@@ -1,0 +1,342 @@
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\bin\Debug\training history.exe.config
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\bin\Debug\training history.exe
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\bin\Debug\training history.pdb
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\bin\Debug\training history.xml
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\obj\Debug\training_history.Resources.resources
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\obj\Debug\training history.exe
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\obj\Debug\training history.xml
+c:\users\duck\documents\visual studio 2013\Projects\training history\training history\obj\Debug\training history.pdb
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.Create_training.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\17-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\17-8-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\17-8-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\17-8-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\17-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.Create_Expert.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.Internal_training.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\bin\Debug\training history.exe.config
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training history.exe
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training history.xml
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training history.pdb
+F:\โปรเจคจบ\18-8-19\training history\training history\bin\Debug\training history.exe
+F:\โปรเจคจบ\18-8-19\training history\training history\bin\Debug\training history.pdb
+F:\โปรเจคจบ\18-8-19\training history\training history\bin\Debug\training history.xml
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.External_traini.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+F:\โปรเจคจบ\18-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\20-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\20-8-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\20-8-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\20-8-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Expert_in.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Expert_i.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.External_traini.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\20-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\21-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\21-8-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\21-8-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\21-8-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Expert_in.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.Expert_out.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\21-8-19\training history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.HOME.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\bin\Debug\training history.exe.config
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training history.exe
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training history.xml
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training history.pdb
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\bin\Debug\training history.exe
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\bin\Debug\training history.pdb
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\bin\Debug\training history.xml
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.HOME.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\narathip-neam\Desktop\28-8-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\28-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\28-8-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\28-8-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\28-8-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\28-8-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\29-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\29-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\29-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\29-8-19\training history\training history\obj\Debug\training history.pdb
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\30-8-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\30-8-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\30-8-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\30-8-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\30-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+H:\ที่ทำงาน\31-8-19\training history\training history\bin\Debug\training history.exe.config
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training history.exe
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training history.xml
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training history.pdb
+H:\ที่ทำงาน\31-8-19\training history\training history\bin\Debug\training history.exe
+H:\ที่ทำงาน\31-8-19\training history\training history\bin\Debug\training history.pdb
+H:\ที่ทำงาน\31-8-19\training history\training history\bin\Debug\training history.xml
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.Create_training.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.Employees.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.External_training.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.HOME.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training_history.Resources.resources
+H:\ที่ทำงาน\31-8-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\bin\Debug\training history.exe.config
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training history.exe
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training history.xml
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training history.pdb
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\bin\Debug\training history.exe
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\bin\Debug\training history.pdb
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\bin\Debug\training history.xml
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.Create_Expert.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.Create_training.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.Employees.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.HOME.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.Internal_training.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.Resources.resources
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\12-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\เดือน 9\13-9-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\16-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\17-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\19-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 9\20-9-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck-Nb\Desktop\โปรเจค\training history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\เดือน 10\5-10-19\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\training history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\training history\training history\obj\Debug\training history.exe
+G:\โปรเจค\training history\training history\obj\Debug\training history.xml
+G:\โปรเจค\training history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\training history\training history\bin\Debug\training history.exe
+G:\โปรเจค\training history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\training history\training history\bin\Debug\training history.xml
+G:\โปรเจค\training history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\training history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
