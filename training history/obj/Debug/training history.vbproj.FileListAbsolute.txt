@@ -340,3 +340,7 @@ G:\โปรเจค\training history\training history\obj\Debug\training_histo
 G:\โปรเจค\training history\training history\obj\Debug\training_history.Internal_training.resources
 G:\โปรเจค\training history\training history\obj\Debug\training_history.Resources.resources
 G:\โปรเจค\training history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+G:\โปรเจค\training history\training-history\training history\bin\Debug\training history.exe.config
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.exe
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.xml
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.pdb

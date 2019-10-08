@@ -339,7 +339,7 @@ Public Class Internal_training
         'showdata()
         cmb_course()
 
-
+        'test
 
     End Sub
 
