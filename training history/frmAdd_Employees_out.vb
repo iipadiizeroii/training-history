@@ -207,84 +207,79 @@ Public Class frmAdd_Employees_out
 #Region "ดึงข้อมูลไปเก็บไว้ในตัวแปลที่ใช้เก็บค่า ข้ามฟอร์ม"
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        Dim re As String = ""
+
         If emio = "IN" Then
             For i As Integer = 0 To dgv_Em.RowCount - 1
                 If Convert.ToBoolean(dgv_Em.Rows(i).Cells("checkBoxColumn").Value) = True Then
+                    re = ""
 
-                        str1 = dgv_Em.Rows(i).Cells(1).Value.ToString()
-                        str2 = dgv_Em.Rows(i).Cells(2).Value.ToString()
-                        str3 = dgv_Em.Rows(i).Cells(3).Value.ToString()
-                        str4 = dgv_Em.Rows(i).Cells(4).Value.ToString()
-                        str5 = dgv_Em.Rows(i).Cells(5).Value.ToString()
-                        str6 = dgv_Em.Rows(i).Cells(6).Value.ToString()
-                        str7 = dgv_Em.Rows(i).Cells(7).Value.ToString()
+
+                    str1 = dgv_Em.Rows(i).Cells(1).Value.ToString()
+                    str2 = dgv_Em.Rows(i).Cells(2).Value.ToString()
+                    str3 = dgv_Em.Rows(i).Cells(3).Value.ToString()
+                    str4 = dgv_Em.Rows(i).Cells(4).Value.ToString()
+                    str5 = dgv_Em.Rows(i).Cells(5).Value.ToString()
+                    str6 = dgv_Em.Rows(i).Cells(6).Value.ToString()
+                    str7 = dgv_Em.Rows(i).Cells(7).Value.ToString()
 
                     numAEMO = numAEMO + 1
 
 
-                    
+                    Dim anydata() As String
+                    anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
+
                     For ii As Integer = 0 To Internal_training.ListView2.Items.Count - 1
-                        Dim anydata() As String
-                        anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
-                        If anydata(str1) = Internal_training.ListView1.Items(ii).SubItems(1).Text Then
-                            If MessageBox.Show("สินค้าซ้ำกับลำดับที่ " & i + 1 & " ต้องการเพิ่มจำนวนหรือไม่?", "",
-                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question
-                                   ) = Windows.Forms.DialogResult.No Then Exit Sub
-
-                            Dim LV As New ListViewItem(anydata)
-                            Internal_training.ListView2.Items.Add(LV)
-                            LV = Nothing
-
-
-
+                        If anydata(1) = Internal_training.ListView2.Items(ii).SubItems(1).Text Then
+                            If MessageBox.Show("สินค้าซ้ำกับลำดับที่ " & ii + 1 & " ต้องการเพิ่มจำนวนหรือไม่?", "",
+                                               MessageBoxButtons.OK, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then re = 1
+                            numAEMO = numAEMO - 1
                         End If
 
+                    Next
+
+                    If re = "" Then
+                        Dim LV As New ListViewItem(anydata)
+                        Internal_training.ListView2.Items.Add(LV)
+                        LV = Nothing
 
                         'เลื่อน listView ไปบันทัดสุดท้าย
                         Internal_training.ListView2.EnsureVisible(Internal_training.ListView2.Items.Count - 1)
-                    Next
+                    End If
 
-                    
                 End If
-
-
-
 
             Next
 
+        Else
+            For i As Integer = 0 To dgv_Em.RowCount - 1
+                If Convert.ToBoolean(dgv_Em.Rows(i).Cells("checkBoxColumn").Value) = True Then
+                    str1 = dgv_Em.Rows(i).Cells(1).Value.ToString()
+                    str2 = dgv_Em.Rows(i).Cells(2).Value.ToString()
+                    str3 = dgv_Em.Rows(i).Cells(3).Value.ToString()
+                    str4 = dgv_Em.Rows(i).Cells(4).Value.ToString()
+                    str5 = dgv_Em.Rows(i).Cells(5).Value.ToString()
+                    str6 = dgv_Em.Rows(i).Cells(6).Value.ToString()
+                    str7 = dgv_Em.Rows(i).Cells(7).Value.ToString()
+
+                    numAEMO = numAEMO + 1
+                    Dim anydata() As String
+                    anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
+                    Dim LV As New ListViewItem(anydata)
+                    External_training.ListView2.Items.Add(LV)
+                    LV = Nothing
+
+                    External_training.ListView2.EnsureVisible(External_training.ListView2.Items.Count - 1)
+
+                End If
+
+            Next
+
+        End If
 
 
-            Else
-                For i As Integer = 0 To dgv_Em.RowCount - 1
-                    If Convert.ToBoolean(dgv_Em.Rows(i).Cells("checkBoxColumn").Value) = True Then
-                        str1 = dgv_Em.Rows(i).Cells(1).Value.ToString()
-                        str2 = dgv_Em.Rows(i).Cells(2).Value.ToString()
-                        str3 = dgv_Em.Rows(i).Cells(3).Value.ToString()
-                        str4 = dgv_Em.Rows(i).Cells(4).Value.ToString()
-                        str5 = dgv_Em.Rows(i).Cells(5).Value.ToString()
-                        str6 = dgv_Em.Rows(i).Cells(6).Value.ToString()
-                        str7 = dgv_Em.Rows(i).Cells(7).Value.ToString()
-
-                        numAEMO = numAEMO + 1
-                        Dim anydata() As String
-                        anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
-                        Dim LV As New ListViewItem(anydata)
-                        External_training.ListView2.Items.Add(LV)
-                        LV = Nothing
-
-                        External_training.ListView2.EnsureVisible(External_training.ListView2.Items.Count - 1)
-
-                    End If
-
-
-                Next
-
-
-            End If
-
-
-            emio = ""
-            Me.Close()
+        emio = ""
+        Me.Close()
     End Sub
 
 #End Region
