@@ -221,31 +221,30 @@ Public Class frmAdd_Employees_out
 
                     numAEMO = numAEMO + 1
 
-                    
-
-
-                    Dim anydata() As String
-                    anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
 
                     
-                        For ii As Integer = 0 To Internal_training.ListView2.Items.Count - 1
-                            If anydata(1) = Internal_training.ListView1.Items(ii).SubItems(1).Text Then
-                                If MessageBox.Show("ซ้ำกรุณาเลือกใหม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning) Then Exit Sub
+                    For ii As Integer = 0 To Internal_training.ListView2.Items.Count - 1
+                        Dim anydata() As String
+                        anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
+                        If anydata(str1) = Internal_training.ListView1.Items(ii).SubItems(1).Text Then
+                            If MessageBox.Show("สินค้าซ้ำกับลำดับที่ " & i + 1 & " ต้องการเพิ่มจำนวนหรือไม่?", "",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                                   ) = Windows.Forms.DialogResult.No Then Exit Sub
 
-                            End If
-
-                        Next
-
-
+                            Dim LV As New ListViewItem(anydata)
+                            Internal_training.ListView2.Items.Add(LV)
+                            LV = Nothing
 
 
-                    Dim LV As New ListViewItem(anydata)
-                    Internal_training.ListView2.Items.Add(LV)
-                    LV = Nothing
 
-                    'เลื่อน listView ไปบันทัดสุดท้าย
-                    Internal_training.ListView2.EnsureVisible(Internal_training.ListView2.Items.Count - 1)
+                        End If
 
+
+                        'เลื่อน listView ไปบันทัดสุดท้าย
+                        Internal_training.ListView2.EnsureVisible(Internal_training.ListView2.Items.Count - 1)
+                    Next
+
+                    
                 End If
 
 

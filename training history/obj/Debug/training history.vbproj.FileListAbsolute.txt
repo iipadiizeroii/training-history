@@ -344,3 +344,20 @@ G:\โปรเจค\training history\training-history\training history\bin\Deb
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.exe
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.xml
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.pdb
+G:\โปรเจค\training history\training-history\training history\bin\Debug\training history.exe
+G:\โปรเจค\training history\training-history\training history\bin\Debug\training history.pdb
+G:\โปรเจค\training history\training-history\training history\bin\Debug\training history.xml
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Create_Expert.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Create_training.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Employees.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.External_training.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmExtermal_training.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmInternal_training.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.HOME.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Internal_training.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Resources.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
