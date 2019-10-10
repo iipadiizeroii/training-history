@@ -192,20 +192,36 @@ Public Class frmadd_Expert_out
 
         '    num = num + Convert.ToInt32(item.SubItems.Item(1).Text)
         '    Next
+        Dim re As String = ""
 
             For i As Integer = 0 To dgv_Ex.RowCount - 1
-                If Convert.ToBoolean(dgv_Ex.Rows(i).Cells("checkBoxColumn").Value) = True Then
-                    str1 = dgv_Ex.Rows(i).Cells(1).Value.ToString()
-                    str2 = dgv_Ex.Rows(i).Cells(2).Value.ToString()
-                    str3 = dgv_Ex.Rows(i).Cells(3).Value.ToString()
-                    str4 = dgv_Ex.Rows(i).Cells(4).Value.ToString()
-                    str5 = dgv_Ex.Rows(i).Cells(5).Value.ToString()
-                    str6 = dgv_Ex.Rows(i).Cells(6).Value.ToString()
+            If Convert.ToBoolean(dgv_Ex.Rows(i).Cells("checkBoxColumn").Value) = True Then
+
+                re = ""
+                str1 = dgv_Ex.Rows(i).Cells(1).Value.ToString()
+                str2 = dgv_Ex.Rows(i).Cells(2).Value.ToString()
+                str3 = dgv_Ex.Rows(i).Cells(3).Value.ToString()
+                str4 = dgv_Ex.Rows(i).Cells(4).Value.ToString()
+                str5 = dgv_Ex.Rows(i).Cells(5).Value.ToString()
+                str6 = dgv_Ex.Rows(i).Cells(6).Value.ToString()
 
 
                 numAEXO = numAEXO + 1
-                    Dim anydata() As String
+                Dim anydata() As String
                 anydata = New String() {numAEXO, str1, str2, str3, str4, str5, str6}
+
+                For ii As Integer = 0 To External_training.ListView1.Items.Count - 1
+                    If anydata(1) = External_training.ListView1.Items(ii).SubItems(1).Text Then
+                        If MessageBox.Show("วิทยากรซ้ำกับลำดับที่ " & ii + 1, "",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then re = 1
+                        numAEXO = numAEXO - 1
+
+                    End If
+
+                Next
+
+
+                If re = "" Then
                     Dim LV As New ListViewItem(anydata)
                     External_training.ListView1.Items.Add(LV)
                     LV = Nothing
@@ -214,8 +230,10 @@ Public Class frmadd_Expert_out
 
                 End If
 
+            End If
 
-            Next
+        Next
+
 
 
             Me.Close()

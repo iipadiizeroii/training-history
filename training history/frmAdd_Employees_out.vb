@@ -231,7 +231,7 @@ Public Class frmAdd_Employees_out
 
                     For ii As Integer = 0 To Internal_training.ListView2.Items.Count - 1
                         If anydata(1) = Internal_training.ListView2.Items(ii).SubItems(1).Text Then
-                            If MessageBox.Show("สินค้าซ้ำกับลำดับที่ " & ii + 1 & " ต้องการเพิ่มจำนวนหรือไม่?", "",
+                            If MessageBox.Show("รายชื่อซ้ำกับลำดับที่ " & ii + 1, "",
                                                MessageBoxButtons.OK, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then re = 1
                             numAEMO = numAEMO - 1
                         End If
@@ -254,6 +254,8 @@ Public Class frmAdd_Employees_out
         Else
             For i As Integer = 0 To dgv_Em.RowCount - 1
                 If Convert.ToBoolean(dgv_Em.Rows(i).Cells("checkBoxColumn").Value) = True Then
+
+                    re = ""
                     str1 = dgv_Em.Rows(i).Cells(1).Value.ToString()
                     str2 = dgv_Em.Rows(i).Cells(2).Value.ToString()
                     str3 = dgv_Em.Rows(i).Cells(3).Value.ToString()
@@ -263,16 +265,28 @@ Public Class frmAdd_Employees_out
                     str7 = dgv_Em.Rows(i).Cells(7).Value.ToString()
 
                     numAEMO = numAEMO + 1
+
                     Dim anydata() As String
                     anydata = New String() {numAEMO, str1, str2, str3, str4, str5, str6, str7}
-                    Dim LV As New ListViewItem(anydata)
-                    External_training.ListView2.Items.Add(LV)
-                    LV = Nothing
 
-                    External_training.ListView2.EnsureVisible(External_training.ListView2.Items.Count - 1)
+                    For ii As Integer = 0 To External_training.ListView2.Items.Count - 1
+                        If anydata(1) = External_training.ListView2.Items(ii).SubItems(1).Text Then
+                            If MessageBox.Show("รายชื่อซ้ำกับลำดับที่ " & ii + 1, "",
+                                               MessageBoxButtons.OK, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then re = 1
+                            numAEMO = numAEMO - 1
+                        End If
 
+                    Next
+
+                    If re = "" Then
+                        Dim LV As New ListViewItem(anydata)
+                        External_training.ListView2.Items.Add(LV)
+                        LV = Nothing
+
+                        External_training.ListView2.EnsureVisible(External_training.ListView2.Items.Count - 1)
+
+                    End If
                 End If
-
             Next
 
         End If

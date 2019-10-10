@@ -361,3 +361,24 @@ G:\โปรเจค\training history\training-history\training history\obj\Deb
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Internal_training.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Resources.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
+C:\Users\Duck\Desktop\training-history\training history\bin\Debug\training history.exe.config
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.exe
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.xml
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.pdb
+C:\Users\Duck\Desktop\training-history\training history\bin\Debug\training history.exe
+C:\Users\Duck\Desktop\training-history\training history\bin\Debug\training history.pdb
+C:\Users\Duck\Desktop\training-history\training history\bin\Debug\training history.xml
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Create_Expert.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Create_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Employees.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmExtermal_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmInternal_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.HOME.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Internal_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Resources.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache

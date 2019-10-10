@@ -273,6 +273,8 @@ Public Class Internal_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         cmb_training_location.Text = ""
+        numAEXI = 0
+        numAEMO = 0
         ListView1.Items.Clear()
         ListView2.Items.Clear()
         R1.Checked = False

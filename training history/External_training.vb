@@ -17,6 +17,13 @@ Public Class External_training
     Dim dt As New DataTable
     Dim savestatus As String = ""
     Dim num As Integer = 0
+    Dim res As DialogResult
+
+    Private Sub myMsg(msg As String, cap As String)
+        Dim btn As MessageBoxButtons = MessageBoxButtons.YesNo
+        Dim ico As MessageBoxIcon = MessageBoxIcon.Question
+        res = MessageBox.Show(msg, cap, btn, ico)
+    End Sub
 
 
     Private Sub cmb_course()
@@ -49,18 +56,59 @@ Public Class External_training
 #Region "เพิ่มข้อมูล"
     Private Sub add_trainningOut()
 
+
+        savestatus = "Add"
+
+        sb = New StringBuilder
+        sb.Append("Select top 1 trainingEx_id From External_training ")
+        sb.Append(" Order by trainingEx_id DESC")
+        'sql = "select * From External_training Order by trainingEx_id DESC"
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
             .Open()
         End With
 
-        savestatus = "Add"
-        sql = "select * From External_training Order by trainingEx_id DESC"
-        Dim cm As New SqlCommand(sql, cn)
+        Dim cm As New SqlCommand(sb.ToString, cn)
         Dim dr As SqlDataReader
         dr = cm.ExecuteReader
 
+        Dim ny As String = Now.Year '2019
+        Dim y As String = ny.Substring(2, 2)  '19
+        Dim m As String = (Now.Month).ToString("00")  '08
+
+
+        If dr.HasRows Then
+            Do While (dr.Read())
+                Dim oldid, Lid, Mid, Rid, newid As String
+
+                'oldid = CStr(dr("trainingIn_id")) 'รหัสสุดท้าย 1908003 ทำได้สองแบบ
+
+                oldid = dr.GetString(0)   'รหัสสุดท้าย 1908003
+                Lid = oldid.Substring(0, 2)  '19
+                Mid = oldid.Substring(2, 2)  '08
+                Rid = oldid.Substring(oldid.Length - 3)   '003
+
+
+                If y = Lid Then 'ถ้าปีเท่ากัน
+                    If m = Mid Then 'ถ้าเดือนเท่ากัน
+                        newid = y & m & (CInt(Rid) + 1).ToString("000")
+                    Else   'ถ้าเดือนไม่เท่ากัน
+                        newid = y & m & "001"
+                    End If
+                Else    'ถ้าปีไม่เท่ากัน
+                    newid = y & m & "001"
+                End If
+                cleardata()
+                txt_trainingOut_id.Text = newid
+            Loop
+        Else
+            txt_trainingOut_id.Text = y & m & "001"
+        End If
+
+
+        dr.Close()
         cn.Close()
         txt_trainingOut_id.Focus()
 
@@ -72,18 +120,50 @@ Public Class External_training
     Private Sub edit_trainningOut()
 
         savestatus = "Edit"
+
+        myMsg("ต้องการแก้ไขข้อมูลใช่หรือไม่", "ยืนยัน")
+        If (res = Windows.Forms.DialogResult.No) Then Exit Sub
+
+
         If txt_trainingOut_id.Text.Trim = "" Then
             MessageBox.Show("กรุณาค้นหารหัสที่ต้องการก่อน")
             txt_trainingOut_name.Focus()
             Exit Sub
         End If
 
-        Dim ctrl As Control
-        For Each ctrl In Me.Controls
-            If ctrl.GetType Is GetType(TextBox) Then
-                CType(ctrl, TextBox).ReadOnly = False
-            End If
-        Next
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        '---ลบรายการใน Expert_detail_in
+        sb = New StringBuilder
+        sb.Append("Delete From Expert_detail_out Where trainingEx_id= @trainingEx_id")
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_trainingOut_id.Text)
+        End With
+        cm.ExecuteNonQuery()
+
+        '---ลบรายการใน Internal_training_history
+        sb = New StringBuilder
+        sb.Append("Delete From External_training_history Where trainingEx_id= @trainingEx_id")
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_trainingOut_id.Text)
+        End With
+        cm.ExecuteNonQuery()
+
+
+        'Dim ctrl As Control
+        'For Each ctrl In Me.Controls
+        '    If ctrl.GetType Is GetType(TextBox) Then
+        '        CType(ctrl, TextBox).ReadOnly = False
+        '    End If
+        'Next
 
     End Sub
 #End Region
@@ -192,6 +272,8 @@ Public Class External_training
         txt_training_location.Text = ""
         ListView1.Items.Clear()
         ListView2.Items.Clear()
+        numAEXO = 0
+        numAEMO = 0
         R1.Checked = False
         R2.Checked = False
 
@@ -317,7 +399,9 @@ Public Class External_training
             Exit Sub
         End If
         If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            SqlTable("DELETE FROM External_training  where trainingEx_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
             'showdata()
             cleardata()
@@ -403,7 +487,7 @@ Public Class External_training
     
     Private Sub add_data_emp_Click(sender As Object, e As EventArgs) Handles add_data_emp.Click
 
-
+        courseID = txt_course_id.Text
         frmAdd_Employees_out.Show()
 
     End Sub
@@ -731,7 +815,6 @@ Public Class External_training
 
 #End Region
 
-    
 
 
 End Class

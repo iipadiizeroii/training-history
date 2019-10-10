@@ -140,8 +140,12 @@ Public Class frmAdd_Expert_in
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        Dim re As String = ""
+
         For i As Integer = 0 To dgv_In.RowCount - 1
             If Convert.ToBoolean(dgv_In.Rows(i).Cells("checkBoxColumn").Value) = True Then
+
+                re = ""
                 str1 = dgv_In.Rows(i).Cells(1).Value.ToString()
                 str2 = dgv_In.Rows(i).Cells(2).Value.ToString()
                 str3 = dgv_In.Rows(i).Cells(3).Value.ToString()
@@ -151,17 +155,31 @@ Public Class frmAdd_Expert_in
 
 
                 numAEXI = numAEXI + 1
+
                 Dim anydata() As String
                 anydata = New String() {numAEXI, str1, str2, str3, str4, str5, str6}
-                Dim LV As New ListViewItem(anydata)
-                Internal_training.ListView1.Items.Add(LV)
-                LV = Nothing
 
-                Internal_training.ListView1.EnsureVisible(Internal_training.ListView1.Items.Count - 1)
+                For ii As Integer = 0 To Internal_training.ListView1.Items.Count - 1
+                    If anydata(1) = Internal_training.ListView1.Items(ii).SubItems(1).Text Then
+                        If MessageBox.Show("วิทยากรซ้ำกับลำดับที่ " & ii + 1, "",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then re = 1
+                        numAEXI = numAEXI - 1
+
+                    End If
+
+                Next
+
+
+                If re = "" Then
+                    Dim LV As New ListViewItem(anydata)
+                    Internal_training.ListView1.Items.Add(LV)
+                    LV = Nothing
+
+                    Internal_training.ListView1.EnsureVisible(Internal_training.ListView1.Items.Count - 1)
+
+                End If
 
             End If
-
-
         Next
 
 
