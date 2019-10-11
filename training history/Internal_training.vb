@@ -174,6 +174,27 @@ Public Class Internal_training
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+        If txt_trainingIn_name.Text = "" Then
+            MessageBox.Show("กรุณากรอกข้อมูลก่อน")
+            Exit Sub
+        End If
+
+        If cmb_course_name.Text = "" Then
+            MessageBox.Show("กรุณาเลือกข้อมูลก่อน")
+            Exit Sub
+        End If
+
+        If cmb_training_location.Text = "" Then
+            MessageBox.Show("กรุณาเลือกข้อมูลก่อน")
+            Exit Sub
+        End If
+
+        If txt_long_term.Text = "" Then
+            MessageBox.Show("กรุณากรอกข้อมูลก่อน")
+            Exit Sub
+        End If
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -261,8 +282,6 @@ Public Class Internal_training
     End Sub
 #End Region
 
-
-
 #Region "cleardata"
     Private Sub cleardata()
 
@@ -285,29 +304,7 @@ Public Class Internal_training
     End Sub
 #End Region
 
-    '#Region "คลิกเลือกข้อมูลใน datagrid"
-    '    Private Sub datagrid_Intraining_CellClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    '        Try
-    '            Dim i As Integer = datagrid_Intraining.CurrentRow.Index
-    '            txt_trainingIn_id.Text = datagrid_Intraining.Item(0, i).Value
-    '            txt_trainingIn_name.Text = datagrid_Intraining.Item(1, i).Value
-    '            Date_training.Text = datagrid_Intraining.Item(2, i).Value
-    '            cmb_training_location.Text = datagrid_Intraining.Item(3, i).Value
-    '            txt_course_id.Text = datagrid_Intraining.Item(4, i).Value
-    '            txt_long_term.Text = datagrid_Intraining.Item(5, i).Value
-
-    '        Catch ex As Exception
-    '            MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
-
-    '        End Try
-
-
-
-    '    End Sub
-    '#End Region
-
-
+#Region "ฟอร์มโหลด"
 
     Private Sub Internal_training_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -345,110 +342,7 @@ Public Class Internal_training
 
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
-    End Sub
-
-    Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
-
-        cleardata()
-        add_trainning()
-        upte_data.Enabled = True
-
-    End Sub
-
-    Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
-
-        edit_trainning()
-        upte_data.Enabled = True
-    End Sub
-
-    Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
-
-        update_training()
-        upte_data.Enabled = False
-        numAEMO = 0
-        numAEXI = 0
-
-    End Sub
-
-    Private Sub cmb_course_id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_course_name.SelectedIndexChanged
-
-        Dim cn As New SqlConnection(strConn)
-        Dim s As String = ""
-        s = "select course_id  from Course where course_name ='" & cmb_course_name.Text & "'"
-        Dim da As New SqlDataAdapter(s, cn)
-        Dim ds As New DataSet
-        Dim dtr As DataRow
-        da.Fill(ds, "courid")
-        For Each dtr In ds.Tables("courid").Rows
-            txt_course_id.Text = dtr("course_id")
-        Next
-
-    End Sub
-
-    Private Sub txt_course_name_TextChanged(sender As Object, e As EventArgs) Handles txt_course_id.TextChanged
-
-        Dim cn As New SqlConnection(strConn)
-        Dim s As String = ""
-        s = "select course_name  from Course where course_id ='" & txt_course_id.Text & "'"
-        Dim da As New SqlDataAdapter(s, cn)
-        Dim ds As New DataSet
-        Dim dtr As DataRow
-        da.Fill(ds, "cour")
-        For Each dtr In ds.Tables("cour").Rows
-            cmb_course_name.Text = dtr("course_name")
-        Next
-
-    End Sub
-
-    Private Sub clear_data_Click(sender As Object, e As EventArgs) Handles clear_data.Click
-
-        If txt_trainingIn_id.Text = "" Then
-            MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
-            Exit Sub
-        End If
-        If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
-            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
-            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
-            MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
-            'showdata()
-            cleardata()
-        End If
-
-    End Sub
-
-    Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
-
-        cleardata()
-        cn.Close()
-        'showdata()
-
-    End Sub
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        frmInternal_training.Show()
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        frmAdd_Expert_in.Show()
-
-    End Sub
-
-    Private Sub add_data_emp_Click(sender As Object, e As EventArgs) Handles add_data_emp.Click
-
-
-        courseID = txt_course_id.Text
-        emio = "IN"
-        frmAdd_Employees_out.Show()
-
-
-    End Sub
+#End Region
 
 #Region "ลบข้อมูลจาก Listview"
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
@@ -485,6 +379,7 @@ Public Class Internal_training
 
 #End Region
 
+#Region "Private sub ค้นหาหนักงาน กับ วิทยามาแสดง"
     Private Sub search_expert()
 
         '--2.SQL
@@ -596,6 +491,9 @@ Public Class Internal_training
             txt_Search.Clear()
         End If
     End Sub
+#End Region
+
+#Region "โค้ดในปุ้มค้นหา"
 
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
@@ -621,9 +519,152 @@ Public Class Internal_training
             numAEMO = ii
         Next
 
-        
+
 
 
     End Sub
+
+#End Region
+
+#Region "ลบข้อมูลการจัดอบรม"
+
+    Private Sub clear_data_Click(sender As Object, e As EventArgs) Handles clear_data.Click
+
+        If txt_trainingIn_id.Text = "" Then
+            MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+        If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
+            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
+            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
+            MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+            'showdata()
+            cleardata()
+        End If
+
+    End Sub
+
+#End Region
+
+#Region "ดึงชื่อ course ไปใส่ CMB เลือกแล้วให้ไปขึ้นรหัสที่ Textboox "
+    Private Sub cmb_course_id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_course_name.SelectedIndexChanged
+
+        Dim cn As New SqlConnection(strConn)
+        Dim s As String = ""
+        s = "select course_id  from Course where course_name ='" & cmb_course_name.Text & "'"
+        Dim da As New SqlDataAdapter(s, cn)
+        Dim ds As New DataSet
+        Dim dtr As DataRow
+        da.Fill(ds, "courid")
+        For Each dtr In ds.Tables("courid").Rows
+            txt_course_id.Text = dtr("course_id")
+        Next
+
+    End Sub
+
+    Private Sub txt_course_name_TextChanged(sender As Object, e As EventArgs) Handles txt_course_id.TextChanged
+
+        Dim cn As New SqlConnection(strConn)
+        Dim s As String = ""
+        s = "select course_name  from Course where course_id ='" & txt_course_id.Text & "'"
+        Dim da As New SqlDataAdapter(s, cn)
+        Dim ds As New DataSet
+        Dim dtr As DataRow
+        da.Fill(ds, "cour")
+        For Each dtr In ds.Tables("cour").Rows
+            cmb_course_name.Text = dtr("course_name")
+        Next
+
+    End Sub
+
+#End Region
+
+    '#Region "คลิกเลือกข้อมูลใน datagrid"
+    '    Private Sub datagrid_Intraining_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    '        Try
+    '            Dim i As Integer = datagrid_Intraining.CurrentRow.Index
+    '            txt_trainingIn_id.Text = datagrid_Intraining.Item(0, i).Value
+    '            txt_trainingIn_name.Text = datagrid_Intraining.Item(1, i).Value
+    '            Date_training.Text = datagrid_Intraining.Item(2, i).Value
+    '            cmb_training_location.Text = datagrid_Intraining.Item(3, i).Value
+    '            txt_course_id.Text = datagrid_Intraining.Item(4, i).Value
+    '            txt_long_term.Text = datagrid_Intraining.Item(5, i).Value
+
+    '        Catch ex As Exception
+    '            MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
+
+    '        End Try
+
+
+
+    '    End Sub
+    '#End Region
+
+
+    Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
+
+        cleardata()
+        add_trainning()
+        upte_data.Enabled = True
+
+    End Sub
+
+    Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
+
+        edit_trainning()
+        upte_data.Enabled = True
+    End Sub
+
+    Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
+
+        update_training()
+        upte_data.Enabled = False
+        numAEMO = 0
+        numAEXI = 0
+
+    End Sub
+
+
+
+
+
+
+    Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
+
+        cleardata()
+        cn.Close()
+        'showdata()
+
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        frmInternal_training.Show()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        frmAdd_Expert_in.Show()
+
+    End Sub
+
+    Private Sub add_data_emp_Click(sender As Object, e As EventArgs) Handles add_data_emp.Click
+
+
+        courseID = txt_course_id.Text
+        emio = "IN"
+        frmAdd_Employees_out.Show()
+
+
+    End Sub
+
+
+
+
+
 
 End Class

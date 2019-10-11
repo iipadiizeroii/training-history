@@ -282,6 +282,173 @@ Public Class External_training
     End Sub
 #End Region
 
+#Region "ฟอร์มโหลด"
+    Private Sub External_traini_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        With ListView1
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสวิทยากร", 80)
+            .Columns.Add("ชื่อ", 100)
+            .Columns.Add("นามสกุล", 100)
+            .Columns.Add("ตำแหน่งวิทยากร", 120)
+            .Columns.Add("หน่วยงานต้นสังกัด", 120)
+            .Columns.Add("ความชำนาญ", 130)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+        With ListView2
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสพนักงาน", 80)
+            .Columns.Add("ชื่อ", 100)
+            .Columns.Add("นามสกุล", 100)
+            .Columns.Add("Level", 50)
+            .Columns.Add("ตำแหน่งพนักงาน", 120)
+            .Columns.Add("แผนก", 130)
+            .Columns.Add("ฝ่าย", 130)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+        cmb_course()
+
+
+    End Sub
+
+#End Region
+
+#Region "ลบข้อมูลการจัดอบรม"
+
+
+    Private Sub clear_data_Click(sender As Object, e As EventArgs) Handles clear_data.Click
+        If txt_trainingOut_id.Text = "" Then
+            MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+        If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+            'showdata()
+            cleardata()
+        End If
+    End Sub
+
+#End Region
+
+#Region "ดึงชื่อ course ไปใส่ CMB เลือกแล้วให้ไปขึ้นรหัสที่ Textboox"
+
+
+    Private Sub cmb_course_id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_course_name.SelectedIndexChanged
+
+
+        Dim cn As New SqlConnection(strConn)
+        Dim s As String = ""
+        s = "select course_id  from Course where course_name ='" & cmb_course_name.Text & "'"
+        Dim da As New SqlDataAdapter(s, cn)
+        Dim ds As New DataSet
+        Dim dtr As DataRow
+        da.Fill(ds, "cour")
+        For Each dtr In ds.Tables("cour").Rows
+            txt_course_id.Text = dtr("course_id")
+        Next
+
+
+    End Sub
+
+    Private Sub txt_course_name_TextChanged(sender As Object, e As EventArgs) Handles txt_course_id.TextChanged
+
+
+        Dim cn As New SqlConnection(strConn)
+        Dim s As String = ""
+        s = "select course_name  from Course where course_id ='" & txt_course_id.Text & "'"
+        Dim da As New SqlDataAdapter(s, cn)
+        Dim ds As New DataSet
+        Dim dtr As DataRow
+        da.Fill(ds, "cour")
+        For Each dtr In ds.Tables("cour").Rows
+            cmb_course_name.Text = dtr("course_name")
+        Next
+
+
+
+    End Sub
+
+#End Region
+
+#Region "ลบรายการสินค้าใน Listview"
+    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+
+        For i As Integer = 0 To ListView1.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView1.SelectedItems(i)
+            ListView1.Items.Remove(lvi)
+        Next
+        numAEXO = 0
+        For j As Integer = 0 To ListView1.Items.Count - 1
+            numAEXO = numAEXO + 1
+            ListView1.Items(j).SubItems(0).Text = numAEXO
+        Next
+
+    End Sub
+
+
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        For i As Integer = 0 To ListView1.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView1.SelectedItems(i)
+            ListView1.Items.Remove(lvi)
+        Next
+
+
+        numAEXO = 0
+        For j As Integer = 0 To ListView1.Items.Count - 1
+            numAEXO = numAEXO + 1
+            ListView1.Items(j).SubItems(0).Text = numAEXO
+        Next
+
+    End Sub
+
+
+    Private Sub ListView2_DoubleClick(sender As Object, e As EventArgs) Handles ListView2.DoubleClick
+
+        For i As Integer = 0 To ListView2.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView2.SelectedItems(i)
+            ListView2.Items.Remove(lvi)
+        Next
+        numAEMO = 0
+        For j As Integer = 0 To ListView2.Items.Count - 1
+            numAEMO = numAEMO + 1
+            ListView2.Items(j).SubItems(0).Text = numAEMO
+        Next
+
+    End Sub
+
+
+    Private Sub clear_data_emp_Click(sender As Object, e As EventArgs) Handles clear_data_emp.Click
+
+        For i As Integer = 0 To ListView2.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView2.SelectedItems(i)
+            ListView2.Items.Remove(lvi)
+        Next
+        numAEMO = 0
+        For j As Integer = 0 To ListView2.Items.Count - 1
+            numAEMO = numAEMO + 1
+            ListView2.Items(j).SubItems(0).Text = numAEMO
+        Next
+
+    End Sub
+
+#End Region
+
+
     '#Region "คลิกเลือกข้อมูลใน datagrid"
     '    Private Sub datagrid_Extraining_CellClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -358,58 +525,6 @@ Public Class External_training
     '    End Sub
     '#End Region
 
-    Private Sub External_traini_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        With ListView1
-            .Columns.Add("ลำดับ", 50)
-            .Columns.Add("รหัสวิทยากร", 80)
-            .Columns.Add("ชื่อ", 100)
-            .Columns.Add("นามสกุล", 100)
-            .Columns.Add("ตำแหน่งวิทยากร", 120)
-            .Columns.Add("หน่วยงานต้นสังกัด", 120)
-            .Columns.Add("ความชำนาญ", 130)
-            .View = View.Details
-            .GridLines = True
-            .FullRowSelect = True
-        End With
-
-        With ListView2
-            .Columns.Add("ลำดับ", 50)
-            .Columns.Add("รหัสพนักงาน", 80)
-            .Columns.Add("ชื่อ", 100)
-            .Columns.Add("นามสกุล", 100)
-            .Columns.Add("Level", 50)
-            .Columns.Add("ตำแหน่งพนักงาน", 120)
-            .Columns.Add("แผนก", 130)
-            .Columns.Add("ฝ่าย", 130)
-            .View = View.Details
-            .GridLines = True
-            .FullRowSelect = True
-        End With
-
-        cmb_course()
-        
-
-
-    End Sub
-
-    Private Sub clear_data_Click(sender As Object, e As EventArgs) Handles clear_data.Click
-        If txt_trainingOut_id.Text = "" Then
-            MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
-            Exit Sub
-        End If
-        If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
-            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
-            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
-            MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
-            'showdata()
-            cleardata()
-        End If
-    End Sub
-
-
-
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
         cleardata()
@@ -437,40 +552,6 @@ Public Class External_training
 
     End Sub
 
-    Private Sub cmb_course_id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_course_name.SelectedIndexChanged
-
-
-        Dim cn As New SqlConnection(strConn)
-        Dim s As String = ""
-        s = "select course_id  from Course where course_name ='" & cmb_course_name.Text & "'"
-        Dim da As New SqlDataAdapter(s, cn)
-        Dim ds As New DataSet
-        Dim dtr As DataRow
-        da.Fill(ds, "cour")
-        For Each dtr In ds.Tables("cour").Rows
-            txt_course_id.Text = dtr("course_id")
-        Next
-
-
-    End Sub
-
-    Private Sub txt_course_name_TextChanged(sender As Object, e As EventArgs) Handles txt_course_id.TextChanged
-
-        
-        Dim cn As New SqlConnection(strConn)
-        Dim s As String = ""
-        s = "select course_name  from Course where course_id ='" & txt_course_id.Text & "'"
-        Dim da As New SqlDataAdapter(s, cn)
-        Dim ds As New DataSet
-        Dim dtr As DataRow
-        da.Fill(ds, "cour")
-        For Each dtr In ds.Tables("cour").Rows
-            cmb_course_name.Text = dtr("course_name")
-        Next
-
-
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -484,7 +565,7 @@ Public Class External_training
 
     End Sub
 
-    
+
     Private Sub add_data_emp_Click(sender As Object, e As EventArgs) Handles add_data_emp.Click
 
         courseID = txt_course_id.Text
@@ -493,74 +574,7 @@ Public Class External_training
     End Sub
 
 
-#Region "ลบรายการสินค้าใน Listview"
-    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
 
-        For i As Integer = 0 To ListView1.SelectedItems.Count - 1
-            Dim lvi As ListViewItem
-            lvi = ListView1.SelectedItems(i)
-            ListView1.Items.Remove(lvi)
-        Next
-        numAEXO = 0
-        For j As Integer = 0 To ListView1.Items.Count - 1
-            numAEXO = numAEXO + 1
-            ListView1.Items(j).SubItems(0).Text = numAEXO
-        Next
-
-    End Sub
-
-
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-        For i As Integer = 0 To ListView1.SelectedItems.Count - 1
-            Dim lvi As ListViewItem
-            lvi = ListView1.SelectedItems(i)
-            ListView1.Items.Remove(lvi)
-        Next
-
-
-        numAEXO = 0
-        For j As Integer = 0 To ListView1.Items.Count - 1
-            numAEXO = numAEXO + 1
-            ListView1.Items(j).SubItems(0).Text = numAEXO
-        Next
-
-    End Sub
-
-
-    Private Sub ListView2_DoubleClick(sender As Object, e As EventArgs) Handles ListView2.DoubleClick
-
-        For i As Integer = 0 To ListView2.SelectedItems.Count - 1
-            Dim lvi As ListViewItem
-            lvi = ListView2.SelectedItems(i)
-            ListView2.Items.Remove(lvi)
-        Next
-        numAEMO = 0
-        For j As Integer = 0 To ListView2.Items.Count - 1
-            numAEMO = numAEMO + 1
-            ListView2.Items(j).SubItems(0).Text = numAEMO
-        Next
-
-    End Sub
-
-
-    Private Sub clear_data_emp_Click(sender As Object, e As EventArgs) Handles clear_data_emp.Click
-
-        For i As Integer = 0 To ListView2.SelectedItems.Count - 1
-            Dim lvi As ListViewItem
-            lvi = ListView2.SelectedItems(i)
-            ListView2.Items.Remove(lvi)
-        Next
-        numAEMO = 0
-        For j As Integer = 0 To ListView2.Items.Count - 1
-            numAEMO = numAEMO + 1
-            ListView2.Items(j).SubItems(0).Text = numAEMO
-        Next
-
-    End Sub
-
-#End Region
 
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -599,7 +613,7 @@ Public Class External_training
         'cn.Close()
     End Sub
 
-   
+
     Private Sub datagrid_ExtrainingNew_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_ExtrainingNew.CellClick
 
 
