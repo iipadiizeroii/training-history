@@ -45,8 +45,6 @@ Partial Class Internal_training
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.R2 = New System.Windows.Forms.RadioButton()
-        Me.R1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.clear_data_emp = New System.Windows.Forms.Button()
         Me.add_data_emp = New System.Windows.Forms.Button()
@@ -56,10 +54,28 @@ Partial Class Internal_training
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -85,7 +101,7 @@ Partial Class Internal_training
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(727, 224)
         Me.GroupBox1.TabIndex = 0
@@ -283,41 +299,18 @@ Partial Class Internal_training
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.R2)
-        Me.GroupBox2.Controls.Add(Me.R1)
+        Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.txt_Search)
-        Me.GroupBox2.Location = New System.Drawing.Point(443, 242)
+        Me.GroupBox2.Location = New System.Drawing.Point(751, 28)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(296, 62)
         Me.GroupBox2.TabIndex = 92
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
         '
-        'R2
-        '
-        Me.R2.AutoSize = True
-        Me.R2.Location = New System.Drawing.Point(6, 38)
-        Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(85, 17)
-        Me.R2.TabIndex = 8
-        Me.R2.TabStop = True
-        Me.R2.Text = "ค้นหาด้วยชื่อ"
-        Me.R2.UseVisualStyleBackColor = True
-        '
-        'R1
-        '
-        Me.R1.AutoSize = True
-        Me.R1.Location = New System.Drawing.Point(6, 15)
-        Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 17)
-        Me.R1.TabIndex = 7
-        Me.R1.TabStop = True
-        Me.R1.Text = "ค้นหาด้วยรหัส"
-        Me.R1.UseVisualStyleBackColor = True
-        '
         'txt_Search
         '
-        Me.txt_Search.Location = New System.Drawing.Point(97, 35)
+        Me.txt_Search.Location = New System.Drawing.Point(9, 22)
         Me.txt_Search.Name = "txt_Search"
         Me.txt_Search.Size = New System.Drawing.Size(189, 20)
         Me.txt_Search.TabIndex = 0
@@ -325,9 +318,9 @@ Partial Class Internal_training
         'clear_data_emp
         '
         Me.clear_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.clear_data_emp.Location = New System.Drawing.Point(386, 208)
+        Me.clear_data_emp.Location = New System.Drawing.Point(761, 85)
         Me.clear_data_emp.Name = "clear_data_emp"
-        Me.clear_data_emp.Size = New System.Drawing.Size(107, 37)
+        Me.clear_data_emp.Size = New System.Drawing.Size(139, 37)
         Me.clear_data_emp.TabIndex = 5
         Me.clear_data_emp.Text = "ลบ"
         Me.clear_data_emp.UseVisualStyleBackColor = True
@@ -335,11 +328,11 @@ Partial Class Internal_training
         'add_data_emp
         '
         Me.add_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.add_data_emp.Location = New System.Drawing.Point(195, 208)
+        Me.add_data_emp.Location = New System.Drawing.Point(761, 42)
         Me.add_data_emp.Name = "add_data_emp"
-        Me.add_data_emp.Size = New System.Drawing.Size(107, 37)
+        Me.add_data_emp.Size = New System.Drawing.Size(139, 37)
         Me.add_data_emp.TabIndex = 9
-        Me.add_data_emp.Text = "เพิ่ม"
+        Me.add_data_emp.Text = "เพิ่มพนักงาน"
         Me.add_data_emp.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -347,9 +340,9 @@ Partial Class Internal_training
         Me.GroupBox3.Controls.Add(Me.ListView2)
         Me.GroupBox3.Controls.Add(Me.add_data_emp)
         Me.GroupBox3.Controls.Add(Me.clear_data_emp)
-        Me.GroupBox3.Location = New System.Drawing.Point(21, 552)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 444)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(727, 251)
+        Me.GroupBox3.Size = New System.Drawing.Size(1035, 251)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "รายละเอียดพนักงานเข้าอบรม"
@@ -358,7 +351,7 @@ Partial Class Internal_training
         '
         Me.ListView2.Location = New System.Drawing.Point(6, 19)
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(715, 183)
+        Me.ListView2.Size = New System.Drawing.Size(749, 183)
         Me.ListView2.TabIndex = 10
         Me.ListView2.UseCompatibleStateImageBehavior = False
         '
@@ -367,9 +360,9 @@ Partial Class Internal_training
         Me.GroupBox4.Controls.Add(Me.ListView1)
         Me.GroupBox4.Controls.Add(Me.Button2)
         Me.GroupBox4.Controls.Add(Me.Button3)
-        Me.GroupBox4.Location = New System.Drawing.Point(21, 310)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 258)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(727, 212)
+        Me.GroupBox4.Size = New System.Drawing.Size(1034, 180)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "รายละเอียดวิทยากรข้าอบรม"
@@ -378,36 +371,195 @@ Partial Class Internal_training
         '
         Me.ListView1.Location = New System.Drawing.Point(6, 19)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(712, 144)
+        Me.ListView1.Size = New System.Drawing.Size(749, 144)
         Me.ListView1.TabIndex = 10
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button2.Location = New System.Drawing.Point(186, 169)
+        Me.Button2.Location = New System.Drawing.Point(761, 19)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 37)
         Me.Button2.TabIndex = 9
-        Me.Button2.Text = "เพิ่ม"
+        Me.Button2.Text = "เพิ่มวิทยากร"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button3.Location = New System.Drawing.Point(379, 169)
+        Me.Button3.Location = New System.Drawing.Point(761, 62)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 37)
+        Me.Button3.Size = New System.Drawing.Size(117, 37)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "ลบ"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.TextBox5)
+        Me.GroupBox5.Controls.Add(Me.TextBox4)
+        Me.GroupBox5.Controls.Add(Me.TextBox3)
+        Me.GroupBox5.Controls.Add(Me.TextBox2)
+        Me.GroupBox5.Controls.Add(Me.TextBox1)
+        Me.GroupBox5.Controls.Add(Me.Label18)
+        Me.GroupBox5.Controls.Add(Me.Label17)
+        Me.GroupBox5.Controls.Add(Me.Label16)
+        Me.GroupBox5.Controls.Add(Me.Label15)
+        Me.GroupBox5.Controls.Add(Me.Label14)
+        Me.GroupBox5.Controls.Add(Me.Label13)
+        Me.GroupBox5.Controls.Add(Me.Label12)
+        Me.GroupBox5.Controls.Add(Me.Label11)
+        Me.GroupBox5.Controls.Add(Me.Label10)
+        Me.GroupBox5.Controls.Add(Me.Label6)
+        Me.GroupBox5.Location = New System.Drawing.Point(750, 97)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(296, 155)
+        Me.GroupBox5.TabIndex = 93
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "ค่าใช้จ่าย"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(122, 118)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox5.TabIndex = 1
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(122, 92)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox4.TabIndex = 1
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(122, 66)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox3.TabIndex = 1
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(122, 40)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(122, 14)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(260, 69)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(26, 13)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "บาท"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(260, 43)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(26, 13)
+        Me.Label15.TabIndex = 0
+        Me.Label15.Text = "บาท"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(260, 16)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(26, 13)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "บาท"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(7, 121)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(69, 13)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "ค่าใช้จ่ายรวม"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(7, 95)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(58, 13)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "ค่าหลักสูตร"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(7, 66)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(113, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "ค่าอาหารว่างผู้เข้าอบรม"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(7, 40)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(86, 13)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "ค่าอาหารวิทยากร"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(7, 17)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(57, 13)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "ค่าวิทยากร"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(260, 95)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(26, 13)
+        Me.Label17.TabIndex = 0
+        Me.Label17.Text = "บาท"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(260, 121)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(26, 13)
+        Me.Label18.TabIndex = 0
+        Me.Label18.Text = "บาท"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(210, 20)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "ค้นหา"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Internal_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(782, 722)
+        Me.ClientSize = New System.Drawing.Size(1095, 722)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -420,6 +572,8 @@ Partial Class Internal_training
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -442,8 +596,6 @@ Partial Class Internal_training
     Friend WithEvents edit_data As System.Windows.Forms.Button
     Friend WithEvents add_data_emp As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents R2 As System.Windows.Forms.RadioButton
-    Friend WithEvents R1 As System.Windows.Forms.RadioButton
     Friend WithEvents txt_Search As System.Windows.Forms.TextBox
     Friend WithEvents add_data As System.Windows.Forms.Button
     Friend WithEvents clear_data As System.Windows.Forms.Button
@@ -457,4 +609,21 @@ Partial Class Internal_training
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ListView2 As System.Windows.Forms.ListView
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class
