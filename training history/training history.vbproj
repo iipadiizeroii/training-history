@@ -159,6 +159,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="SqlDbConn .vb" />
+    <Compile Include="test01.Designer.vb">
+      <DependentUpon>test01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test01.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Create_Expert.resx">
@@ -202,6 +208,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test01.resx">
+      <DependentUpon>test01.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

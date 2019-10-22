@@ -277,8 +277,7 @@ Public Class Internal_training
         numAEMO = 0
         ListView1.Items.Clear()
         ListView2.Items.Clear()
-        R1.Checked = False
-        R2.Checked = False
+        
 
 
 
@@ -627,4 +626,18 @@ Public Class Internal_training
     End Sub
 
     
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        Dim x1, x2, x3, x4 As Integer
+
+        x1 = TextBox1.Text
+        x2 = TextBox2.Text
+        x3 = TextBox3.Text
+        x4 = TextBox4.Text
+
+
+        TextBox5.Text = x1 + x2 + x3 + x4
+
+
+    End Sub
 End Class

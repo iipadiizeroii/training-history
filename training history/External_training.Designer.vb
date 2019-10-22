@@ -343,7 +343,7 @@ Partial Class External_training
         'datagrid_ExtrainingNew
         '
         Me.datagrid_ExtrainingNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagrid_ExtrainingNew.Location = New System.Drawing.Point(3, 2)
+        Me.datagrid_ExtrainingNew.Location = New System.Drawing.Point(0, 0)
         Me.datagrid_ExtrainingNew.Name = "datagrid_ExtrainingNew"
         Me.datagrid_ExtrainingNew.Size = New System.Drawing.Size(691, 171)
         Me.datagrid_ExtrainingNew.TabIndex = 0
