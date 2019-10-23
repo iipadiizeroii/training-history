@@ -30,6 +30,7 @@ Public Class Internal_training
     End Sub
 
 
+
     '#Region "เชื่อต่อ Data"
 
     '    Private Sub showdata()
@@ -209,9 +210,10 @@ Public Class Internal_training
             .Add("@training_location", SqlDbType.NVarChar, 50).Value = cmb_training_location.Text
             .Add("@course_id", SqlDbType.Int).Value = txt_course_id.Text
             .Add("@training_date", SqlDbType.NVarChar, 20).Value = txt_long_term.Text
-
+            cm.ExecuteNonQuery()
         End With
-        cm.ExecuteNonQuery()
+
+        
 
         'บันทึกข้อมูลเข้า รายละเอียดวิทยากรภายนอก
         For i As Integer = 0 To ListView1.Items.Count - 1
@@ -251,7 +253,7 @@ Public Class Internal_training
             cm.ExecuteNonQuery()
 
         Next
-        MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+        'MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
         'showdata()
 
 
@@ -259,6 +261,53 @@ Public Class Internal_training
 
 
     End Sub
+
+    Private Sub update_Expenses()
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        sb = New StringBuilder
+
+        If savestatus = "Add" Then
+            sb.Append("Insert into  Expenses_in (trainingIn_id,Expert,Food_expert,Snack,Course,Total)")
+            sb.Append("Values (@trainingIn_id,@Expert,@Food_expert,@Snack,@Course,@Total)")
+
+        ElseIf savestatus = "Edit" Then
+            sb.Append("Update Expenses_in")
+            sb.Append(" set Expert = @Expert,")
+            sb.Append("Food_expert = @Food_expert,")
+            sb.Append("Snack = @Snack,")
+            sb.Append("Course = @Course,")
+            sb.Append("Total = @Total ")
+            sb.Append(" Where trainingIn_id = @trainingIn_id")
+
+        End If
+
+
+        Dim cmm As New SqlCommand
+        cmm = New SqlCommand(sb.ToString, cn)
+        With cmm.Parameters
+            .Clear()
+            .Add("@trainingIn_id", SqlDbType.NVarChar, 10).Value = txt_trainingIn_id.Text
+            .Add("@Expert", SqlDbType.Int).Value = TextBox1.Text
+            .Add("@Food_expert", SqlDbType.Int).Value = TextBox2.Text
+            .Add("@Snack", SqlDbType.Int).Value = TextBox3.Text
+            .Add("@Course", SqlDbType.Int).Value = TextBox4.Text
+            .Add("@Total", SqlDbType.Int).Value = TextBox5.Text
+            cmm.ExecuteNonQuery()
+        End With
+
+        MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+
+    End Sub
+
+
+
+
 #End Region
 
 
@@ -277,7 +326,7 @@ Public Class Internal_training
         numAEMO = 0
         ListView1.Items.Clear()
         ListView2.Items.Clear()
-        
+
 
 
 
@@ -365,6 +414,7 @@ Public Class Internal_training
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_training()
+        update_Expenses()
         upte_data.Enabled = False
         numAEMO = 0
         numAEXI = 0
@@ -620,12 +670,12 @@ Public Class Internal_training
             numAEMO = ii
         Next
 
-        
+
 
 
     End Sub
 
-    
+
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
         Dim x1, x2, x3, x4 As Integer
@@ -637,6 +687,13 @@ Public Class Internal_training
 
 
         TextBox5.Text = x1 + x2 + x3 + x4
+
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
+
+
 
 
     End Sub
