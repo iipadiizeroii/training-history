@@ -322,6 +322,11 @@ Public Class Internal_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         cmb_training_location.Text = ""
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
         numAEXI = 0
         numAEMO = 0
         ListView1.Items.Clear()
@@ -364,9 +369,9 @@ Public Class Internal_training
             .Columns.Add("รหัสวิทยากร", 80)
             .Columns.Add("ชื่อ", 100)
             .Columns.Add("นามสกุล", 100)
-            .Columns.Add("ตำแหน่งวิทยากร", 120)
-            .Columns.Add("หน่วยงานต้นสังกัด", 120)
-            .Columns.Add("ความชำนาญ", 130)
+            .Columns.Add("ตำแหน่งวิทยากร", 140)
+            .Columns.Add("หน่วยงานต้นสังกัด", 170)
+            .Columns.Add("ความชำนาญ", 320)
             .View = View.Details
             .GridLines = True
             .FullRowSelect = True
@@ -375,18 +380,23 @@ Public Class Internal_training
         With ListView2
             .Columns.Add("ลำดับ", 50)
             .Columns.Add("รหัสพนักงาน", 80)
-            .Columns.Add("ชื่อ", 100)
-            .Columns.Add("นามสกุล", 100)
+            .Columns.Add("ชื่อ", 130)
+            .Columns.Add("นามสกุล", 130)
             .Columns.Add("Level", 50)
-            .Columns.Add("ตำแหน่งพนักงาน", 120)
-            .Columns.Add("แผนก", 130)
-            .Columns.Add("ฝ่าย", 130)
+            .Columns.Add("ตำแหน่งพนักงาน", 170)
+            .Columns.Add("แผนก", 190)
+            .Columns.Add("ฝ่าย", 160)
             .View = View.Details
             .GridLines = True
             .FullRowSelect = True
         End With
 
         'showdata()
+        TextBox1.Text = "0"
+        TextBox2.Text = "0"
+        TextBox3.Text = "0"
+        TextBox4.Text = "0"
+        TextBox5.Text = "0"
         cmb_course()
 
         'test
@@ -461,6 +471,7 @@ Public Class Internal_training
             SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
+            SqlTable("DELETE FROM Expenses_in  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
             'showdata()
             cleardata()
@@ -534,6 +545,7 @@ Public Class Internal_training
 
 #End Region
 
+#Region "ค้นหา"
     Private Sub search_expert()
 
         '--2.SQL
@@ -646,6 +658,49 @@ Public Class Internal_training
         End If
     End Sub
 
+    Private Sub search_Expenses_in()
+
+        sb = New StringBuilder
+        sb.Append("select Ei.Expert,EI.Food_expert,EI.Snack,EI.Course,EI.Total ")
+        sb.Append("from Expenses_in EI inner join Internal_training IT on EI.trainingIn_id = IT.trainingIn_id ")
+        sb.Append(" where Ei.trainingIn_id = @trainingIn_id")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingIn_id", txt_Search.Text)
+        End With
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                TextBox1.Text = dr.GetInt32(0)
+                TextBox2.Text = dr.GetInt32(1)
+                TextBox3.Text = dr.GetInt32(2)
+                TextBox4.Text = dr.GetInt32(3)
+                TextBox5.Text = dr.GetInt32(4)
+                
+
+
+            Loop
+        Else
+
+            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            txt_Search.Clear()
+        End If
+
+
+    End Sub
+
+#End Region
+
+
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
 
@@ -654,7 +709,7 @@ Public Class Internal_training
 
             search_expert()
             search_employees()
-
+            search_Expenses_in()
             edit_data.Enabled = True
             cancel_data.Enabled = True
             clear_data.Enabled = True
