@@ -330,7 +330,7 @@ Partial Class Internal_training
         'clear_data_emp
         '
         Me.clear_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.clear_data_emp.Location = New System.Drawing.Point(167, 13)
+        Me.clear_data_emp.Location = New System.Drawing.Point(167, 24)
         Me.clear_data_emp.Name = "clear_data_emp"
         Me.clear_data_emp.Size = New System.Drawing.Size(115, 37)
         Me.clear_data_emp.TabIndex = 2
@@ -340,7 +340,7 @@ Partial Class Internal_training
         'add_data_emp
         '
         Me.add_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.add_data_emp.Location = New System.Drawing.Point(6, 13)
+        Me.add_data_emp.Location = New System.Drawing.Point(5, 24)
         Me.add_data_emp.Name = "add_data_emp"
         Me.add_data_emp.Size = New System.Drawing.Size(124, 37)
         Me.add_data_emp.TabIndex = 1
@@ -349,7 +349,7 @@ Partial Class Internal_training
         '
         'ListView2
         '
-        Me.ListView2.Location = New System.Drawing.Point(6, 56)
+        Me.ListView2.Location = New System.Drawing.Point(5, 67)
         Me.ListView2.Name = "ListView2"
         Me.ListView2.Size = New System.Drawing.Size(961, 204)
         Me.ListView2.TabIndex = 10
@@ -357,7 +357,7 @@ Partial Class Internal_training
         '
         'ListView1
         '
-        Me.ListView1.Location = New System.Drawing.Point(6, 56)
+        Me.ListView1.Location = New System.Drawing.Point(6, 68)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(961, 201)
         Me.ListView1.TabIndex = 10
@@ -366,7 +366,7 @@ Partial Class Internal_training
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button2.Location = New System.Drawing.Point(6, 13)
+        Me.Button2.Location = New System.Drawing.Point(6, 24)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 37)
         Me.Button2.TabIndex = 1
@@ -376,7 +376,7 @@ Partial Class Internal_training
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button3.Location = New System.Drawing.Point(152, 13)
+        Me.Button3.Location = New System.Drawing.Point(152, 24)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(117, 37)
         Me.Button3.TabIndex = 2
@@ -517,7 +517,7 @@ Partial Class Internal_training
         Me.TabControl1.Location = New System.Drawing.Point(12, 190)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(988, 292)
+        Me.TabControl1.Size = New System.Drawing.Size(988, 303)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -528,7 +528,7 @@ Partial Class Internal_training
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(980, 266)
+        Me.TabPage1.Size = New System.Drawing.Size(980, 277)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "เพิ่มวิทยากร"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -541,7 +541,7 @@ Partial Class Internal_training
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(980, 266)
+        Me.TabPage2.Size = New System.Drawing.Size(980, 277)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "เพิ่มรายชื่อผู้เข้าอบรม"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -586,12 +586,12 @@ Partial Class Internal_training
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1015, 489)
+        Me.ClientSize = New System.Drawing.Size(1015, 505)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Internal_training"
-        Me.Text = "1"
+        Me.Text = "Internal_training"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

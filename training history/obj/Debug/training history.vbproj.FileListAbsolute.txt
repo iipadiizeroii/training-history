@@ -383,3 +383,4 @@ C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_histo
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.Resources.resources
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.test01.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test01.resources

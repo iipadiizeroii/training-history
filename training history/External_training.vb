@@ -209,9 +209,9 @@ Public Class External_training
             .Add("@training_location", SqlDbType.NVarChar, 50).Value = txt_training_location.Text
             .Add("@course_id", SqlDbType.Int).Value = txt_course_id.Text()
             .Add("@training_date", SqlDbType.NVarChar, 20).Value = txt_long_term.Text
-
+            cm.ExecuteNonQuery()
         End With
-        cm.ExecuteNonQuery()
+
 
         'บันทึกข้อมูลเข้า รายละเอียดวิทยากรภายนอก
         For i As Integer = 0 To ListView1.Items.Count - 1
@@ -258,6 +258,54 @@ Public Class External_training
 
 
     End Sub
+
+
+    Private Sub update_Expenses()
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        sb = New StringBuilder
+
+        If savestatus = "Add" Then
+            sb.Append("Insert into  Expenses_out (trainingEx_id,Expert,Course,Travel_expenses,Total)")
+            sb.Append("Values (@trainingEx_id,@Expert,@Course,@Travel_expenses,@Total)")
+
+        ElseIf savestatus = "Edit" Then
+            sb.Append("Update Expenses_out")
+            sb.Append(" set Expert = @Expert,")
+            sb.Append("Course = @Course,")
+            sb.Append("Travel_expenses = @Travel_expenses,")
+            sb.Append("Total = @Total ")
+            sb.Append(" Where trainingEx_id = @trainingEx_id")
+
+        End If
+
+
+        Dim cmm As New SqlCommand
+        cmm = New SqlCommand(sb.ToString, cn)
+        With cmm.Parameters
+            .Clear()
+            .Add("@trainingEx_id", SqlDbType.NVarChar, 10).Value = txt_trainingOut_id.Text
+            .Add("@Expert", SqlDbType.Int).Value = TextBox1.Text
+            .Add("@Course", SqlDbType.Int).Value = TextBox2.Text
+            .Add("@Travel_expenses", SqlDbType.Int).Value = TextBox3.Text
+            .Add("@Total", SqlDbType.Int).Value = TextBox4.Text
+            cmm.ExecuteNonQuery()
+        End With
+
+        MsgBox("บันทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+
+    End Sub
+
+
+
+
+
+
 #End Region
 
 #Region "cleardata"
@@ -270,12 +318,15 @@ Public Class External_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         txt_training_location.Text = ""
+        TextBox1.Text = "0"
+        TextBox2.Text = "0"
+        TextBox3.Text = "0"
+        TextBox4.Text = "0"
         ListView1.Items.Clear()
         ListView2.Items.Clear()
         numAEXO = 0
         numAEMO = 0
-        R1.Checked = False
-        R2.Checked = False
+        
 
 
 
@@ -387,6 +438,10 @@ Public Class External_training
             .FullRowSelect = True
         End With
 
+        TextBox1.Text = "0"
+        TextBox2.Text = "0"
+        TextBox3.Text = "0"
+        TextBox4.Text = "0"
         cmb_course()
         
 
@@ -399,9 +454,10 @@ Public Class External_training
             Exit Sub
         End If
         If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
-            SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
-            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("Delete From Expert_detail_out Where trainingEx_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("Delete From External_training_history Where trainingEx_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("DELETE FROM Expenses_out  where trainingEx_id ='" & txt_trainingOut_id.Text & "'")
+            SqlTable("DELETE FROM External_training  where trainingEx_id ='" & txt_trainingOut_id.Text & "'")
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
             'showdata()
             cleardata()
@@ -426,6 +482,8 @@ Public Class External_training
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_trainingOut()
+        update_Expenses()
+
 
     End Sub
 
@@ -733,6 +791,47 @@ Public Class External_training
         End If
     End Sub
 
+
+    Private Sub search_Expenses_out()
+
+        sb = New StringBuilder
+        sb.Append("select EO.Expert,EO.Course,EO.Travel_expenses,EO.Total ")
+        sb.Append("from Expenses_out EO inner join External_training ET on EO.trainingEx_id = ET.trainingEx_id ")
+        sb.Append(" where EO.trainingEx_id = @trainingEx_id")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_Search.Text)
+        End With
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                TextBox1.Text = dr.GetInt32(0)
+                TextBox2.Text = dr.GetInt32(1)
+                TextBox3.Text = dr.GetInt32(2)
+                TextBox4.Text = dr.GetInt32(3)
+
+
+
+
+            Loop
+        Else
+
+            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            txt_Search.Clear()
+        End If
+
+
+    End Sub
+
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
 
@@ -745,7 +844,7 @@ Public Class External_training
 
             search_expert()
             search_employees()
-
+            search_Expenses_out()
             ''--2.SQL
             'sb = New StringBuilder
             'sb.Append("Select * ")
@@ -817,4 +916,18 @@ Public Class External_training
 
 
 
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+
+        Dim x1, x2, x3, x4 As Integer
+
+        x1 = TextBox1.Text
+        x2 = TextBox2.Text
+        x3 = TextBox3.Text
+
+
+
+        TextBox4.Text = x1 + x2 + x3
+
+    End Sub
 End Class

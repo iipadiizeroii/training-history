@@ -322,11 +322,11 @@ Public Class Internal_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         cmb_training_location.Text = ""
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
-        TextBox5.Text = ""
+        TextBox1.Text = "0"
+        TextBox2.Text = "0"
+        TextBox3.Text = "0"
+        TextBox4.Text = "0"
+        TextBox5.Text = "0"
         numAEXI = 0
         numAEMO = 0
         ListView1.Items.Clear()
@@ -470,8 +470,8 @@ Public Class Internal_training
         If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             SqlTable("Delete From Expert_detail_in Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             SqlTable("Delete From Internal_training_history Where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
-            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             SqlTable("DELETE FROM Expenses_in  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
+            SqlTable("DELETE FROM Internal_training  where trainingIn_id ='" & txt_trainingIn_id.Text & "'")
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
             'showdata()
             cleardata()
@@ -750,6 +750,10 @@ Public Class Internal_training
 
 
 
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
 End Class
