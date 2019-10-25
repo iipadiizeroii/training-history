@@ -23,6 +23,7 @@ Partial Class Internal_training
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.add_data = New System.Windows.Forms.Button()
         Me.clear_data = New System.Windows.Forms.Button()
@@ -73,16 +74,28 @@ Partial Class Internal_training
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.RP2 = New System.Windows.Forms.RadioButton()
+        Me.RP1 = New System.Windows.Forms.RadioButton()
+        Me.txt_Search_panal = New System.Windows.Forms.TextBox()
+        Me.datagrid_IntrainingNew = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.datagrid_IntrainingNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button8)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.add_data)
         Me.GroupBox1.Controls.Add(Me.clear_data)
@@ -110,6 +123,15 @@ Partial Class Internal_training
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "การจัดอบรมภายใน"
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(338, 33)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(40, 23)
+        Me.Button8.TabIndex = 99
+        Me.Button8.Text = "..."
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -567,7 +589,7 @@ Partial Class Internal_training
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(980, 266)
+        Me.TabPage3.Size = New System.Drawing.Size(980, 277)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "บันทึกค่าใช้จ่าย"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -581,12 +603,93 @@ Partial Class Internal_training
         Me.Button5.Text = "คำนวณ"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Info
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.GroupBox3)
+        Me.Panel1.Controls.Add(Me.datagrid_IntrainingNew)
+        Me.Panel1.Location = New System.Drawing.Point(159, 126)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(697, 252)
+        Me.Panel1.TabIndex = 98
+        Me.Panel1.Visible = False
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(619, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 97
+        Me.Button6.Text = "ออก"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button7)
+        Me.GroupBox3.Controls.Add(Me.RP2)
+        Me.GroupBox3.Controls.Add(Me.RP1)
+        Me.GroupBox3.Controls.Add(Me.txt_Search_panal)
+        Me.GroupBox3.Location = New System.Drawing.Point(15, 10)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(378, 62)
+        Me.GroupBox3.TabIndex = 96
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "ค้นหา"
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(297, 32)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 98
+        Me.Button7.Text = "ยกเลิก"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'RP2
+        '
+        Me.RP2.AutoSize = True
+        Me.RP2.Location = New System.Drawing.Point(6, 38)
+        Me.RP2.Name = "RP2"
+        Me.RP2.Size = New System.Drawing.Size(85, 17)
+        Me.RP2.TabIndex = 8
+        Me.RP2.TabStop = True
+        Me.RP2.Text = "ค้นหาด้วยชื่อ"
+        Me.RP2.UseVisualStyleBackColor = True
+        '
+        'RP1
+        '
+        Me.RP1.AutoSize = True
+        Me.RP1.Location = New System.Drawing.Point(6, 15)
+        Me.RP1.Name = "RP1"
+        Me.RP1.Size = New System.Drawing.Size(91, 17)
+        Me.RP1.TabIndex = 7
+        Me.RP1.TabStop = True
+        Me.RP1.Text = "ค้นหาด้วยรหัส"
+        Me.RP1.UseVisualStyleBackColor = True
+        '
+        'txt_Search_panal
+        '
+        Me.txt_Search_panal.Location = New System.Drawing.Point(97, 35)
+        Me.txt_Search_panal.Name = "txt_Search_panal"
+        Me.txt_Search_panal.Size = New System.Drawing.Size(189, 20)
+        Me.txt_Search_panal.TabIndex = 0
+        '
+        'datagrid_IntrainingNew
+        '
+        Me.datagrid_IntrainingNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagrid_IntrainingNew.Location = New System.Drawing.Point(3, 78)
+        Me.datagrid_IntrainingNew.Name = "datagrid_IntrainingNew"
+        Me.datagrid_IntrainingNew.Size = New System.Drawing.Size(691, 171)
+        Me.datagrid_IntrainingNew.TabIndex = 0
+        '
         'Internal_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1015, 505)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -601,6 +704,10 @@ Partial Class Internal_training
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.datagrid_IntrainingNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -655,4 +762,13 @@ Partial Class Internal_training
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents RP2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RP1 As System.Windows.Forms.RadioButton
+    Friend WithEvents txt_Search_panal As System.Windows.Forms.TextBox
+    Friend WithEvents datagrid_IntrainingNew As System.Windows.Forms.DataGridView
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

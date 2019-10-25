@@ -36,7 +36,7 @@ Partial Class frmExtermal_training
         Me.GroupBox2.Controls.Add(Me.R2)
         Me.GroupBox2.Controls.Add(Me.R1)
         Me.GroupBox2.Controls.Add(Me.txt_Search)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(296, 62)
         Me.GroupBox2.TabIndex = 95

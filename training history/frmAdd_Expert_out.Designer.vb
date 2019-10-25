@@ -40,7 +40,7 @@ Partial Class frmadd_Expert_out
         Me.Button2.Location = New System.Drawing.Point(101, 138)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 14
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "ยกเลิก"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -49,7 +49,7 @@ Partial Class frmadd_Expert_out
         Me.Button1.Location = New System.Drawing.Point(20, 138)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 13
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "ตกลง"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -93,28 +93,28 @@ Partial Class frmadd_Expert_out
         Me.TextBox1.Location = New System.Drawing.Point(101, 30)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox1.TabIndex = 15
+        Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(101, 64)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox2.TabIndex = 15
+        Me.TextBox2.TabIndex = 1
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(101, 96)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox3.TabIndex = 15
+        Me.TextBox3.TabIndex = 2
         '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(337, 27)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 13
+        Me.Button3.TabIndex = 3
         Me.Button3.Text = "ค้นหา"
         Me.Button3.UseVisualStyleBackColor = True
         '

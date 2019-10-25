@@ -640,7 +640,8 @@ Public Class External_training
         '5'
         cn.Close()
 
-
+        txt_Search_panal.Text = ""
+        RP1.Checked = True
         ''2.SQL
         'Dim s As String = ""
         's = "select * from External_training"
@@ -657,7 +658,154 @@ Public Class External_training
         'cn.Close()
     End Sub
 
-   
+#Region "ค้นหาจากพาเนล"
+    Private Sub search_expert_panal()
+
+        '--2.SQL
+        sb = New StringBuilder
+        sb.Append("Select * ")
+        sb.Append("From Expert_detail_out EDO ")
+        sb.Append("INNER JOIN External_training ET  ON (ET.trainingEx_id = EDO.trainingEx_id) ")
+        sb.Append("INNER JOIN Expert EX  ON (EX.expert_id = EDO.expert_id) ")
+        sb.Append("where EDO.trainingEx_id = @trainingEx_id")
+
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_trainingOut_id.Text)
+        End With
+        dr = cm.ExecuteReader
+
+        numAEXO = 0
+        ListView1.Items.Clear()
+
+
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+
+
+                Dim LV1 As New ListViewItem
+                LV1.UseItemStyleForSubItems = False
+                numAEXO = numAEXO + 1
+                LV1.Text = numAEXO
+                LV1.SubItems.Add(dr.GetString(8))
+                LV1.SubItems.Add(dr.GetString(9))
+                LV1.SubItems.Add(dr.GetValue(10))
+                LV1.SubItems.Add(dr.GetValue(11))
+                LV1.SubItems.Add(dr.GetValue(12))
+                LV1.SubItems.Add(dr.GetValue(13))
+                ListView1.Items.Add(LV1)
+                LV1 = Nothing
+
+
+            Loop
+
+        End If
+    End Sub
+
+    Private Sub search_employees_panal()
+
+        '--2.SQL
+        sb = New StringBuilder
+        sb.Append("Select E.emp_id,E.emp_name,E.emp_lastname,emp_level,E.emp_position,")
+        sb.Append("E.emp_department,E.emp_division ")
+        sb.Append("From External_training_history ETH ")
+        sb.Append("INNER JOIN External_training ET  ON (ET.trainingEx_id = ETH.trainingEx_id)")
+        sb.Append("INNER JOIN Employees E  ON (E.emp_id = ETH.emp_id)")
+        sb.Append("where ETH.trainingEx_id = @trainingEx_id")
+
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_trainingOut_id.Text)
+        End With
+        dr = cm.ExecuteReader
+
+
+        numAEMO = 0
+        ListView2.Items.Clear()
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                Dim LV2 As New ListViewItem
+                LV2.UseItemStyleForSubItems = False
+                numAEMO = numAEMO + 1
+                LV2.Text = numAEMO
+                LV2.SubItems.Add(dr.GetString(0))
+                LV2.SubItems.Add(dr.GetString(1))
+                LV2.SubItems.Add(dr.GetValue(2))
+                LV2.SubItems.Add(dr.GetValue(3))
+                LV2.SubItems.Add(dr.GetValue(4))
+                LV2.SubItems.Add(dr.GetValue(5))
+                LV2.SubItems.Add(dr.GetValue(6))
+                ListView2.Items.Add(LV2)
+                LV2 = Nothing
+
+
+            Loop
+        Else
+
+            MessageBox.Show("ไม่พบข้อมูล")
+            txt_Search.Clear()
+        End If
+    End Sub
+
+    Private Sub search_Expenses_out_panal()
+
+        sb = New StringBuilder
+        sb.Append("select EO.Expert,EO.Course,EO.Travel_expenses,EO.Total ")
+        sb.Append("from Expenses_out EO inner join External_training ET on EO.trainingEx_id = ET.trainingEx_id ")
+        sb.Append(" where EO.trainingEx_id = @trainingEx_id")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@trainingEx_id", txt_trainingOut_id.Text)
+        End With
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                TextBox1.Text = dr.GetInt32(0)
+                TextBox2.Text = dr.GetInt32(1)
+                TextBox3.Text = dr.GetInt32(2)
+                TextBox4.Text = dr.GetInt32(3)
+
+
+
+
+            Loop
+        Else
+
+            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            txt_Search.Clear()
+        End If
+
+
+    End Sub
+
+
     Private Sub datagrid_ExtrainingNew_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_ExtrainingNew.CellClick
 
 
@@ -672,10 +820,16 @@ Public Class External_training
             txt_Search.Text = .Cells(0).Value.ToString
         End With
 
-
+        search_expert_panal()
+        search_employees_panal()
+        search_Expenses_out_panal()
         Panel1.Visible = False
 
     End Sub
+
+
+#End Region
+
 
 #Region "search"
 
@@ -919,7 +1073,7 @@ Public Class External_training
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
 
 
-        Dim x1, x2, x3, x4 As Integer
+        Dim x1, x2, x3 As Integer
 
         x1 = TextBox1.Text
         x2 = TextBox2.Text
@@ -928,6 +1082,72 @@ Public Class External_training
 
 
         TextBox4.Text = x1 + x2 + x3
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Panel1.Visible = False
+    End Sub
+
+    Private Sub txt_Search_panal_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search_panal.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+            '1
+            Dim cn As New SqlConnection(strConn)
+            '2
+            Dim s, s1 As String
+            If RP1.Checked = True Then
+                s1 = " trainingEx_id like @trainingEx_id"
+            Else
+                s1 = " training_name like @training_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+            End If
+            s = "select * from External_training where " & s1
+            '3
+            With cn
+                If .State = ConnectionState.Open Then .Close()
+                .ConnectionString = strConn
+                .Open()
+            End With
+            Dim CM As New SqlCommand(s, cn)
+            Dim DR As SqlDataReader
+            CM.Parameters.Clear()
+
+            If RP1.Checked = True Then
+                CM.Parameters.Add("@trainingEx_id", SqlDbType.NVarChar, 10).Value = txt_Search_panal.Text & "%"
+            Else
+                CM.Parameters.Add("@training_name", SqlDbType.NVarChar, 100).Value = txt_Search_panal.Text & "%"
+            End If
+            DR = CM.ExecuteReader
+            Dim dt As New DataTable
+            dt.Load(DR)
+            '4
+            If (dt.Rows.Count = 0) Then
+                MessageBox.Show("ไม่พบข้อมูล")
+            Else
+                datagrid_ExtrainingNew.DataSource = dt
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim cn As New SqlConnection(strConn)
+        Dim s As String = ""
+        '2.เขียน sql'
+        s = "select * from External_training"
+        '3'
+        Dim da As New SqlDataAdapter(s, cn)
+        Dim ds As New DataSet
+        da.Fill(ds, "extra")
+        '4.'
+        datagrid_ExtrainingNew.DataSource = ds.Tables("extra")
+        '5'
+        cn.Close()
+
+        txt_Search_panal.Text = ""
 
     End Sub
 End Class

@@ -72,7 +72,7 @@ Partial Class Employees
         Me.txt_emp_name.MaxLength = 50
         Me.txt_emp_name.Name = "txt_emp_name"
         Me.txt_emp_name.Size = New System.Drawing.Size(165, 20)
-        Me.txt_emp_name.TabIndex = 0
+        Me.txt_emp_name.TabIndex = 1
         '
         'txt_emp_lastname
         '
@@ -80,7 +80,7 @@ Partial Class Employees
         Me.txt_emp_lastname.MaxLength = 50
         Me.txt_emp_lastname.Name = "txt_emp_lastname"
         Me.txt_emp_lastname.Size = New System.Drawing.Size(165, 20)
-        Me.txt_emp_lastname.TabIndex = 0
+        Me.txt_emp_lastname.TabIndex = 2
         '
         'txt_emp_position
         '
@@ -88,7 +88,7 @@ Partial Class Employees
         Me.txt_emp_position.MaxLength = 50
         Me.txt_emp_position.Name = "txt_emp_position"
         Me.txt_emp_position.Size = New System.Drawing.Size(165, 20)
-        Me.txt_emp_position.TabIndex = 0
+        Me.txt_emp_position.TabIndex = 4
         '
         'cmb_emp_degree
         '
@@ -97,7 +97,7 @@ Partial Class Employees
         Me.cmb_emp_degree.Location = New System.Drawing.Point(247, 170)
         Me.cmb_emp_degree.Name = "cmb_emp_degree"
         Me.cmb_emp_degree.Size = New System.Drawing.Size(165, 21)
-        Me.cmb_emp_degree.TabIndex = 1
+        Me.cmb_emp_degree.TabIndex = 3
         '
         'cmb_emp_level
         '
@@ -106,7 +106,7 @@ Partial Class Employees
         Me.cmb_emp_level.Location = New System.Drawing.Point(247, 225)
         Me.cmb_emp_level.Name = "cmb_emp_level"
         Me.cmb_emp_level.Size = New System.Drawing.Size(165, 21)
-        Me.cmb_emp_level.TabIndex = 1
+        Me.cmb_emp_level.TabIndex = 5
         '
         'cmb_emp_department
         '
@@ -114,7 +114,7 @@ Partial Class Employees
         Me.cmb_emp_department.Location = New System.Drawing.Point(548, 194)
         Me.cmb_emp_department.Name = "cmb_emp_department"
         Me.cmb_emp_department.Size = New System.Drawing.Size(189, 21)
-        Me.cmb_emp_department.TabIndex = 1
+        Me.cmb_emp_department.TabIndex = 6
         '
         'txt_emp_division
         '
@@ -122,7 +122,7 @@ Partial Class Employees
         Me.txt_emp_division.MaxLength = 30
         Me.txt_emp_division.Name = "txt_emp_division"
         Me.txt_emp_division.Size = New System.Drawing.Size(189, 20)
-        Me.txt_emp_division.TabIndex = 0
+        Me.txt_emp_division.TabIndex = 7
         '
         'Label1
         '
@@ -220,7 +220,7 @@ Partial Class Employees
         Me.add_data.Location = New System.Drawing.Point(247, 301)
         Me.add_data.Name = "add_data"
         Me.add_data.Size = New System.Drawing.Size(107, 37)
-        Me.add_data.TabIndex = 4
+        Me.add_data.TabIndex = 9
         Me.add_data.Text = "เพิ่ม"
         Me.add_data.UseVisualStyleBackColor = True
         '
@@ -230,7 +230,7 @@ Partial Class Employees
         Me.edit_data.Location = New System.Drawing.Point(360, 301)
         Me.edit_data.Name = "edit_data"
         Me.edit_data.Size = New System.Drawing.Size(107, 37)
-        Me.edit_data.TabIndex = 4
+        Me.edit_data.TabIndex = 10
         Me.edit_data.Text = "แก้ไข"
         Me.edit_data.UseVisualStyleBackColor = True
         '
@@ -240,7 +240,7 @@ Partial Class Employees
         Me.upte_data.Location = New System.Drawing.Point(473, 301)
         Me.upte_data.Name = "upte_data"
         Me.upte_data.Size = New System.Drawing.Size(107, 37)
-        Me.upte_data.TabIndex = 4
+        Me.upte_data.TabIndex = 11
         Me.upte_data.Text = "บันทึก"
         Me.upte_data.UseVisualStyleBackColor = True
         '
@@ -250,7 +250,7 @@ Partial Class Employees
         Me.clear_data.Location = New System.Drawing.Point(609, 301)
         Me.clear_data.Name = "clear_data"
         Me.clear_data.Size = New System.Drawing.Size(107, 37)
-        Me.clear_data.TabIndex = 4
+        Me.clear_data.TabIndex = 12
         Me.clear_data.Text = "ลบ"
         Me.clear_data.UseVisualStyleBackColor = True
         '
@@ -314,10 +314,10 @@ Partial Class Employees
         '
         Me.Date_start.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Date_start.Location = New System.Drawing.Point(383, 265)
-        Me.Date_start.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Date_start.Margin = New System.Windows.Forms.Padding(4)
         Me.Date_start.Name = "Date_start"
         Me.Date_start.Size = New System.Drawing.Size(197, 20)
-        Me.Date_start.TabIndex = 89
+        Me.Date_start.TabIndex = 8
         '
         'cancel_data
         '
@@ -325,7 +325,7 @@ Partial Class Employees
         Me.cancel_data.Location = New System.Drawing.Point(722, 300)
         Me.cancel_data.Name = "cancel_data"
         Me.cancel_data.Size = New System.Drawing.Size(82, 38)
-        Me.cancel_data.TabIndex = 4
+        Me.cancel_data.TabIndex = 13
         Me.cancel_data.Text = "ยกเลิก"
         Me.cancel_data.UseVisualStyleBackColor = True
         '
@@ -354,7 +354,7 @@ Partial Class Employees
         Me.R1.Location = New System.Drawing.Point(6, 15)
         Me.R1.Name = "R1"
         Me.R1.Size = New System.Drawing.Size(91, 17)
-        Me.R1.TabIndex = 7
+        Me.R1.TabIndex = 2
         Me.R1.TabStop = True
         Me.R1.Text = "ค้นหาด้วยรหัส"
         Me.R1.UseVisualStyleBackColor = True
@@ -365,7 +365,7 @@ Partial Class Employees
         Me.R2.Location = New System.Drawing.Point(6, 38)
         Me.R2.Name = "R2"
         Me.R2.Size = New System.Drawing.Size(85, 17)
-        Me.R2.TabIndex = 8
+        Me.R2.TabIndex = 1
         Me.R2.TabStop = True
         Me.R2.Text = "ค้นหาด้วยชื่อ"
         Me.R2.UseVisualStyleBackColor = True

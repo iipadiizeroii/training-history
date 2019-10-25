@@ -49,8 +49,13 @@ Partial Class External_training
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RP2 = New System.Windows.Forms.RadioButton()
+        Me.RP1 = New System.Windows.Forms.RadioButton()
+        Me.txt_Search_panal = New System.Windows.Forms.TextBox()
         Me.datagrid_ExtrainingNew = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -65,16 +70,18 @@ Partial Class External_training
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.datagrid_ExtrainingNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -97,7 +104,7 @@ Partial Class External_training
         Me.add_data_emp.Location = New System.Drawing.Point(6, 23)
         Me.add_data_emp.Name = "add_data_emp"
         Me.add_data_emp.Size = New System.Drawing.Size(107, 37)
-        Me.add_data_emp.TabIndex = 9
+        Me.add_data_emp.TabIndex = 0
         Me.add_data_emp.Text = "เพิ่ม"
         Me.add_data_emp.UseVisualStyleBackColor = True
         '
@@ -107,7 +114,7 @@ Partial Class External_training
         Me.clear_data_emp.Location = New System.Drawing.Point(151, 23)
         Me.clear_data_emp.Name = "clear_data_emp"
         Me.clear_data_emp.Size = New System.Drawing.Size(107, 37)
-        Me.clear_data_emp.TabIndex = 5
+        Me.clear_data_emp.TabIndex = 1
         Me.clear_data_emp.Text = "ลบ"
         Me.clear_data_emp.UseVisualStyleBackColor = True
         '
@@ -174,7 +181,7 @@ Partial Class External_training
         Me.txt_long_term.Location = New System.Drawing.Point(121, 116)
         Me.txt_long_term.Name = "txt_long_term"
         Me.txt_long_term.Size = New System.Drawing.Size(65, 20)
-        Me.txt_long_term.TabIndex = 94
+        Me.txt_long_term.TabIndex = 7
         '
         'Label9
         '
@@ -191,17 +198,17 @@ Partial Class External_training
         Me.add_data.Location = New System.Drawing.Point(683, 46)
         Me.add_data.Name = "add_data"
         Me.add_data.Size = New System.Drawing.Size(80, 37)
-        Me.add_data.TabIndex = 11
+        Me.add_data.TabIndex = 1
         Me.add_data.Text = "เพิ่ม"
         Me.add_data.UseVisualStyleBackColor = True
         '
         'clear_data
         '
         Me.clear_data.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.clear_data.Location = New System.Drawing.Point(855, 87)
+        Me.clear_data.Location = New System.Drawing.Point(855, 90)
         Me.clear_data.Name = "clear_data"
         Me.clear_data.Size = New System.Drawing.Size(80, 37)
-        Me.clear_data.TabIndex = 10
+        Me.clear_data.TabIndex = 11
         Me.clear_data.Text = "ลบ"
         Me.clear_data.UseVisualStyleBackColor = True
         '
@@ -211,7 +218,7 @@ Partial Class External_training
         Me.cancel_data.Location = New System.Drawing.Point(769, 89)
         Me.cancel_data.Name = "cancel_data"
         Me.cancel_data.Size = New System.Drawing.Size(80, 38)
-        Me.cancel_data.TabIndex = 6
+        Me.cancel_data.TabIndex = 10
         Me.cancel_data.Text = "ยกเลิก"
         Me.cancel_data.UseVisualStyleBackColor = True
         '
@@ -230,7 +237,7 @@ Partial Class External_training
         Me.upte_data.Location = New System.Drawing.Point(769, 46)
         Me.upte_data.Name = "upte_data"
         Me.upte_data.Size = New System.Drawing.Size(80, 37)
-        Me.upte_data.TabIndex = 7
+        Me.upte_data.TabIndex = 8
         Me.upte_data.Text = "บันทึก"
         Me.upte_data.UseVisualStyleBackColor = True
         '
@@ -240,7 +247,7 @@ Partial Class External_training
         Me.edit_data.Location = New System.Drawing.Point(683, 90)
         Me.edit_data.Name = "edit_data"
         Me.edit_data.Size = New System.Drawing.Size(80, 37)
-        Me.edit_data.TabIndex = 8
+        Me.edit_data.TabIndex = 9
         Me.edit_data.Text = "แก้ไข"
         Me.edit_data.UseVisualStyleBackColor = True
         '
@@ -251,35 +258,35 @@ Partial Class External_training
         Me.cmb_course_name.Location = New System.Drawing.Point(121, 61)
         Me.cmb_course_name.Name = "cmb_course_name"
         Me.cmb_course_name.Size = New System.Drawing.Size(165, 21)
-        Me.cmb_course_name.TabIndex = 2
+        Me.cmb_course_name.TabIndex = 3
         '
         'txt_training_location
         '
         Me.txt_training_location.Location = New System.Drawing.Point(504, 87)
         Me.txt_training_location.Name = "txt_training_location"
         Me.txt_training_location.Size = New System.Drawing.Size(165, 20)
-        Me.txt_training_location.TabIndex = 1
+        Me.txt_training_location.TabIndex = 6
         '
         'txt_course_id
         '
         Me.txt_course_id.Location = New System.Drawing.Point(504, 61)
         Me.txt_course_id.Name = "txt_course_id"
         Me.txt_course_id.Size = New System.Drawing.Size(165, 20)
-        Me.txt_course_id.TabIndex = 1
+        Me.txt_course_id.TabIndex = 4
         '
         'txt_trainingOut_name
         '
         Me.txt_trainingOut_name.Location = New System.Drawing.Point(504, 35)
         Me.txt_trainingOut_name.Name = "txt_trainingOut_name"
         Me.txt_trainingOut_name.Size = New System.Drawing.Size(165, 20)
-        Me.txt_trainingOut_name.TabIndex = 1
+        Me.txt_trainingOut_name.TabIndex = 5
         '
         'txt_trainingOut_id
         '
         Me.txt_trainingOut_id.Location = New System.Drawing.Point(121, 35)
         Me.txt_trainingOut_id.Name = "txt_trainingOut_id"
         Me.txt_trainingOut_id.Size = New System.Drawing.Size(165, 20)
-        Me.txt_trainingOut_id.TabIndex = 1
+        Me.txt_trainingOut_id.TabIndex = 2
         '
         'Label8
         '
@@ -337,17 +344,62 @@ Partial Class External_training
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.datagrid_ExtrainingNew)
-        Me.Panel1.Location = New System.Drawing.Point(12, 597)
+        Me.Panel1.Location = New System.Drawing.Point(164, 92)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(710, 176)
+        Me.Panel1.Size = New System.Drawing.Size(697, 252)
         Me.Panel1.TabIndex = 97
         Me.Panel1.Visible = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button7)
+        Me.GroupBox3.Controls.Add(Me.RP2)
+        Me.GroupBox3.Controls.Add(Me.RP1)
+        Me.GroupBox3.Controls.Add(Me.txt_Search_panal)
+        Me.GroupBox3.Location = New System.Drawing.Point(15, 10)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(378, 62)
+        Me.GroupBox3.TabIndex = 96
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "ค้นหา"
+        '
+        'RP2
+        '
+        Me.RP2.AutoSize = True
+        Me.RP2.Location = New System.Drawing.Point(6, 38)
+        Me.RP2.Name = "RP2"
+        Me.RP2.Size = New System.Drawing.Size(85, 17)
+        Me.RP2.TabIndex = 8
+        Me.RP2.TabStop = True
+        Me.RP2.Text = "ค้นหาด้วยชื่อ"
+        Me.RP2.UseVisualStyleBackColor = True
+        '
+        'RP1
+        '
+        Me.RP1.AutoSize = True
+        Me.RP1.Location = New System.Drawing.Point(6, 15)
+        Me.RP1.Name = "RP1"
+        Me.RP1.Size = New System.Drawing.Size(91, 17)
+        Me.RP1.TabIndex = 7
+        Me.RP1.TabStop = True
+        Me.RP1.Text = "ค้นหาด้วยรหัส"
+        Me.RP1.UseVisualStyleBackColor = True
+        '
+        'txt_Search_panal
+        '
+        Me.txt_Search_panal.Location = New System.Drawing.Point(97, 35)
+        Me.txt_Search_panal.Name = "txt_Search_panal"
+        Me.txt_Search_panal.Size = New System.Drawing.Size(189, 20)
+        Me.txt_Search_panal.TabIndex = 0
         '
         'datagrid_ExtrainingNew
         '
         Me.datagrid_ExtrainingNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagrid_ExtrainingNew.Location = New System.Drawing.Point(3, 5)
+        Me.datagrid_ExtrainingNew.Location = New System.Drawing.Point(3, 78)
         Me.datagrid_ExtrainingNew.Name = "datagrid_ExtrainingNew"
         Me.datagrid_ExtrainingNew.Size = New System.Drawing.Size(691, 171)
         Me.datagrid_ExtrainingNew.TabIndex = 0
@@ -359,16 +411,25 @@ Partial Class External_training
         Me.GroupBox2.Location = New System.Drawing.Point(694, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(296, 46)
-        Me.GroupBox2.TabIndex = 92
+        Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(201, 17)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "ค้นหา"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'txt_Search
         '
         Me.txt_Search.Location = New System.Drawing.Point(6, 19)
         Me.txt_Search.Name = "txt_Search"
         Me.txt_Search.Size = New System.Drawing.Size(189, 20)
-        Me.txt_Search.TabIndex = 0
+        Me.txt_Search.TabIndex = 1
         '
         'ListView1
         '
@@ -385,7 +446,7 @@ Partial Class External_training
         Me.Button2.Location = New System.Drawing.Point(6, 23)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 37)
-        Me.Button2.TabIndex = 9
+        Me.Button2.TabIndex = 1
         Me.Button2.Text = "เพิ่ม"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -395,7 +456,7 @@ Partial Class External_training
         Me.Button3.Location = New System.Drawing.Point(151, 23)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(107, 37)
-        Me.Button3.TabIndex = 5
+        Me.Button3.TabIndex = 2
         Me.Button3.Text = "ลบ"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -408,7 +469,7 @@ Partial Class External_training
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(988, 312)
-        Me.TabControl1.TabIndex = 98
+        Me.TabControl1.TabIndex = 2
         '
         'TabPage1
         '
@@ -454,7 +515,7 @@ Partial Class External_training
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(980, 266)
+        Me.TabPage3.Size = New System.Drawing.Size(980, 286)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "บันทึกค่าใช้จ่าย"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -505,6 +566,15 @@ Partial Class External_training
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(132, 20)
         Me.TextBox1.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(285, 84)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(56, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "ค่าเดินทาง"
         '
         'Label12
         '
@@ -560,39 +630,41 @@ Partial Class External_training
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "บาท"
         '
-        'Button5
+        'Button6
         '
-        Me.Button5.Location = New System.Drawing.Point(201, 17)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "ค้นหา"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button6.Location = New System.Drawing.Point(619, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 97
+        Me.Button6.Text = "ออก"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'Label11
+        'Button7
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(285, 84)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(56, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "ค่าเดินทาง"
+        Me.Button7.Location = New System.Drawing.Point(297, 32)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 98
+        Me.Button7.Text = "ยกเลิก"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'External_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1095, 704)
+        Me.ClientSize = New System.Drawing.Size(1023, 482)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.TabControl1)
         Me.Name = "External_training"
         Me.Text = "External_training"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         CType(Me.datagrid_ExtrainingNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -655,4 +727,10 @@ Partial Class External_training
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents RP2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RP1 As System.Windows.Forms.RadioButton
+    Friend WithEvents txt_Search_panal As System.Windows.Forms.TextBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
 End Class

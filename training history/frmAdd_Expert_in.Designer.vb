@@ -40,28 +40,28 @@ Partial Class frmAdd_Expert_in
         Me.TextBox3.Location = New System.Drawing.Point(102, 70)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox3.TabIndex = 23
+        Me.TextBox3.TabIndex = 2
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(102, 38)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox2.TabIndex = 24
+        Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(102, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.TextBox1.TabIndex = 0
         '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(102, 112)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 22
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "ยกเลิก"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -70,7 +70,7 @@ Partial Class frmAdd_Expert_in
         Me.Button3.Location = New System.Drawing.Point(338, 1)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 20
+        Me.Button3.TabIndex = 3
         Me.Button3.Text = "ค้นหา"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -79,7 +79,7 @@ Partial Class frmAdd_Expert_in
         Me.Button1.Location = New System.Drawing.Point(21, 112)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 21
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "ตกลง"
         Me.Button1.UseVisualStyleBackColor = True
         '
