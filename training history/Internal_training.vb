@@ -310,8 +310,6 @@ Public Class Internal_training
 
 #End Region
 
-
-
 #Region "cleardata"
     Private Sub cleardata()
 
@@ -337,6 +335,8 @@ Public Class Internal_training
 
     End Sub
 #End Region
+
+
 
     '#Region "คลิกเลือกข้อมูลใน datagrid"
     '    Private Sub datagrid_Intraining_CellClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -403,22 +403,24 @@ Public Class Internal_training
 
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
-    End Sub
 
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
         cleardata()
         add_trainning()
         upte_data.Enabled = True
-
+        cancel_data.Enabled = True
+        edit_data.Enabled = False
+        add_data.Enabled = False
     End Sub
 
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_trainning()
         upte_data.Enabled = True
+        edit_data.Enabled = False
+        cancel_data.Enabled = False
+        add_data.Enabled = False
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
@@ -426,8 +428,25 @@ Public Class Internal_training
         update_training()
         update_Expenses()
         upte_data.Enabled = False
+        edit_data.Enabled = True
+        add_data.Enabled = True
+        cancel_data.Enabled = True
         numAEMO = 0
         numAEXI = 0
+
+    End Sub
+
+    Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
+
+        upte_data.Enabled = False
+        edit_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
+        cleardata()
+        cn.Close()
+
+
+        'showdata()
 
     End Sub
 
@@ -477,18 +496,16 @@ Public Class Internal_training
             cleardata()
         End If
 
-    End Sub
-
-    Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
-
-        cleardata()
-        cn.Close()
-        'showdata()
+        upte_data.Enabled = False
+        edit_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 
+   
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         frmInternal_training.Show()
 
@@ -570,7 +587,7 @@ Public Class Internal_training
         End With
         dr = cm.ExecuteReader
 
-        numAEXO = 0
+        numAEXI = 0
         ListView1.Items.Clear()
 
 
@@ -587,8 +604,8 @@ Public Class Internal_training
 
                 Dim LV1 As New ListViewItem
                 LV1.UseItemStyleForSubItems = False
-                numAEXO = numAEXO + 1
-                LV1.Text = numAEXO
+                numAEXI = numAEXI + 1
+                LV1.Text = numAEXI
                 LV1.SubItems.Add(dr.GetString(8))
                 LV1.SubItems.Add(dr.GetString(9))
                 LV1.SubItems.Add(dr.GetValue(10))
@@ -716,14 +733,14 @@ Public Class Internal_training
 
         End If
 
+        'ถ้ากดแก้ไขแล้ว เพิ่มรายชื่อเข้าไปใหม่่ ลำดับจะเพิ่มต่อไปเรื่อย ๆ เป็นโค้ดแบบเก่า
+        'For i As Integer = 0 To ListView1.Items.Count
+        '    numAEXI = i
+        'Next
 
-        For i As Integer = 0 To ListView1.Items.Count
-            numAEXI = i
-        Next
-
-        For ii As Integer = 0 To ListView2.Items.Count
-            numAEMO = ii
-        Next
+        'For ii As Integer = 0 To ListView2.Items.Count
+        '    numAEMO = ii
+        'Next
 
 
 
@@ -796,7 +813,7 @@ Public Class Internal_training
         End With
         dr = cm.ExecuteReader
 
-        numAEXO = 0
+        numAEXI = 0
         ListView1.Items.Clear()
 
 
@@ -805,8 +822,8 @@ Public Class Internal_training
 
                 Dim LV1 As New ListViewItem
                 LV1.UseItemStyleForSubItems = False
-                numAEXO = numAEXO + 1
-                LV1.Text = numAEXO
+                numAEXI = numAEXI + 1
+                LV1.Text = numAEXI
                 LV1.SubItems.Add(dr.GetString(8))
                 LV1.SubItems.Add(dr.GetString(9))
                 LV1.SubItems.Add(dr.GetValue(10))
@@ -936,8 +953,18 @@ Public Class Internal_training
         search_expert_panel()
         search_employees_panel()
         search_Expenses_in_panel()
-        Panel1.Visible = False
 
+        'For i As Integer = 0 To ListView1.Items.Count
+        '    numAEXI = i
+        'Next
+
+        'For ii As Integer = 0 To ListView2.Items.Count
+        '    numAEMO = ii
+        'Next
+
+        Panel1.Visible = False
+        edit_data.Enabled = True
+        clear_data.Enabled = True
 
     End Sub
 
@@ -1013,6 +1040,20 @@ Public Class Internal_training
 
         txt_Search_panal.Text = ""
         RP1.Checked = True
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+
+
+        search_expert()
+        search_employees()
+        search_Expenses_in()
+        edit_data.Enabled = True
+        cancel_data.Enabled = True
+        clear_data.Enabled = True
+
 
     End Sub
 End Class

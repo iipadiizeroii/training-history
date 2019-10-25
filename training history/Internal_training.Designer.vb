@@ -24,7 +24,6 @@ Partial Class Internal_training
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.add_data = New System.Windows.Forms.Button()
         Me.clear_data = New System.Windows.Forms.Button()
         Me.cancel_data = New System.Windows.Forms.Button()
@@ -96,7 +95,6 @@ Partial Class Internal_training
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button8)
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.add_data)
         Me.GroupBox1.Controls.Add(Me.clear_data)
         Me.GroupBox1.Controls.Add(Me.cancel_data)
@@ -126,21 +124,12 @@ Partial Class Internal_training
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(338, 33)
+        Me.Button8.Location = New System.Drawing.Point(292, 33)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(40, 23)
         Me.Button8.TabIndex = 99
         Me.Button8.Text = "..."
         Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(292, 33)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(40, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'add_data
         '
@@ -736,7 +725,6 @@ Partial Class Internal_training
     Friend WithEvents txt_long_term As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ListView1 As System.Windows.Forms.ListView

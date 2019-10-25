@@ -27,7 +27,6 @@ Partial Class External_training
         Me.clear_data_emp = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_long_term = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -49,7 +48,9 @@ Partial Class External_training
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.RP2 = New System.Windows.Forms.RadioButton()
         Me.RP1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search_panal = New System.Windows.Forms.TextBox()
@@ -77,8 +78,6 @@ Partial Class External_training
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -121,7 +120,6 @@ Partial Class External_training
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button4)
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txt_long_term)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -151,21 +149,12 @@ Partial Class External_training
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(338, 35)
+        Me.Button4.Location = New System.Drawing.Point(292, 33)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(40, 23)
         Me.Button4.TabIndex = 98
         Me.Button4.Text = "..."
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(292, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(40, 23)
-        Me.Button1.TabIndex = 96
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -354,6 +343,15 @@ Partial Class External_training
         Me.Panel1.TabIndex = 97
         Me.Panel1.Visible = False
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(619, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 97
+        Me.Button6.Text = "ออก"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Button7)
@@ -366,6 +364,15 @@ Partial Class External_training
         Me.GroupBox3.TabIndex = 96
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ค้นหา"
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(297, 32)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 98
+        Me.Button7.Text = "ยกเลิก"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'RP2
         '
@@ -630,24 +637,6 @@ Partial Class External_training
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "บาท"
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(619, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 97
-        Me.Button6.Text = "ออก"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(297, 32)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 98
-        Me.Button7.Text = "ยกเลิก"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'External_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -701,7 +690,6 @@ Partial Class External_training
     Friend WithEvents txt_long_term As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ListView1 As System.Windows.Forms.ListView

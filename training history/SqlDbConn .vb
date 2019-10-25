@@ -3,8 +3,8 @@ Imports System.Data
 
 Module SqlDbConn
 
-    'Public strConn As String = "data source = DUCK-TNT\SQL2012;database = Data_Training;integrated security = true"
-    Public strConn As String = "data source = KT1-PC-164\SQL2012;database = Data_Training;integrated security = true"
+    Public strConn As String = "data source = DUCK-TNT\SQL2012;database = Data_Training;integrated security = true"
+    'Public strConn As String = "data source = KT1-PC-164\SQL2012;database = Data_Training;integrated security = true"
     'Public strConn As String = "data source = DESKTOP-HUU05QN\SQL2012;database = Data_Training;integrated security = true"
 
     Public dbconnect As New SqlConnection(strConn)
@@ -22,9 +22,9 @@ Module SqlDbConn
     Friend courseID As String 'เก็บค่า รหัสของหลักสูตรเพื่อนำไปเปรียบเทียบคนที่ยังไม่ได้เรียนหลักสูตรนี้
 
 
-    Friend numAEXI As Integer
-    Friend numAEXO As Integer
-    Friend numAEMO As Integer
+    Friend numAEXI As Integer 'ใช้นับลำดับใน เพิ่มรายชื่อวิทยากรภายใน
+    Friend numAEXO As Integer 'ใช้นับลำดับใน เพิ่มรายชื่อวิทยากรภายนอก
+    Friend numAEMO As Integer 'ใช้นับลำดับใน เพิ่มรายชื่อผู้เข้าอบรม
 
     
     Friend str0 As String = ""

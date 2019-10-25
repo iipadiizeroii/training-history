@@ -207,6 +207,7 @@ Public Class frmadd_Expert_out
 
 
                 numAEXO = numAEXO + 1
+
                 Dim anydata() As String
                 anydata = New String() {numAEXO, str1, str2, str3, str4, str5, str6}
 

@@ -442,6 +442,8 @@ Public Class External_training
         TextBox2.Text = "0"
         TextBox3.Text = "0"
         TextBox4.Text = "0"
+        upte_data.Enabled = False
+        edit_data.Enabled = False
         cmb_course()
         
 
@@ -468,19 +470,36 @@ Public Class External_training
 
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
-        cleardata()
+
         add_trainningOut()
+        cleardata()
+        upte_data.Enabled = True
+        cancel_data.Enabled = True
+        edit_data.Enabled = False
+        add_data.Enabled = False
+        
 
     End Sub
 
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_trainningOut()
+        upte_data.Enabled = True
+        edit_data.Enabled = False
+        cancel_data.Enabled = False
+        add_data.Enabled = False
+
 
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
+        upte_data.Enabled = False
+        edit_data.Enabled = True
+        add_data.Enabled = True
+        cancel_data.Enabled = True
+        numAEMO = 0
+        numAEXO = 0
         update_trainingOut()
         update_Expenses()
 
@@ -489,6 +508,10 @@ Public Class External_training
 
     Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
 
+        upte_data.Enabled = False
+        edit_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
         cleardata()
         cn.Close()
         'showdata()
@@ -530,7 +553,7 @@ Public Class External_training
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         frmExtermal_training.Show()
 
@@ -825,6 +848,9 @@ Public Class External_training
         search_Expenses_out_panal()
         Panel1.Visible = False
 
+        edit_data.Enabled = True
+        clear_data.Enabled = True
+
     End Sub
 
 
@@ -999,6 +1025,9 @@ Public Class External_training
             search_expert()
             search_employees()
             search_Expenses_out()
+            edit_data.Enabled = True
+            cancel_data.Enabled = True
+            clear_data.Enabled = True
             ''--2.SQL
             'sb = New StringBuilder
             'sb.Append("Select * ")
@@ -1148,6 +1177,19 @@ Public Class External_training
         cn.Close()
 
         txt_Search_panal.Text = ""
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        search_expert()
+        search_employees()
+        search_Expenses_out()
+        edit_data.Enabled = True
+        cancel_data.Enabled = True
+        clear_data.Enabled = True
+
+        cn.Close()
 
     End Sub
 End Class
