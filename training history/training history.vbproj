@@ -179,6 +179,12 @@
       <DependentUpon>RP_Employees.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RP_PO_internal_training.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RP_PO_internal_training.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SqlDbConn .vb" />
     <Compile Include="test01.Designer.vb">
       <DependentUpon>test01.vb</DependentUpon>
@@ -241,6 +247,10 @@
     <EmbeddedResource Include="RP_Employees.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RP_Employees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RP_PO_internal_training.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RP_PO_internal_training.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="test01.resx">
       <DependentUpon>test01.vb</DependentUpon>
