@@ -387,3 +387,6 @@ C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_histo
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.vbprojResolveAssemblyReference.cache
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.test_PR.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.test_PR02.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.vbprojResolveAssemblyReference.cache
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test_PR.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test_PR02.resources
