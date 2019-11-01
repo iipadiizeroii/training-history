@@ -271,15 +271,16 @@ Public Class External_training
         sb = New StringBuilder
 
         If savestatus = "Add" Then
-            sb.Append("Insert into  Expenses_out (trainingEx_id,Expert,Course,Travel_expenses,Total)")
-            sb.Append("Values (@trainingEx_id,@Expert,@Course,@Travel_expenses,@Total)")
+            sb.Append("Insert into  Expenses_out (trainingEx_id,Expert,Course,Travel_expenses,Total,Date_out)")
+            sb.Append("Values (@trainingEx_id,@Expert,@Course,@Travel_expenses,@Total,@Date_out)")
 
         ElseIf savestatus = "Edit" Then
             sb.Append("Update Expenses_out")
             sb.Append(" set Expert = @Expert,")
             sb.Append("Course = @Course,")
             sb.Append("Travel_expenses = @Travel_expenses,")
-            sb.Append("Total = @Total ")
+            sb.Append("Total = @Total, ")
+            sb.Append("Date_out = @Date_out ")
             sb.Append(" Where trainingEx_id = @trainingEx_id")
 
         End If
@@ -294,6 +295,7 @@ Public Class External_training
             .Add("@Course", SqlDbType.Int).Value = TextBox2.Text
             .Add("@Travel_expenses", SqlDbType.Int).Value = TextBox3.Text
             .Add("@Total", SqlDbType.Int).Value = TextBox4.Text
+            .Add("@Date_out", SqlDbType.Date).Value = Date_training.Text
             cmm.ExecuteNonQuery()
         End With
 

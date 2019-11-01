@@ -9,7 +9,7 @@ Public Class test_PR
         Dim rpt2 As New ReportDocument()
         Dim directory As String = My.Application.Info.DirectoryPath
         'rpt.Load(directory & "\myCrystalReport1.rpt")
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_in.rpt")
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expenses_in.rpt")
         rpt.SetParameterValue("trainingdate1", Me.Date_training1.Text)
         rpt.SetParameterValue("trainingdate2", Me.Date_training2.Text)
 

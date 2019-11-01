@@ -273,8 +273,8 @@ Public Class Internal_training
         sb = New StringBuilder
 
         If savestatus = "Add" Then
-            sb.Append("Insert into  Expenses_in (trainingIn_id,Expert,Food_expert,Snack,Course,Total)")
-            sb.Append("Values (@trainingIn_id,@Expert,@Food_expert,@Snack,@Course,@Total)")
+            sb.Append("Insert into  Expenses_in (trainingIn_id,Expert,Food_expert,Snack,Course,Total,Date_in)")
+            sb.Append("Values (@trainingIn_id,@Expert,@Food_expert,@Snack,@Course,@Total,@Date_in)")
 
         ElseIf savestatus = "Edit" Then
             sb.Append("Update Expenses_in")
@@ -282,7 +282,8 @@ Public Class Internal_training
             sb.Append("Food_expert = @Food_expert,")
             sb.Append("Snack = @Snack,")
             sb.Append("Course = @Course,")
-            sb.Append("Total = @Total ")
+            sb.Append("Total = @Total, ")
+            sb.Append("Date_in = @Date_in ")
             sb.Append(" Where trainingIn_id = @trainingIn_id")
 
         End If
@@ -298,6 +299,7 @@ Public Class Internal_training
             .Add("@Snack", SqlDbType.Int).Value = TextBox3.Text
             .Add("@Course", SqlDbType.Int).Value = TextBox4.Text
             .Add("@Total", SqlDbType.Int).Value = TextBox5.Text
+            .Add("@Date_in", SqlDbType.Date).Value = Date_training.Text
             cmm.ExecuteNonQuery()
         End With
 
