@@ -78,3 +78,7 @@ from Expenses_in EI
 inner join Internal_training IT on EI.trainingIn_id = IT.trainingIn_id
 where Ei.trainingIn_id = '1910007'
 
+
+select *
+from Expenses_in
+where Date_in  between '2019/10/01' and '2019/10/30'

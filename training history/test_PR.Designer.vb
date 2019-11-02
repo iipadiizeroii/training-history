@@ -27,6 +27,8 @@ Partial Class test_PR
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Date_training1 = New System.Windows.Forms.DateTimePicker()
         Me.Date_training2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -76,11 +78,27 @@ Partial Class test_PR
         Me.Date_training2.Size = New System.Drawing.Size(165, 20)
         Me.Date_training2.TabIndex = 6
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(656, 13)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 7
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(778, 14)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 8
+        '
         'test_PR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1002, 586)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Date_training2)
         Me.Controls.Add(Me.Date_training1)
         Me.Controls.Add(Me.CrystalReportViewer1)
@@ -97,4 +115,6 @@ Partial Class test_PR
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents Date_training1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Date_training2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 End Class
