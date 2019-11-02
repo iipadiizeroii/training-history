@@ -177,6 +177,12 @@
       <DependentUpon>PR_Expert.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PR_Register.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PR_Register.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PR_Training.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,16 +208,16 @@
     <Compile Include="test01.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test_PR.Designer.vb">
-      <DependentUpon>test_PR.vb</DependentUpon>
+    <Compile Include="RP_PO_internal.Designer.vb">
+      <DependentUpon>RP_PO_internal.vb</DependentUpon>
     </Compile>
-    <Compile Include="test_PR.vb">
+    <Compile Include="RP_PO_internal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test_PR02.Designer.vb">
-      <DependentUpon>test_PR02.vb</DependentUpon>
+    <Compile Include="RP_Register.Designer.vb">
+      <DependentUpon>RP_Register.vb</DependentUpon>
     </Compile>
-    <Compile Include="test_PR02.vb">
+    <Compile Include="RP_Register.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -266,6 +272,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Expert.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="PR_Register.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PR_Register.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_Training.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Training.vb</LastGenOutput>
@@ -281,11 +291,11 @@
     <EmbeddedResource Include="test01.resx">
       <DependentUpon>test01.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test_PR.resx">
-      <DependentUpon>test_PR.vb</DependentUpon>
+    <EmbeddedResource Include="RP_PO_internal.resx">
+      <DependentUpon>RP_PO_internal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test_PR02.resx">
-      <DependentUpon>test_PR02.vb</DependentUpon>
+    <EmbeddedResource Include="RP_Register.resx">
+      <DependentUpon>RP_Register.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

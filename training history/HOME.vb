@@ -39,6 +39,10 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        test_PR.Show()
+        RP_PO_internal.Show()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        RP_Register.Show()
     End Sub
 End Class
