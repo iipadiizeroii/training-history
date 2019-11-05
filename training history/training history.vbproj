@@ -171,6 +171,12 @@
       <DependentUpon>PR_Expenses_in.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PR_Expenses_yesr_in.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PR_Expenses_yesr_in.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PR_Expert.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -267,6 +273,10 @@
     <EmbeddedResource Include="PR_Expenses_in.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Expenses_in.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR_Expenses_yesr_in.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PR_Expenses_yesr_in.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PR_Expert.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
