@@ -144,6 +144,12 @@
     <Compile Include="HOME.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HOMERPOGRAM.Designer.vb">
+      <DependentUpon>HOMERPOGRAM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HOMERPOGRAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Internal_training.Designer.vb">
       <DependentUpon>Internal_training.vb</DependentUpon>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOMERPOGRAM.resx">
+      <DependentUpon>HOMERPOGRAM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Internal_training.resx">
       <DependentUpon>Internal_training.vb</DependentUpon>
