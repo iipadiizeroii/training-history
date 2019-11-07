@@ -15,7 +15,39 @@ traininghistory
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:training_history.My.Resources.Resources.confidential">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.cookie">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.credibility">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.data">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.directory">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.earth">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_contact_details_49">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:training_history.My.Resources.Resources.icons8_contacts_144">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_edit_48">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

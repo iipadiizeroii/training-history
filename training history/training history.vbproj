@@ -341,6 +341,27 @@
   <ItemGroup>
     <None Include="Resources\icons8-edit-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-details-49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\directory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confidential.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -391,3 +391,4 @@ C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_histo
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.HOMERPOGRAM.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.RP_PO_internal.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.RP_Register.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.HOMERPOGRAM.resources
