@@ -47,14 +47,14 @@ Partial Class HOMERPOGRAM
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(21, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(546, 66)
+        Me.Label1.Size = New System.Drawing.Size(436, 66)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "หน้าแรกโปรแกรมบันทึกข้อมูลการอบรม"
+        Me.Label1.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button2.Location = New System.Drawing.Point(6, 73)
+        Me.Button2.Location = New System.Drawing.Point(16, 73)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(178, 48)
         Me.Button2.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class HOMERPOGRAM
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button3.Location = New System.Drawing.Point(6, 127)
+        Me.Button3.Location = New System.Drawing.Point(16, 127)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(178, 48)
         Me.Button3.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class HOMERPOGRAM
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button4.Location = New System.Drawing.Point(6, 181)
+        Me.Button4.Location = New System.Drawing.Point(16, 181)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(178, 48)
         Me.Button4.TabIndex = 1
@@ -87,7 +87,7 @@ Partial Class HOMERPOGRAM
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button5.Location = New System.Drawing.Point(6, 235)
+        Me.Button5.Location = New System.Drawing.Point(16, 235)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(178, 48)
         Me.Button5.TabIndex = 1
@@ -98,7 +98,7 @@ Partial Class HOMERPOGRAM
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button6.Location = New System.Drawing.Point(6, 289)
+        Me.Button6.Location = New System.Drawing.Point(16, 289)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(178, 48)
         Me.Button6.TabIndex = 1
@@ -108,13 +108,13 @@ Partial Class HOMERPOGRAM
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.DodgerBlue
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.BackColor = System.Drawing.Color.PowderBlue
         Me.GroupBox1.Controls.Add(Me.Button6)
-        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Location = New System.Drawing.Point(21, 105)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(194, 358)
@@ -123,6 +123,7 @@ Partial Class HOMERPOGRAM
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.PowderBlue
         Me.GroupBox2.Location = New System.Drawing.Point(221, 106)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(699, 357)
@@ -142,9 +143,10 @@ Partial Class HOMERPOGRAM
         '
         'Button1
         '
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(6, 19)
+        Me.Button1.Location = New System.Drawing.Point(16, 19)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(178, 48)
         Me.Button1.TabIndex = 1
