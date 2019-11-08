@@ -26,118 +26,165 @@ Partial Class frmAdd_Expert_in
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgv_In = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgv_In, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(102, 70)
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox3.Location = New System.Drawing.Point(118, 76)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
         Me.TextBox3.TabIndex = 2
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(102, 38)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(118, 50)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(102, 4)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox1.Location = New System.Drawing.Point(118, 23)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 0
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(102, 112)
+        Me.Button2.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button2.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(119, 128)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(84, 36)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "ยกเลิก"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(338, 1)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "ค้นหา"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(21, 112)
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_ok_322
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(29, 128)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(84, 36)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "ตกลง"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 41)
+        Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(12, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.Size = New System.Drawing.Size(76, 28)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "ชื่อวิทยากร"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 67)
+        Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(12, 72)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.Size = New System.Drawing.Size(100, 28)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "ความเชี่ยวชาญ"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 11)
+        Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(12, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 28)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "รหัสวิทยากร"
         '
         'dgv_In
         '
         Me.dgv_In.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_In.Location = New System.Drawing.Point(12, 141)
+        Me.dgv_In.Location = New System.Drawing.Point(12, 170)
         Me.dgv_In.Name = "dgv_In"
         Me.dgv_In.Size = New System.Drawing.Size(856, 150)
         Me.dgv_In.TabIndex = 16
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 14)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(436, 108)
+        Me.GroupBox1.TabIndex = 20
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "ค้นหาวิทยากร"
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(226, 128)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(125, 36)
+        Me.Button4.TabIndex = 22
+        Me.Button4.Text = "เลือกทั้งหมด"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Button3.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(312, 60)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(87, 36)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "ค้นหา"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'frmAdd_Expert_in
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 299)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(874, 332)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgv_In)
         Me.Name = "frmAdd_Expert_in"
         Me.Text = "frmAdd_Expert_in"
         CType(Me.dgv_In, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -150,4 +197,6 @@ Partial Class frmAdd_Expert_in
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgv_In As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

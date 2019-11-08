@@ -30,8 +30,8 @@ Partial Class frmAdd_Employees_out
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgv_Em = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgv_Em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,19 +117,6 @@ Partial Class frmAdd_Employees_out
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ค้นหา"
         '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(213, 124)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 39)
-        Me.Button4.TabIndex = 21
-        Me.Button4.Text = "เลือกทั้งหมด"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -142,6 +129,19 @@ Partial Class frmAdd_Employees_out
         Me.Button3.Text = "ค้นหา"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(213, 124)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(125, 39)
+        Me.Button4.TabIndex = 21
+        Me.Button4.Text = "เลือกทั้งหมด"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -159,7 +159,7 @@ Partial Class frmAdd_Employees_out
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_checked_radio_button_32
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_ok_322
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(21, 124)
         Me.Button1.Name = "Button1"

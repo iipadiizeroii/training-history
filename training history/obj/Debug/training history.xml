@@ -95,6 +95,10 @@ traininghistory
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_ok_322">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:training_history.My.Resources.Resources.icons8_recycle_bin_32">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

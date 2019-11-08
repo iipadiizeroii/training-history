@@ -311,12 +311,12 @@ Partial Class Employees
         '
         'Date_start
         '
-        Me.Date_start.Font = New System.Drawing.Font("TH SarabunPSK", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Date_start.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Date_start.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Date_start.Location = New System.Drawing.Point(383, 280)
+        Me.Date_start.Location = New System.Drawing.Point(374, 282)
         Me.Date_start.Margin = New System.Windows.Forms.Padding(4)
         Me.Date_start.Name = "Date_start"
-        Me.Date_start.Size = New System.Drawing.Size(159, 22)
+        Me.Date_start.Size = New System.Drawing.Size(159, 20)
         Me.Date_start.TabIndex = 8
         '
         'clear_data
