@@ -23,16 +23,16 @@ Partial Class HOMERPOGRAM
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -53,12 +53,27 @@ Partial Class HOMERPOGRAM
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button7.Location = New System.Drawing.Point(-8, 9)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(208, 90)
+        Me.Button7.TabIndex = 3
+        Me.Button7.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(215, 58)
+        Me.GroupBox2.Location = New System.Drawing.Point(215, 61)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(719, 421)
+        Me.GroupBox2.Size = New System.Drawing.Size(719, 418)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
@@ -73,20 +88,19 @@ Partial Class HOMERPOGRAM
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
-        'Button7
+        'Button8
         '
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Location = New System.Drawing.Point(-8, 9)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(208, 78)
-        Me.Button7.TabIndex = 3
-        Me.Button7.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button8.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Location = New System.Drawing.Point(214, 13)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(720, 49)
+        Me.Button8.TabIndex = 4
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -189,20 +203,6 @@ Partial Class HOMERPOGRAM
         Me.Button3.TabIndex = 1
         Me.Button3.Text = "เพิ่มหลักสูตรการอบรม"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Location = New System.Drawing.Point(214, 13)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(720, 49)
-        Me.Button8.TabIndex = 4
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'HOMERPOGRAM
         '

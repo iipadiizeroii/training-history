@@ -39,6 +39,34 @@ traininghistory
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_add_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_add_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_add_database_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_calculator_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_cancel_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_check_all_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_checked_radio_button_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:training_history.My.Resources.Resources.icons8_contact_details_49">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -47,11 +75,35 @@ traininghistory
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_edit_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_edit_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:training_history.My.Resources.Resources.icons8_edit_48">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:training_history.My.Resources.Resources.icons8_meeting_room_96">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_news_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_recycle_bin_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_search_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.icons8_shutdown_32">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
