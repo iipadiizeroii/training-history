@@ -189,6 +189,18 @@
       <DependentUpon>PR_Expert.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PR_PO_EX_internal_training.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PR_PO_EX_internal_training.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PR_PO_internal_training.Designer.vb">
+      <DependentUpon>PR_PO_internal_training.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PR_PO_internal_training.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PR_Register.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,10 +219,16 @@
       <DependentUpon>RP_Employees.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RP_PO_internal_training.vb">
+    <Compile Include="RP_PO__EM_external_training.vb">
+      <DependentUpon>RP_PO__EM_external_training.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RP_PO__EM_internal_training.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RP_PO_internal_training.rpt</DependentUpon>
+      <DependentUpon>RP_PO__EM_internal_training.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SqlDbConn .vb" />
@@ -220,10 +238,10 @@
     <Compile Include="test01.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RP_PO_internal.Designer.vb">
-      <DependentUpon>RP_PO_internal.vb</DependentUpon>
+    <Compile Include="RP_Expenses_in.Designer.vb">
+      <DependentUpon>RP_Expenses_in.vb</DependentUpon>
     </Compile>
-    <Compile Include="RP_PO_internal.vb">
+    <Compile Include="RP_Expenses_in.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RP_Register.Designer.vb">
@@ -291,6 +309,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Expert.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="PR_PO_EX_internal_training.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PR_PO_EX_internal_training.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR_PO_internal_training.resx">
+      <DependentUpon>PR_PO_internal_training.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_Register.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Register.vb</LastGenOutput>
@@ -303,15 +328,19 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RP_Employees.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RP_PO_internal_training.rpt">
+    <EmbeddedResource Include="RP_PO__EM_external_training.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RP_PO_internal_training.vb</LastGenOutput>
+      <LastGenOutput>RP_PO__EM_external_training.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RP_PO__EM_internal_training.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RP_PO__EM_internal_training.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="test01.resx">
       <DependentUpon>test01.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RP_PO_internal.resx">
-      <DependentUpon>RP_PO_internal.vb</DependentUpon>
+    <EmbeddedResource Include="RP_Expenses_in.resx">
+      <DependentUpon>RP_Expenses_in.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RP_Register.resx">
       <DependentUpon>RP_Register.vb</DependentUpon>

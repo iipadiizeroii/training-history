@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class RP_PO_internal
+Partial Class RP_Expenses_in
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

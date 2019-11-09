@@ -1,6 +1,6 @@
 ﻿Imports CrystalDecisions.CrystalReports.Engine
 
-Public Class RP_PO_internal
+Public Class RP_Expenses_in
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -13,7 +13,7 @@ Public Class RP_PO_internal
         date_in = Date_training1.Value.ToString("yyyy-MM-dd")
         date_out = Date_training2.Value.ToString("yyyy-MM-dd")
         'rpt.Load(directory & "\myCrystalReport1.rpt")
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_in.rpt")
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expenses_in.rpt")
 
 
         rpt.SetParameterValue("startDate", date_in)

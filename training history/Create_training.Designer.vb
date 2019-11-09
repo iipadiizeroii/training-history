@@ -46,11 +46,11 @@ Partial Class Create_training
         Me.txt_course_id = New System.Windows.Forms.TextBox()
         Me.datagrid_course = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.OP1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.datagrid_course, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -82,7 +82,7 @@ Partial Class Create_training
         Me.GroupBox1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(808, 274)
+        Me.GroupBox1.Size = New System.Drawing.Size(604, 258)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "หลักสูตรการอบรม"
@@ -92,7 +92,7 @@ Partial Class Create_training
         Me.clear_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.clear_data.Image = Global.training_history.My.Resources.Resources.icons8_recycle_bin_32
         Me.clear_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.clear_data.Location = New System.Drawing.Point(411, 221)
+        Me.clear_data.Location = New System.Drawing.Point(411, 212)
         Me.clear_data.Name = "clear_data"
         Me.clear_data.Size = New System.Drawing.Size(78, 37)
         Me.clear_data.TabIndex = 10
@@ -105,7 +105,7 @@ Partial Class Create_training
         Me.cancel_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cancel_data.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
         Me.cancel_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cancel_data.Location = New System.Drawing.Point(495, 220)
+        Me.cancel_data.Location = New System.Drawing.Point(495, 211)
         Me.cancel_data.Name = "cancel_data"
         Me.cancel_data.Size = New System.Drawing.Size(91, 38)
         Me.cancel_data.TabIndex = 11
@@ -118,7 +118,7 @@ Partial Class Create_training
         Me.upte_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.upte_data.Image = Global.training_history.My.Resources.Resources.icons8_add_database_32
         Me.upte_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.upte_data.Location = New System.Drawing.Point(280, 221)
+        Me.upte_data.Location = New System.Drawing.Point(280, 212)
         Me.upte_data.Name = "upte_data"
         Me.upte_data.Size = New System.Drawing.Size(95, 37)
         Me.upte_data.TabIndex = 9
@@ -131,7 +131,7 @@ Partial Class Create_training
         Me.edit_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.edit_data.Image = Global.training_history.My.Resources.Resources.icons8_edit_32
         Me.edit_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.edit_data.Location = New System.Drawing.Point(189, 221)
+        Me.edit_data.Location = New System.Drawing.Point(189, 212)
         Me.edit_data.Name = "edit_data"
         Me.edit_data.Size = New System.Drawing.Size(85, 37)
         Me.edit_data.TabIndex = 8
@@ -144,7 +144,7 @@ Partial Class Create_training
         Me.add_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.add_data.Image = Global.training_history.My.Resources.Resources.icons8_add_32
         Me.add_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.add_data.Location = New System.Drawing.Point(98, 221)
+        Me.add_data.Location = New System.Drawing.Point(98, 212)
         Me.add_data.Name = "add_data"
         Me.add_data.Size = New System.Drawing.Size(85, 37)
         Me.add_data.TabIndex = 7
@@ -304,9 +304,9 @@ Partial Class Create_training
         'datagrid_course
         '
         Me.datagrid_course.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagrid_course.Location = New System.Drawing.Point(12, 304)
+        Me.datagrid_course.Location = New System.Drawing.Point(12, 358)
         Me.datagrid_course.Name = "datagrid_course"
-        Me.datagrid_course.Size = New System.Drawing.Size(543, 263)
+        Me.datagrid_course.Size = New System.Drawing.Size(604, 263)
         Me.datagrid_course.TabIndex = 1
         '
         'GroupBox2
@@ -315,19 +315,34 @@ Partial Class Create_training
         Me.GroupBox2.Controls.Add(Me.R2)
         Me.GroupBox2.Controls.Add(Me.R1)
         Me.GroupBox2.Controls.Add(Me.txt_Search)
-        Me.GroupBox2.Location = New System.Drawing.Point(561, 304)
+        Me.GroupBox2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(292, 274)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(259, 101)
+        Me.GroupBox2.Size = New System.Drawing.Size(324, 78)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(218, 32)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 36)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "ค้นหา"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'R2
         '
         Me.R2.AutoSize = True
-        Me.R2.Location = New System.Drawing.Point(6, 38)
+        Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.R2.Location = New System.Drawing.Point(112, 19)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(85, 17)
+        Me.R2.Size = New System.Drawing.Size(93, 30)
         Me.R2.TabIndex = 2
         Me.R2.TabStop = True
         Me.R2.Text = "ค้นหาด้วยชื่อ"
@@ -336,9 +351,10 @@ Partial Class Create_training
         'R1
         '
         Me.R1.AutoSize = True
-        Me.R1.Location = New System.Drawing.Point(6, 15)
+        Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.R1.Location = New System.Drawing.Point(6, 19)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 17)
+        Me.R1.Size = New System.Drawing.Size(100, 30)
         Me.R1.TabIndex = 1
         Me.R1.TabStop = True
         Me.R1.Text = "ค้นหาด้วยรหัส"
@@ -346,33 +362,21 @@ Partial Class Create_training
         '
         'txt_Search
         '
-        Me.txt_Search.Location = New System.Drawing.Point(97, 35)
+        Me.txt_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txt_Search.Location = New System.Drawing.Point(6, 50)
         Me.txt_Search.Name = "txt_Search"
-        Me.txt_Search.Size = New System.Drawing.Size(156, 20)
+        Me.txt_Search.Size = New System.Drawing.Size(199, 20)
         Me.txt_Search.TabIndex = 0
         '
         'OP1
         '
         Me.OP1.FileName = "OpenFileDialog1"
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(165, 59)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 36)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "ค้นหา"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Create_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(832, 579)
+        Me.ClientSize = New System.Drawing.Size(628, 632)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_course)
         Me.Controls.Add(Me.GroupBox1)
