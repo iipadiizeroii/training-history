@@ -82,3 +82,27 @@ where Ei.trainingIn_id = '1910007'
 select *
 from Expenses_in
 where Date_in  between '2019/10/01' and '2019/10/30'
+
+
+
+select ITH.trainingIn_id
+from Internal_training_history ITH
+inner join Employees E on ITH.emp_id = E.emp_id
+where E.emp_id = 'F1908001'
+
+
+select C.course_id,C.course_name,f.format_name,g.group_name,T.type_name
+from Course C
+inner join format_course F on F.format_id = C.format_id
+inner join group_course G on G.group_id = C.group_id
+inner join type_course T on t.type_id = C.type_id 
+where C.course_id in
+(select it.course_id
+from Internal_training IT
+inner join Internal_training_history ITH on (ITH.trainingIn_id = it.trainingIn_id)
+inner join Employees E on (ITH.emp_id = E.emp_id)
+where E.emp_id = 'F1908001')
+
+
+
+

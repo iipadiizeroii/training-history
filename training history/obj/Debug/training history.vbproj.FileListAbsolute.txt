@@ -386,7 +386,6 @@ G:\โปรเจค\training history\training-history\training history\obj\Deb
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test01.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training history.vbprojResolveAssemblyReference.cache
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training history.vbprojResolveAssemblyReference.cache
-C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.RP_PO_internal.resources
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.RP_Register.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.HOMERPOGRAM.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.RP_Register.resources
@@ -395,3 +394,7 @@ G:\โปรเจค\training history\training-history\training history\obj\Deb
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.PR_PO_internal_training.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.RP_Expenses_out.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmSearch_history_training_Em.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmSearch_history_training_Em.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.PR_PO_internal_training.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.RP_Expenses_out.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.RP_Expenses_in.resources
