@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class PR_Expenses_yesr_in
+Public Class PR_Expenses_out
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class PR_Expenses_yesr_in
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "PR_Expenses_yesr_in.rpt"
+            Return "PR_Expenses_out.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class PR_Expenses_yesr_in
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "training_history.PR_Expenses_yesr_in.rpt"
+            Return "training_history.PR_Expenses_out.rpt"
         End Get
         Set
             'Do nothing
@@ -91,10 +91,34 @@ Public Class PR_Expenses_yesr_in
             Return Me.ReportDefinition.Sections(4)
         End Get
     End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_startDate() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(0)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_endDate() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(1)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_ID() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(2)
+        End Get
+    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedPR_Expenses_yesr_in
+Public Class CachedPR_Expenses_out
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +160,7 @@ Public Class CachedPR_Expenses_yesr_in
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As PR_Expenses_yesr_in = New PR_Expenses_yesr_in()
+        Dim rpt As PR_Expenses_out = New PR_Expenses_out()
         rpt.Site = Me.Site
         Return rpt
     End Function

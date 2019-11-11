@@ -35,6 +35,19 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        RP_Expenses_in.Show()
+
+        PN_Report1.Visible = True
+
+
+
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        PN_Report1.Visible = False
+
     End Sub
 End Class

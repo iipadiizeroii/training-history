@@ -76,12 +76,12 @@ Partial Class Internal_training
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.RP2 = New System.Windows.Forms.RadioButton()
         Me.RP1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search_panal = New System.Windows.Forms.TextBox()
         Me.datagrid_IntrainingNew = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -681,6 +681,19 @@ Partial Class Internal_training
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ค้นหา"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(292, 26)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(85, 35)
+        Me.Button1.TabIndex = 100
+        Me.Button1.Text = "ค้นหา"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!)
@@ -734,19 +747,6 @@ Partial Class Internal_training
         Me.datagrid_IntrainingNew.Size = New System.Drawing.Size(691, 171)
         Me.datagrid_IntrainingNew.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(292, 26)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 35)
-        Me.Button1.TabIndex = 100
-        Me.Button1.Text = "ค้นหา"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Internal_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -758,6 +758,7 @@ Partial Class Internal_training
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Internal_training"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Internal_training"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

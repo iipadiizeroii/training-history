@@ -138,6 +138,12 @@
     <Compile Include="frmNew_expert_In.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSearch_history_training_Em.Designer.vb">
+      <DependentUpon>frmSearch_history_training_Em.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch_history_training_Em.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HOME.Designer.vb">
       <DependentUpon>HOME.vb</DependentUpon>
     </Compile>
@@ -171,16 +177,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PR_Expenses_out.vb">
+      <DependentUpon>PR_Expenses_out.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="PR_Expenses_in.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PR_Expenses_in.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PR_Expenses_yesr_in.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PR_Expenses_yesr_in.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PR_Expert.vb">
@@ -218,6 +224,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RP_Employees.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RP_Expenses_out.Designer.vb">
+      <DependentUpon>RP_Expenses_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RP_Expenses_out.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="RP_PO__EM_external_training.vb">
       <DependentUpon>RP_PO__EM_external_training.rpt</DependentUpon>
@@ -282,6 +294,9 @@
     <EmbeddedResource Include="frmNew_expert_In.resx">
       <DependentUpon>frmNew_expert_In.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch_history_training_Em.resx">
+      <DependentUpon>frmSearch_history_training_Em.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.vb</DependentUpon>
     </EmbeddedResource>
@@ -297,13 +312,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PR_Expenses_out.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PR_Expenses_out.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_Expenses_in.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Expenses_in.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PR_Expenses_yesr_in.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PR_Expenses_yesr_in.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PR_Expert.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -327,6 +342,9 @@
     <EmbeddedResource Include="RP_Employees.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RP_Employees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RP_Expenses_out.resx">
+      <DependentUpon>RP_Expenses_out.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RP_PO__EM_external_training.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -432,6 +450,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-ok-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

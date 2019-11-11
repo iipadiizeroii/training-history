@@ -88,6 +88,7 @@ Partial Class frmNew_expert_In
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_new_expertin)
         Me.Name = "frmNew_expert_In"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmNew_expert_In"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

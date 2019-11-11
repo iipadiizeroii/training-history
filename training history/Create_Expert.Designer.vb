@@ -390,6 +390,7 @@ Partial Class Create_Expert
         Me.Controls.Add(Me.datagrid_exp)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Create_Expert"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Create_Expert"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

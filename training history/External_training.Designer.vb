@@ -28,7 +28,12 @@ Partial Class External_training
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_long_term = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.add_data = New System.Windows.Forms.Button()
+        Me.clear_data = New System.Windows.Forms.Button()
+        Me.cancel_data = New System.Windows.Forms.Button()
         Me.Date_training = New System.Windows.Forms.DateTimePicker()
+        Me.upte_data = New System.Windows.Forms.Button()
+        Me.edit_data = New System.Windows.Forms.Button()
         Me.cmb_course_name = New System.Windows.Forms.ComboBox()
         Me.txt_training_location = New System.Windows.Forms.TextBox()
         Me.txt_course_id = New System.Windows.Forms.TextBox()
@@ -41,18 +46,27 @@ Partial Class External_training
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.RP2 = New System.Windows.Forms.RadioButton()
         Me.RP1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search_panal = New System.Windows.Forms.TextBox()
         Me.datagrid_ExtrainingNew = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.clear_data_emp = New System.Windows.Forms.Button()
+        Me.add_data_emp = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -65,20 +79,6 @@ Partial Class External_training
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.add_data = New System.Windows.Forms.Button()
-        Me.clear_data = New System.Windows.Forms.Button()
-        Me.cancel_data = New System.Windows.Forms.Button()
-        Me.upte_data = New System.Windows.Forms.Button()
-        Me.edit_data = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.clear_data_emp = New System.Windows.Forms.Button()
-        Me.add_data_emp = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -166,6 +166,45 @@ Partial Class External_training
         Me.Label9.TabIndex = 93
         Me.Label9.Text = "ระยะเวลา"
         '
+        'add_data
+        '
+        Me.add_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.add_data.Image = Global.training_history.My.Resources.Resources.icons8_add_32
+        Me.add_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.add_data.Location = New System.Drawing.Point(682, 45)
+        Me.add_data.Name = "add_data"
+        Me.add_data.Size = New System.Drawing.Size(80, 37)
+        Me.add_data.TabIndex = 1
+        Me.add_data.Text = "เพิ่ม"
+        Me.add_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.add_data.UseVisualStyleBackColor = True
+        '
+        'clear_data
+        '
+        Me.clear_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.clear_data.Image = Global.training_history.My.Resources.Resources.icons8_recycle_bin_32
+        Me.clear_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.clear_data.Location = New System.Drawing.Point(870, 89)
+        Me.clear_data.Name = "clear_data"
+        Me.clear_data.Size = New System.Drawing.Size(80, 37)
+        Me.clear_data.TabIndex = 11
+        Me.clear_data.Text = "ลบ"
+        Me.clear_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.clear_data.UseVisualStyleBackColor = True
+        '
+        'cancel_data
+        '
+        Me.cancel_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.cancel_data.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
+        Me.cancel_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cancel_data.Location = New System.Drawing.Point(768, 88)
+        Me.cancel_data.Name = "cancel_data"
+        Me.cancel_data.Size = New System.Drawing.Size(96, 38)
+        Me.cancel_data.TabIndex = 10
+        Me.cancel_data.Text = "ยกเลิก"
+        Me.cancel_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cancel_data.UseVisualStyleBackColor = True
+        '
         'Date_training
         '
         Me.Date_training.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -175,6 +214,32 @@ Partial Class External_training
         Me.Date_training.Name = "Date_training"
         Me.Date_training.Size = New System.Drawing.Size(165, 20)
         Me.Date_training.TabIndex = 90
+        '
+        'upte_data
+        '
+        Me.upte_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.upte_data.Image = Global.training_history.My.Resources.Resources.icons8_add_database_32
+        Me.upte_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.upte_data.Location = New System.Drawing.Point(768, 45)
+        Me.upte_data.Name = "upte_data"
+        Me.upte_data.Size = New System.Drawing.Size(96, 37)
+        Me.upte_data.TabIndex = 8
+        Me.upte_data.Text = "บันทึก"
+        Me.upte_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.upte_data.UseVisualStyleBackColor = True
+        '
+        'edit_data
+        '
+        Me.edit_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.edit_data.Image = Global.training_history.My.Resources.Resources.icons8_edit_32
+        Me.edit_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.edit_data.Location = New System.Drawing.Point(682, 89)
+        Me.edit_data.Name = "edit_data"
+        Me.edit_data.Size = New System.Drawing.Size(80, 37)
+        Me.edit_data.TabIndex = 9
+        Me.edit_data.Text = "แก้ไข"
+        Me.edit_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.edit_data.UseVisualStyleBackColor = True
         '
         'cmb_course_name
         '
@@ -291,6 +356,20 @@ Partial Class External_training
         Me.Panel1.TabIndex = 97
         Me.Panel1.Visible = False
         '
+        'Button6
+        '
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Image = Global.training_history.My.Resources.Resources.icons8_shutdown_32
+        Me.Button6.Location = New System.Drawing.Point(651, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(43, 38)
+        Me.Button6.TabIndex = 97
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Button1)
@@ -305,6 +384,32 @@ Partial Class External_training
         Me.GroupBox3.TabIndex = 96
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ค้นหา"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(292, 30)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(78, 35)
+        Me.Button1.TabIndex = 99
+        Me.Button1.Text = "ค้นหา"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button7.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(376, 30)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(88, 34)
+        Me.Button7.TabIndex = 98
+        Me.Button7.Text = "ยกเลิก"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'RP2
         '
@@ -358,6 +463,19 @@ Partial Class External_training
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
         '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button5.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(201, 17)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(76, 31)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "ค้นหา"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'txt_Search
         '
         Me.txt_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -401,6 +519,26 @@ Partial Class External_training
         Me.TabPage1.Text = "เพิ่มวิทยากร"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button3.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
+        Me.Button3.Location = New System.Drawing.Point(100, 23)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(88, 37)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button2.Image = Global.training_history.My.Resources.Resources.icons8_add_32
+        Me.Button2.Location = New System.Drawing.Point(6, 23)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(88, 37)
+        Me.Button2.TabIndex = 1
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.clear_data_emp)
@@ -413,6 +551,26 @@ Partial Class External_training
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "เพิ่มรายชื่อผู้เข้าอบรม"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'clear_data_emp
+        '
+        Me.clear_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.clear_data_emp.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
+        Me.clear_data_emp.Location = New System.Drawing.Point(100, 23)
+        Me.clear_data_emp.Name = "clear_data_emp"
+        Me.clear_data_emp.Size = New System.Drawing.Size(88, 37)
+        Me.clear_data_emp.TabIndex = 1
+        Me.clear_data_emp.UseVisualStyleBackColor = True
+        '
+        'add_data_emp
+        '
+        Me.add_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.add_data_emp.Image = Global.training_history.My.Resources.Resources.icons8_add_32
+        Me.add_data_emp.Location = New System.Drawing.Point(6, 23)
+        Me.add_data_emp.Name = "add_data_emp"
+        Me.add_data_emp.Size = New System.Drawing.Size(88, 37)
+        Me.add_data_emp.TabIndex = 0
+        Me.add_data_emp.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
@@ -436,6 +594,19 @@ Partial Class External_training
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "บันทึกค่าใช้จ่าย"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Button9.Image = Global.training_history.My.Resources.Resources.icons8_calculator_32
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button9.Location = New System.Drawing.Point(409, 225)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(79, 65)
+        Me.Button9.TabIndex = 5
+        Me.Button9.Text = "คำนวณ"
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
@@ -546,177 +717,6 @@ Partial Class External_training
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "บาท"
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button5.Image = Global.training_history.My.Resources.Resources.icons8_search_32
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(201, 17)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(76, 31)
-        Me.Button5.TabIndex = 1
-        Me.Button5.Text = "ค้นหา"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Image = Global.training_history.My.Resources.Resources.icons8_shutdown_32
-        Me.Button6.Location = New System.Drawing.Point(651, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(43, 38)
-        Me.Button6.TabIndex = 97
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(376, 30)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(88, 34)
-        Me.Button7.TabIndex = 98
-        Me.Button7.Text = "ยกเลิก"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'add_data
-        '
-        Me.add_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.add_data.Image = Global.training_history.My.Resources.Resources.icons8_add_32
-        Me.add_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.add_data.Location = New System.Drawing.Point(682, 45)
-        Me.add_data.Name = "add_data"
-        Me.add_data.Size = New System.Drawing.Size(80, 37)
-        Me.add_data.TabIndex = 1
-        Me.add_data.Text = "เพิ่ม"
-        Me.add_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.add_data.UseVisualStyleBackColor = True
-        '
-        'clear_data
-        '
-        Me.clear_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.clear_data.Image = Global.training_history.My.Resources.Resources.icons8_recycle_bin_32
-        Me.clear_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.clear_data.Location = New System.Drawing.Point(870, 89)
-        Me.clear_data.Name = "clear_data"
-        Me.clear_data.Size = New System.Drawing.Size(80, 37)
-        Me.clear_data.TabIndex = 11
-        Me.clear_data.Text = "ลบ"
-        Me.clear_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.clear_data.UseVisualStyleBackColor = True
-        '
-        'cancel_data
-        '
-        Me.cancel_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.cancel_data.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
-        Me.cancel_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cancel_data.Location = New System.Drawing.Point(768, 88)
-        Me.cancel_data.Name = "cancel_data"
-        Me.cancel_data.Size = New System.Drawing.Size(96, 38)
-        Me.cancel_data.TabIndex = 10
-        Me.cancel_data.Text = "ยกเลิก"
-        Me.cancel_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.cancel_data.UseVisualStyleBackColor = True
-        '
-        'upte_data
-        '
-        Me.upte_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.upte_data.Image = Global.training_history.My.Resources.Resources.icons8_add_database_32
-        Me.upte_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.upte_data.Location = New System.Drawing.Point(768, 45)
-        Me.upte_data.Name = "upte_data"
-        Me.upte_data.Size = New System.Drawing.Size(96, 37)
-        Me.upte_data.TabIndex = 8
-        Me.upte_data.Text = "บันทึก"
-        Me.upte_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.upte_data.UseVisualStyleBackColor = True
-        '
-        'edit_data
-        '
-        Me.edit_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.edit_data.Image = Global.training_history.My.Resources.Resources.icons8_edit_32
-        Me.edit_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.edit_data.Location = New System.Drawing.Point(682, 89)
-        Me.edit_data.Name = "edit_data"
-        Me.edit_data.Size = New System.Drawing.Size(80, 37)
-        Me.edit_data.TabIndex = 9
-        Me.edit_data.Text = "แก้ไข"
-        Me.edit_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.edit_data.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button3.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
-        Me.Button3.Location = New System.Drawing.Point(100, 23)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 37)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button2.Image = Global.training_history.My.Resources.Resources.icons8_add_32
-        Me.Button2.Location = New System.Drawing.Point(6, 23)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 37)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'clear_data_emp
-        '
-        Me.clear_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.clear_data_emp.Image = Global.training_history.My.Resources.Resources.icons8_cancel_32
-        Me.clear_data_emp.Location = New System.Drawing.Point(100, 23)
-        Me.clear_data_emp.Name = "clear_data_emp"
-        Me.clear_data_emp.Size = New System.Drawing.Size(88, 37)
-        Me.clear_data_emp.TabIndex = 1
-        Me.clear_data_emp.UseVisualStyleBackColor = True
-        '
-        'add_data_emp
-        '
-        Me.add_data_emp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.add_data_emp.Image = Global.training_history.My.Resources.Resources.icons8_add_32
-        Me.add_data_emp.Location = New System.Drawing.Point(6, 23)
-        Me.add_data_emp.Name = "add_data_emp"
-        Me.add_data_emp.Size = New System.Drawing.Size(88, 37)
-        Me.add_data_emp.TabIndex = 0
-        Me.add_data_emp.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Button9.Image = Global.training_history.My.Resources.Resources.icons8_calculator_32
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button9.Location = New System.Drawing.Point(409, 225)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(79, 65)
-        Me.Button9.TabIndex = 5
-        Me.Button9.Text = "คำนวณ"
-        Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(292, 30)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 35)
-        Me.Button1.TabIndex = 99
-        Me.Button1.Text = "ค้นหา"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'External_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -728,6 +728,7 @@ Partial Class External_training
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "External_training"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "External_training"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

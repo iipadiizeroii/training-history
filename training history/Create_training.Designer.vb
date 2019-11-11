@@ -381,6 +381,7 @@ Partial Class Create_training
         Me.Controls.Add(Me.datagrid_course)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Create_training"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Create_training"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
