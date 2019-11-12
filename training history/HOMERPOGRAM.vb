@@ -50,4 +50,8 @@
         PN_Report1.Visible = False
 
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        frmSearch_history_training_Em.Show()
+    End Sub
 End Class
