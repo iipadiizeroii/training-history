@@ -40,6 +40,7 @@ Public Class frmSearch_history_training_Em
             sb.Append(" where E.emp_id = @empin_id)")
 
 
+
             With cn
                 If .State = ConnectionState.Open Then .Close()
                 .ConnectionString = strConn
@@ -57,6 +58,9 @@ Public Class frmSearch_history_training_Em
             dt.Load(dr)
 
             dgv_history_em.DataSource = dt
+
+
+
         Else
 
             sb = New StringBuilder
@@ -71,6 +75,9 @@ Public Class frmSearch_history_training_Em
             sb.Append("inner join External_training_history ETH on (ETH.trainingEx_id = Et.trainingEx_id) ")
             sb.Append("inner join Employees E on (ETH.emp_id = E.emp_id) ")
             sb.Append(" where E.emp_id = @empin_id)")
+
+
+
 
 
             With cn
@@ -93,7 +100,26 @@ Public Class frmSearch_history_training_Em
 
 
         End If
+        With dgv_history_em
+            .Columns("course_id").HeaderText = "รหัสหลักสูตร"
+            .Columns("course_id").Width = "100"
+            .Columns("course_name").HeaderText = "ชื่อหลักสูตรการอบรม"
+            .Columns("course_name").Width = "160"
+            .Columns("format_name").HeaderText = "รูปแบบการจัดอบรม"
+            .Columns("format_name").Width = "120"
+            .Columns("group_name").HeaderText = "กลุ่มหลักสูตร"
+            .Columns("group_name").Width = "100"
+            .Columns("type_name").HeaderText = "ประเภทการจัดอบรม"
+            .Columns("type_name").Width = "130"
 
+
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+
+
+        End With
 
 
 
@@ -106,7 +132,7 @@ Public Class frmSearch_history_training_Em
         With PN_dgv_em
             .DataSource = DataShow
             .Columns("emp_id").HeaderText = "รหัสพนักงาน"
-            .Columns("emp_id").Width = "80"
+            .Columns("emp_id").Width = "110"
             .Columns("emp_name").HeaderText = "ชื่อพนักงาน"
             .Columns("emp_name").Width = "100"
             .Columns("emp_lastname").HeaderText = "นามสกุล"
@@ -156,6 +182,38 @@ Public Class frmSearch_history_training_Em
         '5'
         cn.Close()
 
+        With PN_dgv_em
+            .Columns("emp_id").HeaderText = "รหัสพนักงาน"
+            .Columns("emp_id").Width = "110"
+            .Columns("emp_name").HeaderText = "ชื่อพนักงาน"
+            .Columns("emp_name").Width = "100"
+            .Columns("emp_lastname").HeaderText = "นามสกุล"
+            .Columns("emp_lastname").Width = "100"
+            .Columns("emp_level").HeaderText = "ระดับ"
+            .Columns("emp_level").Width = "50"
+            .Columns("emp_position").HeaderText = "ตำแหน่ง"
+            .Columns("emp_position").Width = "130"
+            .Columns("emp_department").HeaderText = "แผนก"
+            .Columns("emp_department").Width = "130"
+            .Columns("emp_division").HeaderText = "ฝ่าย"
+            .Columns("emp_division").Width = "130"
+            .Columns("emp_degree").HeaderText = "การศึกษา"
+            .Columns("emp_degree").Width = "130"
+            .Columns("emp_date").HeaderText = "วันที่เริ่มงาน"
+            .Columns("emp_date").Width = "130"
+
+
+
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
+
+
+        End With
+
         txt_Search_id_panal.Text = ""
         txt_Search_name_panal.Text = ""
         txt_Search_depart_panal.Text = ""
@@ -166,7 +224,9 @@ Public Class frmSearch_history_training_Em
     End Sub
 
     Private Sub frmSearch_history_training_Em_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Panel1.Visible = False
+
     End Sub
 
     

@@ -37,13 +37,14 @@ Partial Class frmSearch_history_training_Em
         Me.txt_Search_id_panal = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txt_Search_depart = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txt_Search_name = New System.Windows.Forms.TextBox()
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txt_Search_name = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txt_Search_depart = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.dgv_history_em, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PN_dgv_em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +58,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 26)
+        Me.Label1.Size = New System.Drawing.Size(74, 22)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสพนักงาน"
         '
@@ -91,7 +92,9 @@ Partial Class frmSearch_history_training_Em
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel1.BackColor = System.Drawing.Color.SkyBlue
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.PN_dgv_em)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -132,7 +135,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(117, 77)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 26)
+        Me.Label4.Size = New System.Drawing.Size(39, 22)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "แผนก"
         '
@@ -142,7 +145,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label3.Location = New System.Drawing.Point(89, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 26)
+        Me.Label3.Size = New System.Drawing.Size(67, 22)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "ชื่อพนักงาน"
         '
@@ -152,7 +155,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 26)
+        Me.Label2.Size = New System.Drawing.Size(74, 22)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "รหัสพนักงาน"
         '
@@ -202,13 +205,49 @@ Partial Class frmSearch_history_training_Em
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label6.Location = New System.Drawing.Point(32, 75)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 22)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "แผนก"
+        '
+        'txt_Search_depart
+        '
+        Me.txt_Search_depart.Enabled = False
+        Me.txt_Search_depart.Location = New System.Drawing.Point(81, 78)
+        Me.txt_Search_depart.Name = "txt_Search_depart"
+        Me.txt_Search_depart.Size = New System.Drawing.Size(179, 20)
+        Me.txt_Search_depart.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 46)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(67, 22)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "ชื่อพนักงาน"
+        '
+        'txt_Search_name
+        '
+        Me.txt_Search_name.Enabled = False
+        Me.txt_Search_name.Location = New System.Drawing.Point(81, 49)
+        Me.txt_Search_name.Name = "txt_Search_name"
+        Me.txt_Search_name.Size = New System.Drawing.Size(179, 20)
+        Me.txt_Search_name.TabIndex = 11
+        '
         'R2
         '
         Me.R2.AutoSize = True
         Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R2.Location = New System.Drawing.Point(6, 60)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(102, 30)
+        Me.R2.Size = New System.Drawing.Size(100, 26)
         Me.R2.TabIndex = 12
         Me.R2.TabStop = True
         Me.R2.Text = "อบรมภายนอก"
@@ -221,7 +260,7 @@ Partial Class frmSearch_history_training_Em
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R1.Location = New System.Drawing.Point(6, 24)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(93, 30)
+        Me.R1.Size = New System.Drawing.Size(91, 26)
         Me.R1.TabIndex = 13
         Me.R1.TabStop = True
         Me.R1.Text = "อบรมภายใน"
@@ -239,41 +278,19 @@ Partial Class frmSearch_history_training_Em
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ประเภทการอบรม"
         '
-        'txt_Search_name
+        'Button6
         '
-        Me.txt_Search_name.Enabled = False
-        Me.txt_Search_name.Location = New System.Drawing.Point(81, 49)
-        Me.txt_Search_name.Name = "txt_Search_name"
-        Me.txt_Search_name.Size = New System.Drawing.Size(179, 20)
-        Me.txt_Search_name.TabIndex = 11
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 46)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 26)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "ชื่อพนักงาน"
-        '
-        'txt_Search_depart
-        '
-        Me.txt_Search_depart.Enabled = False
-        Me.txt_Search_depart.Location = New System.Drawing.Point(81, 78)
-        Me.txt_Search_depart.Name = "txt_Search_depart"
-        Me.txt_Search_depart.Size = New System.Drawing.Size(179, 20)
-        Me.txt_Search_depart.TabIndex = 14
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label6.Location = New System.Drawing.Point(32, 75)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 26)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "แผนก"
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Image = Global.training_history.My.Resources.Resources.icons8_shutdown_32
+        Me.Button6.Location = New System.Drawing.Point(544, 1)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(38, 39)
+        Me.Button6.TabIndex = 98
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'frmSearch_history_training_Em
         '
@@ -320,4 +337,5 @@ Partial Class frmSearch_history_training_Em
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txt_Search_depart As System.Windows.Forms.TextBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
