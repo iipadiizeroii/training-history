@@ -144,6 +144,12 @@
     <Compile Include="frmSearch_history_training_Em.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSearch_not_history_training_Em.Designer.vb">
+      <DependentUpon>frmSearch_not_history_training_Em.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch_not_history_training_Em.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HOME.Designer.vb">
       <DependentUpon>HOME.vb</DependentUpon>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearch_history_training_Em.resx">
       <DependentUpon>frmSearch_history_training_Em.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch_not_history_training_Em.resx">
+      <DependentUpon>frmSearch_not_history_training_Em.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.vb</DependentUpon>

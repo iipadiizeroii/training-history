@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.training_history.HOMERPOGRAM
+            Me.MainForm = Global.training_history.frmSearch_not_history_training_Em
         End Sub
     End Class
 End Namespace

@@ -126,6 +126,9 @@ Public Class frmSearch_history_training_Em
 
     End Sub
 
+
+#Region "อยู่ใน Panal"
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim DataShow As DataTable = SqlTable(" SELECT * FROM Employees Where emp_id LIKE '%" & txt_Search_id_panal.Text & "%' AND emp_name LIKE '%" & txt_Search_name_panal.Text & "%' AND emp_department LIKE '%" & txt_Search_depart_panal.Text & "%' ")
@@ -164,6 +167,25 @@ Public Class frmSearch_history_training_Em
 
 
     End Sub
+
+    Private Sub PN_dgv_em_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles PN_dgv_em.CellClick
+
+        If e.RowIndex < 0 Then Exit Sub
+        With PN_dgv_em.Rows(e.RowIndex)
+            txt_Search.Text = .Cells(0).Value.ToString
+            txt_Search_name.Text = .Cells(1).Value.ToString
+            txt_Search_depart.Text = .Cells(5).Value.ToString
+
+        End With
+
+
+
+
+        Panel1.Visible = False
+
+    End Sub
+
+#End Region
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
@@ -218,7 +240,7 @@ Public Class frmSearch_history_training_Em
         txt_Search_name_panal.Text = ""
         txt_Search_depart_panal.Text = ""
         dgv_history_em.DataSource = ds.Tables
-       
+
 
 
     End Sub
@@ -229,23 +251,8 @@ Public Class frmSearch_history_training_Em
 
     End Sub
 
-    
-    Private Sub PN_dgv_em_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles PN_dgv_em.CellClick
-
-        If e.RowIndex < 0 Then Exit Sub
-        With PN_dgv_em.Rows(e.RowIndex)
-            txt_Search.Text = .Cells(0).Value.ToString
-            txt_Search_name.Text = .Cells(1).Value.ToString
-            txt_Search_depart.Text = .Cells(5).Value.ToString
-
-        End With
-
-       
-
-
-        Panel1.Visible = False
-
-    End Sub
 
    
+
+
 End Class

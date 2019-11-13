@@ -118,6 +118,35 @@ inner join Employees E on (ETH.emp_id = E.emp_id)
 where E.emp_id = 'F1908001')
 
 
+select *
+from Employees
+where emp_id in
+(Select E.emp_id
+from Employees E
+inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
+inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
+where IT.course_id = '19001' );
 
 
 
+
+
+select *
+from Employees
+where emp_department = 'เครื่องกล' and emp_id not in
+(Select E.emp_id
+from Employees E
+inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
+inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
+where IT.course_id = '19001' );
+
+
+
+select *
+from Employees				
+where emp_department = 'สต็อควัตถุดิบ' and emp_id in
+(Select E.emp_id
+from Employees E
+inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
+inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
+where IT.course_id = '19001' );
