@@ -200,4 +200,5 @@ Public Class frmSearch_not_history_training_Em
         End If
 
     End Sub
+
 End Class

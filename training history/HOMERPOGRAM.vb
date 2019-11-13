@@ -6,6 +6,9 @@
 
     Private Sub HOMERPOGRAM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+
+
     End Sub
 
     Private Sub ToolStripComboBox1_Click(sender As Object, e As EventArgs)
@@ -52,6 +55,15 @@
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        frmSearch_history_training_Em.Show()
+
+
+        Dim f As New frmSearch_history_training_Em()
+        'f.MdiParent = GroupBox2.Container
+        f.StartPosition = FormStartPosition.Manual
+        f.Left = 547 : f.Top = 240 : f.Show()
+
+
+
+
     End Sub
 End Class
