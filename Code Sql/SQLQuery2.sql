@@ -105,4 +105,19 @@ where E.emp_id = 'F1908001')
 
 
 
+select C.course_id,C.course_name,f.format_name,g.group_name,T.type_name
+from Course C
+inner join format_course F on F.format_id = C.format_id
+inner join group_course G on G.group_id = C.group_id
+inner join type_course T on t.type_id = C.type_id 
+where C.course_id in
+(select ET.course_id
+from External_training ET
+inner join External_training_history ETH on (ETH.trainingEx_id = Et.trainingEx_id)
+inner join Employees E on (ETH.emp_id = E.emp_id)
+where E.emp_id = 'F1908001')
+
+
+
+
 
