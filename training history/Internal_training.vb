@@ -515,6 +515,13 @@ Public Class Internal_training
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+
+        'Dim f As New frmAdd_Expert_in()
+        'f.MdiParent = HOMERPOGRAM
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 290 : f.Top = 140 : f.Show()
+
+
         frmAdd_Expert_in.Show()
 
     End Sub
@@ -524,6 +531,12 @@ Public Class Internal_training
 
         courseID = txt_course_id.Text
         emio = "IN"
+
+        'Dim f As New frmAdd_Employees_out()
+        'f.MdiParent = HOMERPOGRAM
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 290 : f.Top = 140 : f.Show()
+
         frmAdd_Employees_out.Show()
 
 

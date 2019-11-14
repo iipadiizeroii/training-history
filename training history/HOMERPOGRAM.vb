@@ -52,23 +52,23 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
-        Dim f As New Internal_training()
-        f.MdiParent = Me
-        f.StartPosition = FormStartPosition.Manual
-        f.Left = 215 : f.Top = 50 : f.Show()
+        'Dim f As New Internal_training()
+        'f.MdiParent = Me
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 215 : f.Top = 50 : f.Show()
 
-        'Internal_training.Show()
+        Internal_training.Show()
 
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
-        Dim f As New External_training()
-        f.MdiParent = Me
-        f.StartPosition = FormStartPosition.Manual
-        f.Left = 215 : f.Top = 50 : f.Show()
+        'Dim f As New External_training()
+        'f.MdiParent = Me
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 215 : f.Top = 50 : f.Show()
 
-        'External_training.Show()
+        External_training.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click

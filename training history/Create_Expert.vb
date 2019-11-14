@@ -359,7 +359,14 @@ Public Class Create_Expert
         cleardata()
         savestatus = "Add"
         txt_expert_expertise.Focus()
-        frmNew_expert_In.Show()
+
+        Dim f As New frmNew_expert_In()
+        f.MdiParent = HOMERPOGRAM
+        f.StartPosition = FormStartPosition.Manual
+        f.Left = 380 : f.Top = 50 : f.Show()
+
+
+        'frmNew_expert_In.Show()
 
 
     End Sub

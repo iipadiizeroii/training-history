@@ -116,9 +116,6 @@ Public Class frmNew_expert_In
         Me.Close()
     End Sub
 
-    Private Sub datagrid_new_expertin_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_new_expertin.CellContentClick
-
-    End Sub
 
 
 End Class
