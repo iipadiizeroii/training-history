@@ -286,11 +286,11 @@ Public Class frmSearch_history_training_Em
             dr("emp_name") = txt_Search_name.Text.ToString
             dr("emp_department") = txt_Search_depart.Text.ToString
             dr("type_training") = x1.ToString
-            dr("course_id") = dgv.Cells(4).Value
-            dr("course_name") = dgv.Cells(5).Value
-            dr("format_name") = dgv.Cells(6).Value
-            dr("group_name") = dgv.Cells(7).Value
-            dr("type_name") = dgv.Cells(8).Value
+            dr("course_id") = dgv.Cells(0).Value
+            dr("course_name") = dgv.Cells(1).Value
+            dr("format_name") = dgv.Cells(2).Value
+            dr("group_name") = dgv.Cells(3).Value
+            dr("type_name") = dgv.Cells(4).Value
 
             dt.Rows.Add(dr)
         Next
@@ -303,6 +303,7 @@ Public Class frmSearch_history_training_Em
         test_Print.CrystalReportViewer1.ReportSource = rpt
         test_Print.CrystalReportViewer1.Refresh()
 
+        test_Print.Show()
 
 
 

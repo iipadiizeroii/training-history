@@ -38,6 +38,7 @@ Partial Class frmSearch_history_training_Em
         Me.txt_Search_id_panal = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Print_Pr = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_Search_depart = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -45,7 +46,6 @@ Partial Class frmSearch_history_training_Em
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Print_Pr = New System.Windows.Forms.Button()
         CType(Me.dgv_history_em, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PN_dgv_em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,6 +223,16 @@ Partial Class frmSearch_history_training_Em
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
+        'Print_Pr
+        '
+        Me.Print_Pr.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Print_Pr.Location = New System.Drawing.Point(377, 65)
+        Me.Print_Pr.Name = "Print_Pr"
+        Me.Print_Pr.Size = New System.Drawing.Size(84, 37)
+        Me.Print_Pr.TabIndex = 15
+        Me.Print_Pr.Text = "พิมพ์"
+        Me.Print_Pr.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -295,16 +305,6 @@ Partial Class frmSearch_history_training_Em
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ประเภทการอบรม"
-        '
-        'Print_Pr
-        '
-        Me.Print_Pr.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Print_Pr.Location = New System.Drawing.Point(377, 65)
-        Me.Print_Pr.Name = "Print_Pr"
-        Me.Print_Pr.Size = New System.Drawing.Size(84, 37)
-        Me.Print_Pr.TabIndex = 15
-        Me.Print_Pr.Text = "พิมพ์"
-        Me.Print_Pr.UseVisualStyleBackColor = True
         '
         'frmSearch_history_training_Em
         '
