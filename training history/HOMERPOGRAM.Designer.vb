@@ -31,26 +31,24 @@ Partial Class HOMERPOGRAM
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.PN_Report1 = New System.Windows.Forms.Panel()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.บนทกขอมลพนกงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.บนทกขอมลพนกงานToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.บนทกขอมลวทยากรToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.เพมหลกสตรการอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.จดอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.จดอบรมภายในToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.จดอบรมภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.พมพรายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.เกยวกบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.PN_Report1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox1.Controls.Add(Me.Button9)
         Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Button7)
@@ -59,22 +57,25 @@ Partial Class HOMERPOGRAM
         Me.GroupBox1.Controls.Add(Me.Button6)
         Me.GroupBox1.Controls.Add(Me.Button5)
         Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 7)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(201, 520)
+        Me.GroupBox1.Size = New System.Drawing.Size(201, 736)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
         'Button9
         '
         Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button9.FlatAppearance.BorderSize = 0
         Me.Button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
         Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
         Me.Button9.Image = Global.training_history.My.Resources.Resources.data1
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(0, 400)
+        Me.Button9.Location = New System.Drawing.Point(0, 486)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(206, 51)
         Me.Button9.TabIndex = 0
@@ -92,7 +93,7 @@ Partial Class HOMERPOGRAM
         Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button4.Image = Global.training_history.My.Resources.Resources.confidential
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(2, 292)
+        Me.Button4.Location = New System.Drawing.Point(2, 344)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(205, 48)
         Me.Button4.TabIndex = 4
@@ -107,7 +108,7 @@ Partial Class HOMERPOGRAM
         Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Location = New System.Drawing.Point(-8, 9)
+        Me.Button7.Location = New System.Drawing.Point(-7, 0)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(208, 90)
         Me.Button7.TabIndex = 3
@@ -124,7 +125,7 @@ Partial Class HOMERPOGRAM
         Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button1.Image = Global.training_history.My.Resources.Resources.directory
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(2, 105)
+        Me.Button1.Location = New System.Drawing.Point(2, 130)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(239, 48)
         Me.Button1.TabIndex = 2
@@ -141,7 +142,7 @@ Partial Class HOMERPOGRAM
         Me.Button2.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button2.Image = Global.training_history.My.Resources.Resources.credibility
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(2, 168)
+        Me.Button2.Location = New System.Drawing.Point(2, 202)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(235, 48)
         Me.Button2.TabIndex = 1
@@ -158,7 +159,7 @@ Partial Class HOMERPOGRAM
         Me.Button6.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button6.Image = Global.training_history.My.Resources.Resources.data
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(3, 457)
+        Me.Button6.Location = New System.Drawing.Point(3, 561)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(204, 48)
         Me.Button6.TabIndex = 1
@@ -175,7 +176,7 @@ Partial Class HOMERPOGRAM
         Me.Button5.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button5.Image = Global.training_history.My.Resources.Resources.earth
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(1, 346)
+        Me.Button5.Location = New System.Drawing.Point(1, 414)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(223, 48)
         Me.Button5.TabIndex = 1
@@ -192,196 +193,124 @@ Partial Class HOMERPOGRAM
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button3.Image = Global.training_history.My.Resources.Resources.cookie
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(2, 229)
+        Me.Button3.Location = New System.Drawing.Point(2, 274)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(244, 48)
         Me.Button3.TabIndex = 1
         Me.Button3.Text = "เพิ่มหลักสูตรการอบรม"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'GroupBox2
+        'MenuStrip1
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.PN_Report1)
-        Me.GroupBox2.Location = New System.Drawing.Point(215, 61)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(719, 466)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Snow
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'PN_Report1
+        'ToolStripMenuItem1
         '
-        Me.PN_Report1.Controls.Add(Me.Button16)
-        Me.PN_Report1.Controls.Add(Me.Button15)
-        Me.PN_Report1.Controls.Add(Me.Button14)
-        Me.PN_Report1.Controls.Add(Me.Button13)
-        Me.PN_Report1.Controls.Add(Me.Button12)
-        Me.PN_Report1.Controls.Add(Me.Button11)
-        Me.PN_Report1.Controls.Add(Me.Button10)
-        Me.PN_Report1.Location = New System.Drawing.Point(3, 8)
-        Me.PN_Report1.Name = "PN_Report1"
-        Me.PN_Report1.Size = New System.Drawing.Size(716, 453)
-        Me.PN_Report1.TabIndex = 0
-        Me.PN_Report1.Visible = False
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
+        Me.ToolStripMenuItem1.Text = "หน้าแรก"
         '
-        'Button16
+        'บนทกขอมลพนกงานToolStripMenuItem
         '
-        Me.Button16.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button16.FlatAppearance.BorderSize = 0
-        Me.Button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button16.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.Location = New System.Drawing.Point(274, 157)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(171, 41)
-        Me.Button16.TabIndex = 6
-        Me.Button16.Text = "รายงานแสดงค่าใช้จ่าย"
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.บนทกขอมลพนกงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.บนทกขอมลพนกงานToolStripMenuItem1, Me.บนทกขอมลวทยากรToolStripMenuItem})
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Name = "บนทกขอมลพนกงานToolStripMenuItem"
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Text = "บันทึกข้อมูล"
         '
-        'Button15
+        'บนทกขอมลพนกงานToolStripMenuItem1
         '
-        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button15.FlatAppearance.BorderSize = 0
-        Me.Button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button15.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.Location = New System.Drawing.Point(469, 293)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(171, 83)
-        Me.Button15.TabIndex = 5
-        Me.Button15.Text = "เอกสารลงชื่อเข้ารับการอบรม"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Name = "บนทกขอมลพนกงานToolStripMenuItem1"
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Size = New System.Drawing.Size(167, 22)
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Text = "บันทึกข้อมูลพนักงาน"
         '
-        'Button14
+        'บนทกขอมลวทยากรToolStripMenuItem
         '
-        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button14.FlatAppearance.BorderSize = 0
-        Me.Button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button14.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button14.Location = New System.Drawing.Point(274, 295)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(171, 83)
-        Me.Button14.TabIndex = 4
-        Me.Button14.Text = "เอกสารอนุมัติการอบรมภายนอก"
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Name = "บนทกขอมลวทยากรToolStripMenuItem"
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Text = "บันทึกข้อมูลวิทยากร"
         '
-        'Button13
+        'เพมหลกสตรการอบรมToolStripMenuItem
         '
-        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button13.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(82, 295)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(171, 83)
-        Me.Button13.TabIndex = 3
-        Me.Button13.Text = "เอกสารอนุมัติการจัดอบรมภายใน"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Name = "เพมหลกสตรการอบรมToolStripMenuItem"
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Text = "เพิ่มหลักสูตรการอบรม"
         '
-        'Button12
+        'จดอบรมToolStripMenuItem
         '
-        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button12.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(469, 76)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(171, 41)
-        Me.Button12.TabIndex = 2
-        Me.Button12.Text = "รายงานหลักสูตรการอบรม"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.จดอบรมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.จดอบรมภายในToolStripMenuItem, Me.จดอบรมภายนอกToolStripMenuItem})
+        Me.จดอบรมToolStripMenuItem.Name = "จดอบรมToolStripMenuItem"
+        Me.จดอบรมToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.จดอบรมToolStripMenuItem.Text = "จัดอบรม"
         '
-        'Button11
+        'จดอบรมภายในToolStripMenuItem
         '
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button11.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(274, 76)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(171, 41)
-        Me.Button11.TabIndex = 1
-        Me.Button11.Text = "รายงานรายชื่อวิทยากร"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
+        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
         '
-        'Button10
+        'จดอบรมภายนอกToolStripMenuItem
         '
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
-        Me.Button10.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(82, 76)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(171, 41)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "รายงานรายชื่อพนักงาน"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
+        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.จดอบรมภายนอกToolStripMenuItem.Text = "จัดอบรมภายนอก"
         '
-        'GroupBox3
+        'พมพรายงานToolStripMenuItem
         '
-        Me.GroupBox3.Controls.Add(Me.Button8)
-        Me.GroupBox3.Controls.Add(Me.GroupBox2)
-        Me.GroupBox3.Controls.Add(Me.GroupBox1)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(940, 533)
-        Me.GroupBox3.TabIndex = 4
-        Me.GroupBox3.TabStop = False
+        Me.พมพรายงานToolStripMenuItem.Name = "พมพรายงานToolStripMenuItem"
+        Me.พมพรายงานToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.พมพรายงานToolStripMenuItem.Text = "พิมพ์รายงาน"
         '
-        'Button8
+        'เกยวกบToolStripMenuItem
         '
-        Me.Button8.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Location = New System.Drawing.Point(214, 13)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(720, 49)
-        Me.Button8.TabIndex = 4
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
+        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
         '
         'HOMERPOGRAM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(963, 557)
-        Me.Controls.Add(Me.GroupBox3)
+        Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.IsMdiContainer = True
         Me.Name = "HOMERPOGRAM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HOMERPOGRAM"
+        Me.TransparencyKey = System.Drawing.Color.Black
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.PN_Report1.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents PN_Report1 As System.Windows.Forms.Panel
-    Friend WithEvents Button16 As System.Windows.Forms.Button
-    Friend WithEvents Button15 As System.Windows.Forms.Button
-    Friend WithEvents Button14 As System.Windows.Forms.Button
-    Friend WithEvents Button13 As System.Windows.Forms.Button
-    Friend WithEvents Button12 As System.Windows.Forms.Button
-    Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents บนทกขอมลพนกงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents บนทกขอมลพนกงานToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents บนทกขอมลวทยากรToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents เพมหลกสตรการอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents จดอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents จดอบรมภายในToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents จดอบรมภายนอกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents พมพรายงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents เกยวกบToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

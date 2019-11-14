@@ -274,10 +274,10 @@
       <DependentUpon>RP_Employees.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RP_Expenses_out.Designer.vb">
-      <DependentUpon>RP_Expenses_out.vb</DependentUpon>
+    <Compile Include="RP_Expenses_in_out.Designer.vb">
+      <DependentUpon>RP_Expenses_in_out.vb</DependentUpon>
     </Compile>
-    <Compile Include="RP_Expenses_out.vb">
+    <Compile Include="RP_Expenses_in_out.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RP_PO__EM_external_training.vb">
@@ -297,12 +297,6 @@
       <DependentUpon>test01.vb</DependentUpon>
     </Compile>
     <Compile Include="test01.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RP_Expenses_in.Designer.vb">
-      <DependentUpon>RP_Expenses_in.vb</DependentUpon>
-    </Compile>
-    <Compile Include="RP_Expenses_in.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RP_Register.Designer.vb">
@@ -409,8 +403,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RP_Employees.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RP_Expenses_out.resx">
-      <DependentUpon>RP_Expenses_out.vb</DependentUpon>
+    <EmbeddedResource Include="RP_Expenses_in_out.resx">
+      <DependentUpon>RP_Expenses_in_out.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RP_PO__EM_external_training.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -422,9 +416,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="test01.resx">
       <DependentUpon>test01.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RP_Expenses_in.resx">
-      <DependentUpon>RP_Expenses_in.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RP_Register.resx">
       <DependentUpon>RP_Register.vb</DependentUpon>

@@ -15,7 +15,7 @@ Public Class PR_PO_internal_training
         Dim rpt As New ReportDocument()
         Dim directory As String = My.Application.Info.DirectoryPath
 
-        rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_PO__EM_internal_training.rpt")
+        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\RP_PO__EM_internal_training.rpt")
         rpt.SetParameterValue("PR_traingin_id", TextBox1.Text)
 
 
