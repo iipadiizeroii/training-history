@@ -34,6 +34,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.dgv_not_history_em = New System.Windows.Forms.DataGridView()
+        Me.Print_Pr = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgv_not_history_em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +42,7 @@ Partial Class frmSearch_not_history_training_Em
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Print_Pr)
         Me.GroupBox1.Controls.Add(Me.cmb_department_name)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmb_course_name)
@@ -95,7 +97,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Image = Global.training_history.My.Resources.Resources.icons8_search_32
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(279, 59)
+        Me.Button3.Location = New System.Drawing.Point(282, 31)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 37)
         Me.Button3.TabIndex = 6
@@ -165,6 +167,16 @@ Partial Class frmSearch_not_history_training_Em
         Me.dgv_not_history_em.Size = New System.Drawing.Size(648, 269)
         Me.dgv_not_history_em.TabIndex = 16
         '
+        'Print_Pr
+        '
+        Me.Print_Pr.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Print_Pr.Location = New System.Drawing.Point(282, 75)
+        Me.Print_Pr.Name = "Print_Pr"
+        Me.Print_Pr.Size = New System.Drawing.Size(84, 33)
+        Me.Print_Pr.TabIndex = 17
+        Me.Print_Pr.Text = "พิมพ์"
+        Me.Print_Pr.UseVisualStyleBackColor = True
+        '
         'frmSearch_not_history_training_Em
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,4 +207,5 @@ Partial Class frmSearch_not_history_training_Em
     Friend WithEvents cmb_course_name As System.Windows.Forms.ComboBox
     Friend WithEvents cmb_department_name As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Print_Pr As System.Windows.Forms.Button
 End Class

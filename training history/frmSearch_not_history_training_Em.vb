@@ -5,6 +5,7 @@ Imports System.Text
 Imports System.Globalization
 Imports System.Threading
 Imports System.Data.OleDb
+Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class frmSearch_not_history_training_Em
     Dim cn As New SqlConnection(strConn)
@@ -201,4 +202,59 @@ Public Class frmSearch_not_history_training_Em
 
     End Sub
 
+    Private Sub Print_Pr_Click(sender As Object, e As EventArgs) Handles Print_Pr.Click
+
+        Dim dt As New DataTable
+        Dim dr As DataRow
+        Dim x1 As String = ""
+
+
+
+        If R1.Checked = True Then
+            x1 = "พนักที่เข้ารับการอบรมแล้ว"
+        Else
+            x1 = "พนักงานที่ไม่ได้เข้ารับการอบรม"
+        End If
+        '*** Column ***'
+        dt.Columns.Add("course_id")
+        dt.Columns.Add("course_name")
+        dt.Columns.Add("department")
+        dt.Columns.Add("type_search")
+        dt.Columns.Add("emp_id")
+        dt.Columns.Add("emp_name")
+        dt.Columns.Add("emp_lastname")
+        dt.Columns.Add("emp_level")
+        dt.Columns.Add("emp_position")
+        dt.Columns.Add("emp_department")
+
+
+        For Each dgv As DataGridViewRow In dgv_not_history_em.Rows()
+            '*** Rows ***'
+            dr = dt.NewRow
+
+            dr("course_id") = txt_Search_course_id.Text.ToString
+            dr("course_name") = cmb_course_name.Text.ToString
+            dr("department") = cmb_department_name.Text.ToString
+            dr("type_search") = x1.ToString
+            dr("emp_id") = dgv.Cells(0).Value
+            dr("emp_name") = dgv.Cells(1).Value
+            dr("emp_lastname") = dgv.Cells(2).Value
+            dr("emp_level") = dgv.Cells(3).Value
+            dr("emp_position") = dgv.Cells(4).Value
+            dr("emp_department") = dgv.Cells(5).Value
+
+            dt.Rows.Add(dr)
+        Next
+
+        Dim rpt As New ReportDocument()
+        Dim directory As String = My.Application.Info.DirectoryPath
+        'rpt.Load(directory & "\myCrystalReport1.rpt")
+        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Search_not_history_training_Em.rpt")
+        rpt.SetDataSource(dt)
+        test_Print.CrystalReportViewer1.ReportSource = rpt
+        test_Print.CrystalReportViewer1.Refresh()
+
+        test_Print.Show()
+
+    End Sub
 End Class

@@ -10,11 +10,23 @@ traininghistory
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:training_history.DataSet1.SearcDeDataTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:training_history.DataSet1.SearchEmDataTableRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:training_history.DataSet1.SearcDeDataTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:training_history.DataSet1.SearchEmDataTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:training_history.DataSet1.SearcDeDataTableRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>

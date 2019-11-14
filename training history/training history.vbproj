@@ -250,6 +250,12 @@
       <DependentUpon>PR_Register.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PR_Search_not_history_training_Em.vb">
+      <DependentUpon>PR_Search_not_history_training_Em.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="PR_Search_history_training_Em.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -386,6 +392,10 @@
     <EmbeddedResource Include="PR_Register.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PR_Register.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR_Search_not_history_training_Em.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PR_Search_not_history_training_Em.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PR_Search_history_training_Em.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

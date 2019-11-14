@@ -27,6 +27,22 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="SearcDeDataTable" msprop:Generator_TableClassName="SearcDeDataTableDataTable" msprop:Generator_TableVarName="tableSearcDeDataTable" msprop:Generator_RowChangedName="SearcDeDataTableRowChanged" msprop:Generator_TablePropName="SearcDeDataTable" msprop:Generator_RowDeletingName="SearcDeDataTableRowDeleting" msprop:Generator_RowChangingName="SearcDeDataTableRowChanging" msprop:Generator_RowEvHandlerName="SearcDeDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SearcDeDataTableRowDeleted" msprop:Generator_RowClassName="SearcDeDataTableRow" msprop:Generator_UserTableName="SearcDeDataTable" msprop:Generator_RowEvArgName="SearcDeDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" msprop:Generator_UserColumnName="course_id" type="xs:string" minOccurs="0" />
+              <xs:element name="course_name" msprop:Generator_ColumnVarNameInTable="columncourse_name" msprop:Generator_ColumnPropNameInRow="course_name" msprop:Generator_ColumnPropNameInTable="course_nameColumn" msprop:Generator_UserColumnName="course_name" type="xs:string" minOccurs="0" />
+              <xs:element name="department" msprop:Generator_ColumnVarNameInTable="columndepartment" msprop:Generator_ColumnPropNameInRow="department" msprop:Generator_ColumnPropNameInTable="departmentColumn" msprop:Generator_UserColumnName="department" type="xs:string" minOccurs="0" />
+              <xs:element name="type_search" msprop:Generator_ColumnVarNameInTable="columntype_search" msprop:Generator_ColumnPropNameInRow="type_search" msprop:Generator_ColumnPropNameInTable="type_searchColumn" msprop:Generator_UserColumnName="type_search" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_id" msprop:Generator_ColumnVarNameInTable="columnemp_id" msprop:Generator_ColumnPropNameInRow="emp_id" msprop:Generator_ColumnPropNameInTable="emp_idColumn" msprop:Generator_UserColumnName="emp_id" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_name" msprop:Generator_ColumnVarNameInTable="columnemp_name" msprop:Generator_ColumnPropNameInRow="emp_name" msprop:Generator_ColumnPropNameInTable="emp_nameColumn" msprop:Generator_UserColumnName="emp_name" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_lastname" msprop:Generator_ColumnVarNameInTable="columnemp_lastname" msprop:Generator_ColumnPropNameInRow="emp_lastname" msprop:Generator_ColumnPropNameInTable="emp_lastnameColumn" msprop:Generator_UserColumnName="emp_lastname" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_level" msprop:Generator_ColumnVarNameInTable="columnemp_level" msprop:Generator_ColumnPropNameInRow="emp_level" msprop:Generator_ColumnPropNameInTable="emp_levelColumn" msprop:Generator_UserColumnName="emp_level" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_position" msprop:Generator_ColumnVarNameInTable="columnemp_position" msprop:Generator_ColumnPropNameInRow="emp_position" msprop:Generator_ColumnPropNameInTable="emp_positionColumn" msprop:Generator_UserColumnName="emp_position" type="xs:string" minOccurs="0" />
+              <xs:element name="emp_department" msprop:Generator_ColumnVarNameInTable="columnemp_department" msprop:Generator_ColumnPropNameInRow="emp_department" msprop:Generator_ColumnPropNameInTable="emp_departmentColumn" msprop:Generator_UserColumnName="emp_department" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

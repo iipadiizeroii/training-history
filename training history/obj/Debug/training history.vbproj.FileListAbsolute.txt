@@ -401,3 +401,4 @@ C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_histo
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.frmSearch_not_history_training_Em.resources
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.frmSearch_not_history_training_Em.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.test_Print.resources
+C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test_Print.resources
