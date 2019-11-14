@@ -5,6 +5,7 @@ Imports System.Text
 Imports System.Globalization
 Imports System.Threading
 Imports System.Data.OleDb
+Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class frmSearch_history_training_Em
 
@@ -251,8 +252,59 @@ Public Class frmSearch_history_training_Em
 
     End Sub
 
+    Private Sub Print_Pr_Click(sender As Object, e As EventArgs) Handles Print_Pr.Click
 
-   
+        Dim dt As New DataTable
+        Dim dr As DataRow
+        Dim x1 As String = ""
 
 
+
+        If R1.Checked = True Then
+            x1 = "การอบรมภายใน"
+        Else
+            x1 = "การอบรมภายนอก"
+        End If
+        '*** Column ***'
+        dt.Columns.Add("emp_id")
+        dt.Columns.Add("emp_name")
+        dt.Columns.Add("emp_department")
+        dt.Columns.Add("type_training")
+        dt.Columns.Add("course_id")
+        dt.Columns.Add("course_name")
+        dt.Columns.Add("format_name")
+        dt.Columns.Add("group_name")
+        dt.Columns.Add("type_name")
+
+
+
+        For Each dgv As DataGridViewRow In dgv_history_em.Rows()
+            '*** Rows ***'
+            dr = dt.NewRow
+
+            dr("emp_id") = txt_Search.Text.ToString
+            dr("emp_name") = txt_Search_name.Text.ToString
+            dr("emp_department") = txt_Search_depart.Text.ToString
+            dr("type_training") = x1.ToString
+            dr("course_id") = dgv.Cells(4).Value
+            dr("course_name") = dgv.Cells(5).Value
+            dr("format_name") = dgv.Cells(6).Value
+            dr("group_name") = dgv.Cells(7).Value
+            dr("type_name") = dgv.Cells(8).Value
+
+            dt.Rows.Add(dr)
+        Next
+
+        Dim rpt As New ReportDocument()
+        Dim directory As String = My.Application.Info.DirectoryPath
+        'rpt.Load(directory & "\myCrystalReport1.rpt")
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Search_history_training_Em.rpt")
+        rpt.SetDataSource(dt)
+        test_Print.CrystalReportViewer1.ReportSource = rpt
+        test_Print.CrystalReportViewer1.Refresh()
+
+
+
+
+    End Sub
 End Class

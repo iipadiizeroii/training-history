@@ -6,7 +6,23 @@ traininghistory
 </name>
 </assembly>
 <members>
-<member name="P:training_history.My.Resources.Resources.ResourceManager">
+<member name="T:training_history.DataSet1.SearchEmDataTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:training_history.DataSet1.SearchEmDataTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:training_history.DataSet1.SearchEmDataTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:training_history.DataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:training_history.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

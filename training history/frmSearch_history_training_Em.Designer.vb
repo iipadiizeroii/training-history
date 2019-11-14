@@ -45,6 +45,7 @@ Partial Class frmSearch_history_training_Em
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Print_Pr = New System.Windows.Forms.Button()
         CType(Me.dgv_history_em, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PN_dgv_em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +59,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 22)
+        Me.Label1.Size = New System.Drawing.Size(76, 26)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสพนักงาน"
         '
@@ -103,7 +104,7 @@ Partial Class frmSearch_history_training_Em
         Me.Panel1.Controls.Add(Me.txt_Search_depart_panal)
         Me.Panel1.Controls.Add(Me.txt_Search_name_panal)
         Me.Panel1.Controls.Add(Me.txt_Search_id_panal)
-        Me.Panel1.Location = New System.Drawing.Point(52, 58)
+        Me.Panel1.Location = New System.Drawing.Point(57, 50)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(589, 293)
         Me.Panel1.TabIndex = 9
@@ -149,7 +150,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(117, 77)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 22)
+        Me.Label4.Size = New System.Drawing.Size(41, 26)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "แผนก"
         '
@@ -159,7 +160,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label3.Location = New System.Drawing.Point(89, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 22)
+        Me.Label3.Size = New System.Drawing.Size(69, 26)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "ชื่อพนักงาน"
         '
@@ -169,7 +170,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 22)
+        Me.Label2.Size = New System.Drawing.Size(76, 26)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "รหัสพนักงาน"
         '
@@ -207,6 +208,7 @@ Partial Class frmSearch_history_training_Em
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Print_Pr)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txt_Search_depart)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -227,7 +229,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label6.Location = New System.Drawing.Point(32, 75)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 22)
+        Me.Label6.Size = New System.Drawing.Size(41, 26)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "แผนก"
         '
@@ -245,7 +247,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 46)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 22)
+        Me.Label5.Size = New System.Drawing.Size(69, 26)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "ชื่อพนักงาน"
         '
@@ -263,7 +265,7 @@ Partial Class frmSearch_history_training_Em
         Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R2.Location = New System.Drawing.Point(6, 60)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(100, 26)
+        Me.R2.Size = New System.Drawing.Size(102, 30)
         Me.R2.TabIndex = 12
         Me.R2.TabStop = True
         Me.R2.Text = "อบรมภายนอก"
@@ -276,7 +278,7 @@ Partial Class frmSearch_history_training_Em
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R1.Location = New System.Drawing.Point(6, 24)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 26)
+        Me.R1.Size = New System.Drawing.Size(93, 30)
         Me.R1.TabIndex = 13
         Me.R1.TabStop = True
         Me.R1.Text = "อบรมภายใน"
@@ -293,6 +295,16 @@ Partial Class frmSearch_history_training_Em
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ประเภทการอบรม"
+        '
+        'Print_Pr
+        '
+        Me.Print_Pr.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Print_Pr.Location = New System.Drawing.Point(377, 65)
+        Me.Print_Pr.Name = "Print_Pr"
+        Me.Print_Pr.Size = New System.Drawing.Size(84, 37)
+        Me.Print_Pr.TabIndex = 15
+        Me.Print_Pr.Text = "พิมพ์"
+        Me.Print_Pr.UseVisualStyleBackColor = True
         '
         'frmSearch_history_training_Em
         '
@@ -340,4 +352,5 @@ Partial Class frmSearch_history_training_Em
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txt_Search_depart As System.Windows.Forms.TextBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Print_Pr As System.Windows.Forms.Button
 End Class
