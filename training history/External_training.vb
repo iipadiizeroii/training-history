@@ -447,7 +447,9 @@ Public Class External_training
         upte_data.Enabled = False
         edit_data.Enabled = False
         cmb_course()
-        
+        numAEXO = 0
+        numAEMO = 0
+
 
 
     End Sub

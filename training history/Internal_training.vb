@@ -400,7 +400,8 @@ Public Class Internal_training
         TextBox4.Text = "0"
         TextBox5.Text = "0"
         cmb_course()
-
+        numAEXI = 0
+        numAEMO = 0
         'test
 
     End Sub
