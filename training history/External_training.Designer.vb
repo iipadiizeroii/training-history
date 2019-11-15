@@ -731,6 +731,10 @@ Partial Class External_training
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1031, 657)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(1031, 657)
         Me.Name = "External_training"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "External_training"

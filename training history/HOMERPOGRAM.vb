@@ -30,9 +30,18 @@
         Create_Expert.Top = 50
         Create_Expert.Show()
 
+        
 
         'Create_Expert.Show()
 
+
+        ''เปิดฟอร์มโดยใช้ tap เป็นตัววางฟอร์ม
+        'Create_Expert.TopLevel = False
+        'Me.TabPage1.Controls.Add(Create_Expert)
+        'Create_Expert.Show()
+
+
+        'เปิดฟอร์มใหม่โด้ยการใช้ พาเนลเป็นตัววางฟอร์ม
         'Create_Expert.TopLevel = False
         'Me.Panel1.Controls.Add(Create_Expert)
         'Create_Expert.Show()

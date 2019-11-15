@@ -115,8 +115,10 @@ Public Class frmNew_expert_In
         End With
 
         Create_Expert.upte_data.Enabled = True
-
         Me.Close()
+
+        'Create_Expert.Show()
+
     End Sub
 
 

@@ -383,8 +383,22 @@ Public Class Create_Expert
         f.StartPosition = FormStartPosition.Manual
         f.Left = 380 : f.Top = 50 : f.Show()
 
+        
 
         'frmNew_expert_In.Show()
+
+        ''เปิดฟอร์มโดยใช้ tap เป็นตัววางฟอร์ม
+        'frmNew_expert_In.TopLevel = False
+        'HOMERPOGRAM.TabPage1.Controls.Add(frmNew_expert_In)
+        'frmNew_expert_In.Show()
+        ''Me.Hide()
+
+        'เปิดฟอร์มใหม่โด้ยการใช้ พาเนลเป็นตัววางฟอร์ม
+        'frmNew_expert_In.TopLevel = False
+        'HOMERPOGRAM.Panel1.Controls.Add(frmNew_expert_In)
+        'frmNew_expert_In.Show()
+        'Me.Hide()
+
 
 
     End Sub
