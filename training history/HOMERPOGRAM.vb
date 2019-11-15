@@ -6,7 +6,7 @@
 
     Private Sub HOMERPOGRAM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
+        'Panel1.AutoScroll = True
 
 
     End Sub
@@ -31,6 +31,10 @@
         Create_Expert.Show()
 
 
+        'Create_Expert.Show()
+
+        'Create_Expert.TopLevel = False
+        'Me.Panel1.Controls.Add(Create_Expert)
         'Create_Expert.Show()
 
     End Sub
@@ -81,7 +85,15 @@
         'f.StartPosition = FormStartPosition.Manual
         'f.Left = 215 : f.Top = 50 : f.Show()
 
+        External_training.MdiParent = Me
+        External_training.StartPosition = FormStartPosition.Manual
+        External_training.Left = 215
+        External_training.Top = 50
         External_training.Show()
+
+
+        'External_training.Show()
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click

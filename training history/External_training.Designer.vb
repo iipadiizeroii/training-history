@@ -152,6 +152,7 @@ Partial Class External_training
         '
         Me.txt_long_term.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_long_term.Location = New System.Drawing.Point(121, 116)
+        Me.txt_long_term.MaxLength = 1
         Me.txt_long_term.Name = "txt_long_term"
         Me.txt_long_term.Size = New System.Drawing.Size(65, 20)
         Me.txt_long_term.TabIndex = 7
@@ -255,6 +256,7 @@ Partial Class External_training
         '
         Me.txt_training_location.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_training_location.Location = New System.Drawing.Point(504, 87)
+        Me.txt_training_location.MaxLength = 50
         Me.txt_training_location.Name = "txt_training_location"
         Me.txt_training_location.Size = New System.Drawing.Size(165, 20)
         Me.txt_training_location.TabIndex = 6
@@ -277,6 +279,7 @@ Partial Class External_training
         '
         'txt_trainingOut_id
         '
+        Me.txt_trainingOut_id.Enabled = False
         Me.txt_trainingOut_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_trainingOut_id.Location = New System.Drawing.Point(121, 35)
         Me.txt_trainingOut_id.Name = "txt_trainingOut_id"
@@ -351,7 +354,7 @@ Partial Class External_training
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.datagrid_ExtrainingNew)
         Me.Panel1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(187, 86)
+        Me.Panel1.Location = New System.Drawing.Point(177, 90)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(702, 259)
         Me.Panel1.TabIndex = 97

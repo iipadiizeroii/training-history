@@ -418,9 +418,9 @@ Public Class External_training
             .Columns.Add("รหัสวิทยากร", 80)
             .Columns.Add("ชื่อ", 100)
             .Columns.Add("นามสกุล", 100)
-            .Columns.Add("ตำแหน่งวิทยากร", 120)
-            .Columns.Add("หน่วยงานต้นสังกัด", 120)
-            .Columns.Add("ความชำนาญ", 130)
+            .Columns.Add("ตำแหน่งวิทยากร", 140)
+            .Columns.Add("หน่วยงานต้นสังกัด", 170)
+            .Columns.Add("ความชำนาญ", 320)
             .View = View.Details
             .GridLines = True
             .FullRowSelect = True
@@ -429,12 +429,12 @@ Public Class External_training
         With ListView2
             .Columns.Add("ลำดับ", 50)
             .Columns.Add("รหัสพนักงาน", 80)
-            .Columns.Add("ชื่อ", 100)
-            .Columns.Add("นามสกุล", 100)
+            .Columns.Add("ชื่อ", 130)
+            .Columns.Add("นามสกุล", 130)
             .Columns.Add("Level", 50)
-            .Columns.Add("ตำแหน่งพนักงาน", 120)
-            .Columns.Add("แผนก", 130)
-            .Columns.Add("ฝ่าย", 130)
+            .Columns.Add("ตำแหน่งพนักงาน", 170)
+            .Columns.Add("แผนก", 190)
+            .Columns.Add("ฝ่าย", 160)
             .View = View.Details
             .GridLines = True
             .FullRowSelect = True
@@ -563,7 +563,13 @@ Public Class External_training
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+        frmadd_Expert_out.MdiParent = HOMERPOGRAM
+        frmadd_Expert_out.StartPosition = FormStartPosition.Manual
+        frmadd_Expert_out.Left = 290
+        frmadd_Expert_out.Top = 140
         frmadd_Expert_out.Show()
+
+        'frmadd_Expert_out.Show()
 
     End Sub
 
@@ -571,7 +577,14 @@ Public Class External_training
     Private Sub add_data_emp_Click(sender As Object, e As EventArgs) Handles add_data_emp.Click
 
         courseID = txt_course_id.Text
+
+        frmAdd_Employees_out.MdiParent = HOMERPOGRAM
+        frmAdd_Employees_out.StartPosition = FormStartPosition.Manual
+        frmAdd_Employees_out.Left = 290
+        frmAdd_Employees_out.Top = 140
         frmAdd_Employees_out.Show()
+
+        'frmAdd_Employees_out.Show()
 
     End Sub
 
@@ -1192,6 +1205,75 @@ Public Class External_training
         clear_data.Enabled = True
 
         cn.Close()
+
+    End Sub
+
+    
+    Private Sub cmb_course_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_course_name.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub txt_course_id_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_course_id.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub txt_long_term_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_long_term.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        End Select
 
     End Sub
 End Class
