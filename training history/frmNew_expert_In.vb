@@ -113,6 +113,9 @@ Public Class frmNew_expert_In
             str5 = .Cells(4).Value.ToString
 
         End With
+
+        Create_Expert.upte_data.Enabled = True
+
         Me.Close()
     End Sub
 

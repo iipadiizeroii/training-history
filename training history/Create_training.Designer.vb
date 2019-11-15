@@ -351,6 +351,7 @@ Partial Class Create_training
         'R1
         '
         Me.R1.AutoSize = True
+        Me.R1.Checked = True
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R1.Location = New System.Drawing.Point(6, 19)
         Me.R1.Name = "R1"

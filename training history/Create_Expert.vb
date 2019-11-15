@@ -91,6 +91,8 @@ Public Class Create_Expert
 
             End If
 
+            edit_data.Enabled = True
+
         Catch ex As Exception
             MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
 
@@ -121,6 +123,9 @@ Public Class Create_Expert
 
         R4.Checked = False
         Search_emp.Enabled = False
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 #End Region
@@ -312,6 +317,9 @@ Public Class Create_Expert
 
         R1.Checked = True
         add_data.Enabled = False
+        clear_data.Enabled = False
+        upte_data.Enabled = False
+        edit_data.Enabled = False
         showdata()
 
     End Sub
@@ -320,31 +328,41 @@ Public Class Create_Expert
 
         cleardata()
         add_exp()
+        upte_data.Enabled = True
 
     End Sub
 
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_exp()
-
+        upte_data.Enabled = True
+        clear_data.Enabled = True
+        add_data.Enabled = False
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_exp()
         cleardata()
-
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        cancel_data.Enabled = False
+        add_data.Enabled = True
 
     End Sub
 
 
     Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
 
-        R3.Checked = False
         R4.Checked = False
         cleardata()
         R4.Checked = False
         Search_emp.Enabled = False
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+        R3.Checked = True
+
         showdata()
 
 
@@ -373,6 +391,7 @@ Public Class Create_Expert
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles R4.CheckedChanged
 
+        add_data.Enabled = False
         Search_emp.Enabled = True
 
     End Sub
@@ -440,6 +459,43 @@ Public Class Create_Expert
     
 
     Private Sub txt_exp_name_TextChanged(sender As Object, e As EventArgs) Handles txt_exp_name.TextChanged
+
+    End Sub
+
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+        If R1.Checked = True Then
+
+            Select Case Asc(e.KeyChar)
+                Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                    e.Handled = False
+                Case 8, 13, 46, 70, 102, 84, 116 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                    e.Handled = False
+
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, T")
+            End Select
+
+            txt_Search.MaxLength = 8
+
+        Else
+
+            Select Case Asc(e.KeyChar)
+                Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                    e.Handled = False
+                Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                    e.Handled = False
+                Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                    e.Handled = False
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+            End Select
+            txt_Search.MaxLength = 50
+        End If
+
+
 
     End Sub
 End Class

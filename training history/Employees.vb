@@ -50,6 +50,8 @@ Public Class Employees
         '5'
         cn.Close()
 
+        datagrid_emp.AllowUserToAddRows = False
+
     End Sub
 
 #End Region
@@ -332,11 +334,11 @@ Public Class Employees
         Catch ex As Exception
             MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
 
-
-
-        
-
         End Try
+
+        edit_data.Enabled = True
+        clear_data.Enabled = True
+        upte_data.Enabled = False
 
     End Sub
 #End Region
@@ -354,6 +356,9 @@ Public Class Employees
             cleardata()
         End If
 
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 #End Region
@@ -391,31 +396,40 @@ Public Class Employees
         R1.Checked = True
         E1.Checked = True
         txt_emp_id.Enabled = False
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
         cleardata()
         add_emp()
-
+        upte_data.Enabled = True
+        edit_data.Enabled = False
+        clear_data.Enabled = False
     End Sub
 
 
 
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_emp.CellContentClick
-
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_emp()
+        upte_data.Enabled = True
+        clear_data.Enabled = True
+        add_data.Enabled = False
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_emp()
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
 
     End Sub
 
@@ -425,6 +439,10 @@ Public Class Employees
         cn.Close()
         cleardata()
         showdata2()
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
 
     End Sub
 
@@ -462,15 +480,42 @@ Public Class Employees
     End Sub
 
     Private Sub txt_emp_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_name.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
+        Select Case Asc(e.KeyChar)
+            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+            '    e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
+
+
     End Sub
 
     Private Sub txt_emp_lastname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_lastname.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
+        Select Case Asc(e.KeyChar)
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
+
     End Sub
 
     Private Sub txt_emp_position_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_position.KeyPress
@@ -499,15 +544,48 @@ Public Class Employees
 
     End Sub
 
-    Private Sub txt_emp_division_TextChanged(sender As Object, e As EventArgs) Handles txt_emp_division.TextChanged
 
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
+        If R1.Checked = True Then
+
+
+            Select Case Asc(e.KeyChar)
+                Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                    e.Handled = False
+                Case 8, 13, 46, 70, 102, 89, 121 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                    e.Handled = False
+
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, Y")
+            End Select
+
+            txt_Search.MaxLength = 8
+
+        Else
+
+            Select Case Asc(e.KeyChar)
+                'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+                '    e.Handled = False
+                Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                    e.Handled = False
+                Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                    e.Handled = False
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+            End Select
+            txt_Search.MaxLength = 50
+        End If
     End Sub
 
-    Private Sub txt_Search_TextChanged(sender As Object, e As EventArgs) Handles txt_Search.TextChanged
-
-    End Sub
-
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-
-    End Sub
+    
+   
+    
+   
 End Class

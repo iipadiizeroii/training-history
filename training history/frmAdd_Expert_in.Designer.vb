@@ -32,8 +32,8 @@ Partial Class frmAdd_Expert_in
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgv_In = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.dgv_In, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,6 +42,7 @@ Partial Class frmAdd_Expert_in
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox3.Location = New System.Drawing.Point(118, 76)
+        Me.TextBox3.MaxLength = 100
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
         Me.TextBox3.TabIndex = 2
@@ -50,6 +51,7 @@ Partial Class frmAdd_Expert_in
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox2.Location = New System.Drawing.Point(118, 50)
+        Me.TextBox2.MaxLength = 50
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
         Me.TextBox2.TabIndex = 1
@@ -58,6 +60,7 @@ Partial Class frmAdd_Expert_in
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox1.Location = New System.Drawing.Point(118, 23)
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 0
@@ -143,19 +146,6 @@ Partial Class frmAdd_Expert_in
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ค้นหาวิทยากร"
         '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(226, 128)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 36)
-        Me.Button4.TabIndex = 22
-        Me.Button4.Text = "เลือกทั้งหมด"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
@@ -168,6 +158,19 @@ Partial Class frmAdd_Expert_in
         Me.Button3.Text = "ค้นหา"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(226, 128)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(125, 36)
+        Me.Button4.TabIndex = 22
+        Me.Button4.Text = "เลือกทั้งหมด"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'frmAdd_Expert_in
         '

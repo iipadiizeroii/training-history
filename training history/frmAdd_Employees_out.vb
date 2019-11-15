@@ -301,4 +301,51 @@ Public Class frmAdd_Employees_out
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46, 70, 102, 89, 121 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, Y")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+
+        Select Asc(e.KeyChar)
+            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+            '    e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+            '    e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
+
+    End Sub
 End Class

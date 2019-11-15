@@ -190,4 +190,50 @@ Public Class frmAdd_Expert_in
     End Sub
 
    
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46, 70, 102, 84, 116 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, T")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
 End Class

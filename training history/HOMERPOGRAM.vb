@@ -18,10 +18,17 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim f As New Create_Expert()
-        f.MdiParent = Me
-        f.StartPosition = FormStartPosition.Manual
-        f.Left = 380 : f.Top = 50 : f.Show()
+        'Dim f As New Create_Expert()
+        'f.MdiParent = Me
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 380 : f.Top = 50 : f.Show()
+
+
+        Create_Expert.MdiParent = Me
+        Create_Expert.StartPosition = FormStartPosition.Manual
+        Create_Expert.Left = 380
+        Create_Expert.Top = 50
+        Create_Expert.Show()
 
 
         'Create_Expert.Show()
@@ -57,7 +64,13 @@
         'f.StartPosition = FormStartPosition.Manual
         'f.Left = 215 : f.Top = 50 : f.Show()
 
+        Internal_training.MdiParent = Me
+        Internal_training.StartPosition = FormStartPosition.Manual
+        Internal_training.Left = 215
+        Internal_training.Top = 50
         Internal_training.Show()
+
+        'Internal_training.Show()
 
     End Sub
 

@@ -73,24 +73,24 @@ Partial Class Internal_training
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.datagrid_IntrainingNew = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.RP2 = New System.Windows.Forms.RadioButton()
         Me.RP1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search_panal = New System.Windows.Forms.TextBox()
-        Me.datagrid_IntrainingNew = New System.Windows.Forms.DataGridView()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         CType(Me.datagrid_IntrainingNew, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -235,6 +235,7 @@ Partial Class Internal_training
         '
         Me.txt_long_term.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_long_term.Location = New System.Drawing.Point(121, 116)
+        Me.txt_long_term.MaxLength = 1
         Me.txt_long_term.Name = "txt_long_term"
         Me.txt_long_term.Size = New System.Drawing.Size(48, 20)
         Me.txt_long_term.TabIndex = 4
@@ -251,12 +252,14 @@ Partial Class Internal_training
         '
         Me.txt_trainingIn_name.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_trainingIn_name.Location = New System.Drawing.Point(504, 33)
+        Me.txt_trainingIn_name.MaxLength = 100
         Me.txt_trainingIn_name.Name = "txt_trainingIn_name"
         Me.txt_trainingIn_name.Size = New System.Drawing.Size(165, 20)
         Me.txt_trainingIn_name.TabIndex = 2
         '
         'txt_trainingIn_id
         '
+        Me.txt_trainingIn_id.Enabled = False
         Me.txt_trainingIn_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_trainingIn_id.Location = New System.Drawing.Point(121, 35)
         Me.txt_trainingIn_id.Name = "txt_trainingIn_id"
@@ -640,32 +643,13 @@ Partial Class Internal_training
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'datagrid_IntrainingNew
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Info
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.GroupBox3)
-        Me.Panel1.Controls.Add(Me.datagrid_IntrainingNew)
-        Me.Panel1.Location = New System.Drawing.Point(181, 94)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(705, 261)
-        Me.Panel1.TabIndex = 98
-        Me.Panel1.Visible = False
-        '
-        'Button6
-        '
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Image = Global.training_history.My.Resources.Resources.icons8_shutdown_32
-        Me.Button6.Location = New System.Drawing.Point(665, -1)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(38, 39)
-        Me.Button6.TabIndex = 97
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.datagrid_IntrainingNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagrid_IntrainingNew.Location = New System.Drawing.Point(3, 78)
+        Me.datagrid_IntrainingNew.Name = "datagrid_IntrainingNew"
+        Me.datagrid_IntrainingNew.Size = New System.Drawing.Size(691, 171)
+        Me.datagrid_IntrainingNew.TabIndex = 0
         '
         'GroupBox3
         '
@@ -740,13 +724,32 @@ Partial Class Internal_training
         Me.txt_Search_panal.Size = New System.Drawing.Size(189, 20)
         Me.txt_Search_panal.TabIndex = 0
         '
-        'datagrid_IntrainingNew
+        'Button6
         '
-        Me.datagrid_IntrainingNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagrid_IntrainingNew.Location = New System.Drawing.Point(3, 78)
-        Me.datagrid_IntrainingNew.Name = "datagrid_IntrainingNew"
-        Me.datagrid_IntrainingNew.Size = New System.Drawing.Size(691, 171)
-        Me.datagrid_IntrainingNew.TabIndex = 0
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Image = Global.training_history.My.Resources.Resources.icons8_shutdown_32
+        Me.Button6.Location = New System.Drawing.Point(665, -1)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(38, 39)
+        Me.Button6.TabIndex = 97
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Info
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.GroupBox3)
+        Me.Panel1.Controls.Add(Me.datagrid_IntrainingNew)
+        Me.Panel1.Location = New System.Drawing.Point(247, 94)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(705, 261)
+        Me.Panel1.TabIndex = 98
+        Me.Panel1.Visible = False
         '
         'Internal_training
         '
@@ -770,10 +773,10 @@ Partial Class Internal_training
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
+        CType(Me.datagrid_IntrainingNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.datagrid_IntrainingNew, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -827,14 +830,14 @@ Partial Class Internal_training
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents datagrid_IntrainingNew As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents RP2 As System.Windows.Forms.RadioButton
     Friend WithEvents RP1 As System.Windows.Forms.RadioButton
     Friend WithEvents txt_Search_panal As System.Windows.Forms.TextBox
-    Friend WithEvents datagrid_IntrainingNew As System.Windows.Forms.DataGridView
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

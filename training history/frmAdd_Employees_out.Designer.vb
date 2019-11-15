@@ -42,6 +42,7 @@ Partial Class frmAdd_Employees_out
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox3.Location = New System.Drawing.Point(101, 76)
+        Me.TextBox3.MaxLength = 50
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
         Me.TextBox3.TabIndex = 2
@@ -50,6 +51,7 @@ Partial Class frmAdd_Employees_out
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox2.Location = New System.Drawing.Point(101, 50)
+        Me.TextBox2.MaxLength = 50
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
         Me.TextBox2.TabIndex = 1
@@ -58,6 +60,7 @@ Partial Class frmAdd_Employees_out
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox1.Location = New System.Drawing.Point(101, 24)
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 0

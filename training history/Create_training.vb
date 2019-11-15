@@ -34,6 +34,8 @@ Public Class Create_training
         '5'
         cn.Close()
 
+        datagrid_course.AllowUserToAddRows = False
+
     End Sub
 
 
@@ -231,6 +233,9 @@ Public Class Create_training
         cmb_format()
         cmb_type()
         cmb_group()
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
 
 
 
@@ -289,7 +294,10 @@ Public Class Create_training
 
         cleardata()
         add_cou()
-
+        upte_data.Enabled = True
+        add_data.Enabled = False
+        edit_data.Enabled = False
+        clear_data.Enabled = False
 
 
     End Sub
@@ -298,11 +306,17 @@ Public Class Create_training
 
         edit_cou()
         txt_course_name.Focus()
+        upte_data.Enabled = True
+
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_cou()
+        upte_data.Enabled = False
+        add_data.Enabled = True
+        edit_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 
@@ -322,6 +336,8 @@ Public Class Create_training
 
         End Try
 
+        edit_data.Enabled = True
+        clear_data.Enabled = True
 
 
     End Sub
@@ -402,6 +418,11 @@ Public Class Create_training
         cleardata()
         cn.Close()
         showdata()
+        add_data.Enabled = True
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+
 
     End Sub
 
@@ -445,9 +466,9 @@ Public Class Create_training
     End Sub
 
     Private Sub txt_course_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_course_name.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
     End Sub
 
     Private Sub cmb_format_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_format_name.KeyPress
@@ -472,5 +493,50 @@ Public Class Create_training
 
     Private Sub txt_group_id_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_group_id.KeyPress
         e.Handled = True
+    End Sub
+
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+        If R1.Checked = True Then
+
+
+            Select Case Asc(e.KeyChar)
+                Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                    e.Handled = False
+                Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                    e.Handled = False
+
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+            End Select
+
+            txt_Search.MaxLength = 5
+
+        Else
+
+
+            Select Case Asc(e.KeyChar)
+                Case 48 To 122 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+                    e.Handled = False
+                Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                    e.Handled = False
+                Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                    e.Handled = False
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+            End Select
+            txt_Search.MaxLength = 50
+        End If
+
+    End Sub
+
+    Private Sub R1_CheckedChanged(sender As Object, e As EventArgs) Handles R1.CheckedChanged
+        txt_Search.Text = ""
+    End Sub
+
+    Private Sub R2_CheckedChanged(sender As Object, e As EventArgs) Handles R2.CheckedChanged
+        txt_Search.Text = ""
     End Sub
 End Class

@@ -70,7 +70,7 @@ Partial Class frmadd_Expert_out
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(15, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 24)
+        Me.Label2.Size = New System.Drawing.Size(76, 28)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "ชื่อวิทยากร"
         '
@@ -80,7 +80,7 @@ Partial Class frmadd_Expert_out
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(15, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 24)
+        Me.Label1.Size = New System.Drawing.Size(83, 28)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "รหัสวิทยากร"
         '
@@ -98,7 +98,7 @@ Partial Class frmadd_Expert_out
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(15, 76)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 24)
+        Me.Label3.Size = New System.Drawing.Size(100, 28)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "ความเชี่ยวชาญ"
         '
@@ -106,6 +106,7 @@ Partial Class frmadd_Expert_out
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox1.Location = New System.Drawing.Point(119, 28)
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 0
@@ -114,6 +115,7 @@ Partial Class frmadd_Expert_out
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox2.Location = New System.Drawing.Point(119, 54)
+        Me.TextBox2.MaxLength = 50
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(188, 20)
         Me.TextBox2.TabIndex = 1
@@ -122,6 +124,7 @@ Partial Class frmadd_Expert_out
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox3.Location = New System.Drawing.Point(119, 80)
+        Me.TextBox3.MaxLength = 100
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
         Me.TextBox3.TabIndex = 2
