@@ -59,13 +59,14 @@ Partial Class frmSearch_history_training_Em
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 22)
+        Me.Label1.Size = New System.Drawing.Size(76, 26)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสพนักงาน"
         '
         'txt_Search
         '
         Me.txt_Search.Location = New System.Drawing.Point(81, 20)
+        Me.txt_Search.MaxLength = 8
         Me.txt_Search.Name = "txt_Search"
         Me.txt_Search.Size = New System.Drawing.Size(179, 20)
         Me.txt_Search.TabIndex = 5
@@ -150,7 +151,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(117, 77)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 22)
+        Me.Label4.Size = New System.Drawing.Size(41, 26)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "แผนก"
         '
@@ -160,7 +161,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label3.Location = New System.Drawing.Point(89, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 22)
+        Me.Label3.Size = New System.Drawing.Size(69, 26)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "ชื่อพนักงาน"
         '
@@ -170,7 +171,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 22)
+        Me.Label2.Size = New System.Drawing.Size(76, 26)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "รหัสพนักงาน"
         '
@@ -239,7 +240,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label6.Location = New System.Drawing.Point(32, 75)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 22)
+        Me.Label6.Size = New System.Drawing.Size(41, 26)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "แผนก"
         '
@@ -257,7 +258,7 @@ Partial Class frmSearch_history_training_Em
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 46)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 22)
+        Me.Label5.Size = New System.Drawing.Size(69, 26)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "ชื่อพนักงาน"
         '
@@ -275,7 +276,7 @@ Partial Class frmSearch_history_training_Em
         Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R2.Location = New System.Drawing.Point(6, 60)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(100, 26)
+        Me.R2.Size = New System.Drawing.Size(102, 30)
         Me.R2.TabIndex = 12
         Me.R2.TabStop = True
         Me.R2.Text = "อบรมภายนอก"
@@ -288,7 +289,7 @@ Partial Class frmSearch_history_training_Em
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R1.Location = New System.Drawing.Point(6, 24)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 26)
+        Me.R1.Size = New System.Drawing.Size(93, 30)
         Me.R1.TabIndex = 13
         Me.R1.TabStop = True
         Me.R1.Text = "อบรมภายใน"

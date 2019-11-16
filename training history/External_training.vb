@@ -447,8 +447,8 @@ Public Class External_training
         upte_data.Enabled = False
         edit_data.Enabled = False
         cmb_course()
-        numAEXO = 0
-        numAEMO = 0
+        'numAEXO = 0
+        'numAEMO = 0
 
 
 
@@ -468,6 +468,13 @@ Public Class External_training
             'showdata()
             cleardata()
         End If
+
+        upte_data.Enabled = False
+        edit_data.Enabled = False
+        clear_data.Enabled = False
+        Button2.Enabled = False
+        add_data_emp.Enabled = False
+
     End Sub
 
 
@@ -481,7 +488,9 @@ Public Class External_training
         cancel_data.Enabled = True
         edit_data.Enabled = False
         add_data.Enabled = False
-        
+        Button2.Enabled = True
+        add_data_emp.Enabled = True
+
 
     End Sub
 
@@ -492,12 +501,16 @@ Public Class External_training
         edit_data.Enabled = False
         cancel_data.Enabled = False
         add_data.Enabled = False
+        Button2.Enabled = True
+        add_data_emp.Enabled = True
 
 
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
+        add_data_emp.Enabled = False
+        Button2.Enabled = False
         upte_data.Enabled = False
         edit_data.Enabled = True
         add_data.Enabled = True
@@ -512,6 +525,8 @@ Public Class External_training
 
     Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
 
+        add_data_emp.Enabled = False
+        Button2.Enabled = False
         upte_data.Enabled = False
         edit_data.Enabled = False
         clear_data.Enabled = False

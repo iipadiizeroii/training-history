@@ -249,7 +249,7 @@ Public Class frmSearch_not_history_training_Em
         Dim rpt As New ReportDocument()
         Dim directory As String = My.Application.Info.DirectoryPath
         'rpt.Load(directory & "\myCrystalReport1.rpt")
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Search_not_history_training_Em.rpt")
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Search_not_history_training_Em.rpt")
         rpt.SetDataSource(dt)
         test_Print.CrystalReportViewer1.ReportSource = rpt
         test_Print.CrystalReportViewer1.Refresh()

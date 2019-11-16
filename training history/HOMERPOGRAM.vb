@@ -131,6 +131,14 @@
         f.Left = 370 : f.Top = 50 : f.Show()
 
 
+
+        'Dim f As New frmSearch_not_history_training_Em()
+        'f.MdiParent = Me
+        'f.StartPosition = FormStartPosition.Manual
+        'f.Left = 370 : f.Top = 50 : f.Show()
+
+
+
         'Dim f As New frmSearch_not_history_training_Em()
         ''f.MdiParent = GroupBox2.Container
         'f.StartPosition = FormStartPosition.Manual

@@ -400,8 +400,8 @@ Public Class Internal_training
         TextBox4.Text = "0"
         TextBox5.Text = "0"
         cmb_course()
-        numAEXI = 0
-        numAEMO = 0
+        'numAEXI = 0
+        'numAEMO = 0
         'test
 
     End Sub
@@ -415,6 +415,8 @@ Public Class Internal_training
         cancel_data.Enabled = True
         edit_data.Enabled = False
         add_data.Enabled = False
+        Button2.Enabled = True
+        add_data_emp.Enabled = True
     End Sub
 
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
@@ -424,10 +426,15 @@ Public Class Internal_training
         edit_data.Enabled = False
         cancel_data.Enabled = False
         add_data.Enabled = False
+        Button2.Enabled = True
+        add_data_emp.Enabled = True
+
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
+        add_data_emp.Enabled = False
+        Button2.Enabled = False
         update_training()
         update_Expenses()
         upte_data.Enabled = False
@@ -441,6 +448,8 @@ Public Class Internal_training
 
     Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
 
+        add_data_emp.Enabled = False
+        Button2.Enabled = False
         upte_data.Enabled = False
         edit_data.Enabled = False
         clear_data.Enabled = False
@@ -502,6 +511,8 @@ Public Class Internal_training
         upte_data.Enabled = False
         edit_data.Enabled = False
         clear_data.Enabled = False
+        Button2.Enabled = False
+        add_data_emp.Enabled = False
 
     End Sub
 

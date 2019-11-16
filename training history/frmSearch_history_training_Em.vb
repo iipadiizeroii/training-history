@@ -298,7 +298,7 @@ Public Class frmSearch_history_training_Em
         Dim rpt As New ReportDocument()
         Dim directory As String = My.Application.Info.DirectoryPath
         'rpt.Load(directory & "\myCrystalReport1.rpt")
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Search_history_training_Em.rpt")
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Search_history_training_Em.rpt")
         rpt.SetDataSource(dt)
         test_Print.CrystalReportViewer1.ReportSource = rpt
         test_Print.CrystalReportViewer1.Refresh()
@@ -306,6 +306,62 @@ Public Class frmSearch_history_training_Em
         test_Print.Show()
 
 
+
+    End Sub
+
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46, 70, 102, 89, 121 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, Y")
+        End Select
+
+    End Sub
+
+    
+    
+    Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
+
+
+        If e.KeyCode = Keys.Enter Then
+
+
+            sb = New StringBuilder
+            sb.Append("select emp_name , emp_department from Employees where emp_id = @empid")
+
+
+            With cn
+                If .State = ConnectionState.Open Then .Close()
+                .ConnectionString = strConn
+                .Open()
+            End With
+
+            cm = New SqlCommand(sb.ToString, cn)
+            With cm.Parameters
+                .Clear()
+                .AddWithValue("@empid", txt_Search.Text)
+            End With
+            dr = cm.ExecuteReader
+
+            Dim dt As New DataTable
+            dt.Load(dr)
+
+            If (dt.Rows.Count = 0) Then
+                MessageBox.Show("ไม่พบข้อมูล")
+            Else
+                With dt.Rows(0)
+                    txt_Search_name.Text = .Item(0).ToString
+                    txt_Search_depart.Text = .Item(1).ToString
+
+                End With
+            End If
+        End If
 
     End Sub
 End Class
