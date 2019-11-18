@@ -58,6 +58,7 @@ Partial Class frmSearch_not_history_training_Em
         '
         'Print_Pr
         '
+        Me.Print_Pr.Enabled = False
         Me.Print_Pr.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Print_Pr.Location = New System.Drawing.Point(282, 75)
         Me.Print_Pr.Name = "Print_Pr"
@@ -80,7 +81,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 70)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 26)
+        Me.Label2.Size = New System.Drawing.Size(39, 22)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "แผนก"
         '
@@ -98,7 +99,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 46)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 26)
+        Me.Label5.Size = New System.Drawing.Size(66, 22)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "ชื่อหลักสูตร"
         '
@@ -129,7 +130,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 26)
+        Me.Label1.Size = New System.Drawing.Size(73, 22)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสหลักสูตร"
         '
@@ -151,7 +152,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R2.Location = New System.Drawing.Point(6, 60)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(136, 30)
+        Me.R2.Size = New System.Drawing.Size(134, 26)
         Me.R2.TabIndex = 12
         Me.R2.TabStop = True
         Me.R2.Text = "พนักงานที่ยังไม่อบรม"
@@ -164,7 +165,7 @@ Partial Class frmSearch_not_history_training_Em
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.R1.Location = New System.Drawing.Point(6, 24)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(130, 30)
+        Me.R1.Size = New System.Drawing.Size(128, 26)
         Me.R1.TabIndex = 13
         Me.R1.TabStop = True
         Me.R1.Text = "พนักงานที่อบรมแล้ว"

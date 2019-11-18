@@ -139,13 +139,8 @@ Public Class Create_Expert
         End If
 
 
-        If txt_exp_id.Text = "" Then
-            MsgBox("กรุณากรอกชื่อพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
-            Exit Sub
-        End If
-
-        If txt_expert_expertise.Text = "" Then
-            MsgBox("กรุณากรอกความชำนาญวิทยากร", MsgBoxStyle.Critical, "ผลการทำงาน")
+        If txt_exp_name.Text = "" Then
+            MsgBox("กรุณากรอกชื่อวิทยากร", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
         End If
 
@@ -164,7 +159,10 @@ Public Class Create_Expert
             Exit Sub
         End If
 
-
+        If txt_expert_expertise.Text = "" Then
+            MsgBox("กรุณากรอกความชำนาญวิทยากร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
 
 
         With cn
@@ -214,7 +212,7 @@ Public Class Create_Expert
 
         MessageBox.Show("บันทึกเรียบร้อย ")
         showdata()
-
+        savestatus = ""
         R4.Checked = False
         Search_emp.Enabled = False
 
@@ -377,6 +375,8 @@ Public Class Create_Expert
 
 
         If savestatus = "Add" Then
+            upte_data.Enabled = True
+        ElseIf savestatus = "Edit" Then
             upte_data.Enabled = True
         Else
             cleardata()

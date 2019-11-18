@@ -24,6 +24,41 @@ Public Class frmSearch_history_training_Em
 
 
         Dim cn As New SqlConnection(strConn)
+
+        If txt_Search.Text <> "" Then
+            sb = New StringBuilder
+            sb.Append("select emp_name , emp_department from Employees where emp_id = @empid")
+
+
+            With cn
+                If .State = ConnectionState.Open Then .Close()
+                .ConnectionString = strConn
+                .Open()
+            End With
+
+            cm = New SqlCommand(sb.ToString, cn)
+            With cm.Parameters
+                .Clear()
+                .AddWithValue("@empid", txt_Search.Text)
+            End With
+            dr = cm.ExecuteReader
+
+            Dim dt As New DataTable
+            dt.Load(dr)
+
+            If (dt.Rows.Count = 0) Then
+                MessageBox.Show("ไม่พบข้อมูล")
+            Else
+                With dt.Rows(0)
+                    txt_Search_name.Text = .Item(0).ToString
+                    txt_Search_depart.Text = .Item(1).ToString
+
+                End With
+            End If
+        End If
+
+
+
         '2
 
         If R1.Checked = True Then
@@ -124,6 +159,8 @@ Public Class frmSearch_history_training_Em
 
 
 
+        dgv_history_em.AllowUserToAddRows = False
+        Print_Pr.Enabled = True
 
     End Sub
 
@@ -154,8 +191,6 @@ Public Class frmSearch_history_training_Em
             .Columns("emp_date").HeaderText = "วันที่เริ่มงาน"
             .Columns("emp_date").Width = "130"
 
-
-
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
@@ -163,8 +198,9 @@ Public Class frmSearch_history_training_Em
             .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
 
-
         End With
+
+        PN_dgv_em.AllowUserToAddRows = False
 
 
     End Sub
@@ -190,6 +226,7 @@ Public Class frmSearch_history_training_Em
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+        Print_Pr.Enabled = False
         Panel1.Visible = True
 
         Dim cn As New SqlConnection(strConn)
@@ -240,6 +277,7 @@ Public Class frmSearch_history_training_Em
         txt_Search_id_panal.Text = ""
         txt_Search_name_panal.Text = ""
         txt_Search_depart_panal.Text = ""
+        PN_dgv_em.AllowUserToAddRows = False
         dgv_history_em.DataSource = ds.Tables
 
 
@@ -324,8 +362,8 @@ Public Class frmSearch_history_training_Em
 
     End Sub
 
-    
-    
+
+
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
 
@@ -393,15 +431,15 @@ Public Class frmSearch_history_training_Em
     Private Sub txt_Search_name_panal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search_name_panal.KeyPress
 
         Select Case Asc(e.KeyChar)
-            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
-            '    e.Handled = False
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
         End Select
 
     End Sub

@@ -306,9 +306,9 @@ Public Class Employees
             Dim DR As SqlDataReader
             CM.Parameters.Clear()
             If R1.Checked = True Then
-                CM.Parameters.Add("@emp_id", SqlDbType.NVarChar, 10).Value = "%" & txt_Search.Text & "%"
+                CM.Parameters.Add("@emp_id", SqlDbType.NVarChar, 10).Value = txt_Search.Text & "%"
             Else
-                CM.Parameters.Add("@emp_name", SqlDbType.NVarChar, 50).Value = "%" & txt_Search.Text & "%"
+                CM.Parameters.Add("@emp_name", SqlDbType.NVarChar, 50).Value = txt_Search.Text & "%"
             End If
             DR = CM.ExecuteReader
             Dim dt As New DataTable
@@ -509,15 +509,15 @@ Public Class Employees
         Else
 
             Select Case Asc(e.KeyChar)
-                'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
-                '    e.Handled = False
+                Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                    e.Handled = False
                 Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                     e.Handled = False
                 Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                     e.Handled = False
                 Case Else
                     e.Handled = True
-                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
             End Select
             txt_Search.MaxLength = 50
         End If
@@ -647,14 +647,23 @@ Public Class Employees
         If savestatus = "Add" Then
             upte_data.Enabled = True
 
+        ElseIf savestatus = "Edit" Then
+            upte_data.Enabled = True
         Else
             upte_data.Enabled = False
+            edit_data.Enabled = False
+            clear_data.Enabled = False
+            add_data.Enabled = True
 
         End If
 
-        edit_data.Enabled = False
-        clear_data.Enabled = False
-        add_data.Enabled = True
+
+
+
+        
+
+
+
 
     End Sub
 

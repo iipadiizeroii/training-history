@@ -1,2 +1,3 @@
 C:\Users\Duck\Documents\Visual Studio 2013\Projects\training history\training history\bin\Release\training history.exe.config
 G:\โปรเจค\training history\training-history\training history\bin\Release\training history.exe.config
+C:\Users\Duck\Desktop\training-history\training history\bin\Release\training history.exe.config

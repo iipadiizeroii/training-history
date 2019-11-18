@@ -110,7 +110,7 @@ Public Class External_training
 
         dr.Close()
         cn.Close()
-        txt_trainingOut_id.Focus()
+        'txt_trainingOut_id.Focus()
 
 
     End Sub
@@ -175,6 +175,50 @@ Public Class External_training
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+        If txt_trainingOut_name.Text = "" Then
+            MsgBox("กรุณากรอกชื่อการจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_course_name.Text = "" Then
+            MsgBox("กรุณาเลือกหลักสูตรจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If txt_training_location.Text = "" Then
+            MsgBox("กรุณากรอกสถานที่จัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_long_term.Text = "" Then
+            MsgBox("กรุณากรอกจำนวนวันอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If ListView1.Items.Count <= 0 Then
+            MsgBox("กรุณาเลือกวิทยากรเข้าอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If ListView2.Items.Count <= 0 Then
+            MsgBox("กรุณาเลือกพนักงานเข้ารับการอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If TextBox1.Text And TextBox2.Text And TextBox3.Text = "" Then
+            MsgBox("กรุณากรอกค่าใช้จ่ายให้ครบ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If TextBox4.Text = "" Then
+            MsgBox("กรุณากดคำนวนค่าใช้จ่ายทั้งหมด", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
 
         With cn
             If .State = ConnectionState.Open Then .Close()
@@ -250,11 +294,9 @@ Public Class External_training
             '--4.รัน
             cm.ExecuteNonQuery()
 
-
-
-
         Next
-        MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+        update_Expenses()
+        savestatus = ""
 
 
     End Sub
@@ -313,6 +355,7 @@ Public Class External_training
 #Region "cleardata"
     Private Sub cleardata()
 
+
         txt_trainingOut_id.Text = ""
         txt_trainingOut_name.Text = ""
         txt_course_id.Text = ""
@@ -323,7 +366,7 @@ Public Class External_training
         TextBox1.Text = "0"
         TextBox2.Text = "0"
         TextBox3.Text = "0"
-        TextBox4.Text = "0"
+        TextBox4.Text = ""
         ListView1.Items.Clear()
         ListView2.Items.Clear()
         numAEXO = 0
@@ -443,7 +486,7 @@ Public Class External_training
         TextBox1.Text = "0"
         TextBox2.Text = "0"
         TextBox3.Text = "0"
-        TextBox4.Text = "0"
+        TextBox4.Text = ""
         upte_data.Enabled = False
         edit_data.Enabled = False
         cmb_course()
@@ -481,9 +524,8 @@ Public Class External_training
 
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
-
-        add_trainningOut()
         cleardata()
+        add_trainningOut()
         upte_data.Enabled = True
         cancel_data.Enabled = True
         edit_data.Enabled = False
@@ -509,16 +551,26 @@ Public Class External_training
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
-        add_data_emp.Enabled = False
-        Button2.Enabled = False
-        upte_data.Enabled = False
-        edit_data.Enabled = True
-        add_data.Enabled = True
-        cancel_data.Enabled = True
-        numAEMO = 0
-        numAEXO = 0
         update_trainingOut()
-        update_Expenses()
+        'update_Expenses()
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+
+        ElseIf savestatus = "Edit" Then
+            upte_data.Enabled = True
+        Else
+            add_data_emp.Enabled = False
+            Button2.Enabled = False
+            upte_data.Enabled = False
+            edit_data.Enabled = True
+            add_data.Enabled = True
+            cancel_data.Enabled = True
+            numAEMO = 0
+            numAEXO = 0
+            
+        End If
+        
 
 
     End Sub

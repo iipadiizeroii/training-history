@@ -55,6 +55,18 @@ Public Class frmSearch_not_history_training_Em
 
         Dim cn As New SqlConnection(strConn)
 
+        If cmb_course_name.Text = "" Then
+            MsgBox("กรุณาเลือกหลักสูตร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Print_Pr.Enabled = False
+            Exit Sub
+        End If
+
+        If cmb_department_name.Text = "" Then
+            MsgBox("กรุณาเลือกแผนก", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Print_Pr.Enabled = False
+            Exit Sub
+        End If
+
 
         If R1.Checked = True Then
 
@@ -199,8 +211,12 @@ Public Class frmSearch_not_history_training_Em
             End If
 
             dgv_not_history_em.AllowUserToAddRows = False
+            
+
 
         End If
+        Print_Pr.Enabled = True
+
 
     End Sub
 
@@ -209,6 +225,7 @@ Public Class frmSearch_not_history_training_Em
         Dim dt As New DataTable
         Dim dr As DataRow
         Dim x1 As String = ""
+
 
 
 

@@ -175,6 +175,53 @@ Public Class Internal_training
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+        If txt_trainingIn_name.Text = "" Then
+            MsgBox("กรุณากรอกชื่อการจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_course_name.Text = "" Then
+            MsgBox("กรุณาเลือกหลักสูตรจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If cmb_training_location.Text = "" Then
+            MsgBox("กรุณาเลือกสถานที่จัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If txt_long_term.Text = "" Then
+            MsgBox("กรุณากรอกจำนวนวันอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If ListView1.Items.Count <= 0 Then
+            MsgBox("กรุณาเลือกวิทยากรเข้าอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If ListView2.Items.Count <= 0 Then
+            MsgBox("กรุณาเลือกพนักงานเข้ารับการอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If TextBox1.Text And TextBox2.Text And TextBox3.Text And TextBox4.Text = "" Then
+            MsgBox("กรุณากรอกค่าใช้จ่ายให้ครบ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If TextBox5.Text = "" Then
+            MsgBox("กรุณากดคำนวนค่าใช้จ่ายทั้งหมด", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -213,7 +260,7 @@ Public Class Internal_training
             cm.ExecuteNonQuery()
         End With
 
-        
+
 
         'บันทึกข้อมูลเข้า รายละเอียดวิทยากรภายนอก
         For i As Integer = 0 To ListView1.Items.Count - 1
@@ -253,6 +300,10 @@ Public Class Internal_training
             cm.ExecuteNonQuery()
 
         Next
+
+        update_Expenses()
+
+        savestatus = ""
         'MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
         'showdata()
 
@@ -326,7 +377,7 @@ Public Class Internal_training
         TextBox2.Text = "0"
         TextBox3.Text = "0"
         TextBox4.Text = "0"
-        TextBox5.Text = "0"
+        TextBox5.Text = ""
         numAEXI = 0
         numAEMO = 0
         ListView1.Items.Clear()
@@ -398,7 +449,7 @@ Public Class Internal_training
         TextBox2.Text = "0"
         TextBox3.Text = "0"
         TextBox4.Text = "0"
-        TextBox5.Text = "0"
+        TextBox5.Text = ""
         cmb_course()
         'numAEXI = 0
         'numAEMO = 0
@@ -433,16 +484,28 @@ Public Class Internal_training
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
-        add_data_emp.Enabled = False
-        Button2.Enabled = False
+
         update_training()
-        update_Expenses()
-        upte_data.Enabled = False
-        edit_data.Enabled = True
-        add_data.Enabled = True
-        cancel_data.Enabled = True
-        numAEMO = 0
-        numAEXI = 0
+        'update_Expenses()
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+        ElseIf savestatus = "Edit" Then
+            upte_data.Enabled = True
+
+        Else
+            add_data_emp.Enabled = False
+            Button2.Enabled = False
+            upte_data.Enabled = False
+            edit_data.Enabled = True
+            add_data.Enabled = True
+            cancel_data.Enabled = True
+            numAEMO = 0
+            numAEXI = 0
+        End If
+
+
+        
 
     End Sub
 
@@ -1252,4 +1315,6 @@ Public Class Internal_training
         txt_Search_panal.Text = ""
 
     End Sub
+
+   
 End Class

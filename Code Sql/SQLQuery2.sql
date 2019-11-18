@@ -150,3 +150,11 @@ from Employees E
 inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
 inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
 where IT.course_id = '19001' );
+
+
+select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name
+from Course C
+inner join format_course F on F.format_id = C.format_id
+inner join type_course T on t.type_id = C.type_id 
+inner join group_course G on G.group_id = C.group_id
+where C.course_id = '19018'

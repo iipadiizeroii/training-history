@@ -24,8 +24,9 @@ Public Class Create_training
         Dim cn As New SqlConnection(strConn)
         Dim s As String = ""
         '2.เขียน sql'
-        s = "select * from Course"
+        s = "select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name from Course C inner join format_course F on F.format_id = C.format_id inner join type_course T on t.type_id = C.type_id inner join group_course G on G.group_id = C.group_id"
         '3'
+
         Dim da As New SqlDataAdapter(s, cn)
         Dim ds As New DataSet
         da.Fill(ds, "cou")
@@ -36,6 +37,7 @@ Public Class Create_training
 
         datagrid_course.AllowUserToAddRows = False
 
+        
     End Sub
 
 
@@ -73,10 +75,6 @@ Public Class Create_training
 
         savestatus = "Add"
 
-        'If R3.Checked = False Then
-        '    MessageBox.Show("กรุณาติ๊กเลือก วิทยากรภายนอก")
-        '    Exit Sub
-        'End If
 
         sb = New StringBuilder
         sb.Append("Select top 1 course_id From Course ")
@@ -147,6 +145,30 @@ Public Class Create_training
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+
+        If txt_course_name.Text = "" Then
+            MsgBox("กรุณากรอกชื่อหลักสูตร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_format_name.Text = "" Then
+            MsgBox("กรุณาเลือกรูปแบบจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_type_name.Text = "" Then
+            MsgBox("กรุณาเลือกประเภทจัดอบรม", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+        If cmb_group_name.Text = "" Then
+            MsgBox("กรุณาเลือกกลุ่มหลักสูตร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -187,8 +209,7 @@ Public Class Create_training
 
         MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
         showdata()
-
-
+        savestatus = ""
 
 
 
@@ -313,10 +334,20 @@ Public Class Create_training
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_cou()
-        upte_data.Enabled = False
-        add_data.Enabled = True
-        edit_data.Enabled = False
-        clear_data.Enabled = False
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+
+        ElseIf savestatus = "Edit" Then
+            upte_data.Enabled = True
+        Else
+            upte_data.Enabled = False
+            add_data.Enabled = True
+            edit_data.Enabled = False
+            clear_data.Enabled = False
+
+        End If
+        
 
     End Sub
 
@@ -327,9 +358,9 @@ Public Class Create_training
             Dim i As Integer = datagrid_course.CurrentRow.Index
             txt_course_id.Text = datagrid_course.Item(0, i).Value
             txt_course_name.Text = datagrid_course.Item(1, i).Value
-            txt_format_id.Text = datagrid_course.Item(2, i).Value
-            txt_type_id.Text = datagrid_course.Item(3, i).Value
-            txt_group_id.Text = datagrid_course.Item(4, i).Value
+            cmb_format_name.Text = datagrid_course.Item(2, i).Value
+            cmb_type_name.Text = datagrid_course.Item(3, i).Value
+            cmb_group_name.Text = datagrid_course.Item(4, i).Value
 
         Catch ex As Exception
             MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
