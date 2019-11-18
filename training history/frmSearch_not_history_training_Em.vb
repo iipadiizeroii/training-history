@@ -128,6 +128,8 @@ Public Class frmSearch_not_history_training_Em
 
 
             End If
+            dgv_not_history_em.AllowUserToAddRows = False
+
         Else
 
             If cmb_department_name.Text = "" Then
@@ -196,7 +198,7 @@ Public Class frmSearch_not_history_training_Em
 
             End If
 
-
+            dgv_not_history_em.AllowUserToAddRows = False
 
         End If
 
@@ -256,5 +258,13 @@ Public Class frmSearch_not_history_training_Em
 
         test_Print.Show()
 
+    End Sub
+
+    Private Sub cmb_course_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_course_name.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmb_department_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_department_name.KeyPress
+        e.Handled = True
     End Sub
 End Class

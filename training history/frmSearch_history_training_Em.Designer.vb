@@ -178,6 +178,7 @@ Partial Class frmSearch_history_training_Em
         'txt_Search_depart_panal
         '
         Me.txt_Search_depart_panal.Location = New System.Drawing.Point(164, 80)
+        Me.txt_Search_depart_panal.MaxLength = 30
         Me.txt_Search_depart_panal.Name = "txt_Search_depart_panal"
         Me.txt_Search_depart_panal.Size = New System.Drawing.Size(176, 20)
         Me.txt_Search_depart_panal.TabIndex = 0
@@ -185,6 +186,7 @@ Partial Class frmSearch_history_training_Em
         'txt_Search_name_panal
         '
         Me.txt_Search_name_panal.Location = New System.Drawing.Point(164, 54)
+        Me.txt_Search_name_panal.MaxLength = 50
         Me.txt_Search_name_panal.Name = "txt_Search_name_panal"
         Me.txt_Search_name_panal.Size = New System.Drawing.Size(176, 20)
         Me.txt_Search_name_panal.TabIndex = 0
@@ -194,6 +196,7 @@ Partial Class frmSearch_history_training_Em
         Me.txt_Search_id_panal.BackColor = System.Drawing.Color.White
         Me.txt_Search_id_panal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_Search_id_panal.Location = New System.Drawing.Point(164, 28)
+        Me.txt_Search_id_panal.MaxLength = 8
         Me.txt_Search_id_panal.Name = "txt_Search_id_panal"
         Me.txt_Search_id_panal.Size = New System.Drawing.Size(176, 20)
         Me.txt_Search_id_panal.TabIndex = 0

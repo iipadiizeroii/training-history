@@ -331,6 +331,10 @@ Public Class frmSearch_history_training_Em
 
         If e.KeyCode = Keys.Enter Then
 
+            'If (txt_Search.MaxLength < 8) Then
+            '    MessageBox.Show("กรุณากรอกรหัสพนักงานให้ครบ 8 หลัก")
+            '    Exit Sub
+            'End If
 
             sb = New StringBuilder
             sb.Append("select emp_name , emp_department from Employees where emp_id = @empid")
@@ -363,5 +367,57 @@ Public Class frmSearch_history_training_Em
             End If
         End If
 
+    End Sub
+
+    Private Sub txt_Search_id_panal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search_id_panal.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46, 70, 102, 89, 121 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, Y")
+        End Select
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+        Panel1.Visible = False
+
+    End Sub
+
+    Private Sub txt_Search_name_panal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search_name_panal.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+            '    e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
+
+    End Sub
+
+    Private Sub txt_Search_depart_panal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search_depart_panal.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
+            '    e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+        End Select
     End Sub
 End Class
