@@ -31,8 +31,12 @@ Public Class frmNew_expert_In
         da.Fill(ds, "emtra")
         '4.'
         datagrid_new_expertin.DataSource = ds.Tables("emtra")
+
+        datagrid_new_expertin.AllowUserToAddRows = False
         '5'
         cn.Close()
+
+
 
     End Sub
 #End Region
@@ -123,4 +127,39 @@ Public Class frmNew_expert_In
 
 
 
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+
+        If R1.Checked = True Then
+
+            Select Case Asc(e.KeyChar)
+                Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                    e.Handled = False
+                Case 8, 13, 46, 70, 102, 84, 116 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                    e.Handled = False
+
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, T")
+            End Select
+
+            txt_Search.MaxLength = 8
+
+        Else
+
+            Select Case Asc(e.KeyChar)
+                Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                    e.Handled = False
+                Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                    e.Handled = False
+                Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                    e.Handled = False
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+            End Select
+            txt_Search.MaxLength = 50
+        End If
+
+    End Sub
 End Class

@@ -57,6 +57,7 @@ Public Class Employees
 #End Region
 
 
+
 #Region "add"
     Private Sub add_emp()
 
@@ -166,6 +167,38 @@ Public Class Employees
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+
+        If txt_emp_name.Text = "" Then
+            MsgBox("กรุณากรอกชื่อพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_emp_lastname.Text = "" Then
+            MsgBox("กรุณากรอกนามสกุลพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_emp_degree.Text = "" Then
+            MsgBox("กรุณาเลือกวุฒิการศึกษาพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_emp_position.Text = "" Then
+            MsgBox("กรุณากรอกตำแหน่งพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_emp_department.Text = "" Then
+            MsgBox("กรุณาเลือกแผนกพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If cmb_emp_level.Text = "" Then
+            MsgBox("กรุณาเลือกระดับพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -220,6 +253,7 @@ Public Class Employees
 
         MessageBox.Show("บันทึกเรียบร้อย ")
         showdata2()
+        savestatus = ""
 
         'Dim bb As Boolean
         'bb = source.StartsWith("c:\Pic")
@@ -375,6 +409,8 @@ Public Class Employees
         cmb_emp_level.Text = ""
         txt_Search.Text = ""
         Date_start.Text = Now.Date
+
+
         'R1.Checked = False
         'R2.Checked = False
 
@@ -383,101 +419,8 @@ Public Class Employees
     End Sub
 #End Region
 
-    Private Sub emp_department()
-        sql = "select department_name from Department "
-        cmd_object(cmb_emp_department)
-    End Sub
 
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        showdata2()
-        emp_department()
-        R1.Checked = True
-        E1.Checked = True
-        txt_emp_id.Enabled = False
-        edit_data.Enabled = False
-        upte_data.Enabled = False
-        clear_data.Enabled = False
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles add_data.Click
-
-        cleardata()
-        add_emp()
-        upte_data.Enabled = True
-        edit_data.Enabled = False
-        clear_data.Enabled = False
-    End Sub
-
-
-
-
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles edit_data.Click
-
-        edit_emp()
-        upte_data.Enabled = True
-        clear_data.Enabled = True
-        add_data.Enabled = False
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles upte_data.Click
-
-        update_emp()
-        edit_data.Enabled = False
-        upte_data.Enabled = False
-        clear_data.Enabled = False
-        add_data.Enabled = True
-
-    End Sub
-
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
-
-        cn.Close()
-        cleardata()
-        showdata2()
-        edit_data.Enabled = False
-        upte_data.Enabled = False
-        clear_data.Enabled = False
-        add_data.Enabled = True
-
-    End Sub
-
-
-
-
-    Private Sub R1_CheckedChanged(sender As Object, e As EventArgs) Handles R1.CheckedChanged
-
-        txt_Search.Text = ""
-        txt_Search.Focus()
-        cleardata()
-        showdata2()
-
-    End Sub
-
-    Private Sub R2_CheckedChanged(sender As Object, e As EventArgs) Handles R2.CheckedChanged
-
-        txt_Search.Text = ""
-        txt_Search.Focus()
-        cleardata()
-        showdata2()
-
-    End Sub
-
-    Private Sub cmb_emp_degree_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_degree.KeyPress
-        e.Handled = True
-    End Sub
-
-    Private Sub cmb_emp_level_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_level.KeyPress
-        e.Handled = True
-    End Sub
-
-    Private Sub cmb_emp_department_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_department.KeyPress
-        e.Handled = True
-    End Sub
+#Region "code กันไม่ใช้คีย์ขอมูลผิดประเภท"
 
     Private Sub txt_emp_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_name.KeyPress
 
@@ -486,15 +429,15 @@ Public Class Employees
         'End If
 
         Select Case Asc(e.KeyChar)
-            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
-            '    e.Handled = False
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
         End Select
 
 
@@ -507,40 +450,36 @@ Public Class Employees
         'End If
 
         Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
         End Select
 
     End Sub
 
     Private Sub txt_emp_position_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_position.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
-    End Sub
 
-    Private Sub txt_emp_division_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_division.KeyPress
-        e.Handled = True
-    End Sub
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
 
-    Private Sub cmb_emp_department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_emp_department.SelectedIndexChanged
-
-
-        sql = "select Count_unit.count_name from Count_unit INNER JOIN Department on Department.count_id = Count_unit.count_id where Department.department_name =  '" & cmb_emp_department.Text & "'"
-
-
-        Dim da As New SqlDataAdapter(sql, cn)
-        Dim ds As New DataSet
-        Dim dtr As DataRow
-        da.Fill(ds, "co")
-        For Each dtr In ds.Tables("co").Rows
-            txt_emp_division.Text = dtr("count_name")
-        Next
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
 
     End Sub
 
@@ -584,8 +523,140 @@ Public Class Employees
         End If
     End Sub
 
-    
+    Private Sub cmb_emp_degree_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_degree.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmb_emp_level_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_level.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmb_emp_department_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_emp_department.KeyPress
+        e.Handled = True
+    End Sub
+
+
+    Private Sub txt_emp_division_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_emp_division.KeyPress
+        e.Handled = True
+    End Sub
+
+
+#End Region
+
+
+
+
+    Private Sub emp_department()
+        sql = "select department_name from Department "
+        cmd_object(cmb_emp_department)
+    End Sub
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        showdata2()
+        emp_department()
+        R1.Checked = True
+        E1.Checked = True
+        txt_emp_id.Enabled = False
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles add_data.Click
+
+        cleardata()
+        add_emp()
+        upte_data.Enabled = True
+        edit_data.Enabled = False
+        clear_data.Enabled = False
+    End Sub
+
+
+
+
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles edit_data.Click
+
+        edit_emp()
+        upte_data.Enabled = True
+        clear_data.Enabled = True
+        add_data.Enabled = False
+
+    End Sub
+
    
-    
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
+
+        cn.Close()
+        cleardata()
+        showdata2()
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
+
+    End Sub
+
+
+
+
+    Private Sub R1_CheckedChanged(sender As Object, e As EventArgs) Handles R1.CheckedChanged
+
+        txt_Search.Text = ""
+        txt_Search.Focus()
+        cleardata()
+        showdata2()
+
+    End Sub
+
+    Private Sub R2_CheckedChanged(sender As Object, e As EventArgs) Handles R2.CheckedChanged
+
+        txt_Search.Text = ""
+        txt_Search.Focus()
+        cleardata()
+        showdata2()
+
+    End Sub
+
    
+    Private Sub cmb_emp_department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_emp_department.SelectedIndexChanged
+
+
+        sql = "select Count_unit.count_name from Count_unit INNER JOIN Department on Department.count_id = Count_unit.count_id where Department.department_name =  '" & cmb_emp_department.Text & "'"
+
+
+        Dim da As New SqlDataAdapter(sql, cn)
+        Dim ds As New DataSet
+        Dim dtr As DataRow
+        da.Fill(ds, "co")
+        For Each dtr In ds.Tables("co").Rows
+            txt_emp_division.Text = dtr("count_name")
+        Next
+
+    End Sub
+
+
+    Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
+
+        update_emp()
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+
+        Else
+            upte_data.Enabled = False
+
+        End If
+
+        edit_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
+
+    End Sub
+
+    
 End Class

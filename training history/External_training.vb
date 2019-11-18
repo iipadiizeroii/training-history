@@ -695,6 +695,7 @@ Public Class External_training
         '5'
         cn.Close()
 
+        datagrid_ExtrainingNew.AllowUserToAddRows = False
         txt_Search_panal.Text = ""
         RP1.Checked = True
         ''2.SQL
@@ -1282,6 +1283,72 @@ Public Class External_training
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
 
         Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+
+            Case Else
+                e.Handled = True
+                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        End Select
+
+    End Sub
+
+    Private Sub txt_Search_panal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search_panal.KeyPress
+
+        If RP1.Checked = True Then
+
+
+            Select Case Asc(e.KeyChar)
+
+                Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                    e.Handled = False
+                Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                    e.Handled = False
+
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+            End Select
+
+            txt_Search.MaxLength = 7
+
+        Else
+
+            Select Case Asc(e.KeyChar)
+
+                Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                    e.Handled = False
+                Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                    e.Handled = False
+                Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                    e.Handled = False
+                Case Else
+                    e.Handled = True
+                    MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+            End Select
+            txt_Search.MaxLength = 100
+        End If
+
+    End Sub
+
+    Private Sub RP1_CheckedChanged(sender As Object, e As EventArgs) Handles RP1.CheckedChanged
+
+        txt_Search_panal.Text = ""
+
+    End Sub
+
+    Private Sub RP2_CheckedChanged(sender As Object, e As EventArgs) Handles RP2.CheckedChanged
+
+        txt_Search_panal.Text = ""
+
+    End Sub
+
+    Private Sub txt_Search_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Search.KeyPress
+
+        Select Case Asc(e.KeyChar)
+
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
             Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46

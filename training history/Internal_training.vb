@@ -821,6 +821,7 @@ Public Class Internal_training
         '5'
         cn.Close()
 
+        datagrid_IntrainingNew.AllowUserToAddRows = False
         txt_Search_panal.Text = ""
         RP1.Checked = True
 
@@ -879,6 +880,7 @@ Public Class Internal_training
             txt_Search.Clear()
 
         End If
+        
     End Sub
 
     Private Sub search_employees_panel()
@@ -1238,4 +1240,16 @@ Public Class Internal_training
     End Sub
 
     
+   
+    Private Sub RP1_CheckedChanged(sender As Object, e As EventArgs) Handles RP1.CheckedChanged
+
+        txt_Search_panal.Text = ""
+
+    End Sub
+
+    Private Sub RP2_CheckedChanged(sender As Object, e As EventArgs) Handles RP2.CheckedChanged
+
+        txt_Search_panal.Text = ""
+
+    End Sub
 End Class

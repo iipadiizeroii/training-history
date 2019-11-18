@@ -104,7 +104,7 @@ Partial Class Create_Expert
         Me.R4.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R4.Location = New System.Drawing.Point(6, 47)
         Me.R4.Name = "R4"
-        Me.R4.Size = New System.Drawing.Size(90, 22)
+        Me.R4.Size = New System.Drawing.Size(92, 26)
         Me.R4.TabIndex = 1
         Me.R4.Text = "วิทยากรภายใน"
         Me.R4.UseVisualStyleBackColor = True
@@ -115,7 +115,7 @@ Partial Class Create_Expert
         Me.R3.Font = New System.Drawing.Font("TH SarabunPSK", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R3.Location = New System.Drawing.Point(6, 18)
         Me.R3.Name = "R3"
-        Me.R3.Size = New System.Drawing.Size(108, 24)
+        Me.R3.Size = New System.Drawing.Size(109, 27)
         Me.R3.TabIndex = 0
         Me.R3.TabStop = True
         Me.R3.Text = "วิทยากรภายนอก"
@@ -258,7 +258,7 @@ Partial Class Create_Expert
         Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label6.Location = New System.Drawing.Point(160, 233)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 22)
+        Me.Label6.Size = New System.Drawing.Size(76, 26)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "ความชำนาญ"
         '
@@ -268,7 +268,7 @@ Partial Class Create_Expert
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label5.Location = New System.Drawing.Point(133, 207)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(101, 22)
+        Me.Label5.Size = New System.Drawing.Size(103, 26)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "หน่วยงานต้นสังกัด"
         '
@@ -278,7 +278,7 @@ Partial Class Create_Expert
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label4.Location = New System.Drawing.Point(142, 180)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 22)
+        Me.Label4.Size = New System.Drawing.Size(94, 26)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "ตำแหน่งวิทยากร"
         '
@@ -288,7 +288,7 @@ Partial Class Create_Expert
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label3.Location = New System.Drawing.Point(181, 154)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 22)
+        Me.Label3.Size = New System.Drawing.Size(55, 26)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "นามสกุล"
         '
@@ -298,7 +298,7 @@ Partial Class Create_Expert
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label2.Location = New System.Drawing.Point(210, 128)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(24, 22)
+        Me.Label2.Size = New System.Drawing.Size(26, 26)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "ชื่อ"
         '
@@ -308,7 +308,7 @@ Partial Class Create_Expert
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
         Me.Label1.Location = New System.Drawing.Point(164, 101)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 22)
+        Me.Label1.Size = New System.Drawing.Size(73, 26)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสวิทยากร"
         '
@@ -360,18 +360,18 @@ Partial Class Create_Expert
         Me.R2.AutoSize = True
         Me.R2.Location = New System.Drawing.Point(111, 20)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(91, 26)
+        Me.R2.Size = New System.Drawing.Size(93, 30)
         Me.R2.TabIndex = 2
-        Me.R2.TabStop = True
         Me.R2.Text = "ค้นหาด้วยชื่อ"
         Me.R2.UseVisualStyleBackColor = True
         '
         'R1
         '
         Me.R1.AutoSize = True
+        Me.R1.Checked = True
         Me.R1.Location = New System.Drawing.Point(6, 20)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(98, 26)
+        Me.R1.Size = New System.Drawing.Size(100, 30)
         Me.R1.TabIndex = 1
         Me.R1.TabStop = True
         Me.R1.Text = "ค้นหาด้วยรหัส"

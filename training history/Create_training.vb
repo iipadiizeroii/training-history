@@ -205,7 +205,7 @@ Public Class Create_training
         cmb_type_name.Text = ""
         cmb_format_name.Text = ""
         txt_Search.Text = ""
-        R1.Checked = False
+        R1.Checked = True
         R2.Checked = False
 
 
@@ -469,6 +469,7 @@ Public Class Create_training
         'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
         '    e.Handled = True
         'End If
+
     End Sub
 
     Private Sub cmb_format_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_format_name.KeyPress
@@ -539,4 +540,6 @@ Public Class Create_training
     Private Sub R2_CheckedChanged(sender As Object, e As EventArgs) Handles R2.CheckedChanged
         txt_Search.Text = ""
     End Sub
+
+    
 End Class

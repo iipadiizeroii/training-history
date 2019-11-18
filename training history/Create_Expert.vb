@@ -54,7 +54,7 @@ Public Class Create_Expert
                     txt_exp_department.Text = .Item(4).ToString
                     txt_expert_expertise.Text = .Item(5).ToString
 
-
+                    edit_data.Enabled = True
                     datagrid_exp.DataSource = dt
                 End With
             End If
@@ -64,6 +64,7 @@ Public Class Create_Expert
     End Sub
 
 #End Region
+
 
 #Region "คลิกเลือกข้อมูลใน datagrid"
     Private Sub datagrid_exp_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_exp.CellClick
@@ -92,14 +93,13 @@ Public Class Create_Expert
             End If
 
             edit_data.Enabled = True
+            clear_data.Enabled = True
 
         Catch ex As Exception
             MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
 
         End Try
 
-
-        
 
 
 
@@ -137,6 +137,36 @@ Public Class Create_Expert
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
         End If
+
+
+        If txt_exp_id.Text = "" Then
+            MsgBox("กรุณากรอกชื่อพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_expert_expertise.Text = "" Then
+            MsgBox("กรุณากรอกความชำนาญวิทยากร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_exp_lastname.Text = "" Then
+            MsgBox("กรุณากรอกนามสกุลพนักงาน", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_exp_position.Text = "" Then
+            MsgBox("กรุณากรอกตำแหน่งวิทยากร", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        If txt_exp_department.Text = "" Then
+            MsgBox("กรุณากรอกหน่วยงานต้นสังกัด", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+
+
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -270,6 +300,7 @@ Public Class Create_Expert
         '5'
         cn.Close()
 
+        datagrid_exp.AllowUserToAddRows = False
     End Sub
 
 #End Region
@@ -343,11 +374,19 @@ Public Class Create_Expert
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_exp()
-        cleardata()
-        edit_data.Enabled = False
-        upte_data.Enabled = False
-        cancel_data.Enabled = False
-        add_data.Enabled = True
+
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+        Else
+            cleardata()
+            upte_data.Enabled = False
+            cancel_data.Enabled = False
+            add_data.Enabled = True
+            edit_data.Enabled = False
+        End If
+
+       
 
     End Sub
 
@@ -441,33 +480,79 @@ Public Class Create_Expert
     End Sub
 
     Private Sub txt_exp_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_exp_name.KeyPress
-       If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '     e.Handled = True
+        ' End If
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
     End Sub
 
     Private Sub txt_exp_lastname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_exp_lastname.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
     End Sub
 
     Private Sub txt_exp_position_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_exp_position.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
     End Sub
 
     Private Sub txt_exp_department_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_exp_department.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
     End Sub
 
     Private Sub txt_expert_expertise_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_expert_expertise.KeyPress
-        If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
-            e.Handled = True
-        End If
+
+        'If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Then
+        '    e.Handled = True
+        'End If
+
     End Sub
 
     
@@ -512,4 +597,6 @@ Public Class Create_Expert
 
 
     End Sub
+
+    
 End Class

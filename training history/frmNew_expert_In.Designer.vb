@@ -23,6 +23,7 @@ Partial Class frmNew_expert_In
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search = New System.Windows.Forms.TextBox()
@@ -33,15 +34,29 @@ Partial Class frmNew_expert_In
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.R2)
         Me.GroupBox2.Controls.Add(Me.R1)
         Me.GroupBox2.Controls.Add(Me.txt_Search)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(296, 62)
+        Me.GroupBox2.Size = New System.Drawing.Size(390, 62)
         Me.GroupBox2.TabIndex = 97
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(292, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 36)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "ค้นหา"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'R2
         '
@@ -50,13 +65,13 @@ Partial Class frmNew_expert_In
         Me.R2.Name = "R2"
         Me.R2.Size = New System.Drawing.Size(85, 17)
         Me.R2.TabIndex = 8
-        Me.R2.TabStop = True
         Me.R2.Text = "ค้นหาด้วยชื่อ"
         Me.R2.UseVisualStyleBackColor = True
         '
         'R1
         '
         Me.R1.AutoSize = True
+        Me.R1.Checked = True
         Me.R1.Location = New System.Drawing.Point(6, 15)
         Me.R1.Name = "R1"
         Me.R1.Size = New System.Drawing.Size(91, 17)
@@ -101,4 +116,5 @@ Partial Class frmNew_expert_In
     Friend WithEvents R1 As System.Windows.Forms.RadioButton
     Friend WithEvents txt_Search As System.Windows.Forms.TextBox
     Friend WithEvents datagrid_new_expertin As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
