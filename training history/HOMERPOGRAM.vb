@@ -147,11 +147,13 @@
 
     End Sub
 
-    Private Sub บนทกขอมลพนกงานToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles บนทกขอมลพนกงานToolStripMenuItem.Click
 
-    End Sub
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+        Dim f As New frmSearch_not_history_training_Em()
+        f.MdiParent = Me
+        f.StartPosition = FormStartPosition.Manual
+        f.Left = 370 : f.Top = 50 : f.Show()
 
     End Sub
 End Class

@@ -24,9 +24,11 @@ Public Class Create_training
         Dim cn As New SqlConnection(strConn)
         Dim s As String = ""
         '2.เขียน sql'
-        s = "select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name from Course C inner join format_course F on F.format_id = C.format_id inner join type_course T on t.type_id = C.type_id inner join group_course G on G.group_id = C.group_id"
+        s = "select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name "
+        s &= " from Course C inner join format_course F on F.format_id = C.format_id  "
+        s &= "inner join type_course T on t.type_id = C.type_id "
+        s &= "inner join group_course G on G.group_id = C.group_id "
         '3'
-
         Dim da As New SqlDataAdapter(s, cn)
         Dim ds As New DataSet
         da.Fill(ds, "cou")
@@ -383,11 +385,16 @@ Public Class Create_training
             '2
             Dim s, s1 As String
             If R1.Checked = True Then
-                s1 = " course_id like @course_id"
+                s1 = " C.course_id like @course_id"
             Else
-                s1 = " course_name like @course_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+                s1 = " C.course_name like @course_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
             End If
-            s = "select * from Course where " & s1
+            's = "select * from Course where " & s1
+            s = "select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name "
+            s &= " from Course C inner join format_course F on F.format_id = C.format_id  "
+            s &= "inner join type_course T on t.type_id = C.type_id "
+            s &= "inner join group_course G on G.group_id = C.group_id "
+            s &= "where  " & s1
             '3
             With cn
                 If .State = ConnectionState.Open Then .Close()
@@ -412,9 +419,9 @@ Public Class Create_training
                 With dt.Rows(0)
                     txt_course_id.Text = .Item(0).ToString
                     txt_course_name.Text = .Item(1).ToString
-                    txt_format_id.Text = .Item(2).ToString
-                    txt_type_id.Text = .Item(3).ToString
-                    txt_group_id.Text = .Item(4).ToString
+                    cmb_format_name.Text = .Item(2).ToString
+                    cmb_type_name.Text = .Item(3).ToString
+                    cmb_group_name.Text = .Item(4).ToString
 
 
                     datagrid_course.DataSource = dt
