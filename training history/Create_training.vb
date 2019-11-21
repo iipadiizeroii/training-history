@@ -37,6 +37,28 @@ Public Class Create_training
         '5'
         cn.Close()
 
+        With datagrid_course
+            .Columns.Item(0).HeaderText = "รหัสหลักสูตร"
+            .Columns.Item(0).Width = "90"
+            .Columns.Item(1).HeaderText = "ชื่อหลักสูตร"
+            .Columns.Item(1).Width = "130"
+            .Columns.Item(2).HeaderText = "ชื่อรูปแบบจัดอบรม"
+            .Columns.Item(2).Width = "100"
+            .Columns.Item(3).HeaderText = "ชื่อประเภทจัดอบรม"
+            .Columns.Item(3).Width = "130"
+            .Columns.Item(4).HeaderText = "ชื่อกลุ่มหลักสูตร"
+            .Columns.Item(4).Width = "130"
+            
+
+
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            
+
+
+        End With
         datagrid_course.AllowUserToAddRows = False
 
         

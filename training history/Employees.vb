@@ -50,6 +50,37 @@ Public Class Employees
         '5'
         cn.Close()
 
+        With datagrid_emp
+            .Columns.Item(0).HeaderText = "รหัสพนักงาน"
+            .Columns.Item(0).Width = "80"
+            .Columns.Item(1).HeaderText = "ชื่อ"
+            .Columns.Item(1).Width = "110"
+            .Columns.Item(2).HeaderText = "นามสกุล"
+            .Columns.Item(2).Width = "110"
+            .Columns.Item(3).HeaderText = "LEVEL"
+            .Columns.Item(3).Width = "50"
+            .Columns.Item(4).HeaderText = "ตำแหน่ง"
+            .Columns.Item(4).Width = "160"
+            .Columns.Item(5).HeaderText = "แผนก"
+            .Columns.Item(5).Width = "160"
+            .Columns.Item(6).HeaderText = "ฝ่าย"
+            .Columns.Item(6).Width = "160"
+            .Columns.Item(7).HeaderText = "วุฒิการศึกษา"
+            .Columns.Item(7).Width = "70"
+            .Columns.Item(8).HeaderText = "วันที่เริ่มงาน"
+            .Columns.Item(8).Width = "90"
+
+            .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(7).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(8).SortMode = DataGridViewColumnSortMode.NotSortable
+        End With
+
         datagrid_emp.AllowUserToAddRows = False
 
     End Sub
