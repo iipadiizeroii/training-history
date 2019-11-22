@@ -884,6 +884,30 @@ Public Class Internal_training
         '5'
         cn.Close()
 
+        With datagrid_IntrainingNew
+            .Columns.Item(0).HeaderText = "รหัสจัดอบรมภายใน"
+            .Columns.Item(0).Width = "110"
+            .Columns.Item(1).HeaderText = "ชื่อ"
+            .Columns.Item(1).Width = "130"
+            .Columns.Item(2).HeaderText = "วันที่"
+            .Columns.Item(2).Width = "110"
+            .Columns.Item(3).HeaderText = "สถานที่"
+            .Columns.Item(3).Width = "130"
+            .Columns.Item(4).HeaderText = "หลักสูตรการอบรม"
+            .Columns.Item(4).Width = "90"
+            .Columns.Item(5).HeaderText = "จำนวนวัน"
+            .Columns.Item(5).Width = "90"
+           
+
+            .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+         
+        End With
+
         datagrid_IntrainingNew.AllowUserToAddRows = False
         txt_Search_panal.Text = ""
         RP1.Checked = True

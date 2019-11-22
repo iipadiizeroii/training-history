@@ -211,10 +211,40 @@ Public Class frmSearch_not_history_training_Em
             End If
 
             dgv_not_history_em.AllowUserToAddRows = False
-            
+
+            With dgv_not_history_em
+                .DataSource = dgv_not_history_em
+                .Columns("emp_id").HeaderText = "รหัสพนักงาน"
+                .Columns("emp_id").Width = "110"
+                .Columns("emp_name").HeaderText = "ชื่อพนักงาน"
+                .Columns("emp_name").Width = "100"
+                .Columns("emp_lastname").HeaderText = "นามสกุล"
+                .Columns("emp_lastname").Width = "100"
+                .Columns("emp_level").HeaderText = "ระดับ"
+                .Columns("emp_level").Width = "50"
+                .Columns("emp_position").HeaderText = "ตำแหน่ง"
+                .Columns("emp_position").Width = "130"
+                .Columns("emp_department").HeaderText = "แผนก"
+                .Columns("emp_department").Width = "130"
+                .Columns("emp_division").HeaderText = "ฝ่าย"
+                .Columns("emp_division").Width = "130"
+
+
+
+                .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+                .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+                .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+                .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+                .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+                .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
+
+            End With
+
+
 
 
         End If
+
         Print_Pr.Enabled = True
 
 

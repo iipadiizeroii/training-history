@@ -298,30 +298,7 @@ Public Class Create_Expert
         '5'
         cn.Close()
 
-        'With datagrid_exp
-        '    .Columns.Item(0).HeaderText = "รหัสวิทยากร"
-        '    .Columns.Item(0).Width = "150"
-        '    .Columns.Item(1).HeaderText = "ชื่อ"
-        '    .Columns.Item(1).Width = "130"
-        '    .Columns.Item(2).HeaderText = "นามสกุล"
-        '    .Columns.Item(2).Width = "100"
-        '    .Columns.Item(3).HeaderText = "ตำแหน่งวิทยากร"
-        '    .Columns.Item(3).Width = "130"
-        '    .Columns.Item(4).HeaderText = "หน่วยงานต้นสังกัด"
-        '    .Columns.Item(4).Width = "130"
-        '    .Columns.Item(5).HeaderText = "ความชำนาญ"
-        '    .Columns.Item(5).Width = "130"
-
-
-
-        '    .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
-        '    .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
-        '    .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
-        '    .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
-        '    .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
-        '    .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
-
-        'End With
+       
 
 
 
@@ -369,6 +346,31 @@ Public Class Create_Expert
 
 
     Private Sub Create_Expert_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        With datagrid_exp
+            .Columns.Item(0).HeaderText = "รหัสวิทยากร"
+            .Columns.Item(0).Width = "90"
+            .Columns.Item(1).HeaderText = "ชื่อ"
+            .Columns.Item(1).Width = "100"
+            .Columns.Item(2).HeaderText = "นามสกุล"
+            .Columns.Item(2).Width = "100"
+            .Columns.Item(3).HeaderText = "ตำแหน่งวิทยากร"
+            .Columns.Item(3).Width = "190"
+            .Columns.Item(4).HeaderText = "หน่วยงานต้นสังกัด"
+            .Columns.Item(4).Width = "170"
+            .Columns.Item(5).HeaderText = "ความชำนาญ"
+            .Columns.Item(5).Width = "200"
+
+
+
+            .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+
+        End With
 
         showdata()
         R1.Checked = True
