@@ -103,6 +103,8 @@ Public Class frmSearch_not_history_training_Em
 
                 dgv_not_history_em.DataSource = dt
 
+               
+
             Else
 
 
@@ -140,6 +142,7 @@ Public Class frmSearch_not_history_training_Em
 
 
             End If
+
             dgv_not_history_em.AllowUserToAddRows = False
 
         Else
@@ -176,6 +179,9 @@ Public Class frmSearch_not_history_training_Em
 
                 dgv_not_history_em.DataSource = dt
 
+               
+
+
             Else
                 sb = New StringBuilder
                 sb.Append("select emp_id,emp_name,emp_lastname,emp_level,emp_position,emp_department,emp_division ")
@@ -210,40 +216,42 @@ Public Class frmSearch_not_history_training_Em
 
             End If
 
+           
             dgv_not_history_em.AllowUserToAddRows = False
 
-            With dgv_not_history_em
-                .DataSource = dgv_not_history_em
-                .Columns("emp_id").HeaderText = "รหัสพนักงาน"
-                .Columns("emp_id").Width = "110"
-                .Columns("emp_name").HeaderText = "ชื่อพนักงาน"
-                .Columns("emp_name").Width = "100"
-                .Columns("emp_lastname").HeaderText = "นามสกุล"
-                .Columns("emp_lastname").Width = "100"
-                .Columns("emp_level").HeaderText = "ระดับ"
-                .Columns("emp_level").Width = "50"
-                .Columns("emp_position").HeaderText = "ตำแหน่ง"
-                .Columns("emp_position").Width = "130"
-                .Columns("emp_department").HeaderText = "แผนก"
-                .Columns("emp_department").Width = "130"
-                .Columns("emp_division").HeaderText = "ฝ่าย"
-                .Columns("emp_division").Width = "130"
-
-
-
-                .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
-                .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
-                .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
-                .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
-                .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
-                .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
-
-            End With
-
+           
 
 
 
         End If
+
+        With dgv_not_history_em
+            .Columns.Item(0).HeaderText = "รหัสพนักงาน"
+            .Columns.Item(0).Width = "110"
+            .Columns.Item(1).HeaderText = "ชื่อพนักงาน"
+            .Columns.Item(1).Width = "100"
+            .Columns.Item(2).HeaderText = "นามสกุล"
+            .Columns.Item(2).Width = "100"
+            .Columns.Item(3).HeaderText = "ระดับ"
+            .Columns.Item(3).Width = "50"
+            .Columns.Item(4).HeaderText = "ตำแหน่ง"
+            .Columns.Item(4).Width = "130"
+            .Columns.Item(5).HeaderText = "แผนก"
+            .Columns.Item(5).Width = "130"
+            .Columns.Item(6).HeaderText = "ฝ่าย"
+            .Columns.Item(6).Width = "130"
+
+
+
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
+
+        End With
+
 
         Print_Pr.Enabled = True
 

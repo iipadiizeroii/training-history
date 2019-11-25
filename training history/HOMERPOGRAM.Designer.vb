@@ -23,7 +23,15 @@ Partial Class HOMERPOGRAM
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.บนทกขอมลพนกงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,14 +43,6 @@ Partial Class HOMERPOGRAM
         Me.จดอบรมภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพรายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.เกยวกบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -66,94 +66,6 @@ Partial Class HOMERPOGRAM
         Me.GroupBox1.Size = New System.Drawing.Size(204, 736)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
-        '
-        'Button7
-        '
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Location = New System.Drawing.Point(-7, 0)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(211, 90)
-        Me.Button7.TabIndex = 3
-        Me.Button7.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Snow
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 24)
-        Me.MenuStrip1.TabIndex = 11
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
-        Me.ToolStripMenuItem1.Text = "หน้าแรก"
-        '
-        'บนทกขอมลพนกงานToolStripMenuItem
-        '
-        Me.บนทกขอมลพนกงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.บนทกขอมลพนกงานToolStripMenuItem1, Me.บนทกขอมลวทยากรToolStripMenuItem})
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Name = "บนทกขอมลพนกงานToolStripMenuItem"
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Text = "บันทึกข้อมูล"
-        '
-        'บนทกขอมลพนกงานToolStripMenuItem1
-        '
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Name = "บนทกขอมลพนกงานToolStripMenuItem1"
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Size = New System.Drawing.Size(167, 22)
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Text = "บันทึกข้อมูลพนักงาน"
-        '
-        'บนทกขอมลวทยากรToolStripMenuItem
-        '
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Name = "บนทกขอมลวทยากรToolStripMenuItem"
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Text = "บันทึกข้อมูลวิทยากร"
-        '
-        'เพมหลกสตรการอบรมToolStripMenuItem
-        '
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Name = "เพมหลกสตรการอบรมToolStripMenuItem"
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Text = "เพิ่มหลักสูตรการอบรม"
-        '
-        'จดอบรมToolStripMenuItem
-        '
-        Me.จดอบรมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.จดอบรมภายในToolStripMenuItem, Me.จดอบรมภายนอกToolStripMenuItem})
-        Me.จดอบรมToolStripMenuItem.Name = "จดอบรมToolStripMenuItem"
-        Me.จดอบรมToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
-        Me.จดอบรมToolStripMenuItem.Text = "จัดอบรม"
-        '
-        'จดอบรมภายในToolStripMenuItem
-        '
-        Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
-        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
-        '
-        'จดอบรมภายนอกToolStripMenuItem
-        '
-        Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
-        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.จดอบรมภายนอกToolStripMenuItem.Text = "จัดอบรมภายนอก"
-        '
-        'พมพรายงานToolStripMenuItem
-        '
-        Me.พมพรายงานToolStripMenuItem.Name = "พมพรายงานToolStripMenuItem"
-        Me.พมพรายงานToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
-        Me.พมพรายงานToolStripMenuItem.Text = "พิมพ์รายงาน"
-        '
-        'เกยวกบToolStripMenuItem
-        '
-        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
-        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
         '
         'Button8
         '
@@ -207,6 +119,21 @@ Partial Class HOMERPOGRAM
         Me.Button4.TabIndex = 4
         Me.Button4.Text = "จัดอบรมภายใน"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button7.Location = New System.Drawing.Point(-7, 0)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(211, 90)
+        Me.Button7.TabIndex = 3
+        Me.Button7.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -292,6 +219,79 @@ Partial Class HOMERPOGRAM
         Me.Button3.TabIndex = 1
         Me.Button3.Text = "เพิ่มหลักสูตรการอบรม"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Snow
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
+        Me.ToolStripMenuItem1.Text = "หน้าแรก"
+        '
+        'บนทกขอมลพนกงานToolStripMenuItem
+        '
+        Me.บนทกขอมลพนกงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.บนทกขอมลพนกงานToolStripMenuItem1, Me.บนทกขอมลวทยากรToolStripMenuItem})
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Name = "บนทกขอมลพนกงานToolStripMenuItem"
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
+        Me.บนทกขอมลพนกงานToolStripMenuItem.Text = "บันทึกข้อมูล"
+        '
+        'บนทกขอมลพนกงานToolStripMenuItem1
+        '
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Name = "บนทกขอมลพนกงานToolStripMenuItem1"
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Size = New System.Drawing.Size(167, 22)
+        Me.บนทกขอมลพนกงานToolStripMenuItem1.Text = "บันทึกข้อมูลพนักงาน"
+        '
+        'บนทกขอมลวทยากรToolStripMenuItem
+        '
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Name = "บนทกขอมลวทยากรToolStripMenuItem"
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.บนทกขอมลวทยากรToolStripMenuItem.Text = "บันทึกข้อมูลวิทยากร"
+        '
+        'เพมหลกสตรการอบรมToolStripMenuItem
+        '
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Name = "เพมหลกสตรการอบรมToolStripMenuItem"
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
+        Me.เพมหลกสตรการอบรมToolStripMenuItem.Text = "เพิ่มหลักสูตรการอบรม"
+        '
+        'จดอบรมToolStripMenuItem
+        '
+        Me.จดอบรมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.จดอบรมภายในToolStripMenuItem, Me.จดอบรมภายนอกToolStripMenuItem})
+        Me.จดอบรมToolStripMenuItem.Name = "จดอบรมToolStripMenuItem"
+        Me.จดอบรมToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.จดอบรมToolStripMenuItem.Text = "จัดอบรม"
+        '
+        'จดอบรมภายในToolStripMenuItem
+        '
+        Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
+        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
+        '
+        'จดอบรมภายนอกToolStripMenuItem
+        '
+        Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
+        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.จดอบรมภายนอกToolStripMenuItem.Text = "จัดอบรมภายนอก"
+        '
+        'พมพรายงานToolStripMenuItem
+        '
+        Me.พมพรายงานToolStripMenuItem.Name = "พมพรายงานToolStripMenuItem"
+        Me.พมพรายงานToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.พมพรายงานToolStripMenuItem.Text = "พิมพ์รายงาน"
+        '
+        'เกยวกบToolStripMenuItem
+        '
+        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
+        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
         '
         'HOMERPOGRAM
         '

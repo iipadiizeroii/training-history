@@ -1,4 +1,14 @@
-﻿Public Class HOMERPOGRAM
+﻿Imports CrystalDecisions.CrystalReports.Engine
+Imports System.Data.SqlClient 'แอดฟังก์ชั่นการเรียกใช้ sql'
+Imports training_history.SqlDbConn 'แอดโปรเจค'
+Imports System.IO
+Imports System.Text
+Imports System.Globalization
+Imports System.Threading
+Imports System.Data.OleDb
+
+
+Public Class HOMERPOGRAM
 
     Private Sub Label1_Click(sender As Object, e As EventArgs)
 
@@ -30,7 +40,7 @@
         Create_Expert.Top = 50
         Create_Expert.Show()
 
-        
+
 
         'Create_Expert.Show()
 
@@ -105,22 +115,6 @@
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
-
-
-
-
-    End Sub
-
-    Private Sub Button14_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-
-
-    End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
 
@@ -154,6 +148,18 @@
         f.MdiParent = Me
         f.StartPosition = FormStartPosition.Manual
         f.Left = 370 : f.Top = 50 : f.Show()
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+
+        'Dim rpt As New ReportDocument()
+        'rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_Employees.rpt")
+        'test_Print.CrystalReportViewer1.ReportSource = rpt
+
+        'test_Print.Show()
+
 
     End Sub
 End Class

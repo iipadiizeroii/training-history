@@ -36,6 +36,29 @@ Public Class frmNew_expert_In
         '5'
         cn.Close()
 
+        With datagrid_new_expertin
+            .Columns.Item(0).HeaderText = "รหัสวิทยากร"
+            .Columns.Item(0).Width = "90"
+            .Columns.Item(1).HeaderText = "ชื่อ"
+            .Columns.Item(1).Width = "100"
+            .Columns.Item(2).HeaderText = "นามสกุล"
+            .Columns.Item(2).Width = "100"
+            .Columns.Item(3).HeaderText = "ตำแหน่งวิทยากร"
+            .Columns.Item(3).Width = "190"
+            .Columns.Item(4).HeaderText = "หน่วยงานต้นสังกัด"
+            .Columns.Item(4).Width = "170"
+           
+
+
+
+            .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+            .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+     
+        End With
+
 
 
     End Sub
@@ -135,12 +158,12 @@ Public Class frmNew_expert_In
             Select Case Asc(e.KeyChar)
                 Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                     e.Handled = False
-                Case 8, 13, 46, 70, 102, 84, 116 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                Case 8, 13, 46, 70, 102, 89, 121 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
                     e.Handled = False
 
                 Case Else
                     e.Handled = True
-                    MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, T")
+                    MessageBox.Show("สามารถกดได้แค่ตัวเลข และ อักษร F, Y")
             End Select
 
             txt_Search.MaxLength = 8
@@ -160,6 +183,10 @@ Public Class frmNew_expert_In
             End Select
             txt_Search.MaxLength = 50
         End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class

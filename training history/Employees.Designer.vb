@@ -56,23 +56,11 @@ Partial Class Employees
         Me.R2 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.บนทกขอมลพนกงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.บนทกขอมลพนกงานToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.บนทกขอมลวทยากรToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.เพมหลกสตรการอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.จดอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.จดอบรมภายในToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.จดอบรมภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.พมพรายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.เกยวกบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.datagrid_emp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_emp_id
@@ -453,77 +441,6 @@ Partial Class Employees
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(976, 24)
-        Me.MenuStrip1.TabIndex = 10
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
-        Me.ToolStripMenuItem1.Text = "หน้าแรก"
-        '
-        'บนทกขอมลพนกงานToolStripMenuItem
-        '
-        Me.บนทกขอมลพนกงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.บนทกขอมลพนกงานToolStripMenuItem1, Me.บนทกขอมลวทยากรToolStripMenuItem})
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Name = "บนทกขอมลพนกงานToolStripMenuItem"
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
-        Me.บนทกขอมลพนกงานToolStripMenuItem.Text = "บันทึกข้อมูล"
-        '
-        'บนทกขอมลพนกงานToolStripMenuItem1
-        '
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Name = "บนทกขอมลพนกงานToolStripMenuItem1"
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Size = New System.Drawing.Size(167, 22)
-        Me.บนทกขอมลพนกงานToolStripMenuItem1.Text = "บันทึกข้อมูลพนักงาน"
-        '
-        'บนทกขอมลวทยากรToolStripMenuItem
-        '
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Name = "บนทกขอมลวทยากรToolStripMenuItem"
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.บนทกขอมลวทยากรToolStripMenuItem.Text = "บันทึกข้อมูลวิทยากร"
-        '
-        'เพมหลกสตรการอบรมToolStripMenuItem
-        '
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Name = "เพมหลกสตรการอบรมToolStripMenuItem"
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
-        Me.เพมหลกสตรการอบรมToolStripMenuItem.Text = "เพิ่มหลักสูตรการอบรม"
-        '
-        'จดอบรมToolStripMenuItem
-        '
-        Me.จดอบรมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.จดอบรมภายในToolStripMenuItem, Me.จดอบรมภายนอกToolStripMenuItem})
-        Me.จดอบรมToolStripMenuItem.Name = "จดอบรมToolStripMenuItem"
-        Me.จดอบรมToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
-        Me.จดอบรมToolStripMenuItem.Text = "จัดอบรม"
-        '
-        'จดอบรมภายในToolStripMenuItem
-        '
-        Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
-        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
-        '
-        'จดอบรมภายนอกToolStripMenuItem
-        '
-        Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
-        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.จดอบรมภายนอกToolStripMenuItem.Text = "จัดอบรมภายนอก"
-        '
-        'พมพรายงานToolStripMenuItem
-        '
-        Me.พมพรายงานToolStripMenuItem.Name = "พมพรายงานToolStripMenuItem"
-        Me.พมพรายงานToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
-        Me.พมพรายงานToolStripMenuItem.Text = "พิมพ์รายงาน"
-        '
-        'เกยวกบToolStripMenuItem
-        '
-        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
-        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
-        '
         'Button7
         '
         Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
@@ -549,8 +466,6 @@ Partial Class Employees
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_emp)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(992, 793)
         Me.MinimizeBox = False
@@ -565,10 +480,7 @@ Partial Class Employees
         CType(Me.datagrid_emp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents txt_emp_name As System.Windows.Forms.TextBox
@@ -604,18 +516,7 @@ Partial Class Employees
     Friend WithEvents E2 As System.Windows.Forms.RadioButton
     Friend WithEvents E1 As System.Windows.Forms.RadioButton
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents บนทกขอมลพนกงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents เพมหลกสตรการอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents จดอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents จดอบรมภายในToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents จดอบรมภายนอกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents บนทกขอมลพนกงานToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents บนทกขอมลวทยากรToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents พมพรายงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents เกยวกบToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button7 As System.Windows.Forms.Button
 
 End Class
