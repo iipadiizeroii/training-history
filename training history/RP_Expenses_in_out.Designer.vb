@@ -126,7 +126,7 @@ Partial Class RP_Expenses_in_out
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "เลือกค่าใช้ค่า"
         '
-        'RP_Expenses_out
+        'RP_Expenses_in_out
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -138,7 +138,8 @@ Partial Class RP_Expenses_in_out
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "RP_Expenses_out"
+        Me.Name = "RP_Expenses_in_out"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "test_PR"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

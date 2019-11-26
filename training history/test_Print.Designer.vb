@@ -44,6 +44,7 @@ Partial Class test_Print
         Me.ClientSize = New System.Drawing.Size(884, 761)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "test_Print"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "test_Print"
         Me.ResumeLayout(False)
 

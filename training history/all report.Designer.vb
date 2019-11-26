@@ -29,7 +29,6 @@ Partial Class all_report
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -42,7 +41,7 @@ Partial Class all_report
         Me.Button1.Size = New System.Drawing.Size(292, 39)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "รายงานรายชื่อวิทยากร"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -53,7 +52,7 @@ Partial Class all_report
         Me.Button2.Size = New System.Drawing.Size(318, 39)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "เอกสารอนุมัติการอบรมภายในรายชื่อวิทยากร" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -64,7 +63,7 @@ Partial Class all_report
         Me.Button3.Size = New System.Drawing.Size(318, 39)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "เอกสารลงชื่อพนักงานเข้าอบรม"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -75,7 +74,7 @@ Partial Class all_report
         Me.Button4.Size = New System.Drawing.Size(292, 39)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "รายงานหลักสูตรการอบรม"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -92,12 +91,12 @@ Partial Class all_report
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
-        Me.Button6.Location = New System.Drawing.Point(417, 236)
+        Me.Button6.Location = New System.Drawing.Point(417, 223)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(240, 80)
+        Me.Button6.Size = New System.Drawing.Size(240, 65)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "เอกสารอนุมัติการอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "รายชื่อพนักงานเข้าอบรม" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
@@ -105,22 +104,11 @@ Partial Class all_report
         Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
         Me.Button7.Location = New System.Drawing.Point(417, 155)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(240, 75)
+        Me.Button7.Size = New System.Drawing.Size(240, 62)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "เอกสารอนุมัติการอบรมภายใน" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "รายชื่อพนักงานเข้าอบรม"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
-        Me.Button8.Location = New System.Drawing.Point(45, 277)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(292, 39)
-        Me.Button8.TabIndex = 7
-        Me.Button8.Text = "รายงานแสดงค่าใช้จ่ายการจัดอบรมภายใน"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
@@ -129,8 +117,8 @@ Partial Class all_report
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(292, 39)
         Me.Button9.TabIndex = 8
-        Me.Button9.Text = "รายงานแสดงค่าใช้จ่ายอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button9.Text = "รายงานแสดงค่าใช้จ่ายอบรมภายใน - ภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Label1
@@ -139,7 +127,7 @@ Partial Class all_report
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(39, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(151, 50)
+        Me.Label1.Size = New System.Drawing.Size(147, 42)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "พิมพ์รายงาน"
         '
@@ -147,10 +135,9 @@ Partial Class all_report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(746, 332)
+        Me.ClientSize = New System.Drawing.Size(746, 302)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -171,7 +158,6 @@ Partial Class all_report
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

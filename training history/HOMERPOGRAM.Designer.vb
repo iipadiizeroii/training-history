@@ -61,9 +61,9 @@ Partial Class HOMERPOGRAM
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 25)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(204, 736)
+        Me.GroupBox1.Size = New System.Drawing.Size(204, 749)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
@@ -77,7 +77,7 @@ Partial Class HOMERPOGRAM
         Me.Button8.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
         Me.Button8.Image = Global.training_history.My.Resources.Resources.web
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(0, 574)
+        Me.Button8.Location = New System.Drawing.Point(0, 561)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(221, 85)
         Me.Button8.TabIndex = 5
@@ -95,7 +95,7 @@ Partial Class HOMERPOGRAM
         Me.Button9.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
         Me.Button9.Image = Global.training_history.My.Resources.Resources.data1
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(3, 473)
+        Me.Button9.Location = New System.Drawing.Point(3, 464)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(221, 85)
         Me.Button9.TabIndex = 0
@@ -113,7 +113,7 @@ Partial Class HOMERPOGRAM
         Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button4.Image = Global.training_history.My.Resources.Resources.confidential
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(2, 344)
+        Me.Button4.Location = New System.Drawing.Point(2, 334)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(205, 48)
         Me.Button4.TabIndex = 4
@@ -128,7 +128,7 @@ Partial Class HOMERPOGRAM
         Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("TH SarabunPSK", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Location = New System.Drawing.Point(-7, 0)
+        Me.Button7.Location = New System.Drawing.Point(0, 25)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(211, 90)
         Me.Button7.TabIndex = 3
@@ -145,7 +145,7 @@ Partial Class HOMERPOGRAM
         Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button1.Image = Global.training_history.My.Resources.Resources.directory
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(2, 130)
+        Me.Button1.Location = New System.Drawing.Point(2, 120)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(239, 48)
         Me.Button1.TabIndex = 2
@@ -162,7 +162,7 @@ Partial Class HOMERPOGRAM
         Me.Button2.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button2.Image = Global.training_history.My.Resources.Resources.credibility
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(2, 202)
+        Me.Button2.Location = New System.Drawing.Point(2, 192)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(235, 48)
         Me.Button2.TabIndex = 1
@@ -179,7 +179,7 @@ Partial Class HOMERPOGRAM
         Me.Button6.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button6.Image = Global.training_history.My.Resources.Resources.data
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(3, 670)
+        Me.Button6.Location = New System.Drawing.Point(3, 661)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(204, 48)
         Me.Button6.TabIndex = 1
@@ -196,7 +196,7 @@ Partial Class HOMERPOGRAM
         Me.Button5.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button5.Image = Global.training_history.My.Resources.Resources.earth
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(1, 414)
+        Me.Button5.Location = New System.Drawing.Point(1, 404)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(223, 48)
         Me.Button5.TabIndex = 1
@@ -213,7 +213,7 @@ Partial Class HOMERPOGRAM
         Me.Button3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button3.Image = Global.training_history.My.Resources.Resources.cookie
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(2, 274)
+        Me.Button3.Location = New System.Drawing.Point(2, 264)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(244, 48)
         Me.Button3.TabIndex = 1
