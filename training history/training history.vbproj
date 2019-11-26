@@ -99,6 +99,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all report.Designer.vb">
+      <DependentUpon>all report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="all report.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Create_Expert.Designer.vb">
       <DependentUpon>Create_Expert.vb</DependentUpon>
@@ -313,6 +319,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="all report.resx">
+      <DependentUpon>all report.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create_Expert.resx">
       <DependentUpon>Create_Expert.vb</DependentUpon>
     </EmbeddedResource>

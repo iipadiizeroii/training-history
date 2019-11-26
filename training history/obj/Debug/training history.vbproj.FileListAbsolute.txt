@@ -400,3 +400,4 @@ G:\โปรเจค\training history\training-history\training history\obj\Deb
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.test_Print.resources
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.RP_Expenses_in_out.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.RP_Expenses_in_out.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.all_report.resources

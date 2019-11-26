@@ -153,6 +153,12 @@ Public Class HOMERPOGRAM
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
 
+        all_report.MdiParent = Me
+        all_report.StartPosition = FormStartPosition.Manual
+        all_report.Left = 350
+        all_report.Top = 50
+        all_report.Show()
+
 
         'Dim rpt As New ReportDocument()
         'rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_Employees.rpt")
