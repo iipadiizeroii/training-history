@@ -155,7 +155,7 @@ Public Class HOMERPOGRAM
 
         all_report.MdiParent = Me
         all_report.StartPosition = FormStartPosition.Manual
-        all_report.Left = 350
+        all_report.Left = 550
         all_report.Top = 50
         all_report.Show()
 

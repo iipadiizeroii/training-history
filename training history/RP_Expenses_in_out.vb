@@ -14,7 +14,8 @@ Public Class RP_Expenses_in_out
             date_in = Date_training1.Value.ToString("yyyy-MM-dd")
             date_out = Date_training2.Value.ToString("yyyy-MM-dd")
             'rpt.Load(directory & "\myCrystalReport1.rpt")
-            rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_in.rpt")
+            rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expenses_in.rpt")
+            'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_in.rpt")
 
 
             rpt.SetParameterValue("startDate", date_in)
@@ -32,7 +33,8 @@ Public Class RP_Expenses_in_out
             date_in = Date_training1.Value.ToString("yyyy-MM-dd")
             date_out = Date_training2.Value.ToString("yyyy-MM-dd")
             'rpt.Load(directory & "\myCrystalReport1.rpt")
-            rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_out.rpt")
+            rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expenses_out.rpt")
+            'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expenses_out.rpt")
 
 
             rpt.SetParameterValue("startDate", date_in)
@@ -54,7 +56,4 @@ Public Class RP_Expenses_in_out
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

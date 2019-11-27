@@ -59,7 +59,7 @@ Partial Class RP_Expenses_in_out
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(14, 95)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(972, 525)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(823, 525)
         Me.CrystalReportViewer1.TabIndex = 3
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
@@ -97,7 +97,7 @@ Partial Class RP_Expenses_in_out
         Me.R1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R1.Location = New System.Drawing.Point(22, 17)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 26)
+        Me.R1.Size = New System.Drawing.Size(93, 30)
         Me.R1.TabIndex = 8
         Me.R1.TabStop = True
         Me.R1.Text = "อบรมภายใน"
@@ -109,7 +109,7 @@ Partial Class RP_Expenses_in_out
         Me.R2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R2.Location = New System.Drawing.Point(133, 17)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(100, 26)
+        Me.R2.Size = New System.Drawing.Size(102, 30)
         Me.R2.TabIndex = 9
         Me.R2.Text = "อบรมภายนอก"
         Me.R2.UseVisualStyleBackColor = True
@@ -130,7 +130,7 @@ Partial Class RP_Expenses_in_out
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1002, 631)
+        Me.ClientSize = New System.Drawing.Size(851, 631)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Date_training2)
@@ -140,7 +140,7 @@ Partial Class RP_Expenses_in_out
         Me.Controls.Add(Me.Button1)
         Me.Name = "RP_Expenses_in_out"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "test_PR"
+        Me.Text = "RP_Expenses_in_out"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

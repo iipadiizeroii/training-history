@@ -3,12 +3,21 @@ Public Class all_report
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+        PR_PO_ALL.MdiParent = HOMERPOGRAM
+        PR_PO_ALL.StartPosition = FormStartPosition.Manual
+        PR_PO_ALL.Left = 220
+        PR_PO_ALL.Top = 35
+
+        PR_PO_ALL.Show()
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
         Dim rpt As New ReportDocument()
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\RP_Employees.rpt")
+
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_Employees.rpt")
+        'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\RP_Employees.rpt")
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()
@@ -18,7 +27,9 @@ Public Class all_report
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim rpt As New ReportDocument()
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expert.rpt")
+
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expert.rpt")
+        'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expert.rpt")
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()
@@ -29,7 +40,9 @@ Public Class all_report
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
         Dim rpt As New ReportDocument()
-        rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Training.rpt")
+
+        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Training.rpt")
+        'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Training.rpt")
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()
@@ -40,7 +53,7 @@ Public Class all_report
 
         RP_Expenses_in_out.MdiParent = HOMERPOGRAM
         RP_Expenses_in_out.StartPosition = FormStartPosition.Manual
-        RP_Expenses_in_out.Left = 220
+        RP_Expenses_in_out.Left = 300
         RP_Expenses_in_out.Top = 35
 
         RP_Expenses_in_out.Show()
