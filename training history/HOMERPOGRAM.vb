@@ -90,7 +90,7 @@ Public Class HOMERPOGRAM
         Internal_training.MdiParent = Me
         Internal_training.StartPosition = FormStartPosition.Manual
         Internal_training.Left = 215
-        Internal_training.Top = 50
+        Internal_training.Top = 10
         Internal_training.Show()
 
         'Internal_training.Show()
@@ -107,7 +107,7 @@ Public Class HOMERPOGRAM
         External_training.MdiParent = Me
         External_training.StartPosition = FormStartPosition.Manual
         External_training.Left = 215
-        External_training.Top = 50
+        External_training.Top = 10
         External_training.Show()
 
 

@@ -229,8 +229,8 @@ Public Class External_training
         sb = New StringBuilder
 
         If savestatus = "Add" Then
-            sb.Append("Insert into  External_training (trainingEx_id,training_name,date,training_location,course_id,training_date)")
-            sb.Append("Values (@trainingEx_id,@training_name,@date,@training_location,@course_id,@training_date)")
+            sb.Append("Insert into  External_training (trainingEx_id,training_name,date,training_location,course_id,training_date,date_end,time_start,time_end)")
+            sb.Append("Values (@trainingEx_id,@training_name,@date,@training_location,@course_id,@training_date,@date_end,@time_start,@time_end)")
 
         ElseIf savestatus = "Edit" Then
             sb.Append("Update External_training")
@@ -238,10 +238,20 @@ Public Class External_training
             sb.Append("date = @date,")
             sb.Append("training_location = @training_location,")
             sb.Append("course_id = @course_id,")
-            sb.Append("training_date = @training_date ")
+            sb.Append("training_date = @training_date,")
+            sb.Append("date_end = @date_end,")
+            sb.Append("time_start = @time_start,")
+            sb.Append("time_end = @time_end ")
             sb.Append(" Where trainingEx_id = @trainingEx_id")
 
         End If
+
+        Dim timest As String = ""
+        Dim timeen As String = ""
+
+        timest = cmd_start1.Text & ":" & cmd_start2.Text
+        timeen = cmd_end1.Text & ":" & cmd_end2.Text
+
 
         Dim cm As New SqlCommand
         cm = New SqlCommand(sb.ToString, cn)
@@ -253,6 +263,11 @@ Public Class External_training
             .Add("@training_location", SqlDbType.NVarChar, 50).Value = txt_training_location.Text
             .Add("@course_id", SqlDbType.Int).Value = txt_course_id.Text()
             .Add("@training_date", SqlDbType.NVarChar, 20).Value = txt_long_term.Text
+
+            'ปรับเพิ่มวันเวลาที่ทำการไปอบรมเข้าไป
+            .Add("@date_end", SqlDbType.Date).Value = Date_training_end.Text
+            .Add("@time_start", SqlDbType.NVarChar, 5).Value = timest
+            .Add("@time_end", SqlDbType.NVarChar, 5).Value = timeen
             cm.ExecuteNonQuery()
         End With
 
@@ -367,6 +382,15 @@ Public Class External_training
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
+
+        'ปรับเพิ่มวันที่เวลาการอบรม
+        Date_training.Text = Now.Date
+        cmd_start1.Text = ""
+        cmd_start2.Text = ""
+        Date_training_end.Text = Now.Date
+        cmd_end1.Text = ""
+        cmd_end2.Text = ""
+
         ListView1.Items.Clear()
         ListView2.Items.Clear()
         numAEXO = 0
@@ -752,15 +776,21 @@ Public Class External_training
             .Columns.Item(0).Width = "110"
             .Columns.Item(1).HeaderText = "ชื่อ"
             .Columns.Item(1).Width = "130"
-            .Columns.Item(2).HeaderText = "วันที่"
-            .Columns.Item(2).Width = "110"
-            .Columns.Item(3).HeaderText = "สถานที่"
-            .Columns.Item(3).Width = "130"
-            .Columns.Item(4).HeaderText = "หลักสูตรการอบรม"
+            .Columns.Item(2).HeaderText = "สถานที่"
+            .Columns.Item(2).Width = "130"
+            .Columns.Item(3).HeaderText = "หลักสูตรการอบรม"
+            .Columns.Item(3).Width = "90"
+            .Columns.Item(4).HeaderText = "จำนวนวัน"
             .Columns.Item(4).Width = "90"
-            .Columns.Item(5).HeaderText = "จำนวนวัน"
-            .Columns.Item(5).Width = "90"
 
+            .Columns.Item(5).HeaderText = "วันที่เริ่ม"
+            .Columns.Item(5).Width = "110"
+            .Columns.Item(6).HeaderText = "เวลาเริ่ม"
+            .Columns.Item(6).Width = "110"
+            .Columns.Item(7).HeaderText = "วันที่สิ้นสุด"
+            .Columns.Item(7).Width = "110"
+            .Columns.Item(8).HeaderText = "เวลาสิ้นสุด"
+            .Columns.Item(8).Width = "110"
 
             .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
@@ -829,12 +859,12 @@ Public Class External_training
                 LV1.UseItemStyleForSubItems = False
                 numAEXO = numAEXO + 1
                 LV1.Text = numAEXO
-                LV1.SubItems.Add(dr.GetString(8))
-                LV1.SubItems.Add(dr.GetString(9))
-                LV1.SubItems.Add(dr.GetValue(10))
-                LV1.SubItems.Add(dr.GetValue(11))
-                LV1.SubItems.Add(dr.GetValue(12))
+                LV1.SubItems.Add(dr.GetString(11))
+                LV1.SubItems.Add(dr.GetString(12))
                 LV1.SubItems.Add(dr.GetValue(13))
+                LV1.SubItems.Add(dr.GetValue(14))
+                LV1.SubItems.Add(dr.GetValue(15))
+                LV1.SubItems.Add(dr.GetValue(16))
                 ListView1.Items.Add(LV1)
                 LV1 = Nothing
 
@@ -945,12 +975,20 @@ Public Class External_training
         If e.RowIndex < 0 Then Exit Sub
         With datagrid_ExtrainingNew.Rows(e.RowIndex)
             txt_trainingOut_id.Text = .Cells(0).Value.ToString
-            txt_trainingOut_name.Text = .Cells(1).Value.ToString
-            Date_training.Text = .Cells(2).Value.ToString
-            txt_training_location.Text = .Cells(3).Value.ToString
-            txt_course_id.Text = .Cells(4).Value.ToString
-            txt_long_term.Text = .Cells(5).Value.ToString
             txt_Search.Text = .Cells(0).Value.ToString
+            txt_trainingOut_name.Text = .Cells(1).Value.ToString
+            txt_training_location.Text = .Cells(2).Value.ToString
+            txt_course_id.Text = .Cells(3).Value.ToString
+            txt_long_term.Text = .Cells(4).Value.ToString
+
+            'ปรับเพิ่มวันเวลาในการอบรม
+            Date_training.Text = .Cells(5).Value.ToString
+            cmd_start1.Text = .Cells(6).Value.Substring(0, 2)
+            cmd_start2.Text = .Cells(6).Value.Substring(3, 2)
+            Date_training_end.Text = .Cells(7).Value.ToString
+            cmd_end1.Text = .Cells(8).Value.Substring(0, 2)
+            cmd_end2.Text = .Cells(8).Value.Substring(3, 2)
+
         End With
 
         search_expert_panal()
@@ -1001,23 +1039,27 @@ Public Class External_training
             Do While dr.Read
                 txt_trainingOut_id.Text = dr.GetString(2)
                 txt_trainingOut_name.Text = dr.GetString(3)
-                Date_training.Text = dr.GetDateTime(4)
-                txt_training_location.Text = dr.GetString(5)
-                txt_course_id.Text = dr.GetString(6)
-                txt_long_term.Text = dr.GetString(7)
+                txt_training_location.Text = dr.GetString(4)
+                txt_course_id.Text = dr.GetString(5)
+                txt_long_term.Text = dr.GetString(6)
 
-
+                Date_training.Text = dr.GetDateTime(7)
+                cmd_start1.Text = dr.GetString(8).Substring(0, 2)
+                cmd_start2.Text = dr.GetString(8).Substring(3, 2)
+                Date_training_end.Text = dr.GetDateTime(9)
+                cmd_end1.Text = dr.GetString(10).Substring(0, 2)
+                cmd_end2.Text = dr.GetString(10).Substring(3, 2)
 
                 Dim LV1 As New ListViewItem
                 LV1.UseItemStyleForSubItems = False
                 numAEXO = numAEXO + 1
                 LV1.Text = numAEXO
-                LV1.SubItems.Add(dr.GetString(8))
-                LV1.SubItems.Add(dr.GetString(9))
-                LV1.SubItems.Add(dr.GetValue(10))
-                LV1.SubItems.Add(dr.GetValue(11))
-                LV1.SubItems.Add(dr.GetValue(12))
+                LV1.SubItems.Add(dr.GetString(11))
+                LV1.SubItems.Add(dr.GetString(12))
                 LV1.SubItems.Add(dr.GetValue(13))
+                LV1.SubItems.Add(dr.GetValue(14))
+                LV1.SubItems.Add(dr.GetValue(15))
+                LV1.SubItems.Add(dr.GetValue(16))
                 ListView1.Items.Add(LV1)
                 LV1 = Nothing
 
