@@ -37,7 +37,7 @@ Public Class HOMERPOGRAM
         Create_Expert.MdiParent = Me
         Create_Expert.StartPosition = FormStartPosition.Manual
         Create_Expert.Left = 380
-        Create_Expert.Top = 50
+        Create_Expert.Top = 10
         Create_Expert.Show()
 
 
@@ -63,7 +63,7 @@ Public Class HOMERPOGRAM
         Dim f As New Employees()
         f.MdiParent = Me
         f.StartPosition = FormStartPosition.Manual
-        f.Left = 220 : f.Top = 50 : f.Show()
+        f.Left = 220 : f.Top = 0 : f.Show()
 
         'Employees.Show()
 

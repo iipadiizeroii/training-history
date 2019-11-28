@@ -363,9 +363,9 @@ Public Class External_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         txt_training_location.Text = ""
-        TextBox1.Text = "0"
-        TextBox2.Text = "0"
-        TextBox3.Text = "0"
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
         TextBox4.Text = ""
         ListView1.Items.Clear()
         ListView2.Items.Clear()
@@ -483,9 +483,9 @@ Public Class External_training
             .FullRowSelect = True
         End With
 
-        TextBox1.Text = "0"
-        TextBox2.Text = "0"
-        TextBox3.Text = "0"
+        'TextBox1.Text = ""
+        'TextBox2.Text = ""
+        'TextBox3.Text = ""
         TextBox4.Text = ""
         upte_data.Enabled = False
         edit_data.Enabled = False
@@ -1214,11 +1214,29 @@ Public Class External_training
 
         Dim x1, x2, x3 As Integer
 
-        x1 = TextBox1.Text
-        x2 = TextBox2.Text
-        x3 = TextBox3.Text
+        If TextBox1.Text = "" Then
+            TextBox1.Text = 0
+        Else
+            x1 = TextBox1.Text
+        End If
+
+        If TextBox2.Text = "" Then
+            TextBox2.Text = 0
+        Else
+            x2 = TextBox2.Text
+        End If
+
+        If TextBox3.Text = "" Then
+            TextBox3.Text = 0
+        Else
+            x3 = TextBox3.Text
+        End If
 
 
+
+        'x1 = TextBox1.Text
+        'x2 = TextBox2.Text
+        'x3 = TextBox3.Text
 
         TextBox4.Text = x1 + x2 + x3
 
@@ -1435,6 +1453,44 @@ Public Class External_training
                 e.Handled = True
                 MessageBox.Show("สามารถกดได้แค่ตัวเลข")
         End Select
+
+    End Sub
+
+    Private Sub TextBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox1.MouseClick
+
+        If TextBox1.Text = "" Then
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        If TextBox1.Text = 0 Then
+            TextBox1.Text = ""
+        End If
+    End Sub
+
+    Private Sub TextBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox2.MouseClick
+
+        If TextBox2.Text = "" Then
+            TextBox2.Focus()
+            Exit Sub
+        End If
+
+        If TextBox2.Text = 0 Then
+            TextBox2.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox3_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox3.MouseClick
+
+        If TextBox3.Text = "" Then
+            TextBox3.Focus()
+            Exit Sub
+        End If
+
+        If TextBox3.Text = 0 Then
+            TextBox3.Text = ""
+        End If
 
     End Sub
 End Class

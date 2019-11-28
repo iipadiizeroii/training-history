@@ -373,10 +373,10 @@ Public Class Internal_training
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         cmb_training_location.Text = ""
-        TextBox1.Text = "0"
-        TextBox2.Text = "0"
-        TextBox3.Text = "0"
-        TextBox4.Text = "0"
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
         TextBox5.Text = ""
         numAEXI = 0
         numAEMO = 0
@@ -445,10 +445,10 @@ Public Class Internal_training
         End With
 
         'showdata()
-        TextBox1.Text = "0"
-        TextBox2.Text = "0"
-        TextBox3.Text = "0"
-        TextBox4.Text = "0"
+        'TextBox1.Text = "0"
+        'TextBox2.Text = "0"
+        'TextBox3.Text = "0"
+        'TextBox4.Text = "0"
         TextBox5.Text = ""
         cmb_course()
         'numAEXI = 0
@@ -854,10 +854,37 @@ Public Class Internal_training
 
         Dim x1, x2, x3, x4 As Integer
 
-        x1 = TextBox1.Text
-        x2 = TextBox2.Text
-        x3 = TextBox3.Text
-        x4 = TextBox4.Text
+
+        If TextBox1.Text = "" Then
+            TextBox1.Text = 0
+        Else
+            x1 = TextBox1.Text
+        End If
+
+        If TextBox2.Text = "" Then
+            TextBox2.Text = 0
+        Else
+            x2 = TextBox2.Text
+        End If
+
+        If TextBox3.Text = "" Then
+            TextBox3.Text = 0
+        Else
+            x3 = TextBox3.Text
+        End If
+
+        If TextBox4.Text = "" Then
+            TextBox4.Text = 0
+        Else
+            x4 = TextBox4.Text
+        End If
+
+
+
+        'x1 = TextBox1.Text
+        'x2 = TextBox2.Text
+        'x3 = TextBox3.Text
+        'x4 = TextBox4.Text
 
 
         TextBox5.Text = x1 + x2 + x3 + x4
@@ -1233,7 +1260,7 @@ Public Class Internal_training
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+            Case 8, 13 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
                 e.Handled = False
 
             Case Else
@@ -1248,7 +1275,7 @@ Public Class Internal_training
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+            Case 8, 13 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
                 e.Handled = False
 
             Case Else
@@ -1263,7 +1290,7 @@ Public Class Internal_training
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+            Case 8, 13 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
                 e.Handled = False
 
             Case Else
@@ -1278,7 +1305,7 @@ Public Class Internal_training
         Select Case Asc(e.KeyChar)
             Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
                 e.Handled = False
-            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+            Case 8, 13 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
                 e.Handled = False
 
             Case Else
@@ -1340,7 +1367,57 @@ Public Class Internal_training
 
     End Sub
 
-   
+
+    Private Sub TextBox4_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox4.MouseClick
+
+        If TextBox4.Text = "" Then
+            TextBox4.Focus()
+            Exit Sub
+        End If
+
+        If TextBox4.Text = 0 Then
+            TextBox4.Text = ""
+        End If
+
+    End Sub
+
     
-   
+    Private Sub TextBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox1.MouseClick
+
+        If TextBox1.Text = "" Then
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        If TextBox1.Text = 0 Then
+            TextBox1.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox2.MouseClick
+
+        If TextBox2.Text = "" Then
+            TextBox2.Focus()
+            Exit Sub
+        End If
+
+        If TextBox2.Text = 0 Then
+            TextBox2.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox3_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox3.MouseClick
+
+        If TextBox3.Text = "" Then
+            TextBox3.Focus()
+            Exit Sub
+        End If
+
+        If TextBox3.Text = 0 Then
+            TextBox3.Text = ""
+        End If
+
+    End Sub
 End Class

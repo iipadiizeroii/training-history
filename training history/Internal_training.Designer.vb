@@ -450,6 +450,7 @@ Partial Class Internal_training
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(400, 161)
+        Me.TextBox4.MaxLength = 7
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(132, 32)
         Me.TextBox4.TabIndex = 4
@@ -458,6 +459,7 @@ Partial Class Internal_training
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(400, 123)
+        Me.TextBox3.MaxLength = 7
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(132, 32)
         Me.TextBox3.TabIndex = 3
@@ -466,6 +468,7 @@ Partial Class Internal_training
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(400, 85)
+        Me.TextBox2.MaxLength = 7
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 32)
         Me.TextBox2.TabIndex = 2
@@ -474,6 +477,7 @@ Partial Class Internal_training
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(400, 47)
+        Me.TextBox1.MaxLength = 7
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(132, 32)
         Me.TextBox1.TabIndex = 1

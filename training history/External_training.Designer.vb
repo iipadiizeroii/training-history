@@ -354,7 +354,7 @@ Partial Class External_training
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.datagrid_ExtrainingNew)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Panel1.Location = New System.Drawing.Point(177, 90)
+        Me.Panel1.Location = New System.Drawing.Point(158, 90)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(702, 259)
         Me.Panel1.TabIndex = 97
