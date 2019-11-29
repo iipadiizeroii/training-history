@@ -382,23 +382,23 @@ Public Class Internal_training
         txt_trainingIn_id.Text = ""
         txt_trainingIn_name.Text = ""
         txt_course_id.Text = ""
-        txt_long_term.Text = ""
         txt_Search.Text = ""
         cmb_course_name.Text = ""
         cmb_training_location.Text = ""
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
+        TextBox1.Text = "0"
+        TextBox2.Text = "0"
+        TextBox3.Text = "0"
+        TextBox4.Text = "0"
         TextBox5.Text = ""
 
         'ปรับเพิ่มวันที่เวลาการอบรม
         Date_training.Text = Now.Date
-        cmd_start1.Text = ""
-        cmd_start2.Text = ""
         Date_training_end.Text = Now.Date
-        cmd_end1.Text = ""
-        cmd_end2.Text = ""
+        cmd_start1.Text = "00"
+        cmd_start2.Text = "00"
+        cmd_end1.Text = "00"
+        cmd_end2.Text = "00"
+        txt_long_term.Text = "00:00"
 
         numAEXI = 0
         numAEMO = 0
@@ -506,7 +506,7 @@ Public Class Internal_training
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
-
+        totalmonyerror() 'ป้องกันเมื่อผู้ใช้งานไม่ได้กรอกจำนวนค่าใช้ครบ textbok ที่ไม่ได้กรอกค่าใช้จ่ายจะเป็นเลข 0
         update_training()
         'update_Expenses()
 
@@ -877,50 +877,163 @@ Public Class Internal_training
 
     End Sub
 
+#Region "คำนวณตัวเลขอัตโนมัติ"
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-        Dim x1, x2, x3, x4 As Integer
-
+    Private Sub totalmonyerror() 'ป้องกันเมื่อผู้ใช้งานไม่ได้กรอกจำนวนค่าใช้ครบ textbok ที่ไม่ได้กรอกค่าใช้จ่ายจะเป็นเลข 0
 
         If TextBox1.Text = "" Then
             TextBox1.Text = 0
-        Else
-            x1 = TextBox1.Text
         End If
 
         If TextBox2.Text = "" Then
             TextBox2.Text = 0
-        Else
-            x2 = TextBox2.Text
+
         End If
 
         If TextBox3.Text = "" Then
             TextBox3.Text = 0
-        Else
-            x3 = TextBox3.Text
+
         End If
 
         If TextBox4.Text = "" Then
             TextBox4.Text = 0
-        Else
-            x4 = TextBox4.Text
         End If
-
-
-
-        'x1 = TextBox1.Text
-        'x2 = TextBox2.Text
-        'x3 = TextBox3.Text
-        'x4 = TextBox4.Text
-
-
-        TextBox5.Text = x1 + x2 + x3 + x4
-
 
     End Sub
 
-    
+    Private Sub totalmony() 'จะคำนวณค่าใช้จ่ายให้อัตโนมัติทุก textbok จะต้องมีตัวเลขหากช่องไหนไม่มีค่าใช้จ่ายให้ใส่เลข 0
+
+        Try
+
+            TextBox5.Text = CDbl(TextBox1.Text) + CDbl(TextBox2.Text) + CDbl(TextBox3.Text) + CDbl(TextBox4.Text)
+
+        Catch ex As Exception
+
+            TextBox5.Text = "0"
+            'TextBox1.Text = "0"
+            'TextBox2.Text = "0"
+            'TextBox3.Text = "0"
+            'TextBox4.Text = "0"  ' ถ้ามี Error ก็ให้ออกเป็น 0 ไปก่อน
+        End Try
+
+    End Sub
+
+
+    'Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+
+    '    'รูปแบบการคำนวณแบบแรก ต้องกดปุ่มคำนวณด้วยตัวเอง
+    '    Dim x1, x2, x3, x4 As Integer
+
+
+    '    If TextBox1.Text = "" Then
+    '        TextBox1.Text = 0
+    '    Else
+    '        x1 = TextBox1.Text
+    '    End If
+
+    '    If TextBox2.Text = "" Then
+    '        TextBox2.Text = 0
+    '    Else
+    '        x2 = TextBox2.Text
+    '    End If
+
+    '    If TextBox3.Text = "" Then
+    '        TextBox3.Text = 0
+    '    Else
+    '        x3 = TextBox3.Text
+    '    End If
+
+    '    If TextBox4.Text = "" Then
+    '        TextBox4.Text = 0
+    '    Else
+    '        x4 = TextBox4.Text
+    '    End If
+
+
+
+    '    'x1 = TextBox1.Text
+    '    'x2 = TextBox2.Text
+    '    'x3 = TextBox3.Text
+    '    'x4 = TextBox4.Text
+
+
+    '    TextBox5.Text = x1 + x2 + x3 + x4
+
+
+    'End Sub
+
+
+    Private Sub TextBox4_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox4.MouseClick
+
+        If TextBox4.Text = "" Then
+            TextBox4.Focus()
+            Exit Sub
+        End If
+
+        If TextBox4.Text = 0 Then
+            TextBox4.Text = ""
+        End If
+
+    End Sub
+
+
+    Private Sub TextBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox1.MouseClick
+
+        If TextBox1.Text = "" Then
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        If TextBox1.Text = 0 Then
+            TextBox1.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox2.MouseClick
+
+        If TextBox2.Text = "" Then
+            TextBox2.Focus()
+            Exit Sub
+        End If
+
+        If TextBox2.Text = 0 Then
+            TextBox2.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox3_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox3.MouseClick
+
+        If TextBox3.Text = "" Then
+            TextBox3.Focus()
+            Exit Sub
+        End If
+
+        If TextBox3.Text = 0 Then
+            TextBox3.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        totalmony()
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+        totalmony()
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+        totalmony()
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+        totalmony()
+    End Sub
+
+#End Region
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
 
@@ -948,7 +1061,7 @@ Public Class Internal_training
             .Columns.Item(2).Width = "130"
             .Columns.Item(3).HeaderText = "หลักสูตรการอบรม"
             .Columns.Item(3).Width = "90"
-            .Columns.Item(4).HeaderText = "จำนวนวัน"
+            .Columns.Item(4).HeaderText = "ชม : นาที"
             .Columns.Item(4).Width = "90"
 
             .Columns.Item(5).HeaderText = "วันที่เริ่ม"
@@ -966,7 +1079,7 @@ Public Class Internal_training
             .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
-         
+
         End With
 
         datagrid_IntrainingNew.AllowUserToAddRows = False
@@ -1028,7 +1141,7 @@ Public Class Internal_training
             txt_Search.Clear()
 
         End If
-        
+
     End Sub
 
     Private Sub search_employees_panel()
@@ -1217,8 +1330,8 @@ Public Class Internal_training
 
 
 #End Region
-    
-   
+
+
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 
         Dim cn As New SqlConnection(strConn)
@@ -1265,7 +1378,7 @@ Public Class Internal_training
         e.Handled = True
     End Sub
 
-   
+
     Private Sub txt_long_term_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_long_term.KeyPress
 
         Select Case Asc(e.KeyChar)
@@ -1394,8 +1507,8 @@ Public Class Internal_training
 
     End Sub
 
-    
-   
+
+
     Private Sub RP1_CheckedChanged(sender As Object, e As EventArgs) Handles RP1.CheckedChanged
 
         txt_Search_panal.Text = ""
@@ -1409,108 +1522,79 @@ Public Class Internal_training
     End Sub
 
 
-    Private Sub TextBox4_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox4.MouseClick
 
-        If TextBox4.Text = "" Then
-            TextBox4.Focus()
-            Exit Sub
-        End If
-
-        If TextBox4.Text = 0 Then
-            TextBox4.Text = ""
-        End If
-
-    End Sub
-
-    
-    Private Sub TextBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox1.MouseClick
-
-        If TextBox1.Text = "" Then
-            TextBox1.Focus()
-            Exit Sub
-        End If
-
-        If TextBox1.Text = 0 Then
-            TextBox1.Text = ""
-        End If
-
-    End Sub
-
-    Private Sub TextBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox2.MouseClick
-
-        If TextBox2.Text = "" Then
-            TextBox2.Focus()
-            Exit Sub
-        End If
-
-        If TextBox2.Text = 0 Then
-            TextBox2.Text = ""
-        End If
-
-    End Sub
-
-    Private Sub TextBox3_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox3.MouseClick
-
-        If TextBox3.Text = "" Then
-            TextBox3.Focus()
-            Exit Sub
-        End If
-
-        If TextBox3.Text = 0 Then
-            TextBox3.Text = ""
-        End If
-
-    End Sub
-
-   
 #Region "ทดลองคำนวณเวลาที่ใช้อบรม / จัดอบรม"
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+    Private Sub log_term()
 
         Dim timest As String = cmd_start1.Text & ":" & cmd_start2.Text
         Dim timeen1 As String = cmd_end1.Text & ":" & cmd_end2.Text
         Dim Day As String = ""
         Dim Hour As String = ""
         Dim Minute As String = ""
-        Dim test As String = ""
+
 
 
         Dim time As String = ""
         Dim date_st_en As String = ""
 
-        If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
-            MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
-            Exit Sub
-        Else
+        Try
 
-            Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
-            'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1))
-            'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1))
-            Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
-            Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+            If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
+                MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            Else
 
-            If Hour >= 6 Then
-                Hour = Hour - 1
+                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+                Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+
+                If Hour >= 6 Then
+                    Hour = Hour - 1
+                End If
+
+                txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+
             End If
 
-            txt_long_term.Text = Day * 8 + Hour & ":" & Minute
-
-
-
-            test = (CDate(timeen1) - CDate(timest)).ToString
-            TextBox6.Text = Hour
-
-
-
-
-        End If
-
-
+        Catch ex As Exception
+            txt_long_term.Text = "0" ' ถ้ามี Error ก็ให้ออกเป็น 0 ไปก่อน
+        End Try
 
     End Sub
 
-#End Region
 
+    Private Sub Date_training_ValueChanged(sender As Object, e As EventArgs) Handles Date_training.ValueChanged
+
+        log_term()
+
+    End Sub
+
+    Private Sub cmd_start1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmd_start1.SelectedIndexChanged
+        log_term()
+    End Sub
+
+    Private Sub cmd_start2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmd_start2.SelectedIndexChanged
+        log_term()
+    End Sub
+
+    Private Sub Date_training_end_ValueChanged(sender As Object, e As EventArgs) Handles Date_training_end.ValueChanged
+        log_term()
+    End Sub
+
+    Private Sub cmd_end1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmd_end1.SelectedIndexChanged
+        log_term()
+    End Sub
+
+    Private Sub cmd_end2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmd_end2.SelectedIndexChanged
+        log_term()
+    End Sub
+
+#End Region
 
 
 End Class
