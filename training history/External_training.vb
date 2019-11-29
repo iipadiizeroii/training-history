@@ -1535,4 +1535,9 @@ Public Class External_training
         End If
 
     End Sub
+
+    Private Sub Date_training_ValueChanged(sender As Object, e As EventArgs) Handles Date_training.ValueChanged
+
+
+    End Sub
 End Class

@@ -1462,5 +1462,55 @@ Public Class Internal_training
 
     End Sub
 
-    
+   
+#Region "ทดลองคำนวณเวลาที่ใช้อบรม / จัดอบรม"
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+        Dim timest As String = cmd_start1.Text & ":" & cmd_start2.Text
+        Dim timeen1 As String = cmd_end1.Text & ":" & cmd_end2.Text
+        Dim Day As String = ""
+        Dim Hour As String = ""
+        Dim Minute As String = ""
+        Dim test As String = ""
+
+
+        Dim time As String = ""
+        Dim date_st_en As String = ""
+
+        If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
+            MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        Else
+
+            Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+            'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1))
+            'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1))
+            Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+            Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+
+            If Hour >= 6 Then
+                Hour = Hour - 1
+            End If
+
+            txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+
+
+            test = (CDate(timeen1) - CDate(timest)).ToString
+            TextBox6.Text = Hour
+
+
+
+
+        End If
+
+
+
+    End Sub
+
+#End Region
+
+
+
 End Class
