@@ -219,6 +219,20 @@ Public Class External_training
             Exit Sub
         End If
 
+        If txt_long_term.Text = "0::0" Then
+            MsgBox("กรุณาเลือกเวลาเริ่มต้น หรือ สิ้นสุดให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        ElseIf txt_long_term.Text = "0:00" Then
+            MsgBox("กรุณาเลือกเวลาเริ่มต้น หรือ สิ้นสุดให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        ElseIf txt_long_term.Text = "-1::0" Then
+            MsgBox("กรุณาเลือกเวลาเริ่มต้น หรือ สิ้นสุดให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        ElseIf txt_long_term.Text = "-2::0" Then
+            MsgBox("กรุณาเลือกเวลาเริ่มต้น หรือ สิ้นสุดให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
 
         With cn
             If .State = ConnectionState.Open Then .Close()
@@ -1464,16 +1478,17 @@ Public Class External_training
 
     Private Sub txt_long_term_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_long_term.KeyPress
 
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
-                e.Handled = False
-            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
-                e.Handled = False
+        e.Handled = True
+        'Select Case Asc(e.KeyChar)
+        '    Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+        '        e.Handled = False
+        '    Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+        '        e.Handled = False
 
-            Case Else
-                e.Handled = True
-                MessageBox.Show("สามารถกดได้แค่ตัวเลข")
-        End Select
+        '    Case Else
+        '        e.Handled = True
+        '        MessageBox.Show("สามารถกดได้แค่ตัวเลข")
+        'End Select
 
     End Sub
 
@@ -1608,25 +1623,25 @@ Public Class External_training
 
         Try
 
-            If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
-                MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
-                Exit Sub
-            Else
+            'If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
+            '    MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            '    Exit Sub
+            'Else
 
-                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
-                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-                Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
-                Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+            Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+            'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+            'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+            Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+            Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
 
-                If Hour >= 6 Then
-                    Hour = Hour - 1
-                End If
-
-                txt_long_term.Text = Day * 8 + Hour & ":" & Minute
-
-
+            If Hour >= 6 Then
+                Hour = Hour - 1
             End If
+
+            txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+
+            'End If
 
         Catch ex As Exception
             txt_long_term.Text = "0" ' ถ้ามี Error ก็ให้ออกเป็น 0 ไปก่อน
@@ -1663,4 +1678,27 @@ Public Class External_training
 
 
     
+    Private Sub Date_training_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Date_training.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmd_start1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_start1.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmd_start2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_start2.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub Date_training_end_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Date_training_end.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmd_end1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_end1.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cmd_end2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_end2.KeyPress
+        e.Handled = True
+    End Sub
 End Class
