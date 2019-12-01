@@ -1038,8 +1038,12 @@ Public Class Internal_training
 
     End Sub
 
+   
+
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
         totalmony()
+
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
@@ -1568,38 +1572,67 @@ Public Class Internal_training
             '    Exit Sub
             'Else
 
-            Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
-            'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-            'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-            If (CStr(cmd_start1.Text)) > (CStr(cmd_end1.Text)) Then
-                Hour = (CDate(timest) - CDate(timeen1)).ToString.Substring(0, 2)
-                Minute = (CDate(timest) - CDate(timeen1)).ToString.Substring(3, 2)
+            If (CDate(Date_training.Text)) = (CDate(Date_training_end.Text)) Then
 
-                If Hour >= 6 Then
-                    Hour = Hour - 1
-                End If
+                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
 
-                txt_long_term.Text = Day * 8 - Hour & ":" & Minute
+                'If (CStr(cmd_start1.Text)) > (CStr(cmd_end1.Text)) Then
+                '    Hour = (CDate(timest) - CDate(timeen1)).ToString.Substring(0, 2)
+                '    Minute = (CDate(timest) - CDate(timeen1)).ToString.Substring(3, 2)
 
-            Else
+                '    If Hour >= 6 Then
+                '        Hour = Hour - 1
+                '    End If
+
+                '    txt_long_term.Text = Day * 8 - Hour & ":" & Minute
+
+                'Else
                 Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
                 Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
 
-                If Hour >= 6 Then
+                If Hour >= 5 Then
                     Hour = Hour - 1
                 End If
 
                 txt_long_term.Text = Day * 8 + Hour & ":" & Minute
 
+                'End If
+
+            Else
+
+                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+
+                If (CStr(cmd_start1.Text)) > (CStr(cmd_end1.Text)) Then
+                    Hour = (CDate(timest) - CDate(timeen1)).ToString.Substring(0, 2)
+                    Minute = (CDate(timest) - CDate(timeen1)).ToString.Substring(3, 2)
+
+                    If Hour >= 6 Then
+                        Hour = Hour - 1
+                    End If
+
+                    txt_long_term.Text = (Day * 8) - Hour & ":" & Minute
+
+                Else
+                    Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+                    Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+
+                    If Hour >= 5 Then
+                        Hour = Hour - 1
+                    End If
+
+                    txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+                End If
 
             End If
-            
 
-           
 
-            TextBox6.Text = Hour
-            TextBox7.Text = Minute
-            TextBox8.Text = Day
+
+          
 
 
             'End If

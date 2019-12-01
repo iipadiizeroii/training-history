@@ -404,3 +404,35 @@ G:\โปรเจค\training history\training-history\training history\obj\Deb
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.all_report.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.PR_PO_ALL.resources
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.PR_PO_ALL.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\bin\Debug\training history.exe.config
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.exe
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.xml
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.pdb
+C:\Users\Duck-Nb\Desktop\training-history\training history\bin\Debug\training history.exe
+C:\Users\Duck-Nb\Desktop\training-history\training history\bin\Debug\training history.pdb
+C:\Users\Duck-Nb\Desktop\training-history\training history\bin\Debug\training history.xml
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.vbprojResolveAssemblyReference.cache
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.all_report.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Create_Expert.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Create_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Employees.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmAdd_Employees_out.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmAdd_Expert_in.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmadd_Expert_out.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.External_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmExtermal_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmInternal_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmNew_expert_In.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmSearch_history_training_Em.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.frmSearch_not_history_training_Em.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.HOME.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.HOMERPOGRAM.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Internal_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Resources.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.PR_PO_ALL.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.PR_PO_internal_training.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.RP_Expenses_in_out.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.test01.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.RP_Register.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.test_Print.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache

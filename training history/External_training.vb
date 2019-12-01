@@ -219,6 +219,12 @@ Public Class External_training
             Exit Sub
         End If
 
+
+        If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
+            MsgBox("กรุณาเลือกวันที่เริ่มต้น หรือ สิ้นสุดการอบรมให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
         If txt_long_term.Text = "0::0" Then
             MsgBox("กรุณาเลือกเวลาเริ่มต้น หรือ สิ้นสุดให้ถูกต้อง", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
@@ -1621,6 +1627,7 @@ Public Class External_training
         Dim time As String = ""
         Dim date_st_en As String = ""
 
+
         Try
 
             'If (CDate(Date_training.Text)) > (CDate(Date_training_end.Text)) Then
@@ -1628,17 +1635,67 @@ Public Class External_training
             '    Exit Sub
             'Else
 
-            Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
-            'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-            'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
-            Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
-            Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+            If (CDate(Date_training.Text)) = (CDate(Date_training_end.Text)) Then
 
-            If Hour >= 6 Then
-                Hour = Hour - 1
+                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+
+                'If (CStr(cmd_start1.Text)) > (CStr(cmd_end1.Text)) Then
+                '    Hour = (CDate(timest) - CDate(timeen1)).ToString.Substring(0, 2)
+                '    Minute = (CDate(timest) - CDate(timeen1)).ToString.Substring(3, 2)
+
+                '    If Hour >= 6 Then
+                '        Hour = Hour - 1
+                '    End If
+
+                '    txt_long_term.Text = Day * 8 - Hour & ":" & Minute
+
+                'Else
+                Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+                Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+
+                If Hour >= 5 Then
+                    Hour = Hour - 1
+                End If
+
+                txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+                'End If
+
+            Else
+
+                Day = DateDiff(DateInterval.Day, CDate(Date_training.Text), CDate(Date_training_end.Text))
+                'Hour = DateDiff(DateInterval.Hour, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+                'Minute = DateDiff(DateInterval.Minute, CDate(timest), CDate(timeen1)) 'แนวความคิดแรก
+
+                If (CStr(cmd_start1.Text)) > (CStr(cmd_end1.Text)) Then
+                    Hour = (CDate(timest) - CDate(timeen1)).ToString.Substring(0, 2)
+                    Minute = (CDate(timest) - CDate(timeen1)).ToString.Substring(3, 2)
+
+                    If Hour >= 6 Then
+                        Hour = Hour - 1
+                    End If
+
+                    txt_long_term.Text = (Day * 8) - Hour & ":" & Minute
+
+                Else
+                    Hour = (CDate(timeen1) - CDate(timest)).ToString.Substring(0, 2)
+                    Minute = (CDate(timeen1) - CDate(timest)).ToString.Substring(3, 2)
+
+                    If Hour >= 5 Then
+                        Hour = Hour - 1
+                    End If
+
+                    txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+                End If
+
             End If
 
-            txt_long_term.Text = Day * 8 + Hour & ":" & Minute
+
+
+
 
 
             'End If
@@ -1646,7 +1703,6 @@ Public Class External_training
         Catch ex As Exception
             txt_long_term.Text = "0" ' ถ้ามี Error ก็ให้ออกเป็น 0 ไปก่อน
         End Try
-
     End Sub
 
 

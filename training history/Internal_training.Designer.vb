@@ -93,9 +93,6 @@ Partial Class Internal_training
         Me.datagrid_IntrainingNew = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -109,9 +106,6 @@ Partial Class Internal_training
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
         Me.GroupBox1.Controls.Add(Me.Label22)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Label24)
@@ -897,27 +891,6 @@ Partial Class Internal_training
         Me.TabPage3.Text = "บันทึกค่าใช้จ่าย"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(449, 112)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 28)
-        Me.TextBox6.TabIndex = 122
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(449, 146)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 28)
-        Me.TextBox7.TabIndex = 122
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(569, 146)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 28)
-        Me.TextBox8.TabIndex = 122
-        '
         'Internal_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1021,7 +994,4 @@ Partial Class Internal_training
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents cmd_start2 As System.Windows.Forms.ComboBox
     Friend WithEvents cmd_start1 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
 End Class
