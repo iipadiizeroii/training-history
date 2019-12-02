@@ -220,6 +220,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="new_admin.Designer.vb">
+      <DependentUpon>new_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="new_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PR_Expenses_out.vb">
       <DependentUpon>PR_Expenses_out.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -378,6 +384,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_admin.resx">
+      <DependentUpon>new_admin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PR_Expenses_out.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

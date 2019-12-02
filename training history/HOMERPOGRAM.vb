@@ -314,4 +314,14 @@ Public Class HOMERPOGRAM
     End Sub
 #End Region
 
+   
+    Private Sub บนทกขอมลUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles บนทกขอมลUserToolStripMenuItem.Click
+
+        new_admin.MdiParent = Me
+        new_admin.StartPosition = FormStartPosition.Manual
+        new_admin.Left = 215
+        new_admin.Top = 10
+        new_admin.Show()
+
+    End Sub
 End Class
