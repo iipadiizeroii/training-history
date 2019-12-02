@@ -31,6 +31,7 @@ Partial Class PR_PO_ALL
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.R4 = New System.Windows.Forms.RadioButton()
         Me.R3 = New System.Windows.Forms.RadioButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -48,7 +49,7 @@ Partial Class PR_PO_ALL
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(693, 33)
+        Me.Button1.Location = New System.Drawing.Point(648, 32)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -57,10 +58,10 @@ Partial Class PR_PO_ALL
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(510, 35)
+        Me.TextBox1.Location = New System.Drawing.Point(522, 34)
         Me.TextBox1.MaxLength = 7
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(165, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(120, 20)
         Me.TextBox1.TabIndex = 2
         '
         'GroupBox1
@@ -135,11 +136,21 @@ Partial Class PR_PO_ALL
         Me.R3.Text = "วิทยากร"
         Me.R3.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(519, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "กรอกรหัสอบรม"
+        '
         'PR_PO_ALL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 631)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
@@ -164,4 +175,5 @@ Partial Class PR_PO_ALL
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents R4 As System.Windows.Forms.RadioButton
     Friend WithEvents R3 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

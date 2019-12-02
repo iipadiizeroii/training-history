@@ -41,8 +41,17 @@ Partial Class HOMERPOGRAM
         Me.จดอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.จดอบรมภายในToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.จดอบรมภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.พมพรายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.เกยวกบToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.พมพรายงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานรายชอพนกงานToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานรายชอวทยากรToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานหลกสตรการอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.เกยวกบToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.คนหาประวตการอบรมรายบคคลToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.คนหาประวตการอบรมตามแผนกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -198,9 +207,9 @@ Partial Class HOMERPOGRAM
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button5.Location = New System.Drawing.Point(1, 404)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(223, 48)
+        Me.Button5.Size = New System.Drawing.Size(210, 48)
         Me.Button5.TabIndex = 1
-        Me.Button5.Text = "จัดอบรมภายนอก"
+        Me.Button5.Text = "อบรมภายนอก"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button3
@@ -223,7 +232,7 @@ Partial Class HOMERPOGRAM
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Snow
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.บนทกขอมลพนกงานToolStripMenuItem, Me.เพมหลกสตรการอบรมToolStripMenuItem, Me.จดอบรมToolStripMenuItem, Me.เกยวกบToolStripMenuItem, Me.พมพรายงานToolStripMenuItem, Me.เกยวกบToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -272,26 +281,82 @@ Partial Class HOMERPOGRAM
         'จดอบรมภายในToolStripMenuItem
         '
         Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
-        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
         '
         'จดอบรมภายนอกToolStripMenuItem
         '
         Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
-        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.จดอบรมภายนอกToolStripMenuItem.Text = "จัดอบรมภายนอก"
+        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.จดอบรมภายนอกToolStripMenuItem.Text = "อบรมภายนอก"
+        '
+        'เกยวกบToolStripMenuItem
+        '
+        Me.เกยวกบToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.คนหาประวตการอบรมรายบคคลToolStripMenuItem, Me.คนหาประวตการอบรมตามแผนกToolStripMenuItem})
+        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
+        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(98, 20)
+        Me.เกยวกบToolStripMenuItem.Text = "ค้นหาประวัติอบรม"
         '
         'พมพรายงานToolStripMenuItem
         '
+        Me.พมพรายงานToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานรายชอพนกงานToolStripMenuItem, Me.รายงานรายชอวทยากรToolStripMenuItem, Me.รายงานหลกสตรการอบรมToolStripMenuItem, Me.รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem, Me.เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem, Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem})
         Me.พมพรายงานToolStripMenuItem.Name = "พมพรายงานToolStripMenuItem"
         Me.พมพรายงานToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.พมพรายงานToolStripMenuItem.Text = "พิมพ์รายงาน"
         '
-        'เกยวกบToolStripMenuItem
+        'รายงานรายชอพนกงานToolStripMenuItem
         '
-        Me.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem"
-        Me.เกยวกบToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ"
+        Me.รายงานรายชอพนกงานToolStripMenuItem.Name = "รายงานรายชอพนกงานToolStripMenuItem"
+        Me.รายงานรายชอพนกงานToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.รายงานรายชอพนกงานToolStripMenuItem.Text = "รายงานรายชื่อพนักงาน"
+        '
+        'รายงานรายชอวทยากรToolStripMenuItem
+        '
+        Me.รายงานรายชอวทยากรToolStripMenuItem.Name = "รายงานรายชอวทยากรToolStripMenuItem"
+        Me.รายงานรายชอวทยากรToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.รายงานรายชอวทยากรToolStripMenuItem.Text = "รายงานรายชื่อวิทยากร"
+        '
+        'รายงานหลกสตรการอบรมToolStripMenuItem
+        '
+        Me.รายงานหลกสตรการอบรมToolStripMenuItem.Name = "รายงานหลกสตรการอบรมToolStripMenuItem"
+        Me.รายงานหลกสตรการอบรมToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.รายงานหลกสตรการอบรมToolStripMenuItem.Text = "รายงานหลักสูตรการอบรม"
+        '
+        'รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem
+        '
+        Me.รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem.Name = "รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem"
+        Me.รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem.Text = "รายงานแสดงค่าใช้จ่ายอบรมภายใน - ภายนอก"
+        '
+        'เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem
+        '
+        Me.เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem.Name = "เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem"
+        Me.เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem.Text = "เอกสารลงชื่อพนักงานเข้าอบรม"
+        '
+        'เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem
+        '
+        Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem.Name = "เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem"
+        Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem.Size = New System.Drawing.Size(274, 22)
+        Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem.Text = "เอกสารอนุมัติการอบรมภายใน - ภายนอก"
+        '
+        'เกยวกบToolStripMenuItem1
+        '
+        Me.เกยวกบToolStripMenuItem1.Name = "เกยวกบToolStripMenuItem1"
+        Me.เกยวกบToolStripMenuItem1.Size = New System.Drawing.Size(54, 20)
+        Me.เกยวกบToolStripMenuItem1.Text = "เกี่ยวกับ"
+        '
+        'คนหาประวตการอบรมรายบคคลToolStripMenuItem
+        '
+        Me.คนหาประวตการอบรมรายบคคลToolStripMenuItem.Name = "คนหาประวตการอบรมรายบคคลToolStripMenuItem"
+        Me.คนหาประวตการอบรมรายบคคลToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.คนหาประวตการอบรมรายบคคลToolStripMenuItem.Text = "ค้นหาประวัติการอบรมรายบุคคล"
+        '
+        'คนหาประวตการอบรมตามแผนกToolStripMenuItem
+        '
+        Me.คนหาประวตการอบรมตามแผนกToolStripMenuItem.Name = "คนหาประวตการอบรมตามแผนกToolStripMenuItem"
+        Me.คนหาประวตการอบรมตามแผนกToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.คนหาประวตการอบรมตามแผนกToolStripMenuItem.Text = "ค้นหาประวัติการอบรมตามแผนก"
         '
         'HOMERPOGRAM
         '
@@ -302,6 +367,8 @@ Partial Class HOMERPOGRAM
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.IsMdiContainer = True
+        Me.MaximumSize = New System.Drawing.Size(1280, 800)
+        Me.MinimumSize = New System.Drawing.Size(1280, 800)
         Me.Name = "HOMERPOGRAM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HOMERPOGRAM"
@@ -334,4 +401,13 @@ Partial Class HOMERPOGRAM
     Friend WithEvents พมพรายงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents เกยวกบToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents รายงานรายชอพนกงานToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents รายงานรายชอวทยากรToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents รายงานหลกสตรการอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents รายงานแสดงคาใชจายอบรมภายในภายนอกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents เอกสารลงชอพนกงานเขาอบรมToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents เกยวกบToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents คนหาประวตการอบรมรายบคคลToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents คนหาประวตการอบรมตามแผนกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
