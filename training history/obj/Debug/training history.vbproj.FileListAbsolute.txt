@@ -439,3 +439,5 @@ C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training hi
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.new_admin.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.new_admin.resources
 G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Login_Form.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.Login_Form.resources
+C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.new_admin.resources

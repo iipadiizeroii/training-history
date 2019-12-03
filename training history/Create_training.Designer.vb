@@ -51,29 +51,26 @@ Partial Class Create_training
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.OP1 = New System.Windows.Forms.OpenFileDialog()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.datagrid_course, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.clear_data)
         Me.GroupBox1.Controls.Add(Me.cancel_data)
         Me.GroupBox1.Controls.Add(Me.upte_data)
         Me.GroupBox1.Controls.Add(Me.edit_data)
         Me.GroupBox1.Controls.Add(Me.add_data)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txt_group_id)
-        Me.GroupBox1.Controls.Add(Me.txt_type_id)
-        Me.GroupBox1.Controls.Add(Me.txt_format_id)
         Me.GroupBox1.Controls.Add(Me.cmb_group_name)
         Me.GroupBox1.Controls.Add(Me.cmb_type_name)
         Me.GroupBox1.Controls.Add(Me.cmb_format_name)
@@ -156,7 +153,7 @@ Partial Class Create_training
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label8.Location = New System.Drawing.Point(84, 153)
+        Me.Label8.Location = New System.Drawing.Point(119, 163)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(90, 26)
         Me.Label8.TabIndex = 4
@@ -166,7 +163,7 @@ Partial Class Create_training
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label5.Location = New System.Drawing.Point(340, 150)
+        Me.Label5.Location = New System.Drawing.Point(22, 81)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 26)
         Me.Label5.TabIndex = 4
@@ -176,7 +173,7 @@ Partial Class Create_training
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label7.Location = New System.Drawing.Point(64, 122)
+        Me.Label7.Location = New System.Drawing.Point(99, 132)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 26)
         Me.Label7.TabIndex = 4
@@ -186,7 +183,7 @@ Partial Class Create_training
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label4.Location = New System.Drawing.Point(320, 117)
+        Me.Label4.Location = New System.Drawing.Point(2, 48)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(117, 26)
         Me.Label4.TabIndex = 4
@@ -196,7 +193,7 @@ Partial Class Create_training
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label6.Location = New System.Drawing.Point(68, 93)
+        Me.Label6.Location = New System.Drawing.Point(103, 103)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(106, 26)
         Me.Label6.TabIndex = 4
@@ -206,7 +203,7 @@ Partial Class Create_training
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label3.Location = New System.Drawing.Point(324, 90)
+        Me.Label3.Location = New System.Drawing.Point(6, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(113, 26)
         Me.Label3.TabIndex = 4
@@ -216,7 +213,7 @@ Partial Class Create_training
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label2.Location = New System.Drawing.Point(106, 63)
+        Me.Label2.Location = New System.Drawing.Point(141, 73)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 26)
         Me.Label2.TabIndex = 4
@@ -226,7 +223,7 @@ Partial Class Create_training
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 36)
+        Me.Label1.Location = New System.Drawing.Point(134, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 26)
         Me.Label1.TabIndex = 4
@@ -235,7 +232,7 @@ Partial Class Create_training
         'txt_group_id
         '
         Me.txt_group_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_group_id.Location = New System.Drawing.Point(443, 153)
+        Me.txt_group_id.Location = New System.Drawing.Point(125, 84)
         Me.txt_group_id.Name = "txt_group_id"
         Me.txt_group_id.Size = New System.Drawing.Size(100, 20)
         Me.txt_group_id.TabIndex = 6
@@ -243,7 +240,7 @@ Partial Class Create_training
         'txt_type_id
         '
         Me.txt_type_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_type_id.Location = New System.Drawing.Point(443, 123)
+        Me.txt_type_id.Location = New System.Drawing.Point(125, 54)
         Me.txt_type_id.Name = "txt_type_id"
         Me.txt_type_id.Size = New System.Drawing.Size(100, 20)
         Me.txt_type_id.TabIndex = 5
@@ -251,7 +248,7 @@ Partial Class Create_training
         'txt_format_id
         '
         Me.txt_format_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_format_id.Location = New System.Drawing.Point(443, 93)
+        Me.txt_format_id.Location = New System.Drawing.Point(125, 24)
         Me.txt_format_id.Name = "txt_format_id"
         Me.txt_format_id.Size = New System.Drawing.Size(100, 20)
         Me.txt_format_id.TabIndex = 4
@@ -260,7 +257,7 @@ Partial Class Create_training
         '
         Me.cmb_group_name.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.cmb_group_name.FormattingEnabled = True
-        Me.cmb_group_name.Location = New System.Drawing.Point(180, 158)
+        Me.cmb_group_name.Location = New System.Drawing.Point(215, 168)
         Me.cmb_group_name.Name = "cmb_group_name"
         Me.cmb_group_name.Size = New System.Drawing.Size(121, 21)
         Me.cmb_group_name.TabIndex = 3
@@ -269,7 +266,7 @@ Partial Class Create_training
         '
         Me.cmb_type_name.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.cmb_type_name.FormattingEnabled = True
-        Me.cmb_type_name.Location = New System.Drawing.Point(180, 127)
+        Me.cmb_type_name.Location = New System.Drawing.Point(215, 137)
         Me.cmb_type_name.Name = "cmb_type_name"
         Me.cmb_type_name.Size = New System.Drawing.Size(121, 21)
         Me.cmb_type_name.TabIndex = 2
@@ -278,7 +275,7 @@ Partial Class Create_training
         '
         Me.cmb_format_name.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.cmb_format_name.FormattingEnabled = True
-        Me.cmb_format_name.Location = New System.Drawing.Point(180, 96)
+        Me.cmb_format_name.Location = New System.Drawing.Point(215, 106)
         Me.cmb_format_name.Name = "cmb_format_name"
         Me.cmb_format_name.Size = New System.Drawing.Size(121, 21)
         Me.cmb_format_name.TabIndex = 1
@@ -286,7 +283,7 @@ Partial Class Create_training
         'txt_course_name
         '
         Me.txt_course_name.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_course_name.Location = New System.Drawing.Point(180, 66)
+        Me.txt_course_name.Location = New System.Drawing.Point(215, 76)
         Me.txt_course_name.MaxLength = 50
         Me.txt_course_name.Name = "txt_course_name"
         Me.txt_course_name.Size = New System.Drawing.Size(121, 20)
@@ -296,7 +293,7 @@ Partial Class Create_training
         '
         Me.txt_course_id.Enabled = False
         Me.txt_course_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_course_id.Location = New System.Drawing.Point(180, 36)
+        Me.txt_course_id.Location = New System.Drawing.Point(215, 46)
         Me.txt_course_id.Name = "txt_course_id"
         Me.txt_course_id.Size = New System.Drawing.Size(121, 20)
         Me.txt_course_id.TabIndex = 0
@@ -373,6 +370,21 @@ Partial Class Create_training
         '
         Me.OP1.FileName = "OpenFileDialog1"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.txt_group_id)
+        Me.GroupBox3.Controls.Add(Me.txt_type_id)
+        Me.GroupBox3.Controls.Add(Me.txt_format_id)
+        Me.GroupBox3.Location = New System.Drawing.Point(342, 66)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(256, 123)
+        Me.GroupBox3.TabIndex = 12
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "รหัส"
+        '
         'Create_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -393,6 +405,8 @@ Partial Class Create_training
         CType(Me.datagrid_course, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -425,4 +439,5 @@ Partial Class Create_training
     Friend WithEvents txt_Search As System.Windows.Forms.TextBox
     Friend WithEvents OP1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
 End Class

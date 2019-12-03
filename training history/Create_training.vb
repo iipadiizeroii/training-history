@@ -281,6 +281,7 @@ Public Class Create_training
         edit_data.Enabled = False
         upte_data.Enabled = False
         clear_data.Enabled = False
+        GroupBox3.Visible = False
 
 
 
@@ -461,12 +462,17 @@ Public Class Create_training
             MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
         End If
-        If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            SqlTable("DELETE FROM Course  where course_id ='" & txt_course_id.Text & "'")
-            MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
-            showdata()
-            cleardata()
-        End If
+
+            If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                SqlTable("DELETE FROM Course  where course_id ='" & txt_course_id.Text & "'")
+                MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+                showdata()
+                cleardata()
+            End If
+
+        
+
+
     End Sub
 #End Region
 

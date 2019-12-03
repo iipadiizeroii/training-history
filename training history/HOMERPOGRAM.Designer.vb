@@ -289,13 +289,13 @@ Partial Class HOMERPOGRAM
         'จดอบรมภายในToolStripMenuItem
         '
         Me.จดอบรมภายในToolStripMenuItem.Name = "จดอบรมภายในToolStripMenuItem"
-        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.จดอบรมภายในToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.จดอบรมภายในToolStripMenuItem.Text = "จัดอบรมภายใน"
         '
         'จดอบรมภายนอกToolStripMenuItem
         '
         Me.จดอบรมภายนอกToolStripMenuItem.Name = "จดอบรมภายนอกToolStripMenuItem"
-        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.จดอบรมภายนอกToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.จดอบรมภายนอกToolStripMenuItem.Text = "อบรมภายนอก"
         '
         'เกยวกบToolStripMenuItem
@@ -409,7 +409,7 @@ Partial Class HOMERPOGRAM
         'Status2
         '
         Me.Status2.Name = "Status2"
-        Me.Status2.Size = New System.Drawing.Size(47, 17)
+        Me.Status2.Size = New System.Drawing.Size(45, 17)
         Me.Status2.Text = "STATUS"
         '
         'HOMERPOGRAM

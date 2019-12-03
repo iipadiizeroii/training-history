@@ -156,17 +156,28 @@ Public Class new_admin
             Exit Sub
         End If
 
-        myMsg("ต้องการแก้ไขใช่หรือไม่", "ยืนยัน")
-        If res = Windows.Forms.DialogResult.No Then Exit Sub
+            If HOMERPOGRAM.Status1.Text = txt_username.Text Then
+            MsgBox("กรุณาเลือกข้อมูลใหม่ ไม่สามารถแก้ไข Username ที่กำลังใช้งานได้", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+            End If
 
-        savestatus = "Edit"
+            myMsg("ต้องการแก้ไขใช่หรือไม่", "ยืนยัน")
+            If res = Windows.Forms.DialogResult.No Then Exit Sub
 
-        'Dim ctrl As Control
-        'For Each ctrl In Me.Controls
-        '    If ctrl.GetType Is GetType(TextBox) Then
-        '        CType(ctrl, TextBox).ReadOnly = False
-        '    End If
-        'Next
+            savestatus = "Edit"
+
+
+        upte_data.Enabled = True
+        clear_data.Enabled = True
+        add_data.Enabled = False
+
+
+            'Dim ctrl As Control
+            'For Each ctrl In Me.Controls
+            '    If ctrl.GetType Is GetType(TextBox) Then
+            '        CType(ctrl, TextBox).ReadOnly = False
+            '    End If
+            'Next
 
     End Sub
 #End Region
@@ -312,6 +323,12 @@ Public Class new_admin
             MsgBox("กรุณาเลือกข้อมูลที่ต้องการลบ", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
         End If
+
+        If HOMERPOGRAM.Status1.Text = txt_username.Text Then
+            MsgBox("กรุณาเลือกข้อมูลใหม่ ไม่สามารถลบ Username ที่กำลังใช้งานได้", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
         If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             SqlTable("DELETE FROM User_Pass  where UserID ='" & txt_user_id.Text & "'")
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
@@ -401,9 +418,7 @@ Public Class new_admin
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_admin()
-        upte_data.Enabled = True
-        clear_data.Enabled = True
-        add_data.Enabled = False
+       
 
     End Sub
 

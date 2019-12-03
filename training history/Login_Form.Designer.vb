@@ -41,9 +41,9 @@ Partial Class Login_Form
         Me.GroupBox1.Controls.Add(Me.txt_usermane)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 46)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 45)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(326, 80)
+        Me.GroupBox1.Size = New System.Drawing.Size(333, 80)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
@@ -87,7 +87,7 @@ Partial Class Login_Form
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label2.Location = New System.Drawing.Point(0, 49)
+        Me.Label2.Location = New System.Drawing.Point(3, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 0
@@ -97,7 +97,7 @@ Partial Class Login_Form
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label1.Location = New System.Drawing.Point(-2, 22)
+        Me.Label1.Location = New System.Drawing.Point(2, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 0
@@ -107,11 +107,11 @@ Partial Class Login_Form
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
-        Me.Label3.Location = New System.Drawing.Point(73, 9)
+        Me.Label3.Location = New System.Drawing.Point(47, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(207, 33)
+        Me.Label3.Size = New System.Drawing.Size(250, 33)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "กรุณาใส่รหัสผ่านและพาสเวิร์ด"
+        Me.Label3.Text = "กรุณาใส่ Username และ Password"
         '
         'Login_Form
         '
