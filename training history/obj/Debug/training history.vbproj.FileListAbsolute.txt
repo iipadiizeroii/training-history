@@ -437,3 +437,5 @@ C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_hi
 C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training_history.test_Print.resources
 C:\Users\Duck-Nb\Desktop\training-history\training history\obj\Debug\training history.vbproj.GenerateResource.Cache
 C:\Users\Duck\Desktop\training-history\training history\obj\Debug\training_history.new_admin.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.new_admin.resources
+G:\โปรเจค\training history\training-history\training history\obj\Debug\training_history.Login_Form.resources

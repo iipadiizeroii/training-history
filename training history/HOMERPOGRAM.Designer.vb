@@ -53,8 +53,15 @@ Partial Class HOMERPOGRAM
         Me.เอกสารอนมตการอบรมภายในภายนอกToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.เกยวกบToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.บนทกขอมลUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Status1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Status2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -366,12 +373,52 @@ Partial Class HOMERPOGRAM
         Me.บนทกขอมลUserToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.บนทกขอมลUserToolStripMenuItem.Text = "บันทึกข้อมูล User"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.Status1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.Status2})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 739)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1264, 22)
+        Me.StatusStrip1.TabIndex = 15
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(45, 17)
+        Me.ToolStripStatusLabel1.Text = "ชื่อผู้ใช้ :"
+        '
+        'Status1
+        '
+        Me.Status1.Name = "Status1"
+        Me.Status1.Size = New System.Drawing.Size(68, 17)
+        Me.Status1.Text = "USERNAME"
+        '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(10, 17)
+        Me.ToolStripStatusLabel2.Text = "|"
+        '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(42, 17)
+        Me.ToolStripStatusLabel3.Text = "สถานะ :"
+        '
+        'Status2
+        '
+        Me.Status2.Name = "Status2"
+        Me.Status2.Size = New System.Drawing.Size(47, 17)
+        Me.Status2.Text = "STATUS"
+        '
         'HOMERPOGRAM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.IsMdiContainer = True
@@ -384,6 +431,8 @@ Partial Class HOMERPOGRAM
         Me.GroupBox1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -419,4 +468,10 @@ Partial Class HOMERPOGRAM
     Friend WithEvents คนหาประวตการอบรมรายบคคลToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents คนหาประวตการอบรมตามแผนกToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents บนทกขอมลUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Status1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Status2 As System.Windows.Forms.ToolStripStatusLabel
 End Class

@@ -18,6 +18,24 @@ Public Class HOMERPOGRAM
 
         'Panel1.AutoScroll = True
 
+        Login_Form.MdiParent = Me
+        Login_Form.StartPosition = FormStartPosition.Manual
+        Login_Form.Left = 447
+        Login_Form.Top = 187
+        Login_Form.Show()
+
+        'Button1.Visible = False
+        'Button2.Visible = False
+        'Button3.Visible = False
+        'Button4.Visible = False
+        'Button5.Visible = False
+        'Button6.Visible = False
+        'Button7.Visible = False
+        'Button8.Visible = False
+        'Button9.Visible = False
+        GroupBox1.Visible = False
+        MenuStrip1.Visible = False
+        StatusStrip1.Visible = False
 
     End Sub
 
@@ -322,6 +340,11 @@ Public Class HOMERPOGRAM
         new_admin.Left = 215
         new_admin.Top = 10
         new_admin.Show()
+
+    End Sub
+
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
 
     End Sub
 End Class

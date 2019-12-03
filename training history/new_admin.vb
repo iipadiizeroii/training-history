@@ -10,6 +10,7 @@ Public Class new_admin
 
     Dim cn As New SqlConnection(strConn)
     Dim cm As New SqlCommand
+    Dim cmm As New SqlCommand
     Dim sb As StringBuilder
     Dim tr As SqlTransaction
     Dim ds As New DataSet
@@ -173,6 +174,7 @@ Public Class new_admin
 #Region "บันทึกข้อมูล"
     Private Sub update_admin()
 
+
         If txt_user_id.Text = "" Then
             MessageBox.Show("กรุณาเพื่มข้อมูลหรือค้นหาก่อน")
             Exit Sub
@@ -214,6 +216,38 @@ Public Class new_admin
             MsgBox("กรุณาเลือกสถานะ ADMIN หรือ USER", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
         End If
+
+        ' ตรวจสอบค่า userneam ที่ซ้ำในระบบ
+        If txt_username.Text <> "" Then
+
+            Dim cn As New SqlConnection(strConn)
+            Dim ss As String
+
+            ss = "select * from User_Pass where Username like @user_name "
+
+            With cn
+                If .State = ConnectionState.Open Then .Close()
+                .ConnectionString = strConn
+                .Open()
+            End With
+
+            Dim cmm As New SqlCommand(ss, cn)
+            Dim DR As SqlDataReader
+            cmm.Parameters.Clear()
+            cmm.Parameters.Add("@user_name", SqlDbType.NVarChar, 20).Value = txt_username.Text
+            DR = cmm.ExecuteReader
+
+            Dim dt As New DataTable
+            dt.Load(DR)
+
+            If (dt.Rows.Count <> 0) Then
+                MsgBox("Username นี้ถูกใช้งานแล้วกรุณากรอกใหม่", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
+            cn.Close()
+        End If
+
+        ' สิ้นสุดโค้ดที่ตรวจสอบค่าซ้ำ
 
 
         With cn
@@ -284,7 +318,14 @@ Public Class new_admin
             showdata()
             cleardata()
         End If
+
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+
     End Sub
+
+
 #End Region
 
 #Region "เลือกข้อมูลจากดาด้ากริด"
@@ -306,30 +347,52 @@ Public Class new_admin
 
         End Try
 
+        edit_data.Enabled = True
+        clear_data.Enabled = True
+        upte_data.Enabled = False
+
     End Sub
 
 #End Region
 
 
-    Private Sub cmb_emp_department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_department.SelectedIndexChanged, cmd_status.SelectedIndexChanged
-
+    Private Sub emp_department()
+        sql = "select department_name from Department "
+        cmd_object(cmb_department)
     End Sub
-
+   
     Private Sub new_admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         showdata()
+        emp_department()
 
     End Sub
 
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
         add_cou()
+        upte_data.Enabled = True
+        edit_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 
     Private Sub upte_data_Click(sender As Object, e As EventArgs) Handles upte_data.Click
 
         update_admin()
+
+        If savestatus = "Add" Then
+            upte_data.Enabled = True
+
+        ElseIf savestatus = "Edit" Then
+            upte_data.Enabled = True
+        Else
+            upte_data.Enabled = False
+            edit_data.Enabled = False
+            clear_data.Enabled = False
+            add_data.Enabled = True
+
+        End If
 
     End Sub
 
@@ -338,12 +401,119 @@ Public Class new_admin
     Private Sub edit_data_Click(sender As Object, e As EventArgs) Handles edit_data.Click
 
         edit_admin()
+        upte_data.Enabled = True
+        clear_data.Enabled = True
+        add_data.Enabled = False
 
     End Sub
 
     Private Sub cancel_data_Click(sender As Object, e As EventArgs) Handles cancel_data.Click
 
+
+        cn.Close()
         cleardata()
+        showdata()
+        edit_data.Enabled = False
+        upte_data.Enabled = False
+        clear_data.Enabled = False
+        add_data.Enabled = True
+
 
     End Sub
+
+#Region "code กันไม่ใช้คีย์ขอมูลผิดประเภท"
+
+    Private Sub txt_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_name.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub txt_lastname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_lastname.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub txt_position_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_position.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub txt_username_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_username.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นตัวเลข และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub txt_password_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_password.KeyPress
+
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นตัวเลข และ ภาษาอังกฤษ")
+        End Select
+
+    End Sub
+
+    Private Sub cmb_department_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_department.KeyPress
+
+        e.Handled = True
+
+    End Sub
+
+    Private Sub cmd_status_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_status.KeyPress
+
+        e.Handled = True
+
+    End Sub
+
+
+#End Region
+
+
+   
 End Class

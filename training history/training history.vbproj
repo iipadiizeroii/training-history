@@ -205,6 +205,12 @@
     <Compile Include="Internal_training.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login_Form.Designer.vb">
+      <DependentUpon>Login_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Internal_training.resx">
       <DependentUpon>Internal_training.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

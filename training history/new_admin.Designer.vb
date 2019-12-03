@@ -54,7 +54,7 @@ Partial Class new_admin
         Me.txt_name.MaxLength = 50
         Me.txt_name.Name = "txt_name"
         Me.txt_name.Size = New System.Drawing.Size(165, 20)
-        Me.txt_name.TabIndex = 5
+        Me.txt_name.TabIndex = 2
         '
         'txt_user_id
         '
@@ -72,7 +72,7 @@ Partial Class new_admin
         Me.txt_lastname.MaxLength = 50
         Me.txt_lastname.Name = "txt_lastname"
         Me.txt_lastname.Size = New System.Drawing.Size(165, 20)
-        Me.txt_lastname.TabIndex = 6
+        Me.txt_lastname.TabIndex = 3
         '
         'Label3
         '
@@ -80,7 +80,7 @@ Partial Class new_admin
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label3.Location = New System.Drawing.Point(66, 132)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 22)
+        Me.Label3.Size = New System.Drawing.Size(55, 26)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "นามสกุล"
         '
@@ -90,7 +90,7 @@ Partial Class new_admin
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label2.Location = New System.Drawing.Point(95, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(24, 22)
+        Me.Label2.Size = New System.Drawing.Size(26, 26)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "ขื่อ"
         '
@@ -100,7 +100,7 @@ Partial Class new_admin
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label1.Location = New System.Drawing.Point(73, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 22)
+        Me.Label1.Size = New System.Drawing.Size(48, 26)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "UserID"
         '
@@ -111,7 +111,7 @@ Partial Class new_admin
         Me.cmb_department.Location = New System.Drawing.Point(127, 191)
         Me.cmb_department.Name = "cmb_department"
         Me.cmb_department.Size = New System.Drawing.Size(165, 21)
-        Me.cmb_department.TabIndex = 11
+        Me.cmb_department.TabIndex = 5
         '
         'Label7
         '
@@ -119,7 +119,7 @@ Partial Class new_admin
         Me.Label7.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label7.Location = New System.Drawing.Point(80, 191)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 22)
+        Me.Label7.Size = New System.Drawing.Size(41, 26)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "แผนก"
         '
@@ -131,7 +131,7 @@ Partial Class new_admin
         Me.txt_position.Multiline = True
         Me.txt_position.Name = "txt_position"
         Me.txt_position.Size = New System.Drawing.Size(165, 20)
-        Me.txt_position.TabIndex = 13
+        Me.txt_position.TabIndex = 4
         '
         'Label4
         '
@@ -139,7 +139,7 @@ Partial Class new_admin
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.Location = New System.Drawing.Point(67, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 22)
+        Me.Label4.Size = New System.Drawing.Size(54, 26)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "ตำแหน่ง"
         '
@@ -151,7 +151,7 @@ Partial Class new_admin
         Me.cmd_status.Location = New System.Drawing.Point(127, 218)
         Me.cmd_status.Name = "cmd_status"
         Me.cmd_status.Size = New System.Drawing.Size(102, 21)
-        Me.cmd_status.TabIndex = 11
+        Me.cmd_status.TabIndex = 6
         '
         'Label5
         '
@@ -159,19 +159,20 @@ Partial Class new_admin
         Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label5.Location = New System.Drawing.Point(80, 218)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 22)
+        Me.Label5.Size = New System.Drawing.Size(47, 26)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "สถานะ"
         '
         'clear_data
         '
+        Me.clear_data.Enabled = False
         Me.clear_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.clear_data.Image = Global.training_history.My.Resources.Resources.icons8_recycle_bin_32
         Me.clear_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.clear_data.Location = New System.Drawing.Point(427, 165)
         Me.clear_data.Name = "clear_data"
         Me.clear_data.Size = New System.Drawing.Size(84, 39)
-        Me.clear_data.TabIndex = 18
+        Me.clear_data.TabIndex = 11
         Me.clear_data.Text = "ลบ"
         Me.clear_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.clear_data.UseVisualStyleBackColor = True
@@ -184,33 +185,35 @@ Partial Class new_admin
         Me.cancel_data.Location = New System.Drawing.Point(324, 166)
         Me.cancel_data.Name = "cancel_data"
         Me.cancel_data.Size = New System.Drawing.Size(97, 38)
-        Me.cancel_data.TabIndex = 19
+        Me.cancel_data.TabIndex = 10
         Me.cancel_data.Text = "ยกเลิก"
         Me.cancel_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cancel_data.UseVisualStyleBackColor = True
         '
         'upte_data
         '
+        Me.upte_data.Enabled = False
         Me.upte_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.upte_data.Image = Global.training_history.My.Resources.Resources.icons8_add_database_32
         Me.upte_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.upte_data.Location = New System.Drawing.Point(324, 122)
         Me.upte_data.Name = "upte_data"
         Me.upte_data.Size = New System.Drawing.Size(97, 38)
-        Me.upte_data.TabIndex = 17
+        Me.upte_data.TabIndex = 9
         Me.upte_data.Text = "บันทึก"
         Me.upte_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.upte_data.UseVisualStyleBackColor = True
         '
         'edit_data
         '
+        Me.edit_data.Enabled = False
         Me.edit_data.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.edit_data.Image = Global.training_history.My.Resources.Resources.icons8_edit_32
         Me.edit_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.edit_data.Location = New System.Drawing.Point(324, 78)
         Me.edit_data.Name = "edit_data"
         Me.edit_data.Size = New System.Drawing.Size(97, 38)
-        Me.edit_data.TabIndex = 16
+        Me.edit_data.TabIndex = 8
         Me.edit_data.Text = "แก้ไข"
         Me.edit_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.edit_data.UseVisualStyleBackColor = True
@@ -223,7 +226,7 @@ Partial Class new_admin
         Me.add_data.Location = New System.Drawing.Point(324, 31)
         Me.add_data.Name = "add_data"
         Me.add_data.Size = New System.Drawing.Size(97, 38)
-        Me.add_data.TabIndex = 15
+        Me.add_data.TabIndex = 7
         Me.add_data.Text = "เพื่ม"
         Me.add_data.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.add_data.UseVisualStyleBackColor = True
@@ -234,25 +237,25 @@ Partial Class new_admin
         Me.DataGridView1.Location = New System.Drawing.Point(12, 260)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(499, 210)
-        Me.DataGridView1.TabIndex = 21
+        Me.DataGridView1.TabIndex = 12
         '
         'txt_username
         '
         Me.txt_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_username.Location = New System.Drawing.Point(127, 61)
-        Me.txt_username.MaxLength = 50
+        Me.txt_username.MaxLength = 20
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(165, 20)
-        Me.txt_username.TabIndex = 22
+        Me.txt_username.TabIndex = 0
         '
         'txt_password
         '
         Me.txt_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_password.Location = New System.Drawing.Point(127, 87)
-        Me.txt_password.MaxLength = 50
+        Me.txt_password.MaxLength = 20
         Me.txt_password.Name = "txt_password"
         Me.txt_password.Size = New System.Drawing.Size(165, 20)
-        Me.txt_password.TabIndex = 23
+        Me.txt_password.TabIndex = 1
         '
         'Label6
         '
@@ -260,7 +263,7 @@ Partial Class new_admin
         Me.Label6.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label6.Location = New System.Drawing.Point(57, 83)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 22)
+        Me.Label6.Size = New System.Drawing.Size(66, 26)
         Me.Label6.TabIndex = 24
         Me.Label6.Text = "Password"
         '
@@ -270,7 +273,7 @@ Partial Class new_admin
         Me.Label8.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label8.Location = New System.Drawing.Point(54, 59)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(67, 22)
+        Me.Label8.Size = New System.Drawing.Size(69, 26)
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "Username"
         '
