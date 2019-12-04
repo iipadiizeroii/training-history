@@ -24,7 +24,7 @@ Public Class new_admin
         Dim cn As New SqlConnection(strConn)
         Dim s As String = ""
         '2.เขียน sql'
-        s = "select * from User_Pass"
+        s = "select UserID,Username,name,lastname,position,department,status from User_Pass"
         '3'
         Dim da As New SqlDataAdapter(s, cn)
         Dim ds As New DataSet
@@ -39,27 +39,25 @@ Public Class new_admin
             .Columns.Item(0).Width = "80"
             .Columns.Item(1).HeaderText = "Username"
             .Columns.Item(1).Width = "110"
-            .Columns.Item(2).HeaderText = "Password"
-            .Columns.Item(2).Width = "110"
-            .Columns.Item(3).HeaderText = "ชื่อ"
-            .Columns.Item(3).Width = "50"
-            .Columns.Item(4).HeaderText = "นามสกุล"
+            .Columns.Item(2).HeaderText = "ชื่อ"
+            .Columns.Item(2).Width = "100"
+            .Columns.Item(3).HeaderText = "นามสกุล"
+            .Columns.Item(3).Width = "100"
+            .Columns.Item(4).HeaderText = "ตำแหน่ง"
             .Columns.Item(4).Width = "160"
-            .Columns.Item(5).HeaderText = "ตำแหน่ง"
+            .Columns.Item(5).HeaderText = "แผนก"
             .Columns.Item(5).Width = "160"
-            .Columns.Item(6).HeaderText = "แผนก"
-            .Columns.Item(6).Width = "160"
-            .Columns.Item(7).HeaderText = "STATUS"
-            .Columns.Item(7).Width = "70"
+            .Columns.Item(6).HeaderText = "STATUS"
+            .Columns.Item(6).Width = "70"
 
-            .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
-            .Columns(7).SortMode = DataGridViewColumnSortMode.NotSortable
+
 
         End With
 
@@ -95,7 +93,7 @@ Public Class new_admin
         oldid = ""
 
         Do While dr.Read
-            oldid = dr.GetInt32(0)   'รหัสสุดท้าย 1908003
+            oldid = dr.GetInt32(0)   'รหัสสุดท้าย 19003
         Loop
 
         Lid = oldid.Substring(0, 2)  '19
@@ -115,7 +113,9 @@ Public Class new_admin
         cn.Close()
 
         txt_username.Focus()
-
+        upte_data.Enabled = True
+        edit_data.Enabled = False
+        clear_data.Enabled = False
 
     End Sub
 #End Region
@@ -156,15 +156,15 @@ Public Class new_admin
             Exit Sub
         End If
 
-            If HOMERPOGRAM.Status1.Text = txt_username.Text Then
+        If HOMERPOGRAM.Status1.Text = txt_username.Text Then
             MsgBox("กรุณาเลือกข้อมูลใหม่ ไม่สามารถแก้ไข Username ที่กำลังใช้งานได้", MsgBoxStyle.Critical, "ผลการทำงาน")
             Exit Sub
-            End If
+        End If
 
             myMsg("ต้องการแก้ไขใช่หรือไม่", "ยืนยัน")
             If res = Windows.Forms.DialogResult.No Then Exit Sub
 
-            savestatus = "Edit"
+        savestatus = "Edit"
 
 
         upte_data.Enabled = True
@@ -229,7 +229,7 @@ Public Class new_admin
         End If
 
         ' ตรวจสอบค่า userneam ที่ซ้ำในระบบ
-        If txt_username.Text <> "" Then
+        If txt_username.Text <> "" And savestatus = "Add" Then
 
             Dim cn As New SqlConnection(strConn)
             Dim ss As String
@@ -253,8 +253,10 @@ Public Class new_admin
 
             If (dt.Rows.Count <> 0) Then
                 MsgBox("Username นี้ถูกใช้งานแล้วกรุณากรอกใหม่", MsgBoxStyle.Critical, "ผลการทำงาน")
+                txt_username.Focus()
                 Exit Sub
             End If
+
             cn.Close()
         End If
 
@@ -273,7 +275,7 @@ Public Class new_admin
             s &= "Values (@UserID,@Username,@Password,@name,@lastname,@position,@department,@status)"
 
         ElseIf savestatus = "Edit" Then
-            s = "Update User_Pass"
+            s = "Update User_Pass "
             s &= " set Username = @Username,"
             s &= "Password = @Password,"
             s &= "name = @name,"
@@ -307,7 +309,7 @@ Public Class new_admin
 
         End With
 
-        MsgBox("บัยทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
+        MsgBox("บันทึกข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
         showdata()
         savestatus = ""
 
@@ -352,13 +354,13 @@ Public Class new_admin
             Dim i As Integer = DataGridView1.CurrentRow.Index
             txt_user_id.Text = DataGridView1.Item(0, i).Value
             txt_username.Text = DataGridView1.Item(1, i).Value
-            txt_password.Text = DataGridView1.Item(2, i).Value
-            txt_name.Text = DataGridView1.Item(3, i).Value
-            txt_lastname.Text = DataGridView1.Item(4, i).Value
-            txt_position.Text = DataGridView1.Item(5, i).Value
-            cmb_department.Text = DataGridView1.Item(6, i).Value
-            cmd_status.Text = DataGridView1.Item(7, i).Value
-
+            'txt_password.Text = DataGridView1.Item(2, i).Value
+            txt_name.Text = DataGridView1.Item(2, i).Value
+            txt_lastname.Text = DataGridView1.Item(3, i).Value
+            txt_position.Text = DataGridView1.Item(4, i).Value
+            cmb_department.Text = DataGridView1.Item(5, i).Value
+            cmd_status.Text = DataGridView1.Item(6, i).Value
+            txt_password.Text = "●●●●●●●●●●●"
         Catch ex As Exception
             MessageBox.Show("ไม่พบข้อมูล" & ex.Message)
 
@@ -388,9 +390,7 @@ Public Class new_admin
     Private Sub add_data_Click(sender As Object, e As EventArgs) Handles add_data.Click
 
         add_cou()
-        upte_data.Enabled = True
-        edit_data.Enabled = False
-        clear_data.Enabled = False
+        
 
     End Sub
 
@@ -529,6 +529,7 @@ Public Class new_admin
 
 #End Region
 
-
-   
+    Private Sub txt_password_MouseDown(sender As Object, e As MouseEventArgs) Handles txt_password.MouseDown
+        txt_password.Text = ""
+    End Sub
 End Class

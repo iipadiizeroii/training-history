@@ -29,4 +29,5 @@ Public Class RP_Register
         Me.CrystalReportViewer1.Refresh()
 
     End Sub
+
 End Class

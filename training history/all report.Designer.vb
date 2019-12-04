@@ -37,7 +37,7 @@ Partial Class all_report
         Me.Button1.Location = New System.Drawing.Point(12, 150)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(292, 39)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 1
         Me.Button1.Text = "รายงานรายชื่อวิทยากร"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button1.UseVisualStyleBackColor = True
@@ -48,7 +48,7 @@ Partial Class all_report
         Me.Button2.Location = New System.Drawing.Point(12, 364)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(318, 39)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "เอกสารอนุมัติการอบรมภายใน - ภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button2.UseVisualStyleBackColor = True
@@ -59,7 +59,7 @@ Partial Class all_report
         Me.Button3.Location = New System.Drawing.Point(12, 311)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(318, 39)
-        Me.Button3.TabIndex = 2
+        Me.Button3.TabIndex = 4
         Me.Button3.Text = "เอกสารลงชื่อพนักงานเข้าอบรม"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button3.UseVisualStyleBackColor = True
@@ -70,7 +70,7 @@ Partial Class all_report
         Me.Button4.Location = New System.Drawing.Point(12, 202)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(292, 39)
-        Me.Button4.TabIndex = 3
+        Me.Button4.TabIndex = 2
         Me.Button4.Text = "รายงานหลักสูตรการอบรม"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button4.UseVisualStyleBackColor = True
@@ -81,7 +81,7 @@ Partial Class all_report
         Me.Button5.Location = New System.Drawing.Point(12, 96)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(292, 39)
-        Me.Button5.TabIndex = 4
+        Me.Button5.TabIndex = 0
         Me.Button5.Text = "รายงานรายชื่อพนักงาน"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button5.UseVisualStyleBackColor = True
@@ -92,7 +92,7 @@ Partial Class all_report
         Me.Button9.Location = New System.Drawing.Point(12, 256)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(292, 39)
-        Me.Button9.TabIndex = 8
+        Me.Button9.TabIndex = 3
         Me.Button9.Text = "รายงานแสดงค่าใช้จ่ายอบรมภายใน - ภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button9.UseVisualStyleBackColor = True

@@ -116,6 +116,12 @@ Public Class Create_Expert
         End If
         If MessageBox.Show("ต้องการลบข้อมูลใช่หรือไม่ ? ", "ยืนยันการลบข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             SqlTable("DELETE FROM Expert  where expert_id ='" & txt_exp_id.Text & "'")
+
+            If error1 = 1 Then
+                error1 = 0
+                Exit Sub
+            End If
+
             MsgBox("ลบข้อมูลสำเร็จ", MsgBoxStyle.Information, "ผลการทำงาน")
             showdata()
             cleardata()

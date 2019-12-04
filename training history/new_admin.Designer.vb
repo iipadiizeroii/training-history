@@ -254,6 +254,7 @@ Partial Class new_admin
         Me.txt_password.Location = New System.Drawing.Point(127, 87)
         Me.txt_password.MaxLength = 20
         Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txt_password.Size = New System.Drawing.Size(165, 20)
         Me.txt_password.TabIndex = 1
         '

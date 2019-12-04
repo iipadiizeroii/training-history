@@ -4,8 +4,8 @@ Imports System.Data
 Module SqlDbConn
 
     'Public strConn As String = "data source = DUCK-TNT\SQL2012;database = Data_Training;integrated security = true"
-    'Public strConn As String = "data source = KT1-PC-164\SQL2012;database = Data_Training;integrated security = true"
-    Public strConn As String = "data source = DESKTOP-HUU05QN\SQL2012;database = Data_Training;integrated security = true"
+    Public strConn As String = "data source = KT1-PC-164\SQL2012;database = Data_Training;integrated security = true"
+    'Public strConn As String = "data source = DESKTOP-HUU05QN\SQL2012;database = Data_Training;integrated security = true"
 
     Public dbconnect As New SqlConnection(strConn)
     Public command As New SqlCommand("", dbconnect)
@@ -21,6 +21,7 @@ Module SqlDbConn
     Friend emio As String = ""
     Friend courseID As String 'เก็บค่า รหัสของหลักสูตรเพื่อนำไปเปรียบเทียบคนที่ยังไม่ได้เรียนหลักสูตรนี้
 
+    Friend error1 As Integer
 
     Friend numAEXI As Integer 'ใช้นับลำดับใน เพิ่มรายชื่อวิทยากรภายใน
     Friend numAEXO As Integer 'ใช้นับลำดับใน เพิ่มรายชื่อวิทยากรภายนอก
@@ -70,7 +71,9 @@ Module SqlDbConn
             objConn = Nothing
             Return dt
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            MsgBox("ไม่สามารถลบข้อมูลนี้ได้", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            error1 = 1
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End Try
     End Function
 

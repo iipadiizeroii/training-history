@@ -31,9 +31,10 @@ Partial Class PR_PO_ALL
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.R4 = New System.Windows.Forms.RadioButton()
         Me.R3 = New System.Windows.Forms.RadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -49,7 +50,8 @@ Partial Class PR_PO_ALL
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(648, 32)
+        Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(144, 17)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -58,7 +60,8 @@ Partial Class PR_PO_ALL
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(522, 34)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox1.Location = New System.Drawing.Point(18, 20)
         Me.TextBox1.MaxLength = 7
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(120, 20)
@@ -136,25 +139,26 @@ Partial Class PR_PO_ALL
         Me.R3.Text = "วิทยากร"
         Me.R3.UseVisualStyleBackColor = True
         '
-        'Label1
+        'GroupBox3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(519, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "กรอกรหัสอบรม"
+        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!)
+        Me.GroupBox3.Location = New System.Drawing.Point(486, 12)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(243, 48)
+        Me.GroupBox3.TabIndex = 13
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "กรอกรหัสอบรม"
         '
         'PR_PO_ALL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 631)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "PR_PO_ALL"
         Me.Text = "PR_PO_ALL"
@@ -162,8 +166,9 @@ Partial Class PR_PO_ALL
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
@@ -175,5 +180,5 @@ Partial Class PR_PO_ALL
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents R4 As System.Windows.Forms.RadioButton
     Friend WithEvents R3 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
 End Class
