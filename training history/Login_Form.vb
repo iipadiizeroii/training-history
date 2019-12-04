@@ -40,6 +40,7 @@ Public Class Login_Form
             HOMERPOGRAM.MenuStrip1.Visible = True
             HOMERPOGRAM.StatusStrip1.Visible = True
             HOMERPOGRAM.GroupBox1.Visible = True
+            HOMERPOGRAM.Panel1.Visible = True
             'HOMERPOGRAM.Button1.Visible = True
             'HOMERPOGRAM.Button2.Visible = True
             'HOMERPOGRAM.Button3.Visible = True
@@ -55,6 +56,7 @@ Public Class Login_Form
             HOMERPOGRAM.บนทกขอมลUserToolStripMenuItem.Enabled = False
             HOMERPOGRAM.StatusStrip1.Visible = True
             HOMERPOGRAM.GroupBox1.Visible = True
+            HOMERPOGRAM.Panel1.Visible = True
             'HOMERPOGRAM.Button1.Visible = True
             'HOMERPOGRAM.Button2.Visible = True
             'HOMERPOGRAM.Button3.Visible = True
@@ -102,6 +104,7 @@ Public Class Login_Form
                 HOMERPOGRAM.MenuStrip1.Visible = True
                 HOMERPOGRAM.StatusStrip1.Visible = True
                 HOMERPOGRAM.GroupBox1.Visible = True
+                HOMERPOGRAM.Panel1.Visible = True
                 'HOMERPOGRAM.Button1.Visible = True
                 'HOMERPOGRAM.Button2.Visible = True
                 'HOMERPOGRAM.Button3.Visible = True
@@ -117,6 +120,7 @@ Public Class Login_Form
                 HOMERPOGRAM.บนทกขอมลUserToolStripMenuItem.Enabled = False
                 HOMERPOGRAM.StatusStrip1.Visible = True
                 HOMERPOGRAM.GroupBox1.Visible = True
+                HOMERPOGRAM.Panel1.Visible = True
                 'HOMERPOGRAM.Button1.Visible = True
                 'HOMERPOGRAM.Button2.Visible = True
                 'HOMERPOGRAM.Button3.Visible = True
@@ -159,6 +163,7 @@ Public Class Login_Form
                 HOMERPOGRAM.MenuStrip1.Visible = True
                 HOMERPOGRAM.StatusStrip1.Visible = True
                 HOMERPOGRAM.GroupBox1.Visible = True
+                HOMERPOGRAM.Panel1.Visible = True
                 'HOMERPOGRAM.Button1.Visible = True
                 'HOMERPOGRAM.Button2.Visible = True
                 'HOMERPOGRAM.Button3.Visible = True
@@ -174,6 +179,7 @@ Public Class Login_Form
                 HOMERPOGRAM.บนทกขอมลUserToolStripMenuItem.Enabled = False
                 HOMERPOGRAM.StatusStrip1.Visible = True
                 HOMERPOGRAM.GroupBox1.Visible = True
+                HOMERPOGRAM.Panel1.Visible = True
                 'HOMERPOGRAM.Button1.Visible = True
                 'HOMERPOGRAM.Button2.Visible = True
                 'HOMERPOGRAM.Button3.Visible = True

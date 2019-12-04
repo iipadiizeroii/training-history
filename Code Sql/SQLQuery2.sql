@@ -158,3 +158,29 @@ inner join format_course F on F.format_id = C.format_id
 inner join type_course T on t.type_id = C.type_id 
 inner join group_course G on G.group_id = C.group_id
 where C.course_id = '19018'
+
+
+Select *
+From Expert EX
+INNER JOIN Expert_detail_out EDO 
+on EDO.expert_id = EX.expert_id
+where EDO.trainingEx_id = '1909001'
+
+SELECT SUM(Total) FROM Expenses_in
+where YEAR(Date_in) = '2019'
+
+SELECT SUM(Total) FROM Expenses_in
+where MONTH(Date_in) = '11'
+
+
+SELECT coalesce( SUM(Total),0) FROM Expenses_out where MONTH(Date_out) = '12'
+
+
+select COUNT(emp_id)
+from Employees
+where emp_id in
+(Select E.emp_id
+from Employees E
+inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
+inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
+where IT.course_id = '19001' );

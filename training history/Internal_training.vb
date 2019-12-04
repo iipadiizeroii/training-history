@@ -1696,4 +1696,5 @@ Public Class Internal_training
     Private Sub cmd_end2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_end2.KeyPress
         e.Handled = True
     End Sub
+
 End Class

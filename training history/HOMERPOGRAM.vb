@@ -10,6 +10,16 @@ Imports System.Data.OleDb
 
 Public Class HOMERPOGRAM
 
+    Dim cn As New SqlConnection(strConn)
+    Dim cm As New SqlCommand
+    Dim sb As StringBuilder
+    Dim tr As SqlTransaction
+    Dim ds As New DataSet
+    Dim dt As New DataTable
+    Dim savestatus As String = ""
+    Dim num As Integer = 0
+    Dim res As DialogResult
+
     Private Sub frm_Employees()
 
         With Employees
@@ -111,10 +121,14 @@ Public Class HOMERPOGRAM
             .Show()
             .Activate()
         End With
-        
+
     End Sub
 
     Private Sub HOMERPOGRAM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim m As String = (Now.Month).ToString("00")  '12
+        Dim y As String = Now.Year  '2019
+        Dim cn As New SqlConnection(strConn)
 
         'Panel1.AutoScroll = True
 
@@ -136,6 +150,279 @@ Public Class HOMERPOGRAM
         GroupBox1.Visible = False
         MenuStrip1.Visible = False
         StatusStrip1.Visible = False
+        Panel1.Visible = False
+
+        '-----------------------------------------
+        'แสดงข้อมูลการอบรมภายในทั้งหมด
+
+        sb = New StringBuilder
+        '2.เขียน sql'
+        sb.Append("select * from Internal_training where MONTH(date) = @date_in ")
+        '3'
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@date_in", m)
+        End With
+        dr = cm.ExecuteReader
+
+        numAEMO = 0
+        ListView2.Items.Clear()
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                Dim LV2 As New ListViewItem
+                LV2.UseItemStyleForSubItems = False
+                numAEMO = numAEMO + 1
+                LV2.Text = numAEMO
+                LV2.SubItems.Add(dr.GetString(0))
+                LV2.SubItems.Add(dr.GetString(1))
+                LV2.SubItems.Add(dr.GetValue(2))
+                LV2.SubItems.Add(dr.GetValue(3))
+                LV2.SubItems.Add(dr.GetValue(4))
+                LV2.SubItems.Add(dr.GetValue(5))
+                LV2.SubItems.Add(dr.GetValue(6))
+                LV2.SubItems.Add(dr.GetValue(7))
+                LV2.SubItems.Add(dr.GetValue(8))
+                ListView2.Items.Add(LV2)
+                LV2 = Nothing
+
+            Loop
+
+        End If
+
+        With ListView2
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสอบรมภายใน", 110)
+            .Columns.Add("ชื่อ", 200)
+            .Columns.Add("สถานที่", 130)
+            .Columns.Add("หลักสูตรการอบรม", 90)
+            .Columns.Add("ชม : นาที", 90)
+            .Columns.Add("วันที่เริ่ม", 90)
+            .Columns.Add("เวลาเริ่ม", 60)
+            .Columns.Add("วันที่สิ้นสุด", 90)
+            .Columns.Add("เวลาสิ้นสุด", 70)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+
+
+
+
+
+
+
+        '--------------------------------------------------------------------
+        'แสดงข้อมูลการอบรมภายนอกทั้งหมด
+
+
+        cn = New SqlConnection(strConn)
+        'Dim s As String = ""
+        sb = New StringBuilder
+
+        '2.เขียน sql'
+        sb.Append("select * from External_training where MONTH(date) = @date_out")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@date_out", m)
+        End With
+        dr = cm.ExecuteReader
+
+        numAEMO = 0
+        ListView1.Items.Clear()
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                Dim LV1 As New ListViewItem
+                LV1.UseItemStyleForSubItems = False
+                numAEMO = numAEMO + 1
+                LV1.Text = numAEMO
+                LV1.SubItems.Add(dr.GetString(0))
+                LV1.SubItems.Add(dr.GetString(1))
+                LV1.SubItems.Add(dr.GetValue(2))
+                LV1.SubItems.Add(dr.GetValue(3))
+                LV1.SubItems.Add(dr.GetValue(4))
+                LV1.SubItems.Add(dr.GetValue(5))
+                LV1.SubItems.Add(dr.GetValue(6))
+                LV1.SubItems.Add(dr.GetValue(7))
+                LV1.SubItems.Add(dr.GetValue(8))
+                ListView1.Items.Add(LV1)
+                LV1 = Nothing
+
+            Loop
+
+        End If
+
+        With ListView1
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสอบรมภายนอก", 110)
+            .Columns.Add("ชื่อ", 200)
+            .Columns.Add("สถานที่", 130)
+            .Columns.Add("หลักสูตรการอบรม", 90)
+            .Columns.Add("ชม : นาที", 90)
+            .Columns.Add("วันที่เริ่ม", 90)
+            .Columns.Add("เวลาเริ่ม", 60)
+            .Columns.Add("วันที่สิ้นสุด", 90)
+            .Columns.Add("เวลาสิ้นสุด", 70)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+
+       
+
+        '-------------------------------------------------------------------------
+        'ค่าใช้จ่ายประจำเดือน จัดอบรมภายใน
+
+        sb = New StringBuilder
+        sb.Append("SELECT coalesce(SUM(Total),0) FROM Expenses_in where MONTH(Date_in) = @datetotal_in ")
+        
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@datetotal_in", m)
+        End With
+
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                'Label3.Text = dr.GetInt32(0)
+                'Label3.Text = "฿ " & CDbl(dr.GetInt32(0)).ToString("#,###.##") & " บาท"
+                Label3.Text = "฿ " & Format(dr.GetInt32(0), "#,###,##0.00") & " บาท"
+            Loop
+
+        End If
+
+
+        '-------------------------------------------------------------------------
+        'ค่าใช้จ่ายประจำปี จัดอบรมภายใน
+        Dim inmony As String = ""
+        sb = New StringBuilder
+        sb.Append("SELECT coalesce(SUM(Total),0) FROM Expenses_in where YEAR(Date_in) = @datetotal_in ")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@datetotal_in", y)
+        End With
+
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                'Label3.Text = dr.GetInt32(0)
+                'Label3.Text = "฿ " & CDbl(dr.GetInt32(0)).ToString("#,###.##") & " บาท"
+                Label8.Text = "฿ " & Format(dr.GetInt32(0), "#,###,##0.00") & " บาท"
+                inmony = Format(dr.GetInt32(0), "#,###,##0.00")
+            Loop
+
+        End If
+
+        '-------------------------------------------------------------------------
+        'ค่าใช้จ่ายประจำเดือน อบรมภายนอก
+        'Dim m As String = (Now.Month).ToString("00")  '12
+        sb = New StringBuilder
+        sb.Append("SELECT coalesce(SUM(Total),0) FROM Expenses_out where MONTH(Date_out) = @datetotal_out ")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@datetotal_out", m)
+        End With
+
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                'Label3.Text = dr.GetInt32(0)
+                'Label6.Text = "฿ " & CDbl(dr.GetInt32(0)).ToString("#,###.00") & " บาท"
+                Label6.Text = "฿ " & Format(dr.GetInt32(0), "#,###,##0.00") & " บาท"
+
+
+            Loop
+
+        End If
+
+        '-------------------------------------------------------------------------
+        'ค่าใช้จ่ายประจำปี อบรมภายนอก
+        'Dim m As String = (Now.Month).ToString("00")  '12
+
+        Dim outmony As String = ""
+        sb = New StringBuilder
+        sb.Append("SELECT coalesce(SUM(Total),0) FROM Expenses_out where YEAR(Date_out) = @datetotal_out ")
+
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+
+        cm = New SqlCommand(sb.ToString, cn)
+
+        With cm.Parameters
+            .Clear()
+            .AddWithValue("@datetotal_out", y)
+        End With
+
+        dr = cm.ExecuteReader
+
+        If dr.HasRows = True Then
+            Do While dr.Read
+                'Label3.Text = dr.GetInt32(0)
+                'Label6.Text = "฿ " & CDbl(dr.GetInt32(0)).ToString("#,###.00") & " บาท"
+                Label10.Text = "฿ " & Format(dr.GetInt32(0), "#,###,##0.00") & " บาท"
+                outmony = Format(dr.GetInt32(0), "#,###,##0.00")
+            Loop
+
+        End If
+
+        '------------------------------------------------
+        'ค่าใช้จ่ายรวมทั้งปี
+        Dim inout_total As Integer
+        inout_total = CDbl(outmony) + CDbl(inmony)
+        Label12.Text = "฿ " & Format(inout_total, "#,###,##0.00") & " บาท"
+
+
+
 
     End Sub
 
@@ -288,6 +575,7 @@ Public Class HOMERPOGRAM
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
         frm_External_training()
+        Panel1.Visible = False
         'With External_training
         '    .MdiParent = Me
         '    .StartPosition = FormStartPosition.Manual
@@ -680,5 +968,6 @@ Public Class HOMERPOGRAM
 
 #End Region
 
-    
+
+   
 End Class
