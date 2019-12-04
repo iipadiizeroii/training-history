@@ -121,7 +121,7 @@ Partial Class Login_Form
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Login_Form"
-        Me.Text = "Login"
+        Me.Text = "โปรแกรมบันทึกประวัติการอบรม"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
