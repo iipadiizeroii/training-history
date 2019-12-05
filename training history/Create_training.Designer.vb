@@ -22,23 +22,25 @@ Partial Class Create_training
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Create_training))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_group_id = New System.Windows.Forms.TextBox()
+        Me.txt_type_id = New System.Windows.Forms.TextBox()
+        Me.txt_format_id = New System.Windows.Forms.TextBox()
         Me.clear_data = New System.Windows.Forms.Button()
         Me.cancel_data = New System.Windows.Forms.Button()
         Me.upte_data = New System.Windows.Forms.Button()
         Me.edit_data = New System.Windows.Forms.Button()
         Me.add_data = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_group_id = New System.Windows.Forms.TextBox()
-        Me.txt_type_id = New System.Windows.Forms.TextBox()
-        Me.txt_format_id = New System.Windows.Forms.TextBox()
         Me.cmb_group_name = New System.Windows.Forms.ComboBox()
         Me.cmb_type_name = New System.Windows.Forms.ComboBox()
         Me.cmb_format_name = New System.Windows.Forms.ComboBox()
@@ -51,11 +53,10 @@ Partial Class Create_training
         Me.R1 = New System.Windows.Forms.RadioButton()
         Me.txt_Search = New System.Windows.Forms.TextBox()
         Me.OP1 = New System.Windows.Forms.OpenFileDialog()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.datagrid_course, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -83,6 +84,75 @@ Partial Class Create_training
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "หลักสูตรการอบรม"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.txt_group_id)
+        Me.GroupBox3.Controls.Add(Me.txt_type_id)
+        Me.GroupBox3.Controls.Add(Me.txt_format_id)
+        Me.GroupBox3.Location = New System.Drawing.Point(342, 66)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(256, 123)
+        Me.GroupBox3.TabIndex = 12
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "รหัส"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.Label5.Location = New System.Drawing.Point(22, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(97, 26)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "รหัสกลุ่มหลักสูตร"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.Label4.Location = New System.Drawing.Point(2, 48)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(117, 26)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "รหัสประเภทจัดอบรม"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.Label3.Location = New System.Drawing.Point(6, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(113, 26)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "รหัสรูปแบบจัดอบรม"
+        '
+        'txt_group_id
+        '
+        Me.txt_group_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txt_group_id.Location = New System.Drawing.Point(125, 84)
+        Me.txt_group_id.Name = "txt_group_id"
+        Me.txt_group_id.Size = New System.Drawing.Size(100, 20)
+        Me.txt_group_id.TabIndex = 6
+        '
+        'txt_type_id
+        '
+        Me.txt_type_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txt_type_id.Location = New System.Drawing.Point(125, 54)
+        Me.txt_type_id.Name = "txt_type_id"
+        Me.txt_type_id.Size = New System.Drawing.Size(100, 20)
+        Me.txt_type_id.TabIndex = 5
+        '
+        'txt_format_id
+        '
+        Me.txt_format_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txt_format_id.Location = New System.Drawing.Point(125, 24)
+        Me.txt_format_id.Name = "txt_format_id"
+        Me.txt_format_id.Size = New System.Drawing.Size(100, 20)
+        Me.txt_format_id.TabIndex = 4
         '
         'clear_data
         '
@@ -159,16 +229,6 @@ Partial Class Create_training
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "ชื่อกลุ่มหลักสูตร"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label5.Location = New System.Drawing.Point(22, 81)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 26)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "รหัสกลุ่มหลักสูตร"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -179,16 +239,6 @@ Partial Class Create_training
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "ชื่อประเภทจัดอบรม"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label4.Location = New System.Drawing.Point(2, 48)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(117, 26)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "รหัสประเภทจัดอบรม"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -198,16 +248,6 @@ Partial Class Create_training
         Me.Label6.Size = New System.Drawing.Size(106, 26)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "ชื่อรูปแบบจัดอบรม"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
-        Me.Label3.Location = New System.Drawing.Point(6, 21)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 26)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "รหัสรูปแบบจัดอบรม"
         '
         'Label2
         '
@@ -228,30 +268,6 @@ Partial Class Create_training
         Me.Label1.Size = New System.Drawing.Size(75, 26)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "รหัสหลักสูตร"
-        '
-        'txt_group_id
-        '
-        Me.txt_group_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_group_id.Location = New System.Drawing.Point(125, 84)
-        Me.txt_group_id.Name = "txt_group_id"
-        Me.txt_group_id.Size = New System.Drawing.Size(100, 20)
-        Me.txt_group_id.TabIndex = 6
-        '
-        'txt_type_id
-        '
-        Me.txt_type_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_type_id.Location = New System.Drawing.Point(125, 54)
-        Me.txt_type_id.Name = "txt_type_id"
-        Me.txt_type_id.Size = New System.Drawing.Size(100, 20)
-        Me.txt_type_id.TabIndex = 5
-        '
-        'txt_format_id
-        '
-        Me.txt_format_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txt_format_id.Location = New System.Drawing.Point(125, 24)
-        Me.txt_format_id.Name = "txt_format_id"
-        Me.txt_format_id.Size = New System.Drawing.Size(100, 20)
-        Me.txt_format_id.TabIndex = 4
         '
         'cmb_group_name
         '
@@ -370,21 +386,6 @@ Partial Class Create_training
         '
         Me.OP1.FileName = "OpenFileDialog1"
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Controls.Add(Me.Label4)
-        Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.txt_group_id)
-        Me.GroupBox3.Controls.Add(Me.txt_type_id)
-        Me.GroupBox3.Controls.Add(Me.txt_format_id)
-        Me.GroupBox3.Location = New System.Drawing.Point(342, 66)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(256, 123)
-        Me.GroupBox3.TabIndex = 12
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "รหัส"
-        '
         'Create_training
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -393,20 +394,21 @@ Partial Class Create_training
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_course)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(644, 671)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(644, 671)
         Me.Name = "Create_training"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Create_training"
+        Me.Text = "เพิ่มหลักสูตรการอบรม"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         CType(Me.datagrid_course, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

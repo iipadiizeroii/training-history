@@ -16,8 +16,10 @@ Public Class all_report
 
         Dim rpt As New ReportDocument()
 
-        rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_Employees.rpt")
+        'rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_Employees.rpt")
         'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\RP_Employees.rpt")
+        rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\RP_Employees.rpt")
+
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()
@@ -28,8 +30,9 @@ Public Class all_report
 
         Dim rpt As New ReportDocument()
 
-        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expert.rpt")
+        'rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Expert.rpt")
         'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Expert.rpt")
+        rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\PR_Expert.rpt")
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()
@@ -41,8 +44,9 @@ Public Class all_report
 
         Dim rpt As New ReportDocument()
 
-        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Training.rpt")
+        'rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Training.rpt")
         'rpt.Load("C:\Users\Duck\Desktop\training-history\training history\PR_Training.rpt")
+        rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\PR_Training.rpt")
         test_Print.CrystalReportViewer1.ReportSource = rpt
 
         test_Print.Show()

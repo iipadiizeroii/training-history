@@ -3,9 +3,9 @@ Imports System.Data
 
 Module SqlDbConn
 
-    Public strConn As String = "data source = DUCK-TNT\SQL2012;database = Data_Training;integrated security = true"
+    'Public strConn As String = "data source = DUCK-TNT\SQL2012;database = Data_Training;integrated security = true"
     'Public strConn As String = "data source = KT1-PC-164\SQL2012;database = Data_Training;integrated security = true"
-    'Public strConn As String = "data source = DESKTOP-HUU05QN\SQL2012;database = Data_Training;integrated security = true"
+    Public strConn As String = "data source = DESKTOP-HUU05QN\SQL2012;database = Data_Training;integrated security = true"
 
     Public dbconnect As New SqlConnection(strConn)
     Public command As New SqlCommand("", dbconnect)

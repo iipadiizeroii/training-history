@@ -22,6 +22,7 @@ Partial Class HOMERPOGRAM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HOMERPOGRAM))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -60,6 +61,18 @@ Partial Class HOMERPOGRAM
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Status2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -78,25 +91,37 @@ Partial Class HOMERPOGRAM
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -449,6 +474,9 @@ Partial Class HOMERPOGRAM
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.GroupBox11)
+        Me.Panel1.Controls.Add(Me.GroupBox10)
+        Me.Panel1.Controls.Add(Me.GroupBox9)
         Me.Panel1.Controls.Add(Me.GroupBox8)
         Me.Panel1.Controls.Add(Me.GroupBox7)
         Me.Panel1.Controls.Add(Me.GroupBox6)
@@ -456,246 +484,102 @@ Partial Class HOMERPOGRAM
         Me.Panel1.Controls.Add(Me.GroupBox5)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.GroupBox2)
-        Me.Panel1.Location = New System.Drawing.Point(219, 91)
+        Me.Panel1.Location = New System.Drawing.Point(219, 37)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1033, 630)
+        Me.Panel1.Size = New System.Drawing.Size(1033, 684)
         Me.Panel1.TabIndex = 17
         '
-        'GroupBox7
+        'GroupBox9
         '
-        Me.GroupBox7.Controls.Add(Me.Label9)
-        Me.GroupBox7.Controls.Add(Me.Button13)
-        Me.GroupBox7.Controls.Add(Me.Label10)
-        Me.GroupBox7.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox7.Location = New System.Drawing.Point(606, -7)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(180, 123)
-        Me.GroupBox7.TabIndex = 5
-        Me.GroupBox7.TabStop = False
+        Me.GroupBox9.Controls.Add(Me.Button15)
+        Me.GroupBox9.Controls.Add(Me.Label17)
+        Me.GroupBox9.Controls.Add(Me.Label16)
+        Me.GroupBox9.Controls.Add(Me.Label15)
+        Me.GroupBox9.Controls.Add(Me.Label14)
+        Me.GroupBox9.Controls.Add(Me.Label13)
+        Me.GroupBox9.Controls.Add(Me.ComboBox1)
+        Me.GroupBox9.Location = New System.Drawing.Point(608, 147)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(400, 245)
+        Me.GroupBox9.TabIndex = 7
+        Me.GroupBox9.TabStop = False
         '
-        'Label9
+        'Button15
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(38, 58)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(110, 36)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "ค่าใช้จ่ายอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำปี"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button15.BackColor = System.Drawing.Color.Aquamarine
+        Me.Button15.FlatAppearance.BorderSize = 0
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button15.Font = New System.Drawing.Font("TH SarabunPSK", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.Button15.Image = Global.training_history.My.Resources.Resources.data1
+        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button15.Location = New System.Drawing.Point(0, 19)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(400, 47)
+        Me.Button15.TabIndex = 3
+        Me.Button15.Text = "จำนวนพนักงานผ่านการอบรมแต่ละหลักสูตร"
+        Me.Button15.UseVisualStyleBackColor = False
         '
-        'Button13
+        'Label17
         '
-        Me.Button13.BackColor = System.Drawing.Color.Turquoise
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(-2, 97)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(182, 31)
-        Me.Button13.TabIndex = 1
-        Me.Button13.Text = "Expenses Year"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label17.Location = New System.Drawing.Point(155, 77)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(83, 26)
+        Me.Label17.TabIndex = 6
+        Me.Label17.Text = "เลือกหลักสูตร"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label10
+        'Label16
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(4, 21)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 27)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Label10"
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(224, 158)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(27, 26)
+        Me.Label16.TabIndex = 5
+        Me.Label16.Text = "คน"
         '
-        'GroupBox6
+        'Label15
         '
-        Me.GroupBox6.Controls.Add(Me.Label7)
-        Me.GroupBox6.Controls.Add(Me.Button12)
-        Me.GroupBox6.Controls.Add(Me.Label8)
-        Me.GroupBox6.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox6.Location = New System.Drawing.Point(201, -9)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(180, 123)
-        Me.GroupBox6.TabIndex = 4
-        Me.GroupBox6.TabStop = False
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(155, 158)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(47, 26)
+        Me.Label15.TabIndex = 4
+        Me.Label15.Text = "จำนวน"
         '
-        'Label7
+        'Label14
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(32, 58)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(119, 36)
-        Me.Label7.TabIndex = 2
-        Me.Label7.Text = "ค่าใช้จ่ายจัดอบรมภายใน " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำปี"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(140, 194)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(140, 22)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "พนักงานที่ผ่านการอบอรมแล้ว"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button12
+        'Label13
         '
-        Me.Button12.BackColor = System.Drawing.Color.Magenta
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(-2, 97)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(182, 31)
-        Me.Button12.TabIndex = 1
-        Me.Button12.Text = "Expenses Year"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("TH SarabunPSK", 26.25!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Location = New System.Drawing.Point(197, 147)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(33, 47)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "0"
         '
-        'Label8
+        'ComboBox1
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(4, 21)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 27)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Label8"
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Controls.Add(Me.Button10)
-        Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, -9)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(180, 123)
-        Me.GroupBox4.TabIndex = 3
-        Me.GroupBox4.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(27, 58)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 36)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "ค่าใช้จ่ายจัดอบรมภายใน " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำเดือน"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(-2, 97)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(182, 31)
-        Me.Button10.TabIndex = 1
-        Me.Button10.Text = "Expenses Month"
-        Me.Button10.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(4, 21)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 27)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Label3"
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.Label5)
-        Me.GroupBox5.Controls.Add(Me.Button11)
-        Me.GroupBox5.Controls.Add(Me.Label6)
-        Me.GroupBox5.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox5.Location = New System.Drawing.Point(416, -8)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(180, 123)
-        Me.GroupBox5.TabIndex = 4
-        Me.GroupBox5.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(38, 58)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(110, 36)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "ค่าใช้จ่ายอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำเดือน"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.Yellow
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(-2, 97)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(182, 31)
-        Me.Button11.TabIndex = 1
-        Me.Button11.Text = "Expenses Month"
-        Me.Button11.UseVisualStyleBackColor = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(4, 21)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 27)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Label6"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.ListView1)
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Location = New System.Drawing.Point(11, 371)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(587, 248)
-        Me.GroupBox3.TabIndex = 2
-        Me.GroupBox3.TabStop = False
-        '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(10, 51)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(571, 191)
-        Me.ListView1.TabIndex = 3
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 27)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "อบรมภายนอก"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.ListView2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 121)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(587, 244)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 27)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "จัดอบรมภายใน"
-        '
-        'ListView2
-        '
-        Me.ListView2.Location = New System.Drawing.Point(10, 46)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(571, 191)
-        Me.ListView2.TabIndex = 4
-        Me.ListView2.UseCompatibleStateImageBehavior = False
+        Me.ComboBox1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(31, 106)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(331, 34)
+        Me.ComboBox1.TabIndex = 0
+        Me.ComboBox1.Text = "การจัดทำ OPL"
         '
         'GroupBox8
         '
@@ -703,7 +587,7 @@ Partial Class HOMERPOGRAM
         Me.GroupBox8.Controls.Add(Me.Button14)
         Me.GroupBox8.Controls.Add(Me.Label12)
         Me.GroupBox8.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox8.Location = New System.Drawing.Point(840, -6)
+        Me.GroupBox8.Location = New System.Drawing.Point(828, 8)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(180, 123)
         Me.GroupBox8.TabIndex = 6
@@ -715,7 +599,7 @@ Partial Class HOMERPOGRAM
         Me.Label11.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(32, 64)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(121, 18)
+        Me.Label11.Size = New System.Drawing.Size(123, 22)
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "ค่าใช้จ่ายอบรมรวมทั้งจำปี"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -738,9 +622,409 @@ Partial Class HOMERPOGRAM
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(4, 21)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(72, 27)
+        Me.Label12.Size = New System.Drawing.Size(75, 33)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Label12"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.Label9)
+        Me.GroupBox7.Controls.Add(Me.Button13)
+        Me.GroupBox7.Controls.Add(Me.Label10)
+        Me.GroupBox7.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox7.Location = New System.Drawing.Point(608, 8)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(180, 123)
+        Me.GroupBox7.TabIndex = 5
+        Me.GroupBox7.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(38, 53)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(112, 44)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "ค่าใช้จ่ายอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำปี"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.Turquoise
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Location = New System.Drawing.Point(-2, 97)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(182, 31)
+        Me.Button13.TabIndex = 1
+        Me.Button13.Text = "Expenses Year"
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(4, 21)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(75, 33)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Label10"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Label7)
+        Me.GroupBox6.Controls.Add(Me.Button12)
+        Me.GroupBox6.Controls.Add(Me.Label8)
+        Me.GroupBox6.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox6.Location = New System.Drawing.Point(204, 8)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(180, 123)
+        Me.GroupBox6.TabIndex = 4
+        Me.GroupBox6.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(32, 53)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(121, 44)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "ค่าใช้จ่ายจัดอบรมภายใน " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำปี"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.Magenta
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.Location = New System.Drawing.Point(-2, 97)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(182, 31)
+        Me.Button12.TabIndex = 1
+        Me.Button12.Text = "Expenses Year"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(4, 21)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 33)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Label8"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label4)
+        Me.GroupBox4.Controls.Add(Me.Button10)
+        Me.GroupBox4.Controls.Add(Me.Label3)
+        Me.GroupBox4.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 8)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(180, 123)
+        Me.GroupBox4.TabIndex = 3
+        Me.GroupBox4.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(27, 52)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 44)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "ค่าใช้จ่ายจัดอบรมภายใน " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำเดือน"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(-2, 97)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(182, 31)
+        Me.Button10.TabIndex = 1
+        Me.Button10.Text = "Expenses Month"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(4, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 33)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Label3"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Label5)
+        Me.GroupBox5.Controls.Add(Me.Button11)
+        Me.GroupBox5.Controls.Add(Me.Label6)
+        Me.GroupBox5.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox5.Location = New System.Drawing.Point(416, 8)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(180, 123)
+        Me.GroupBox5.TabIndex = 4
+        Me.GroupBox5.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(38, 52)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(112, 44)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "ค่าใช้จ่ายอบรมภายนอก" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ประจำเดือน"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.Yellow
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.Location = New System.Drawing.Point(-2, 97)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(182, 31)
+        Me.Button11.TabIndex = 1
+        Me.Button11.Text = "Expenses Month"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(4, 21)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(66, 33)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Label6"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button17)
+        Me.GroupBox3.Controls.Add(Me.ListView1)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 414)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(587, 248)
+        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabStop = False
+        '
+        'ListView1
+        '
+        Me.ListView1.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.ListView1.Location = New System.Drawing.Point(10, 51)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(571, 191)
+        Me.ListView1.TabIndex = 3
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button16)
+        Me.GroupBox2.Controls.Add(Me.ListView2)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 147)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(587, 245)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("TH SarabunPSK", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.Button16.Image = Global.training_history.My.Resources.Resources.confidential
+        Me.Button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button16.Location = New System.Drawing.Point(1, 7)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(588, 39)
+        Me.Button16.TabIndex = 7
+        Me.Button16.Text = "จัดอบรมภายในประจำเดือน"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
+        'ListView2
+        '
+        Me.ListView2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.ListView2.Location = New System.Drawing.Point(10, 49)
+        Me.ListView2.Name = "ListView2"
+        Me.ListView2.Size = New System.Drawing.Size(571, 191)
+        Me.ListView2.TabIndex = 4
+        Me.ListView2.UseCompatibleStateImageBehavior = False
+        '
+        'Button17
+        '
+        Me.Button17.BackColor = System.Drawing.Color.Plum
+        Me.Button17.FlatAppearance.BorderSize = 0
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button17.Font = New System.Drawing.Font("TH SarabunPSK", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.Button17.Image = Global.training_history.My.Resources.Resources.earth
+        Me.Button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button17.Location = New System.Drawing.Point(-1, 6)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(588, 39)
+        Me.Button17.TabIndex = 8
+        Me.Button17.Text = "อบรมภายนอกประจำเดือน"
+        Me.Button17.UseVisualStyleBackColor = False
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.Label20)
+        Me.GroupBox10.Controls.Add(Me.Label1)
+        Me.GroupBox10.Controls.Add(Me.Button18)
+        Me.GroupBox10.Controls.Add(Me.Label2)
+        Me.GroupBox10.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox10.Location = New System.Drawing.Point(606, 420)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(180, 234)
+        Me.GroupBox10.TabIndex = 7
+        Me.GroupBox10.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(29, 151)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(136, 22)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "จำนวนหลักสูตรอบรมทั้งหมด"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button18
+        '
+        Me.Button18.BackColor = System.Drawing.Color.Pink
+        Me.Button18.FlatAppearance.BorderSize = 0
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.Image = Global.training_history.My.Resources.Resources.cookie
+        Me.Button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button18.Location = New System.Drawing.Point(-2, 28)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(182, 31)
+        Me.Button18.TabIndex = 1
+        Me.Button18.Text = "Course"
+        Me.Button18.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 26.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(62, 104)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(33, 47)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "0"
+        '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.Label24)
+        Me.GroupBox11.Controls.Add(Me.Label23)
+        Me.GroupBox11.Controls.Add(Me.Label22)
+        Me.GroupBox11.Controls.Add(Me.Label18)
+        Me.GroupBox11.Controls.Add(Me.Label21)
+        Me.GroupBox11.Controls.Add(Me.Button19)
+        Me.GroupBox11.Controls.Add(Me.Label19)
+        Me.GroupBox11.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox11.Location = New System.Drawing.Point(826, 420)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(180, 234)
+        Me.GroupBox11.TabIndex = 8
+        Me.GroupBox11.TabStop = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(31, 114)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(113, 22)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "จำนวนวิทยากรภายนอก"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.Color.HotPink
+        Me.Button19.FlatAppearance.BorderSize = 0
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.Image = Global.training_history.My.Resources.Resources.credibility
+        Me.Button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button19.Location = New System.Drawing.Point(0, 28)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(182, 31)
+        Me.Button19.TabIndex = 1
+        Me.Button19.Text = "Expert"
+        Me.Button19.UseVisualStyleBackColor = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("TH SarabunPSK", 26.0!, System.Drawing.FontStyle.Bold)
+        Me.Label19.Location = New System.Drawing.Point(60, 77)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(33, 47)
+        Me.Label19.TabIndex = 0
+        Me.Label19.Text = "0"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(101, 117)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(54, 26)
+        Me.Label20.TabIndex = 6
+        Me.Label20.Text = "หลักสูตร"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("TH SarabunPSK", 26.0!, System.Drawing.FontStyle.Bold)
+        Me.Label21.Location = New System.Drawing.Point(60, 151)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(33, 47)
+        Me.Label21.TabIndex = 0
+        Me.Label21.Text = "0"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(39, 187)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(105, 22)
+        Me.Label22.TabIndex = 2
+        Me.Label22.Text = "จำนวนวิทยากรภายใน"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(88, 88)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(27, 26)
+        Me.Label23.TabIndex = 6
+        Me.Label23.Text = "คน"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(88, 161)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(27, 26)
+        Me.Label24.TabIndex = 7
+        Me.Label24.Text = "คน"
         '
         'HOMERPOGRAM
         '
@@ -752,12 +1036,13 @@ Partial Class HOMERPOGRAM
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MaximumSize = New System.Drawing.Size(1280, 800)
         Me.MinimumSize = New System.Drawing.Size(1280, 800)
         Me.Name = "HOMERPOGRAM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "HOMERPOGRAM"
+        Me.Text = "โปรแกรมบันทึกข้อมูลการอบรม"
         Me.TransparencyKey = System.Drawing.Color.Black
         Me.GroupBox1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
@@ -765,6 +1050,10 @@ Partial Class HOMERPOGRAM
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox9.ResumeLayout(False)
+        Me.GroupBox9.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
@@ -774,11 +1063,11 @@ Partial Class HOMERPOGRAM
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -822,11 +1111,9 @@ Partial Class HOMERPOGRAM
     Friend WithEvents Status2 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
@@ -847,4 +1134,27 @@ Partial Class HOMERPOGRAM
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Button15 As System.Windows.Forms.Button
+    Friend WithEvents Button16 As System.Windows.Forms.Button
+    Friend WithEvents Button17 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Button19 As System.Windows.Forms.Button
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Button18 As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
 End Class

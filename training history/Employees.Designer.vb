@@ -22,6 +22,7 @@ Partial Class Employees
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Employees))
         Me.txt_emp_id = New System.Windows.Forms.TextBox()
         Me.txt_emp_name = New System.Windows.Forms.TextBox()
         Me.txt_emp_lastname = New System.Windows.Forms.TextBox()
@@ -466,13 +467,14 @@ Partial Class Employees
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_emp)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(992, 793)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(992, 793)
         Me.Name = "Employees"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "บันทึกข้อมูลพนักงาน"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)

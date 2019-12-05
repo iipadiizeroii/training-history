@@ -17,8 +17,8 @@ Public Class RP_Register
         Dim rpt As New ReportDocument()
         Dim directory As String = My.Application.Info.DirectoryPath
         'rpt.Load(directory & "\myCrystalReport1.rpt")
-        rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Register.rpt")
-
+        'rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_Register.rpt")
+        rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\PR_Register.rpt")
 
         rpt.SetParameterValue("trainingin_id", TextBox1.Text)
 

@@ -22,6 +22,7 @@ Partial Class Internal_training
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Internal_training))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -152,7 +153,7 @@ Partial Class Internal_training
         Me.Label22.AutoSize = True
         Me.Label22.Location = New System.Drawing.Point(363, 138)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 18)
+        Me.Label22.Size = New System.Drawing.Size(20, 22)
         Me.Label22.TabIndex = 121
         Me.Label22.Text = "น."
         '
@@ -161,7 +162,7 @@ Partial Class Internal_training
         Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(238, 138)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(27, 18)
+        Me.Label23.Size = New System.Drawing.Size(29, 22)
         Me.Label23.TabIndex = 120
         Me.Label23.Text = "เวลา"
         '
@@ -170,7 +171,7 @@ Partial Class Internal_training
         Me.Label24.AutoSize = True
         Me.Label24.Location = New System.Drawing.Point(309, 138)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(11, 18)
+        Me.Label24.Size = New System.Drawing.Size(13, 22)
         Me.Label24.TabIndex = 119
         Me.Label24.Text = ":"
         '
@@ -181,7 +182,7 @@ Partial Class Internal_training
         Me.cmd_end2.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
         Me.cmd_end2.Location = New System.Drawing.Point(322, 134)
         Me.cmd_end2.Name = "cmd_end2"
-        Me.cmd_end2.Size = New System.Drawing.Size(35, 26)
+        Me.cmd_end2.Size = New System.Drawing.Size(35, 30)
         Me.cmd_end2.TabIndex = 117
         Me.cmd_end2.Text = "00"
         '
@@ -192,7 +193,7 @@ Partial Class Internal_training
         Me.cmd_end1.Items.AddRange(New Object() {"06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"})
         Me.cmd_end1.Location = New System.Drawing.Point(268, 134)
         Me.cmd_end1.Name = "cmd_end1"
-        Me.cmd_end1.Size = New System.Drawing.Size(35, 26)
+        Me.cmd_end1.Size = New System.Drawing.Size(35, 30)
         Me.cmd_end1.TabIndex = 118
         Me.cmd_end1.Text = "00"
         '
@@ -212,7 +213,7 @@ Partial Class Internal_training
         Me.Label25.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label25.Location = New System.Drawing.Point(56, 137)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(54, 18)
+        Me.Label25.Size = New System.Drawing.Size(56, 22)
         Me.Label25.TabIndex = 115
         Me.Label25.Text = "วันที่สิ้นสุด"
         '
@@ -221,7 +222,7 @@ Partial Class Internal_training
         Me.Label21.AutoSize = True
         Me.Label21.Location = New System.Drawing.Point(363, 99)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(18, 18)
+        Me.Label21.Size = New System.Drawing.Size(20, 22)
         Me.Label21.TabIndex = 114
         Me.Label21.Text = "น."
         '
@@ -230,7 +231,7 @@ Partial Class Internal_training
         Me.Label20.AutoSize = True
         Me.Label20.Location = New System.Drawing.Point(238, 100)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(27, 18)
+        Me.Label20.Size = New System.Drawing.Size(29, 22)
         Me.Label20.TabIndex = 113
         Me.Label20.Text = "เวลา"
         '
@@ -239,7 +240,7 @@ Partial Class Internal_training
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(309, 99)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 18)
+        Me.Label19.Size = New System.Drawing.Size(13, 22)
         Me.Label19.TabIndex = 112
         Me.Label19.Text = ":"
         '
@@ -250,7 +251,7 @@ Partial Class Internal_training
         Me.cmd_start2.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
         Me.cmd_start2.Location = New System.Drawing.Point(322, 96)
         Me.cmd_start2.Name = "cmd_start2"
-        Me.cmd_start2.Size = New System.Drawing.Size(35, 26)
+        Me.cmd_start2.Size = New System.Drawing.Size(35, 30)
         Me.cmd_start2.TabIndex = 110
         Me.cmd_start2.Text = "00"
         '
@@ -261,7 +262,7 @@ Partial Class Internal_training
         Me.cmd_start1.Items.AddRange(New Object() {"06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"})
         Me.cmd_start1.Location = New System.Drawing.Point(268, 96)
         Me.cmd_start1.Name = "cmd_start1"
-        Me.cmd_start1.Size = New System.Drawing.Size(35, 26)
+        Me.cmd_start1.Size = New System.Drawing.Size(35, 30)
         Me.cmd_start1.TabIndex = 111
         Me.cmd_start1.Text = "00"
         '
@@ -414,7 +415,7 @@ Partial Class Internal_training
         Me.Label8.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.Location = New System.Drawing.Point(392, 83)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 18)
+        Me.Label8.Size = New System.Drawing.Size(41, 22)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "สถานที่"
         '
@@ -424,7 +425,7 @@ Partial Class Internal_training
         Me.Label9.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.Location = New System.Drawing.Point(56, 163)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(49, 18)
+        Me.Label9.Size = New System.Drawing.Size(51, 22)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "ระยะเวลา"
         '
@@ -433,7 +434,7 @@ Partial Class Internal_training
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(167, 163)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 18)
+        Me.Label5.Size = New System.Drawing.Size(50, 22)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "ชม : นาที"
         '
@@ -443,7 +444,7 @@ Partial Class Internal_training
         Me.Label7.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.Location = New System.Drawing.Point(62, 100)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 18)
+        Me.Label7.Size = New System.Drawing.Size(45, 22)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "วันที่เริ่ม"
         '
@@ -453,7 +454,7 @@ Partial Class Internal_training
         Me.Label4.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(6, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 18)
+        Me.Label4.Size = New System.Drawing.Size(101, 22)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "ชื่อหลักสูตรการอบรม"
         '
@@ -463,7 +464,7 @@ Partial Class Internal_training
         Me.Label3.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(392, 59)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 18)
+        Me.Label3.Size = New System.Drawing.Size(106, 22)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "รหัสหลักสูตรการอบรม"
         '
@@ -473,7 +474,7 @@ Partial Class Internal_training
         Me.Label2.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(392, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 18)
+        Me.Label2.Size = New System.Drawing.Size(77, 22)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ชื่อการจัดอบรม"
         '
@@ -483,7 +484,7 @@ Partial Class Internal_training
         Me.Label1.Font = New System.Drawing.Font("TH SarabunPSK", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(6, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 18)
+        Me.Label1.Size = New System.Drawing.Size(95, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "รหัสจัดอบรมภายใน"
         '
@@ -585,7 +586,7 @@ Partial Class Internal_training
         Me.TextBox5.Enabled = False
         Me.TextBox5.Location = New System.Drawing.Point(400, 199)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(132, 29)
+        Me.TextBox5.Size = New System.Drawing.Size(132, 32)
         Me.TextBox5.TabIndex = 5
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -594,7 +595,7 @@ Partial Class Internal_training
         Me.TextBox4.Location = New System.Drawing.Point(400, 161)
         Me.TextBox4.MaxLength = 7
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(132, 29)
+        Me.TextBox4.Size = New System.Drawing.Size(132, 32)
         Me.TextBox4.TabIndex = 4
         Me.TextBox4.Text = "0"
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -604,7 +605,7 @@ Partial Class Internal_training
         Me.TextBox3.Location = New System.Drawing.Point(400, 123)
         Me.TextBox3.MaxLength = 7
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(132, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(132, 32)
         Me.TextBox3.TabIndex = 3
         Me.TextBox3.Text = "0"
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -614,7 +615,7 @@ Partial Class Internal_training
         Me.TextBox2.Location = New System.Drawing.Point(400, 85)
         Me.TextBox2.MaxLength = 7
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(132, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(132, 32)
         Me.TextBox2.TabIndex = 2
         Me.TextBox2.Text = "0"
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -624,7 +625,7 @@ Partial Class Internal_training
         Me.TextBox1.Location = New System.Drawing.Point(400, 47)
         Me.TextBox1.MaxLength = 7
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(132, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(132, 32)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = "0"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -634,7 +635,7 @@ Partial Class Internal_training
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(538, 202)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(32, 22)
+        Me.Label18.Size = New System.Drawing.Size(34, 26)
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "บาท"
         '
@@ -643,7 +644,7 @@ Partial Class Internal_training
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(538, 164)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(32, 22)
+        Me.Label17.Size = New System.Drawing.Size(34, 26)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "บาท"
         '
@@ -652,7 +653,7 @@ Partial Class Internal_training
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(538, 126)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(32, 22)
+        Me.Label16.Size = New System.Drawing.Size(34, 26)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "บาท"
         '
@@ -661,7 +662,7 @@ Partial Class Internal_training
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(538, 88)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(32, 22)
+        Me.Label15.Size = New System.Drawing.Size(34, 26)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "บาท"
         '
@@ -670,7 +671,7 @@ Partial Class Internal_training
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(538, 50)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(32, 22)
+        Me.Label14.Size = New System.Drawing.Size(34, 26)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "บาท"
         '
@@ -679,7 +680,7 @@ Partial Class Internal_training
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(252, 202)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(78, 22)
+        Me.Label13.Size = New System.Drawing.Size(80, 26)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "ค่าใช้จ่ายรวม"
         '
@@ -688,7 +689,7 @@ Partial Class Internal_training
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(252, 164)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(69, 22)
+        Me.Label12.Size = New System.Drawing.Size(71, 26)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "ค่าหลักสูตร"
         '
@@ -697,7 +698,7 @@ Partial Class Internal_training
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(252, 126)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(131, 22)
+        Me.Label11.Size = New System.Drawing.Size(133, 26)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "ค่าอาหารว่างผู้เข้าอบรม"
         '
@@ -706,7 +707,7 @@ Partial Class Internal_training
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(252, 88)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(98, 22)
+        Me.Label10.Size = New System.Drawing.Size(100, 26)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "ค่าอาหารวิทยากร"
         '
@@ -715,7 +716,7 @@ Partial Class Internal_training
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(252, 50)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 22)
+        Me.Label6.Size = New System.Drawing.Size(67, 26)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "ค่าวิทยากร"
         '
@@ -737,10 +738,10 @@ Partial Class Internal_training
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.ListView1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 35)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(980, 385)
+        Me.TabPage1.Size = New System.Drawing.Size(980, 381)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "เพิ่มวิทยากร"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -819,7 +820,7 @@ Partial Class Internal_training
         Me.RP2.Font = New System.Drawing.Font("TH SarabunPSK", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RP2.Location = New System.Drawing.Point(6, 38)
         Me.RP2.Name = "RP2"
-        Me.RP2.Size = New System.Drawing.Size(85, 24)
+        Me.RP2.Size = New System.Drawing.Size(86, 27)
         Me.RP2.TabIndex = 8
         Me.RP2.TabStop = True
         Me.RP2.Text = "ค้นหาด้วยชื่อ"
@@ -831,7 +832,7 @@ Partial Class Internal_training
         Me.RP1.Font = New System.Drawing.Font("TH SarabunPSK", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RP1.Location = New System.Drawing.Point(6, 15)
         Me.RP1.Name = "RP1"
-        Me.RP1.Size = New System.Drawing.Size(90, 24)
+        Me.RP1.Size = New System.Drawing.Size(91, 27)
         Me.RP1.TabIndex = 7
         Me.RP1.TabStop = True
         Me.RP1.Text = "ค้นหาด้วยรหัส"
@@ -858,10 +859,10 @@ Partial Class Internal_training
         Me.TabPage2.Controls.Add(Me.clear_data_emp)
         Me.TabPage2.Controls.Add(Me.add_data_emp)
         Me.TabPage2.Controls.Add(Me.ListView2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 35)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(980, 385)
+        Me.TabPage2.Size = New System.Drawing.Size(980, 381)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "เพิ่มรายชื่อผู้เข้าอบรม"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -883,10 +884,10 @@ Partial Class Internal_training
         Me.TabPage3.Controls.Add(Me.Label16)
         Me.TabPage3.Controls.Add(Me.Label14)
         Me.TabPage3.Controls.Add(Me.Label15)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 35)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(980, 385)
+        Me.TabPage3.Size = New System.Drawing.Size(980, 381)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "บันทึกค่าใช้จ่าย"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -900,13 +901,14 @@ Partial Class Internal_training
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1031, 697)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1031, 697)
         Me.Name = "Internal_training"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Internal_training"
+        Me.Text = "จัดอบรมภายใน"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

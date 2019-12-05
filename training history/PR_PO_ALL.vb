@@ -17,7 +17,8 @@ Public Class PR_PO_ALL
 
 
             'rpt.Load(directory & "\myCrystalReport1.rpt")
-            rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_PO_EX_internal_training.rpt")
+            'rpt.Load("G:\โปรเจค\training history\training-history\training history\PR_PO_EX_internal_training.rpt")
+            rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\PR_PO_EX_internal_training.rpt")
 
             rpt.SetParameterValue("PR_trainingin_id", TextBox1.Text)
             'rpt.SetParameterValue("trainingdate2", Me.Date_training2.Text)
@@ -29,7 +30,8 @@ Public Class PR_PO_ALL
             'Dim directory As String = My.Application.Info.DirectoryPath
 
             'rpt.Load(directory & "\myCrystalReport1.rpt")
-            rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_PO__EM_internal_training.rpt")
+            'rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_PO__EM_internal_training.rpt")
+            rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\RP_PO__EM_internal_training.rpt")
             rpt.SetParameterValue("PR_traingin_id", TextBox1.Text)
             'rpt.SetParameterValue("trainingdate2", Me.Date_training2.Text)
             Me.CrystalReportViewer1.ReportSource = rpt
@@ -40,7 +42,8 @@ Public Class PR_PO_ALL
             'Dim directory As String = My.Application.Info.DirectoryPath
 
             'rpt.Load(directory & "\myCrystalReport1.rpt")
-            rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_PO__EM_external_training.rpt")
+            'rpt.Load("G:\โปรเจค\training history\training-history\training history\RP_PO__EM_external_training.rpt")
+            rpt.Load("C:\Users\Duck-Nb\Desktop\training-history\training history\RP_PO__EM_external_training.rpt")
             rpt.SetParameterValue("PR_traingEx_id", TextBox1.Text)
             'rpt.SetParameterValue("trainingdate2", Me.Date_training2.Text)
             Me.CrystalReportViewer1.ReportSource = rpt

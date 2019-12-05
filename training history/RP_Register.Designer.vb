@@ -22,6 +22,7 @@ Partial Class RP_Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RP_Register))
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -77,8 +78,9 @@ Partial Class RP_Register
         Me.ClientSize = New System.Drawing.Size(1051, 602)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "RP_Register"
-        Me.Text = "RP_Register"
+        Me.Text = "เอกสารลงชื่อพนักงานเข้าอบรม"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
