@@ -173,10 +173,10 @@ SELECT SUM(Total) FROM Expenses_in
 where MONTH(Date_in) = '11'
 
 
-SELECT coalesce( SUM(Total),0) FROM Expenses_out where MONTH(Date_out) = '12'
+SELECT coalesce( SUM(Total),0) FROM Expenses_out where MONTH(Date_out) = '12' and YEAR(Date_out) ='2019'
 
 
-select COUNT(emp_id)
+select coalesce(COUNT(emp_id),0)
 from Employees
 where emp_id in
 (Select E.emp_id
@@ -184,3 +184,14 @@ from Employees E
 inner join Internal_training_history ITH on (E.emp_id = ITH.emp_id)
 inner join Internal_training IT  on (IT.trainingIn_id = ITH.trainingIn_id)
 where IT.course_id = '19001' );
+
+SELECT TOP 1 course_name from Course
+
+SELECT COUNT( course_id ) from Course
+
+SELECT COUNT( expert_id ) from Expert 
+where   expert_id like '%T%'
+
+SELECT COUNT( expert_id ) from Expert 
+where   expert_id like '%F%'
+
