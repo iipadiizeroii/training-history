@@ -22,6 +22,7 @@ Partial Class frmNew_expert_In
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmNew_expert_In))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.R2 = New System.Windows.Forms.RadioButton()
@@ -38,9 +39,10 @@ Partial Class frmNew_expert_In
         Me.GroupBox2.Controls.Add(Me.R2)
         Me.GroupBox2.Controls.Add(Me.R1)
         Me.GroupBox2.Controls.Add(Me.txt_Search)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox2.Font = New System.Drawing.Font("TH SarabunPSK", 14.25!)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(390, 62)
+        Me.GroupBox2.Size = New System.Drawing.Size(415, 88)
         Me.GroupBox2.TabIndex = 97
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ค้นหา"
@@ -50,7 +52,7 @@ Partial Class frmNew_expert_In
         Me.Button1.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button1.Image = Global.training_history.My.Resources.Resources.icons8_search_32
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(292, 19)
+        Me.Button1.Location = New System.Drawing.Point(300, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(88, 36)
         Me.Button1.TabIndex = 9
@@ -61,9 +63,9 @@ Partial Class frmNew_expert_In
         'R2
         '
         Me.R2.AutoSize = True
-        Me.R2.Location = New System.Drawing.Point(6, 38)
+        Me.R2.Location = New System.Drawing.Point(6, 48)
         Me.R2.Name = "R2"
-        Me.R2.Size = New System.Drawing.Size(85, 17)
+        Me.R2.Size = New System.Drawing.Size(93, 30)
         Me.R2.TabIndex = 8
         Me.R2.Text = "ค้นหาด้วยชื่อ"
         Me.R2.UseVisualStyleBackColor = True
@@ -72,9 +74,9 @@ Partial Class frmNew_expert_In
         '
         Me.R1.AutoSize = True
         Me.R1.Checked = True
-        Me.R1.Location = New System.Drawing.Point(6, 15)
+        Me.R1.Location = New System.Drawing.Point(6, 21)
         Me.R1.Name = "R1"
-        Me.R1.Size = New System.Drawing.Size(91, 17)
+        Me.R1.Size = New System.Drawing.Size(100, 30)
         Me.R1.TabIndex = 7
         Me.R1.TabStop = True
         Me.R1.Text = "ค้นหาด้วยรหัส"
@@ -82,7 +84,8 @@ Partial Class frmNew_expert_In
         '
         'txt_Search
         '
-        Me.txt_Search.Location = New System.Drawing.Point(97, 35)
+        Me.txt_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.txt_Search.Location = New System.Drawing.Point(105, 53)
         Me.txt_Search.Name = "txt_Search"
         Me.txt_Search.Size = New System.Drawing.Size(189, 20)
         Me.txt_Search.TabIndex = 0
@@ -90,7 +93,7 @@ Partial Class frmNew_expert_In
         'datagrid_new_expertin
         '
         Me.datagrid_new_expertin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagrid_new_expertin.Location = New System.Drawing.Point(12, 79)
+        Me.datagrid_new_expertin.Location = New System.Drawing.Point(12, 99)
         Me.datagrid_new_expertin.Name = "datagrid_new_expertin"
         Me.datagrid_new_expertin.Size = New System.Drawing.Size(562, 150)
         Me.datagrid_new_expertin.TabIndex = 96
@@ -102,9 +105,10 @@ Partial Class frmNew_expert_In
         Me.ClientSize = New System.Drawing.Size(586, 261)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.datagrid_new_expertin)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmNew_expert_In"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmNew_expert_In"
+        Me.Text = "ค้นหาพนักงาน"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.datagrid_new_expertin, System.ComponentModel.ISupportInitialize).EndInit()

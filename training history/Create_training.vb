@@ -403,6 +403,12 @@ Public Class Create_training
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
+
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -437,7 +443,7 @@ Public Class Create_training
             dt.Load(DR)
             '4
             If (dt.Rows.Count = 0) Then
-                MessageBox.Show("ไม่พบข้อมูล")
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             Else
                 With dt.Rows(0)
                     txt_course_id.Text = .Item(0).ToString
@@ -453,6 +459,64 @@ Public Class Create_training
 
 
         End If
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        '1
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If R1.Checked = True Then
+            s1 = " C.course_id like @course_id"
+        Else
+            s1 = " C.course_name like @course_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        's = "select * from Course where " & s1
+        s = "select C.course_id,C.course_name,f.format_name,T.type_name,g.group_name "
+        s &= " from Course C inner join format_course F on F.format_id = C.format_id  "
+        s &= "inner join type_course T on t.type_id = C.type_id "
+        s &= "inner join group_course G on G.group_id = C.group_id "
+        s &= "where  " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+        If R1.Checked = True Then
+            CM.Parameters.Add("@course_id", SqlDbType.NVarChar, 10).Value = txt_Search.Text & "%"
+        Else
+            CM.Parameters.Add("@course_name", SqlDbType.NVarChar, 50).Value = txt_Search.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+        Else
+            With dt.Rows(0)
+                txt_course_id.Text = .Item(0).ToString
+                txt_course_name.Text = .Item(1).ToString
+                cmb_format_name.Text = .Item(2).ToString
+                cmb_type_name.Text = .Item(3).ToString
+                cmb_group_name.Text = .Item(4).ToString
+
+
+                datagrid_course.DataSource = dt
+            End With
+        End If
+
     End Sub
 #End Region
 
@@ -613,5 +677,6 @@ Public Class Create_training
         txt_Search.Text = ""
     End Sub
 
+    
     
 End Class

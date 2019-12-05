@@ -244,21 +244,7 @@ Public Class HOMERPOGRAM
 
         End If
 
-        With ListView2
-            .Columns.Add("ลำดับ", 50)
-            .Columns.Add("รหัสอบรมภายใน", 110)
-            .Columns.Add("ชื่อ", 200)
-            .Columns.Add("สถานที่", 130)
-            .Columns.Add("หลักสูตรการอบรม", 90)
-            .Columns.Add("ชม : นาที", 90)
-            .Columns.Add("วันที่เริ่ม", 90)
-            .Columns.Add("เวลาเริ่ม", 60)
-            .Columns.Add("วันที่สิ้นสุด", 90)
-            .Columns.Add("เวลาสิ้นสุด", 70)
-            .View = View.Details
-            .GridLines = True
-            .FullRowSelect = True
-        End With
+        
 
         '--------------------------------------------------------------------
         'แสดงข้อมูลการอบรมภายนอกทั้งหมด
@@ -310,21 +296,7 @@ Public Class HOMERPOGRAM
 
         End If
 
-        With ListView1
-            .Columns.Add("ลำดับ", 50)
-            .Columns.Add("รหัสอบรมภายนอก", 110)
-            .Columns.Add("ชื่อ", 200)
-            .Columns.Add("สถานที่", 130)
-            .Columns.Add("หลักสูตรการอบรม", 90)
-            .Columns.Add("ชม : นาที", 90)
-            .Columns.Add("วันที่เริ่ม", 90)
-            .Columns.Add("เวลาเริ่ม", 60)
-            .Columns.Add("วันที่สิ้นสุด", 90)
-            .Columns.Add("เวลาสิ้นสุด", 70)
-            .View = View.Details
-            .GridLines = True
-            .FullRowSelect = True
-        End With
+        
 
 
 
@@ -566,11 +538,46 @@ Public Class HOMERPOGRAM
 
 
 
+
         Login_Form.MdiParent = Me
         Login_Form.StartPosition = FormStartPosition.Manual
         Login_Form.Left = 447
         Login_Form.Top = 187
         Login_Form.Show()
+
+        With ListView1
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสอบรมภายนอก", 110)
+            .Columns.Add("ชื่อ", 200)
+            .Columns.Add("สถานที่", 130)
+            .Columns.Add("หลักสูตรการอบรม", 90)
+            .Columns.Add("ชม : นาที", 90)
+            .Columns.Add("วันที่เริ่ม", 90)
+            .Columns.Add("เวลาเริ่ม", 60)
+            .Columns.Add("วันที่สิ้นสุด", 90)
+            .Columns.Add("เวลาสิ้นสุด", 70)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+        With ListView2
+            .Columns.Add("ลำดับ", 50)
+            .Columns.Add("รหัสอบรมภายใน", 110)
+            .Columns.Add("ชื่อ", 200)
+            .Columns.Add("สถานที่", 130)
+            .Columns.Add("หลักสูตรการอบรม", 90)
+            .Columns.Add("ชม : นาที", 90)
+            .Columns.Add("วันที่เริ่ม", 90)
+            .Columns.Add("เวลาเริ่ม", 60)
+            .Columns.Add("วันที่สิ้นสุด", 90)
+            .Columns.Add("เวลาสิ้นสุด", 70)
+            .View = View.Details
+            .GridLines = True
+            .FullRowSelect = True
+        End With
+
+
 
         'Button1.Visible = False
         'Button2.Visible = False
@@ -1162,4 +1169,17 @@ Public Class HOMERPOGRAM
         Panel1_show()
     End Sub
 
+    Private Sub เปลยนรหสผานToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles เปลยนรหสผานToolStripMenuItem.Click
+
+        Panel1.Visible = False
+        With frmRe_password
+            .MdiParent = Me
+            .StartPosition = FormStartPosition.Manual
+            .Left = 215
+            .Top = 10
+            .Show()
+            .Activate()
+        End With
+
+    End Sub
 End Class

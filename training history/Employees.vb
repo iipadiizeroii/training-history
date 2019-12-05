@@ -317,6 +317,13 @@ Public Class Employees
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
+
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -346,7 +353,7 @@ Public Class Employees
             dt.Load(DR)
             '4
             If (dt.Rows.Count = 0) Then
-                MessageBox.Show("ไม่พบข้อมูล")
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             Else
                 With dt.Rows(0)
                     txt_emp_id.Text = .Item(0).ToString
@@ -366,6 +373,62 @@ Public Class Employees
 
         End If
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If R1.Checked = True Then
+            s1 = " emp_id like @emp_id"
+        Else
+            s1 = " emp_name like @emp_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        s = "select * from Employees where " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+        If R1.Checked = True Then
+            CM.Parameters.Add("@emp_id", SqlDbType.NVarChar, 10).Value = txt_Search.Text & "%"
+        Else
+            CM.Parameters.Add("@emp_name", SqlDbType.NVarChar, 50).Value = txt_Search.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+        Else
+            With dt.Rows(0)
+                txt_emp_id.Text = .Item(0).ToString
+                txt_emp_name.Text = .Item(1).ToString
+                txt_emp_lastname.Text = .Item(2).ToString
+                cmb_emp_level.Text = .Item(3).ToString
+                txt_emp_position.Text = .Item(4).ToString
+                cmb_emp_department.Text = .Item(5).ToString
+                txt_emp_division.Text = .Item(6).ToString
+                cmb_emp_degree.Text = .Item(7).ToString
+                Date_start.Text = .Item(8).ToString
+
+                datagrid_emp.DataSource = dt
+            End With
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "คลิกเลือกข้อมูลใน datagrid"
@@ -557,7 +620,7 @@ Public Class Employees
                     e.Handled = True
                     MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
             End Select
-            txt_Search.MaxLength = 50
+
         End If
     End Sub
 
@@ -697,13 +760,8 @@ Public Class Employees
 
 
 
-
-        
-
-
-
-
     End Sub
 
+   
    
 End Class

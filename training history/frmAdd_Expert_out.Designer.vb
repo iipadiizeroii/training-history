@@ -22,6 +22,7 @@ Partial Class frmadd_Expert_out
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmadd_Expert_out))
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -89,7 +90,7 @@ Partial Class frmadd_Expert_out
         Me.dgv_Ex.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_Ex.Location = New System.Drawing.Point(12, 175)
         Me.dgv_Ex.Name = "dgv_Ex"
-        Me.dgv_Ex.Size = New System.Drawing.Size(856, 150)
+        Me.dgv_Ex.Size = New System.Drawing.Size(841, 199)
         Me.dgv_Ex.TabIndex = 8
         '
         'Label3
@@ -176,14 +177,15 @@ Partial Class frmadd_Expert_out
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(877, 333)
+        Me.ClientSize = New System.Drawing.Size(870, 386)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgv_Ex)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmadd_Expert_out"
-        Me.Text = "frmadd_Expert_out"
+        Me.Text = "เลือกวิทยากรภายนอก"
         CType(Me.dgv_Ex, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -22,6 +22,7 @@ Partial Class frmAdd_Expert_in
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdd_Expert_in))
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -124,9 +125,9 @@ Partial Class frmAdd_Expert_in
         'dgv_In
         '
         Me.dgv_In.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_In.Location = New System.Drawing.Point(12, 170)
+        Me.dgv_In.Location = New System.Drawing.Point(12, 175)
         Me.dgv_In.Name = "dgv_In"
-        Me.dgv_In.Size = New System.Drawing.Size(856, 150)
+        Me.dgv_In.Size = New System.Drawing.Size(841, 199)
         Me.dgv_In.TabIndex = 16
         '
         'GroupBox1
@@ -176,14 +177,15 @@ Partial Class frmAdd_Expert_in
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 332)
+        Me.ClientSize = New System.Drawing.Size(870, 386)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgv_In)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAdd_Expert_in"
-        Me.Text = "frmAdd_Expert_in"
+        Me.Text = "เลือกวิทยากรอบรมภายใน"
         CType(Me.dgv_In, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

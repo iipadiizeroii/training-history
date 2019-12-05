@@ -22,6 +22,11 @@ Public Class frmSearch_history_training_Em
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกเลือกพนักงานที่ต้องการ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Button2.Focus()
+            Exit Sub
+        End If
 
         Dim cn As New SqlConnection(strConn)
 
@@ -168,6 +173,12 @@ Public Class frmSearch_history_training_Em
 #Region "อยู่ใน Panal"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search_id_panal.Text = "" And txt_Search_name_panal.Text = "" And txt_Search_depart_panal.Text = "" Then
+            MsgBox("กรุณากรอกข้อมูลที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            txt_Search_id_panal.Focus()
+            Exit Sub
+        End If
 
         Dim DataShow As DataTable = SqlTable(" SELECT * FROM Employees Where emp_id LIKE '%" & txt_Search_id_panal.Text & "%' AND emp_name LIKE '%" & txt_Search_name_panal.Text & "%' AND emp_department LIKE '%" & txt_Search_depart_panal.Text & "%' ")
         With PN_dgv_em

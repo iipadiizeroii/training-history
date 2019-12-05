@@ -942,10 +942,7 @@ Public Class External_training
 
 
             Loop
-        Else
-
-            MessageBox.Show("ไม่พบข้อมูล")
-            txt_Search.Clear()
+        
         End If
     End Sub
 
@@ -976,13 +973,10 @@ Public Class External_training
                 TextBox3.Text = dr.GetInt32(2)
                 TextBox4.Text = dr.GetInt32(3)
 
-
-
-
             Loop
         Else
 
-            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             txt_Search.Clear()
         End If
 
@@ -1083,8 +1077,6 @@ Public Class External_training
                 LV1.SubItems.Add(dr.GetValue(16))
                 ListView1.Items.Add(LV1)
                 LV1 = Nothing
-
-
             Loop
 
         End If
@@ -1135,12 +1127,8 @@ Public Class External_training
                 ListView2.Items.Add(LV2)
                 LV2 = Nothing
 
-
             Loop
-        Else
-
-            MessageBox.Show("ไม่พบข้อมูล")
-            txt_Search.Clear()
+        
         End If
     End Sub
 
@@ -1172,13 +1160,10 @@ Public Class External_training
                 TextBox3.Text = dr.GetInt32(2)
                 TextBox4.Text = dr.GetInt32(3)
 
-
-
-
             Loop
         Else
 
-            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             txt_Search.Clear()
         End If
 
@@ -1187,12 +1172,12 @@ Public Class External_training
 
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
-
-
-
-
         If e.KeyCode = Keys.Enter Then
 
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกรหัสที่ต้องการ", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
 
 
             search_expert()
@@ -1201,6 +1186,7 @@ Public Class External_training
             edit_data.Enabled = True
             cancel_data.Enabled = True
             clear_data.Enabled = True
+
             ''--2.SQL
             'sb = New StringBuilder
             'sb.Append("Select * ")
@@ -1267,6 +1253,25 @@ Public Class External_training
         End If
 
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกรหัสที่ต้องการ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        search_expert()
+        search_employees()
+        search_Expenses_out()
+        edit_data.Enabled = True
+        cancel_data.Enabled = True
+        clear_data.Enabled = True
+
+        cn.Close()
+
+    End Sub
+
 
 #End Region
 
@@ -1398,9 +1403,15 @@ Public Class External_training
         Panel1.Visible = False
     End Sub
 
+#Region "ค้นหาใน Panal"
     Private Sub txt_Search_panal_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search_panal.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+            If txt_Search_panal.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -1431,7 +1442,7 @@ Public Class External_training
             dt.Load(DR)
             '4
             If (dt.Rows.Count = 0) Then
-                MessageBox.Show("ไม่พบข้อมูล")
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             Else
                 datagrid_ExtrainingNew.DataSource = dt
 
@@ -1439,8 +1450,53 @@ Public Class External_training
 
         End If
 
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search_panal.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If RP1.Checked = True Then
+            s1 = " trainingEx_id like @trainingEx_id"
+        Else
+            s1 = " training_name like @training_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        s = "select * from External_training where " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+
+        If RP1.Checked = True Then
+            CM.Parameters.Add("@trainingEx_id", SqlDbType.NVarChar, 10).Value = txt_Search_panal.Text & "%"
+        Else
+            CM.Parameters.Add("@training_name", SqlDbType.NVarChar, 100).Value = txt_Search_panal.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+        Else
+            datagrid_ExtrainingNew.DataSource = dt
+
+        End If
 
     End Sub
+
+#End Region
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim cn As New SqlConnection(strConn)
@@ -1457,19 +1513,6 @@ Public Class External_training
         cn.Close()
 
         txt_Search_panal.Text = ""
-
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-        search_expert()
-        search_employees()
-        search_Expenses_out()
-        edit_data.Enabled = True
-        cancel_data.Enabled = True
-        clear_data.Enabled = True
-
-        cn.Close()
 
     End Sub
 
@@ -1609,7 +1652,7 @@ Public Class External_training
 
     End Sub
 
-    
+
 
 #Region "ทดลองคำนวณเวลาที่ใช้อบรม / จัดอบรม"
 
@@ -1733,7 +1776,7 @@ Public Class External_training
 #End Region
 
 
-    
+
     Private Sub Date_training_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Date_training.KeyPress
         e.Handled = True
     End Sub
@@ -1757,4 +1800,6 @@ Public Class External_training
     Private Sub cmd_end2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmd_end2.KeyPress
         e.Handled = True
     End Sub
+
+
 End Class

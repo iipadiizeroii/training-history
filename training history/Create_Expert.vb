@@ -15,6 +15,11 @@ Public Class Create_Expert
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -44,7 +49,7 @@ Public Class Create_Expert
             dt.Load(DR)
             '4
             If (dt.Rows.Count = 0) Then
-                MessageBox.Show("ไม่พบข้อมูล")
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             Else
                 With dt.Rows(0)
                     txt_exp_id.Text = .Item(0).ToString
@@ -61,6 +66,60 @@ Public Class Create_Expert
 
 
         End If
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        '1
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If R1.Checked = True Then
+            s1 = " expert_id like @emp_id"
+        Else
+            s1 = " expert_name like @emp_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        s = "select * from Expert where " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+        If R1.Checked = True Then
+            CM.Parameters.Add("@emp_id", SqlDbType.NVarChar, 10).Value = "%" & txt_Search.Text & "%"
+        Else
+            CM.Parameters.Add("@emp_name", SqlDbType.NVarChar, 50).Value = "%" & txt_Search.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+        Else
+            With dt.Rows(0)
+                txt_exp_id.Text = .Item(0).ToString
+                txt_exp_name.Text = .Item(1).ToString
+                txt_exp_lastname.Text = .Item(2).ToString
+                txt_exp_position.Text = .Item(3).ToString
+                txt_exp_department.Text = .Item(4).ToString
+                txt_expert_expertise.Text = .Item(5).ToString
+
+                edit_data.Enabled = True
+                datagrid_exp.DataSource = dt
+            End With
+        End If
+
+
     End Sub
 
 #End Region
@@ -170,59 +229,66 @@ Public Class Create_Expert
             Exit Sub
         End If
 
+        Try
 
-        With cn
-            If .State = ConnectionState.Open Then .Close()
-            .ConnectionString = strConn
-            .Open()
-        End With
+            With cn
+                If .State = ConnectionState.Open Then .Close()
+                .ConnectionString = strConn
+                .Open()
+            End With
 
-        Dim s As String = ""
-        If savestatus = "Add" Then
-            s = "Insert into  Expert (expert_id,expert_name,expert_lastname,expert_position,expert_department,expert_expertise)"
-            s &= "Values (@expert_id,@expert_name,@expert_lastname,@expert_position,@expert_department,@expert_expertise)"
-
-
-        ElseIf savestatus = "Edit" Then
-            s = "Update Expert"
-            s &= " set expert_name = @expert_name,"
-            s &= "expert_lastname = @expert_lastname,"
-            s &= "expert_position = @expert_position,"
-            s &= "expert_department = @expert_department,"
-            s &= "expert_expertise = @expert_expertise"
-            s &= " Where expert_id = @expert_id"
+            Dim s As String = ""
+            If savestatus = "Add" Then
+                s = "Insert into  Expert (expert_id,expert_name,expert_lastname,expert_position,expert_department,expert_expertise)"
+                s &= "Values (@expert_id,@expert_name,@expert_lastname,@expert_position,@expert_department,@expert_expertise)"
 
 
-        End If
-
-        Dim cm As New SqlCommand
-
-        With cm
-            .CommandType = CommandType.Text
-            .CommandText = s
-            .Connection = cn
-            .Parameters.Clear()
-
-            .Parameters.Add("@expert_id", SqlDbType.NVarChar, 50).Value = txt_exp_id.Text
-            .Parameters.Add("@expert_name", SqlDbType.NVarChar, 50).Value = txt_exp_name.Text
-            .Parameters.Add("@expert_lastname", SqlDbType.NVarChar, 50).Value = txt_exp_lastname.Text
-            .Parameters.Add("@expert_position", SqlDbType.NVarChar, 50).Value = txt_exp_position.Text
-            .Parameters.Add("@expert_department", SqlDbType.NVarChar, 50).Value = txt_exp_department.Text
-            .Parameters.Add("@expert_expertise", SqlDbType.NVarChar, 50).Value = txt_expert_expertise.Text
+            ElseIf savestatus = "Edit" Then
+                s = "Update Expert"
+                s &= " set expert_name = @expert_name,"
+                s &= "expert_lastname = @expert_lastname,"
+                s &= "expert_position = @expert_position,"
+                s &= "expert_department = @expert_department,"
+                s &= "expert_expertise = @expert_expertise"
+                s &= " Where expert_id = @expert_id"
 
 
-            .ExecuteNonQuery()
+            End If
 
-        End With
+            Dim cm As New SqlCommand
+
+            With cm
+                .CommandType = CommandType.Text
+                .CommandText = s
+                .Connection = cn
+                .Parameters.Clear()
+
+                .Parameters.Add("@expert_id", SqlDbType.NVarChar, 50).Value = txt_exp_id.Text
+                .Parameters.Add("@expert_name", SqlDbType.NVarChar, 50).Value = txt_exp_name.Text
+                .Parameters.Add("@expert_lastname", SqlDbType.NVarChar, 50).Value = txt_exp_lastname.Text
+                .Parameters.Add("@expert_position", SqlDbType.NVarChar, 50).Value = txt_exp_position.Text
+                .Parameters.Add("@expert_department", SqlDbType.NVarChar, 50).Value = txt_exp_department.Text
+                .Parameters.Add("@expert_expertise", SqlDbType.NVarChar, 50).Value = txt_expert_expertise.Text
 
 
-        MessageBox.Show("บันทึกเรียบร้อย ")
-        showdata()
-        savestatus = ""
-        R4.Checked = False
-        Search_emp.Enabled = False
+                .ExecuteNonQuery()
+
+            End With
+
+        Catch ex As Exception
+            MsgBox("รหัสนี้มีชื่อเป็นวิทยากรแล้ว", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            Exit Sub
 
 
+            MessageBox.Show("บันทึกเรียบร้อย ")
+            showdata()
+            savestatus = ""
+            R4.Checked = False
+            Search_emp.Enabled = False
+
+
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End Try
     End Sub
 #End Region
 
@@ -633,5 +699,6 @@ Public Class Create_Expert
 
     End Sub
 
+    
     
 End Class

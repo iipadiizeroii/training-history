@@ -22,6 +22,7 @@ Partial Class frmAdd_Employees_out
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdd_Employees_out))
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -100,7 +101,7 @@ Partial Class frmAdd_Employees_out
         Me.dgv_Em.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_Em.Location = New System.Drawing.Point(11, 171)
         Me.dgv_Em.Name = "dgv_Em"
-        Me.dgv_Em.Size = New System.Drawing.Size(856, 150)
+        Me.dgv_Em.Size = New System.Drawing.Size(845, 203)
         Me.dgv_Em.TabIndex = 16
         '
         'GroupBox1
@@ -118,7 +119,7 @@ Partial Class frmAdd_Employees_out
         Me.GroupBox1.Size = New System.Drawing.Size(401, 108)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "ค้นหา"
+        Me.GroupBox1.Text = "ค้นหาพนักงาน"
         '
         'Button3
         '
@@ -176,14 +177,15 @@ Partial Class frmAdd_Employees_out
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(879, 333)
+        Me.ClientSize = New System.Drawing.Size(870, 386)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgv_Em)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAdd_Employees_out"
-        Me.Text = "frmAdd_Employees_out"
+        Me.Text = "เลือกพนักงานเข้าอบรม"
         CType(Me.dgv_Em, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

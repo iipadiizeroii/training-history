@@ -176,6 +176,12 @@
     <Compile Include="frmNew_expert_In.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRe_password.Designer.vb">
+      <DependentUpon>frmRe_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRe_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSearch_history_training_Em.Designer.vb">
       <DependentUpon>frmSearch_history_training_Em.vb</DependentUpon>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNew_expert_In.resx">
       <DependentUpon>frmNew_expert_In.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRe_password.resx">
+      <DependentUpon>frmRe_password.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearch_history_training_Em.resx">
       <DependentUpon>frmSearch_history_training_Em.vb</DependentUpon>

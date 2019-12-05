@@ -385,6 +385,7 @@ Partial Class Employees
         '
         Me.txt_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txt_Search.Location = New System.Drawing.Point(112, 48)
+        Me.txt_Search.MaxLength = 50
         Me.txt_Search.Name = "txt_Search"
         Me.txt_Search.Size = New System.Drawing.Size(189, 20)
         Me.txt_Search.TabIndex = 0

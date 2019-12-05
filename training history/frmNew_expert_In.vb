@@ -68,6 +68,12 @@ Public Class frmNew_expert_In
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
+
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -97,9 +103,9 @@ Public Class frmNew_expert_In
             dt.Load(DR)
             '4
             If (dt.Rows.Count = 0) Then
-                MessageBox.Show("ไม่พบข้อมูล")
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             Else
-                
+
 
                 datagrid_new_expertin.DataSource = dt
 
@@ -107,6 +113,52 @@ Public Class frmNew_expert_In
 
 
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        '1
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If R1.Checked = True Then
+            s1 = " emp_id like @emp_id"
+        Else
+            s1 = " emp_name like @emp_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        s = "select * from Employees where " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+        If R1.Checked = True Then
+            CM.Parameters.Add("@emp_id", SqlDbType.NVarChar, 10).Value = "%" & txt_Search.Text & "%"
+        Else
+            CM.Parameters.Add("@emp_name", SqlDbType.NVarChar, 50).Value = "%" & txt_Search.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+        Else
+
+
+            datagrid_new_expertin.DataSource = dt
+
+        End If
+
     End Sub
 #End Region
 
@@ -186,7 +238,5 @@ Public Class frmNew_expert_In
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
+   
 End Class

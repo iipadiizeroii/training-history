@@ -819,10 +819,7 @@ Public Class Internal_training
 
 
             Loop
-        Else
-
-            MessageBox.Show("ไม่พบข้อมูล")
-            txt_Search.Clear()
+        
         End If
     End Sub
 
@@ -854,19 +851,15 @@ Public Class Internal_training
                 TextBox4.Text = dr.GetInt32(3)
                 TextBox5.Text = dr.GetInt32(4)
                 
-
-
             Loop
         Else
 
-            MessageBox.Show("ไม่พบข้อมูลค่าใช้จ่าย")
+            MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
             txt_Search.Clear()
         End If
 
 
     End Sub
-
-#End Region
 
 
     Private Sub txt_Search_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search.KeyDown
@@ -874,6 +867,10 @@ Public Class Internal_training
 
         If e.KeyCode = Keys.Enter Then
 
+            If txt_Search.Text = "" Then
+                MsgBox("กรุณากรอกรหัสที่ต้องการ", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
 
             search_expert()
             search_employees()
@@ -897,6 +894,27 @@ Public Class Internal_training
 
 
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        If txt_Search.Text = "" Then
+            MsgBox("กรุณากรอกรหัสที่ต้องการ", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+
+        search_expert()
+        search_employees()
+        search_Expenses_in()
+        edit_data.Enabled = True
+        cancel_data.Enabled = True
+        clear_data.Enabled = True
+
+
+    End Sub
+
+#End Region
+
+
 
 #Region "คำนวณตัวเลขอัตโนมัติ"
 
@@ -1312,6 +1330,11 @@ Public Class Internal_training
     Private Sub txt_Search_panal_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_Search_panal.KeyDown
 
         If e.KeyCode = Keys.Enter Then
+
+            If txt_Search_panal.Text = "" Then
+                MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+                Exit Sub
+            End If
             '1
             Dim cn As New SqlConnection(strConn)
             '2
@@ -1353,6 +1376,50 @@ Public Class Internal_training
     End Sub
 
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txt_Search_panal.Text = "" Then
+            MsgBox("กรุณากรอกหรัสหรือชื่อที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            Exit Sub
+        End If
+        '1
+        Dim cn As New SqlConnection(strConn)
+        '2
+        Dim s, s1 As String
+        If RP1.Checked = True Then
+            s1 = " trainingIn_id like @trainingIn_id"
+        Else
+            s1 = " training_name like @training_name" 'like พิมพ์อักษรตัวเดียวก็ขึ้น
+        End If
+        s = "select * from Internal_training where " & s1
+        '3
+        With cn
+            If .State = ConnectionState.Open Then .Close()
+            .ConnectionString = strConn
+            .Open()
+        End With
+        Dim CM As New SqlCommand(s, cn)
+        Dim DR As SqlDataReader
+        CM.Parameters.Clear()
+
+        If RP1.Checked = True Then
+            CM.Parameters.Add("@trainingIn_id", SqlDbType.NVarChar, 10).Value = txt_Search_panal.Text & "%"
+        Else
+            CM.Parameters.Add("@training_name", SqlDbType.NVarChar, 100).Value = txt_Search_panal.Text & "%"
+        End If
+        DR = CM.ExecuteReader
+        Dim dt As New DataTable
+        dt.Load(DR)
+        '4
+        If (dt.Rows.Count = 0) Then
+            MessageBox.Show("ไม่พบข้อมูล")
+        Else
+
+            datagrid_IntrainingNew.DataSource = dt
+
+        End If
+
+    End Sub
 
 #End Region
 
@@ -1377,19 +1444,7 @@ Public Class Internal_training
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-
-
-        search_expert()
-        search_employees()
-        search_Expenses_in()
-        edit_data.Enabled = True
-        cancel_data.Enabled = True
-        clear_data.Enabled = True
-
-
-    End Sub
+    
 
     Private Sub cmb_course_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_course_name.KeyPress
         e.Handled = True
@@ -1697,4 +1752,5 @@ Public Class Internal_training
         e.Handled = True
     End Sub
 
+  
 End Class

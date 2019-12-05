@@ -20,9 +20,9 @@ Public Class frmadd_Expert_out
             .Columns("expert_position").HeaderText = "ต่ำแหน่ง"
             .Columns("expert_position").Width = "200"
             .Columns("expert_department").HeaderText = "หน่วยงานต้นสังกัด"
-            .Columns("expert_department").Width = "130"
+            .Columns("expert_department").Width = "160"
             .Columns("expert_expertise").HeaderText = "ความเชี่ยวชาญ"
-            .Columns("expert_expertise").Width = "130"
+            .Columns("expert_expertise").Width = "220"
 
             .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
@@ -143,7 +143,11 @@ Public Class frmadd_Expert_out
 #Region "ค้นหา2"
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-
+        If TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" Then
+            MsgBox("กรุณากรอกข้อมูลที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            TextBox1.Focus()
+            Exit Sub
+        End If
 
         Dim DataShow As DataTable = SqlTable(" SELECT * FROM Expert Where expert_id LIKE '%" & TextBox1.Text & "%' AND expert_name LIKE '%" & TextBox2.Text & "%' AND expert_expertise LIKE '%" & TextBox3.Text & "%' ")
         With dgv_Ex
@@ -157,9 +161,9 @@ Public Class frmadd_Expert_out
             .Columns("expert_position").HeaderText = "ตำแหน่ง"
             .Columns("expert_position").Width = "200"
             .Columns("expert_department").HeaderText = "หน่วยงานต้นสังกัด"
-            .Columns("expert_department").Width = "130"
+            .Columns("expert_department").Width = "160"
             .Columns("expert_expertise").HeaderText = "ความเชี่ยวชาญ"
-            .Columns("expert_expertise").Width = "130"
+            .Columns("expert_expertise").Width = "220"
 
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
@@ -171,6 +175,7 @@ Public Class frmadd_Expert_out
 
         End With
 
+        
 
     End Sub
 #End Region
@@ -369,4 +374,15 @@ Public Class frmadd_Expert_out
 
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        showdata()
+
+    End Sub
+
+    
 End Class

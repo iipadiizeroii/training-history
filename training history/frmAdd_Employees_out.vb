@@ -55,8 +55,9 @@ Public Class frmAdd_Employees_out
         
 
         If (dt.Rows.Count = 0) Then
-            MessageBox.Show("ไม่พบข้อมูล")
-            Me.Close()
+            'MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Critical, "ผลการทำงาน")
+            'Exit Sub
+
         Else
             With dt.Rows(0)
 
@@ -80,7 +81,14 @@ Public Class frmAdd_Employees_out
 #Region "ค้นหา"
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        Dim DataShow As DataTable = SqlTable(" SELECT * FROM Employees Where emp_id LIKE '%" & TextBox1.Text & "%' AND emp_name LIKE '%" & TextBox2.Text & "%' AND emp_department LIKE '%" & TextBox3.Text & "%' ")
+
+        If TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" Then
+            MsgBox("กรุณากรอกข้อมูลที่ต้องการค้นหา", MsgBoxStyle.Critical, "ผลการทำงาน")
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        Dim DataShow As DataTable = SqlTable(" SELECT emp_id,emp_name,emp_lastname,emp_level,emp_position,emp_department,emp_division FROM Employees Where emp_id LIKE '%" & TextBox1.Text & "%' AND emp_name LIKE '%" & TextBox2.Text & "%' AND emp_department LIKE '%" & TextBox3.Text & "%' ")
 
         With dgv_Em
             .DataSource = DataShow
@@ -95,9 +103,9 @@ Public Class frmAdd_Employees_out
             .Columns("emp_position").HeaderText = "ตำแหน่งพนักงาน"
             .Columns("emp_position").Width = "130"
             .Columns("emp_department").HeaderText = "แผนก"
-            .Columns("emp_department").Width = "130"
+            .Columns("emp_department").Width = "160"
             .Columns("emp_division").HeaderText = "ฝ่าย"
-            .Columns("emp_division").Width = "130"
+            .Columns("emp_division").Width = "160"
 
             .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
@@ -199,7 +207,9 @@ Public Class frmAdd_Employees_out
             End With
 
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+
+            MsgBox("ไม่พบพนักงานที่ต้องเข้ารับการอบรม", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End Try
     End Sub
 #End Region
@@ -300,6 +310,12 @@ Public Class frmAdd_Employees_out
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        showdata()
+
+
     End Sub
 
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
@@ -319,32 +335,34 @@ Public Class frmAdd_Employees_out
 
     Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
 
-        Select Asc(e.KeyChar)
-            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
-            '    e.Handled = False
+        Select Case Asc(e.KeyChar)
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
         End Select
+
+        
 
     End Sub
 
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
 
         Select Case Asc(e.KeyChar)
-            'Case 48 To 57 ' ตรงนี้คือโค๊ดตัวเลขน่ะครับเราตัดโค๊ด58-122ออกไป
-            '    e.Handled = False
+            Case 58 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
             Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
                 e.Handled = False
             Case 161 To 240 ' แล้วมาใส่ตรงนี้เป็นคีย์โค๊ดภาษาไทยรวมทั้งตัวสระ+วรรณยุกต์ด้วยน่ะครับ
                 e.Handled = False
             Case Else
                 e.Handled = True
-                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย")
+                MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
         End Select
 
     End Sub
