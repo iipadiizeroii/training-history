@@ -497,7 +497,7 @@ Partial Class External_training
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.datagrid_ExtrainingNew)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Panel1.Location = New System.Drawing.Point(155, 75)
+        Me.Panel1.Location = New System.Drawing.Point(133, 67)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(705, 470)
         Me.Panel1.TabIndex = 97
@@ -656,7 +656,6 @@ Partial Class External_training
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Button3)
-        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.ListView1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 35)
@@ -863,6 +862,7 @@ Partial Class External_training
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1015, 658)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

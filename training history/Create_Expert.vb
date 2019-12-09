@@ -278,17 +278,17 @@ Public Class Create_Expert
         Catch ex As Exception
             MsgBox("รหัสนี้มีชื่อเป็นวิทยากรแล้ว", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
             Exit Sub
-
-
-            MessageBox.Show("บันทึกเรียบร้อย ")
-            showdata()
-            savestatus = ""
-            R4.Checked = False
-            Search_emp.Enabled = False
-
-
-            'MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End Try
+
+        MessageBox.Show("บันทึกเรียบร้อย ")
+        showdata()
+        savestatus = ""
+        R4.Checked = False
+        Search_emp.Enabled = False
+
+
+        'MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+
     End Sub
 #End Region
 
@@ -477,6 +477,7 @@ Public Class Create_Expert
 
         If savestatus = "Add" Then
             upte_data.Enabled = True
+            cancel_data.Enabled = True
         ElseIf savestatus = "Edit" Then
             upte_data.Enabled = True
         Else

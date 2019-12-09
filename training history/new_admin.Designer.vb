@@ -307,6 +307,8 @@ Partial Class new_admin
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(539, 519)
+        Me.MinimumSize = New System.Drawing.Size(539, 519)
         Me.Name = "new_admin"
         Me.Text = "สร้าง Username"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

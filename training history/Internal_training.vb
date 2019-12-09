@@ -349,6 +349,7 @@ Public Class Internal_training
 
     Private Sub update_Expenses()
 
+
         With cn
             If .State = ConnectionState.Open Then .Close()
             .ConnectionString = strConn
@@ -383,7 +384,7 @@ Public Class Internal_training
             .Add("@Food_expert", SqlDbType.Int).Value = TextBox2.Text
             .Add("@Snack", SqlDbType.Int).Value = TextBox3.Text
             .Add("@Course", SqlDbType.Int).Value = TextBox4.Text
-            .Add("@Total", SqlDbType.Int).Value = TextBox5.Text
+            .Add("@Total", SqlDbType.Int).Value = CDbl(TextBox5.Text)
             .Add("@Date_in", SqlDbType.Date).Value = Date_training.Text
             cmm.ExecuteNonQuery()
         End With
@@ -488,6 +489,7 @@ Public Class Internal_training
         End With
 
         'showdata()
+
         'TextBox1.Text = "0"
         'TextBox2.Text = "0"
         'TextBox3.Text = "0"
@@ -944,7 +946,7 @@ Public Class Internal_training
 
         Try
 
-            TextBox5.Text = CDbl(TextBox1.Text) + CDbl(TextBox2.Text) + CDbl(TextBox3.Text) + CDbl(TextBox4.Text)
+            TextBox5.Text = Format(CDbl(TextBox1.Text) + CDbl(TextBox2.Text) + CDbl(TextBox3.Text) + CDbl(TextBox4.Text), "#,###,##0.##")
 
         Catch ex As Exception
 
@@ -1060,6 +1062,7 @@ Public Class Internal_training
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
+
         totalmony()
 
     End Sub
@@ -1075,6 +1078,7 @@ Public Class Internal_training
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
         totalmony()
     End Sub
+
 
 #End Region
 
@@ -1753,4 +1757,35 @@ Public Class Internal_training
     End Sub
 
   
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        For i As Integer = 0 To ListView1.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView1.SelectedItems(i)
+            ListView1.Items.Remove(lvi)
+        Next
+        numAEXO = 0
+        For j As Integer = 0 To ListView1.Items.Count - 1
+            numAEXO = numAEXO + 1
+            ListView1.Items(j).SubItems(0).Text = numAEXO
+        Next
+
+    End Sub
+
+    Private Sub clear_data_emp_Click(sender As Object, e As EventArgs) Handles clear_data_emp.Click
+
+        For i As Integer = 0 To ListView2.SelectedItems.Count - 1
+            Dim lvi As ListViewItem
+            lvi = ListView2.SelectedItems(i)
+            ListView2.Items.Remove(lvi)
+        Next
+        numAEMO = 0
+        For j As Integer = 0 To ListView2.Items.Count - 1
+            numAEMO = numAEMO + 1
+            ListView2.Items(j).SubItems(0).Text = numAEMO
+        Next
+    End Sub
+
+
+
 End Class

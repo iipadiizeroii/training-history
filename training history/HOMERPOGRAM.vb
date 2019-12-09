@@ -1182,4 +1182,34 @@ Public Class HOMERPOGRAM
         End With
 
     End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+
+
+        Login_Form.MdiParent = Me
+        Login_Form.StartPosition = FormStartPosition.Manual
+        Login_Form.Left = 447
+        Login_Form.Top = 187
+        Login_Form.Show()
+
+        GroupBox1.Visible = False
+        MenuStrip1.Visible = False
+        StatusStrip1.Visible = False
+        Panel1.Visible = False
+        Employees.Close()
+        Create_Expert.Close()
+        Create_training.Close()
+        Internal_training.Close()
+        External_training.Close()
+        frmSearch_history_training_Em.Close()
+        frmSearch_not_history_training_Em.Close()
+        all_report.Close()
+        test_Print.Close()
+        RP_Expenses_in_out.Close()
+
+
+
+
+
+    End Sub
 End Class

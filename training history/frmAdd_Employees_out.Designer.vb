@@ -32,7 +32,6 @@ Partial Class frmAdd_Employees_out
         Me.dgv_Em = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgv_Em, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,19 +133,6 @@ Partial Class frmAdd_Employees_out
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.Button4.Image = Global.training_history.My.Resources.Resources.icons8_check_all_32
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(213, 124)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 39)
-        Me.Button4.TabIndex = 21
-        Me.Button4.Text = "เลือกทั้งหมด"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("TH SarabunPSK", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -178,7 +164,6 @@ Partial Class frmAdd_Employees_out
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 386)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -203,5 +188,4 @@ Partial Class frmAdd_Employees_out
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgv_Em As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

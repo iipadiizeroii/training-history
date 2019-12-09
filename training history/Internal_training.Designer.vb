@@ -734,7 +734,6 @@ Partial Class Internal_training
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.ListView1)
@@ -753,7 +752,7 @@ Partial Class Internal_training
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.datagrid_IntrainingNew)
-        Me.Panel1.Location = New System.Drawing.Point(141, 79)
+        Me.Panel1.Location = New System.Drawing.Point(132, 69)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(705, 470)
         Me.Panel1.TabIndex = 98
@@ -898,6 +897,7 @@ Partial Class Internal_training
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1015, 658)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

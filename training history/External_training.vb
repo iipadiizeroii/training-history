@@ -371,7 +371,7 @@ Public Class External_training
             .Add("@Expert", SqlDbType.Int).Value = TextBox1.Text
             .Add("@Course", SqlDbType.Int).Value = TextBox2.Text
             .Add("@Travel_expenses", SqlDbType.Int).Value = TextBox3.Text
-            .Add("@Total", SqlDbType.Int).Value = TextBox4.Text
+            .Add("@Total", SqlDbType.Int).Value = CDbl(TextBox4.Text)
             .Add("@Date_out", SqlDbType.Date).Value = Date_training.Text
             cmm.ExecuteNonQuery()
         End With
@@ -1301,7 +1301,7 @@ Public Class External_training
 
         Try
 
-            TextBox4.Text = CDbl(TextBox1.Text) + CDbl(TextBox2.Text) + CDbl(TextBox3.Text)
+            TextBox4.Text = Format(CDbl(TextBox1.Text) + CDbl(TextBox2.Text) + CDbl(TextBox3.Text), "#,###,##0.##")
 
         Catch ex As Exception
 

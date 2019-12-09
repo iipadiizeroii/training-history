@@ -620,7 +620,7 @@ Public Class Employees
                     e.Handled = True
                     MessageBox.Show("กรุณาระบุข้อมูลเป็นภาษาไทย และ ภาษาอังกฤษ")
             End Select
-
+            txt_Search.MaxLength = 50
         End If
     End Sub
 
